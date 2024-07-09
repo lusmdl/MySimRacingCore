@@ -3,20 +3,22 @@
 
 #include "ProjectConfig.hpp"
 #include <Joystick.h>
+#include "Buttons.hpp"
 
-class ComUsb
-{
-private:
-    Joystick_ *joy_;
+class ComUsb {
 
-public:
-    ComUsb();
-    ~ComUsb();
-    
-    void begin();
-    void sendData();
+    private:
+
+        Joystick_ joy_;
+        Buttons *btns_;
+
+
+    public:
+
+        ComUsb(Buttons &btns);
+        ~ComUsb();
+        void begin();
+        void sendData();
 };
-
-
 
 #endif // COM_USB_HPP

@@ -32,7 +32,10 @@ void Buttons::listner() {
 
         // check 2x2 Matrix A
 
-        matrix_[btnIndex].pushed = btnA_->getButtonStatus(i).fallingEdge;
+        if (btnA_->getButtonStatus(i).fallingEdge) {
+
+            matrix_[btnIndex].pushed++;
+        }
         btnIndex++; // for the next getter
     }
 
@@ -40,7 +43,10 @@ void Buttons::listner() {
 
         // check 2x2 Matrix B
 
-        matrix_[btnIndex].pushed = btnB_->getButtonStatus(i).fallingEdge;
+        if (btnB_->getButtonStatus(i).fallingEdge) {
+
+            matrix_[btnIndex].pushed++;
+        }
         btnIndex++; // for the next getter
     }
 
@@ -48,7 +54,10 @@ void Buttons::listner() {
 
         // check 2x2 Matrix C
 
-        matrix_[btnIndex].pushed = btnC_->getButtonStatus(i).fallingEdge;
+        if (btnC_->getButtonStatus(i).fallingEdge) {
+
+            matrix_[btnIndex].pushed++;
+        }
         btnIndex++; // for the next getter
     }
 
@@ -56,7 +65,10 @@ void Buttons::listner() {
 
         // check 2x2 Matrix D
 
-        matrix_[btnIndex].pushed = btnD_->getButtonStatus(i).fallingEdge;
+        if (btnD_->getButtonStatus(i).fallingEdge) {
+
+            matrix_[btnIndex].pushed++;
+        }
         btnIndex++; // for the next getter
     }
 }

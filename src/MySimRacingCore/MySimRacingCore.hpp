@@ -1,14 +1,7 @@
 #ifndef MY_SIM_RACING_CORE_HPP
 #define MY_SIM_RACING_CORE_HPP
 
-//#include "ProjectConfig.hpp"
-
-//#include <math.h>
-//#include <avr/io.h>
-//#include <avr/interrupt.h>
-
 #include <MyAvr.hpp>
-//#include <MyNeoPixels.hpp>
 
 #include "ComUsb.hpp"
 #include "Buttons.hpp"
@@ -29,9 +22,8 @@ class MySimRacingCore {
     private:
 
         MyAtmega32u4 controller_;
-        //Com usb_;
-        ComUsb com_;
         Buttons buttons_;
+        ComUsb com_;
         //Pedals pedals_;
         //Shifting shift_;
         //WheelBase wheele_;

@@ -4,22 +4,21 @@
 #include <MyAvr.hpp>
 #include "ProjectConfig.hpp"
 
-
 struct pod_buttonmatrix {
-    bool pushed;
-};
 
+    uint8_t pushed;
+};
 
 class Buttons {
 
-
     public:
+
         Buttons();
         ~Buttons();
         void begin();
         void listner();
-
         pod_buttonmatrix matrix_[BTN_NUMBER];
+
 
     private:
 
@@ -31,4 +30,3 @@ class Buttons {
 
 
 #endif // BUTTONS_HPP
-
