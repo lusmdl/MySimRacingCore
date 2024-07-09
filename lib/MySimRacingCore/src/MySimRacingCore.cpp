@@ -7,7 +7,7 @@ MySimRacingCore::MySimRacingCore() {
 
 void MySimRacingCore::setup() {
 
-    
+    com_.begin();
 
     
 
@@ -16,6 +16,7 @@ void MySimRacingCore::setup() {
 
 void MySimRacingCore::loop() {
 
+    com_.send();
 
 
 
