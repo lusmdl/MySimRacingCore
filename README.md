@@ -4,19 +4,11 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 
 ## Features
 
-- **Precision Control**: High-resolution input handling for accurate steering and pedal control.
-- **Accessory Integration**: Supports various sim racing accessories, enhancing the overall racing experience.
-- **Real-time Processing**: Fast and efficient processing to ensure minimal latency and responsive controls.
-- **Customizable**: Easily adaptable for different racing setups and preferences.
+
 
 ## Getting Started
 
-To get started with the project, clone this repository and follow the setup instructions in the [README.md](README.md) file.
 
-```bash
-git clone https://github.com/yourusername/sim-racing-core-controller.git
-cd sim-racing-core-controller
-```
 
 ## Hardware Requirements
 
@@ -27,8 +19,9 @@ cd sim-racing-core-controller
 
 ## Software Requirements
 
-- **Arduino IDE**: Used for programming the ATmega32u4 microcontroller.
-- **Sim Racing Software**: Compatible with popular sim racing software for a fully integrated experience.
+- [**Platform IO**](https://platformio.org/install/ide?install=vscode): Used for programming the ATmega32u4 microcontroller.
+- [**Arduino Joystick With Force Feedback Library**](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary.git)
+- [**My AVR Library**](https://github.com/lusmdl/MyAvr.git)
 
 ## Contributing
 
