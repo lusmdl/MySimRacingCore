@@ -1,6 +1,7 @@
-#include <config.h>
+
 #include <Arduino.h>
-#include <MySimRacingCore.hpp>
+
+#include "MySimRacingCore/MySimRacingCore.hpp"
 
 MySimRacingCore core;
 

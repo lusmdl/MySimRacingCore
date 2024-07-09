@@ -5,7 +5,7 @@ ComUsb::ComUsb() {
     joy_ = new Joystick_(
         JOYSTICK_DEFAULT_REPORT_ID, // REPORT_ID        Hid report id
         JOYSTICK_TYPE_MULTI_AXIS, // JOYSTICK_TYPE      Type of device: JOYSTICK, GAMEPAD, MULTI_AXIS
-        16, // button count                             [0-32]
+        BTN_NUMBER, // button count                     [0-32]
         0, // Hat Switch count                          [0,1,2]
         true, // X Axis enable                          True or False
         false, // Y Axis enable                          True or False
@@ -42,12 +42,9 @@ void ComUsb::begin() {
     joy_->begin(false);
 }
 
-void ComUsb::send() {
+void ComUsb::sendData() {
     // Code to send data via USB
-    joy_->setXAxis(32000);
+    
     joy_->sendState();
-    _delay_ms(1000);
-    joy_->setXAxis(-32000);
-    joy_->sendState();
-    _delay_ms(1000);
+    
 }

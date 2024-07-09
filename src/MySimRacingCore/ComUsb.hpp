@@ -1,8 +1,7 @@
 #ifndef COM_USB_HPP
 #define COM_USB_HPP
 
-//#include <MySimRacingCore.hpp> //problems, i don´t know
-
+#include "ProjectConfig.hpp"
 #include <Joystick.h>
 
 class ComUsb
@@ -15,7 +14,7 @@ public:
     ~ComUsb();
     
     void begin();
-    void send();
+    void sendData();
 };
 
 

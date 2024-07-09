@@ -16,7 +16,7 @@ void MySimRacingCore::setup() {
 
 void MySimRacingCore::loop() {
 
-    com_.send();
+    com_.sendData();
 
 
 
