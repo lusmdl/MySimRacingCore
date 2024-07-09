@@ -1,0 +1,590 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_my_avr_8hpp" kind="file" language="C++">
+    <compoundname>MyAvr.hpp</compoundname>
+    <includes local="no">avr/io.h</includes>
+    <includes local="no">avr/interrupt.h</includes>
+    <includes local="no">avr/eeprom.h</includes>
+    <includes local="no">WString.h</includes>
+    <includes refid="_my_behavioral_design_patterns_8hpp" local="no">MyBehavioralDesignPatterns.hpp</includes>
+    <includes refid="_atmega328p_i_s_r_8h" local="yes">Atmega328pISR.h</includes>
+    <includes refid="_my_atmega328p_8hpp" local="yes">MyAtmega328p.hpp</includes>
+    <includes refid="_my_button_8hpp" local="yes">MyButton.hpp</includes>
+    <includes refid="_my_button_matrix2x2_8hpp" local="yes">MyButtonMatrix2x2.hpp</includes>
+    <includedby refid="_my_atmega328p_8hpp" local="yes">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp</includedby>
+    <includedby refid="_my_avr_8cpp" local="yes">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</includedby>
+    <includedby refid="_my_behavioral_design_patterns_8hpp" local="yes">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp</includedby>
+    <includedby refid="_my_button_8hpp" local="yes">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.hpp</includedby>
+    <includedby refid="_my_button_matrix2x2_8hpp" local="yes">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>Atmega328pISR.h</label>
+        <link refid="_atmega328p_i_s_r_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>MyAtmega328p.hpp</label>
+        <link refid="_my_atmega328p_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp</label>
+        <link refid="_my_avr_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>MyBehavioralDesignPatterns.hpp</label>
+        <link refid="_my_behavioral_design_patterns_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>MyButton.hpp</label>
+        <link refid="_my_button_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>MyButtonMatrix2x2.hpp</label>
+        <link refid="_my_button_matrix2x2_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>WString.h</label>
+      </node>
+      <node id="4">
+        <label>avr/eeprom.h</label>
+      </node>
+      <node id="3">
+        <label>avr/interrupt.h</label>
+      </node>
+      <node id="2">
+        <label>avr/io.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp</label>
+        <link refid="_my_atmega328p_8cpp"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp</label>
+        <link refid="_my_atmega328p_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</label>
+        <link refid="_my_avr_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp</label>
+        <link refid="_my_avr_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp</label>
+        <link refid="_my_behavioral_design_patterns_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.cpp</label>
+        <link refid="_my_button_8cpp"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.hpp</label>
+        <link refid="_my_button_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.cpp</label>
+        <link refid="_my_button_matrix2x2_8cpp"/>
+      </node>
+      <node id="8">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp</label>
+        <link refid="_my_button_matrix2x2_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpod__gpioregister" prot="public">pod_gpioregister</innerclass>
+    <innerclass refid="structpod__buttonstatus" prot="public">pod_buttonstatus</innerclass>
+    <innerclass refid="class_my_controller" prot="public">MyController</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" prot="public" static="no">
+        <name>BITMASK</name>
+        <param><defname>bit</defname></param>
+        <initializer>(1 &lt;&lt; (bit))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="7" column="9" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>enum_gpiomodes</name>
+        <enumvalue id="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a63d584017f7c02340d67a87f3755085a" prot="public">
+          <name>INPUT_TRI_STATE_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a851c2ac60276ada62e8d9ba216c7a487" prot="public">
+          <name>INPUT_PULLUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8ad6ef398fae2c8923732f80c01a9b4fdb" prot="public">
+          <name>INPUT_TRI_STATE_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a73010ac0f307d96c97238d8878f14b3e" prot="public">
+          <name>OUTPUT_SINK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a8dd6b0345a569bf4a420f510341124b6" prot="public">
+          <name>OUTPUT_SOURCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Konfiguration der General Porpus IOs Legt fest, ob es sich um einen Eingang oder Ausgang handelt. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="35" column="1" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="enum" id="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>enum_tcmodes</name>
+        <enumvalue id="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93ca50d1448013c6f17125caee18aa418af7" prot="public">
+          <name>NORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cae4a645162ba5053016798fe8cd8d8ee0" prot="public">
+          <name>PWM_PHASE_CORRECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cad472717efbd11a2e3c7a10a2bcece779" prot="public">
+          <name>CTC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93ca5ac8d17362dfcf008366da62ff1ec646" prot="public">
+          <name>FAST_PWM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93ca96ade528774d486607a39536f307c784" prot="public">
+          <name>PWM_PHASE_CORRECT_COMPARE_A</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cae0f9ebc0dca5efd0b67c82ec5c97bd1c" prot="public">
+          <name>FAST_PWM_COMPARE_A</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Konfigurationsmodi für Timer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="49" column="1" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" bodystart="49" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="enum" id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84" prot="public" static="no" strong="no">
+        <type></type>
+        <name>enum_tcprescalers</name>
+        <enumvalue id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ae89f92ea0ffcda1050fe5b523e2655e0" prot="public">
+          <name>NO_CLOCK_SOURCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ad2ef98ac0d98086868c235ef37670273" prot="public">
+          <name>CLK_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a4f4b40052b3e128cbef3e15dd579c50e" prot="public">
+          <name>CLK_8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a48584a4758d577f0fb4c3e1579f03154" prot="public">
+          <name>CLK_32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a0a39b4aae1959fc16bbe8382aa2f36de" prot="public">
+          <name>CLK_64</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ae0517226b9353a16475bea667a0a0c10" prot="public">
+          <name>CLK_128</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84adb5e9424a002d86170784b48e6943810" prot="public">
+          <name>CLK_256</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84add15888bea74c6eeca3a3fb06181b857" prot="public">
+          <name>CLK_1024</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84abf7407a632cd1a1dc9eaa6fca42ee2a8" prot="public">
+          <name>EXT_CLK_SOURCE_RISING_EDGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a33416c83ecdef3b829acc08e92983853" prot="public">
+          <name>EXT_CLK_SOURCE_FALLING_EDGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Timer/Counter Prescalers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>NO_CLOCK_SOURCE, CLK_1, CLK_8, CLK_32, CLK_64, CLK_128, CLK_256, CLK_1024, EXT_CLK_SOURCE_RISING_EDGE, EXT_CLK_SOURCE_FALLING_EDGE </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="82" column="1" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" bodystart="82" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="enum" id="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374" prot="public" static="no" strong="no">
+        <type></type>
+        <name>enum_sleepmodes</name>
+        <enumvalue id="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374afd6a0e4343048b10646dd2976cc5ad18" prot="public">
+          <name>IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a19e4c86357ccabfaf43e2fabe2189f3c" prot="public">
+          <name>ADC_NOISE_REDUCTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a2abda45f1b1e5bbe193611fb41ae7dfa" prot="public">
+          <name>POWER_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a412ffca781db3a099f287df487667d19" prot="public">
+          <name>POWER_SAVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374ae4634ae4352b512b38c5da9dc1610ca6" prot="public">
+          <name>STANDBY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374ad57e897be0d28a3218fa9fc2eeb650e2" prot="public">
+          <name>EXTENDED_STANDBY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Sleep Modes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>IDLE, ADC_NOISE_REDUCTION, POWER_DOWN, POWER_SAVE, STANDBY, EXTENDED_STANDBY </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="115" column="1" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" bodystart="115" bodyend="126"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MYAVR_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MYAVR_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MACROS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BITMASK(bit)<sp/>(1<sp/>&lt;&lt;<sp/>(bit))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>AVR<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/interrupt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/eeprom.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C/C++</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;WString.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Design<sp/>Patterns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_my_behavioral_design_patterns_8hpp" kindref="compound">MyBehavioralDesignPatterns.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ENUMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8" kindref="member">enum_gpiomodes</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a63d584017f7c02340d67a87f3755085a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a63d584017f7c02340d67a87f3755085a" kindref="member">INPUT_TRI_STATE_1</ref>,</highlight></codeline>
+<codeline lineno="38" refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a851c2ac60276ada62e8d9ba216c7a487" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a851c2ac60276ada62e8d9ba216c7a487" kindref="member">INPUT_PULLUP</ref>,</highlight></codeline>
+<codeline lineno="39" refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8ad6ef398fae2c8923732f80c01a9b4fdb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8ad6ef398fae2c8923732f80c01a9b4fdb" kindref="member">INPUT_TRI_STATE_2</ref>,</highlight></codeline>
+<codeline lineno="40" refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a73010ac0f307d96c97238d8878f14b3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a73010ac0f307d96c97238d8878f14b3e" kindref="member">OUTPUT_SINK</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a8dd6b0345a569bf4a420f510341124b6" kindref="member">OUTPUT_SOURCE</ref></highlight></codeline>
+<codeline lineno="42" refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a8dd6b0345a569bf4a420f510341124b6" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93c" kindref="member">enum_tcmodes</ref><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93ca50d1448013c6f17125caee18aa418af7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93ca50d1448013c6f17125caee18aa418af7" kindref="member">NORMAL</ref>,</highlight></codeline>
+<codeline lineno="52" refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cae4a645162ba5053016798fe8cd8d8ee0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cae4a645162ba5053016798fe8cd8d8ee0" kindref="member">PWM_PHASE_CORRECT</ref>,</highlight></codeline>
+<codeline lineno="53" refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cad472717efbd11a2e3c7a10a2bcece779" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cad472717efbd11a2e3c7a10a2bcece779" kindref="member">CTC</ref>,</highlight></codeline>
+<codeline lineno="54" refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93ca5ac8d17362dfcf008366da62ff1ec646" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93ca5ac8d17362dfcf008366da62ff1ec646" kindref="member">FAST_PWM</ref>,</highlight></codeline>
+<codeline lineno="55" refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93ca96ade528774d486607a39536f307c784" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93ca96ade528774d486607a39536f307c784" kindref="member">PWM_PHASE_CORRECT_COMPARE_A</ref>,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cae0f9ebc0dca5efd0b67c82ec5c97bd1c" kindref="member">FAST_PWM_COMPARE_A</ref></highlight></codeline>
+<codeline lineno="57" refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cae0f9ebc0dca5efd0b67c82ec5c97bd1c" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84" kindref="member">enum_tcprescalers</ref><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ae89f92ea0ffcda1050fe5b523e2655e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ae89f92ea0ffcda1050fe5b523e2655e0" kindref="member">NO_CLOCK_SOURCE</ref>,</highlight></codeline>
+<codeline lineno="85" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ad2ef98ac0d98086868c235ef37670273" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ad2ef98ac0d98086868c235ef37670273" kindref="member">CLK_1</ref>,</highlight></codeline>
+<codeline lineno="86" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a4f4b40052b3e128cbef3e15dd579c50e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a4f4b40052b3e128cbef3e15dd579c50e" kindref="member">CLK_8</ref>,</highlight></codeline>
+<codeline lineno="87" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a48584a4758d577f0fb4c3e1579f03154" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a48584a4758d577f0fb4c3e1579f03154" kindref="member">CLK_32</ref>,</highlight></codeline>
+<codeline lineno="88" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a0a39b4aae1959fc16bbe8382aa2f36de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a0a39b4aae1959fc16bbe8382aa2f36de" kindref="member">CLK_64</ref>,</highlight></codeline>
+<codeline lineno="89" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ae0517226b9353a16475bea667a0a0c10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ae0517226b9353a16475bea667a0a0c10" kindref="member">CLK_128</ref>,</highlight></codeline>
+<codeline lineno="90" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84adb5e9424a002d86170784b48e6943810" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84adb5e9424a002d86170784b48e6943810" kindref="member">CLK_256</ref>,</highlight></codeline>
+<codeline lineno="91" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84add15888bea74c6eeca3a3fb06181b857" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84add15888bea74c6eeca3a3fb06181b857" kindref="member">CLK_1024</ref>,</highlight></codeline>
+<codeline lineno="92" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84abf7407a632cd1a1dc9eaa6fca42ee2a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84abf7407a632cd1a1dc9eaa6fca42ee2a8" kindref="member">EXT_CLK_SOURCE_RISING_EDGE</ref>,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a33416c83ecdef3b829acc08e92983853" kindref="member">EXT_CLK_SOURCE_FALLING_EDGE</ref></highlight></codeline>
+<codeline lineno="94" refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a33416c83ecdef3b829acc08e92983853" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374" kindref="member">enum_sleepmodes</ref><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374afd6a0e4343048b10646dd2976cc5ad18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374afd6a0e4343048b10646dd2976cc5ad18" kindref="member">IDLE</ref>,</highlight></codeline>
+<codeline lineno="120" refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a19e4c86357ccabfaf43e2fabe2189f3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a19e4c86357ccabfaf43e2fabe2189f3c" kindref="member">ADC_NOISE_REDUCTION</ref>,</highlight></codeline>
+<codeline lineno="121" refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a2abda45f1b1e5bbe193611fb41ae7dfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a2abda45f1b1e5bbe193611fb41ae7dfa" kindref="member">POWER_DOWN</ref>,</highlight></codeline>
+<codeline lineno="122" refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a412ffca781db3a099f287df487667d19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a412ffca781db3a099f287df487667d19" kindref="member">POWER_SAVE</ref>,</highlight></codeline>
+<codeline lineno="123" refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374ae4634ae4352b512b38c5da9dc1610ca6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374ae4634ae4352b512b38c5da9dc1610ca6" kindref="member">STANDBY</ref>,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374ad57e897be0d28a3218fa9fc2eeb650e2" kindref="member">EXTENDED_STANDBY</ref></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374ad57e897be0d28a3218fa9fc2eeb650e2" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Plain<sp/>Old<sp/>Data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Für<sp/>Datenübertragung<sp/>zwischen<sp/>Softwarekomponenten</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Regeln:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Einfache<sp/>Datenstrukturen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Nur<sp/>Daten,<sp/>keine<sp/>Methoden</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>kompakt<sp/>und<sp/>leichtgewichtig</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>portabel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>unveränderlich</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="structpod__gpioregister" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpod__gpioregister" kindref="compound">pod_gpioregister</ref><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142" refid="structpod__gpioregister_1acae519b175670a1e742d5fd527ddc5c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="structpod__gpioregister_1acae519b175670a1e742d5fd527ddc5c0" kindref="member">ptrDataDirection</ref><sp/>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>Input/Output<sp/>direction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="structpod__gpioregister_1a703fb7dad21dd88d7d79033b4da8d97e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="structpod__gpioregister_1a703fb7dad21dd88d7d79033b4da8d97e" kindref="member">ptrPort</ref><sp/>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Output<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="structpod__gpioregister_1a635b2c0cd8f1cfd6802be460951d1e70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="structpod__gpioregister_1a635b2c0cd8f1cfd6802be460951d1e70" kindref="member">ptrPin</ref><sp/>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Input<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="structpod__buttonstatus" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpod__buttonstatus" kindref="compound">pod_buttonstatus</ref><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>button<sp/>status<sp/>(PUSHED<sp/>or<sp/>NOT<sp/>PUSHED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="structpod__buttonstatus_1ab4e161628fecde5af7494971e2aabd39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpod__buttonstatus_1ab4e161628fecde5af7494971e2aabd39" kindref="member">pushed</ref><sp/>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>button<sp/>status<sp/>at<sp/>the<sp/>last<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="structpod__buttonstatus_1a9d14dc30e81344522cea101a74714e9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpod__buttonstatus_1a9d14dc30e81344522cea101a74714e9e" kindref="member">flagOldPush</ref><sp/>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="structpod__buttonstatus_1acfff471d10511dac2fc6c1d612e48cbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpod__buttonstatus_1acfff471d10511dac2fc6c1d612e48cbb" kindref="member">risingEdge</ref><sp/>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="structpod__buttonstatus_1a245d018f7d46ec7fd57f58c802603de1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpod__buttonstatus_1a245d018f7d46ec7fd57f58c802603de1" kindref="member">fallingEdge</ref><sp/>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>pushes<sp/>since<sp/>reset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="structpod__buttonstatus_1a1e93bc76f005f56b7629222841a5bb35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpod__buttonstatus_1a1e93bc76f005f56b7629222841a5bb35" kindref="member">numberGetPushed</ref><sp/>{0};</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>invert<sp/>the<sp/>HIGH<sp/>Signal<sp/>(usefull<sp/>if<sp/>pullup<sp/>is<sp/>in<sp/>use)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="structpod__buttonstatus_1ad004f1ea69954b4f47528ffc1a9e525e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpod__buttonstatus_1ad004f1ea69954b4f47528ffc1a9e525e" kindref="member">enableInvert</ref><sp/>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CLASSES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">//<sp/>BASIC<sp/>CLASSES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="class_my_controller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_my_controller" kindref="compound">MyController</ref><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DATA<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>CPU<sp/>Frequenz<sp/>-<sp/>Atmega328p<sp/>standard<sp/>=<sp/>8<sp/>Mhz<sp/>-&gt;<sp/>8000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//unsigned<sp/>long<sp/>cpuFreq_;<sp/>//<sp/>handle<sp/>everything<sp/>with<sp/>F_CPU<sp/>Makro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>GETTER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_my_controller_1a7b49b818dd3b640cbeece0f42f00944d" kindref="member">getBit</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;reg,<sp/>uint8_t<sp/>bit);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SETTER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b" kindref="member">setBit</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;reg,<sp/>uint8_t<sp/>bit,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_controller_1a552532ef8cb1a262be9029c7609a62c6" kindref="member">setBitMask</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;reg,<sp/>uint8_t<sp/>bit_mask,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_controller_1a9861e8a403627e884a0bfbc837cf0723" kindref="member">setGpioConfig</ref>(<ref refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8" kindref="member">enum_gpiomodes</ref><sp/>mode,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;ddxn,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;portxn,<sp/>uint8_t<sp/>bit);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>EXECUTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_controller_1a394f574554f9120822501bac762ac7a1" kindref="member">execNop</ref>();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_controller_1aad1dc8b4b2b15ed34db85f46514349a4" kindref="member">execDelayUs</ref>(uint16_t<sp/>us);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_controller_1a452b611e91abf97cc6caeacc4949dbc4" kindref="member">execDelayMs</ref>(uint32_t<sp/>ms);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CLEAR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7" kindref="member">clearBit</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;reg,<sp/>uint8_t<sp/>bit);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd" kindref="member">clearBitMask</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;reg,<sp/>uint8_t<sp/>bit_mask);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="comment">//<sp/>µController</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ATMEGAs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ATMEGA328p</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_atmega328p_i_s_r_8h" kindref="compound">Atmega328pISR.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_my_atmega328p_8hpp" kindref="compound">MyAtmega328p.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">//<sp/>PERIPHERALS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="comment">//<sp/>BUTTONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_my_button_8hpp" kindref="compound">MyButton.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_my_button_matrix2x2_8hpp" kindref="compound">MyButtonMatrix2x2.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp"/>
+  </compounddef>
+</doxygen>

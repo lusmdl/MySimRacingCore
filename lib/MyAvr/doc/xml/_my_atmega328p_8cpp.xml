@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_my_atmega328p_8cpp" kind="file" language="C++">
+    <compoundname>MyAtmega328p.cpp</compoundname>
+    <includes refid="_my_atmega328p_8hpp" local="yes">MyAtmega328p.hpp</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>Atmega328pISR.h</label>
+        <link refid="_atmega328p_i_s_r_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp</label>
+        <link refid="_my_atmega328p_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MyAtmega328p.hpp</label>
+        <link refid="_my_atmega328p_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MyAvr.hpp</label>
+        <link refid="_my_avr_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>MyBehavioralDesignPatterns.hpp</label>
+        <link refid="_my_behavioral_design_patterns_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>MyButton.hpp</label>
+        <link refid="_my_button_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>MyButtonMatrix2x2.hpp</label>
+        <link refid="_my_button_matrix2x2_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>WString.h</label>
+      </node>
+      <node id="6">
+        <label>avr/eeprom.h</label>
+      </node>
+      <node id="5">
+        <label>avr/interrupt.h</label>
+      </node>
+      <node id="4">
+        <label>avr/io.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>HEADER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_my_atmega328p_8hpp" kindref="compound">MyAtmega328p.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_my_atmega328p_1a5ba27c7a67683a56e9344f45013357b2" refkind="member"><highlight class="normal">MyAtmega328p<sp/>::MyAtmega328p(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>f_cpu)<sp/>{}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_my_atmega328p_1a2a0dd016860c999d1e4c6b5c8cbedb40" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyAtmega328p<sp/>::writeToEEPROM(uint16_t<sp/>address,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;str)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(address<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>address<sp/>&lt;<sp/>E2END)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Speicherzugriff<sp/>einschränken<sp/>auf<sp/>den<sp/>EEPROM-Bereich</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length<sp/>=<sp/>str.length();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(length<sp/>&gt;<sp/>E2END<sp/>-<sp/>address)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>length<sp/>=<sp/>E2END<sp/>-<sp/>address;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>eeprom_write_block(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(str.c_str()),<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(address),<sp/>length);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_my_atmega328p_1ab35eca0553fbccec30f84528b9ea1473" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyAtmega328p<sp/>::readFromEEPROM(uint16_t<sp/>address,<sp/>String<sp/>&amp;str,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size_buffer)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(address<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>address<sp/>&lt;<sp/>E2END)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Überprüfen,<sp/>ob<sp/>Adresse<sp/>innerhalb<sp/>des<sp/>EEPROM-Bereichs<sp/>liegt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length<sp/>=<sp/>E2END<sp/>-<sp/>address;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(length<sp/>&gt;<sp/>size_buffer)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>length<sp/>=<sp/>size_buffer;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">[length<sp/>+<sp/>1];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>eeprom_read_block(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(buffer),<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(address),<sp/>length);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer[length]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>str<sp/>=<sp/>buffer;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>buffer;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_my_atmega328p_1a624c2bc2597cd99201a79695948d5b7d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyAtmega328p<sp/>::writeToEEPROM(uint16_t<sp/>address,<sp/>uint8_t<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(address<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>address<sp/>&lt;<sp/>E2END)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Speicher-Zugriff<sp/>einschränken<sp/>auf<sp/>Adressebereich<sp/>des<sp/>EEPROM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>eeprom_write_byte((uint8_t*)address,<sp/>value);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="class_my_atmega328p_1a7c6d57660b7cbcb735225dfdeb569ec7" refkind="member"><highlight class="normal">uint8_t<sp/>MyAtmega328p<sp/>::readFromEEPROM(uint16_t<sp/>address)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(address<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>address<sp/>&lt;<sp/>E2END)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Überprüfen,<sp/>ob<sp/>Adresse<sp/>innerhalb<sp/>des<sp/>EEPROM-Bereichs<sp/>liegt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>eeprom_read_byte((uint8_t*)address);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight><highlight class="comment">//<sp/>Rückgabewert,<sp/>wenn<sp/>Adresse<sp/>ungültig<sp/>ist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="class_my_atmega328p_1a3d77b3e0b30c518b80a0c33f7ae32cf1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyAtmega328p<sp/>::execTest(uint16_t<sp/>delay)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Den<sp/>digitalen<sp/>Pin<sp/>als<sp/>Ausgang<sp/>konfigurieren</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>DDRB<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>DDB5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>setBit(DDRB,<sp/>DDB5,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Die<sp/>LED<sp/>einschalten</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>PORTB<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>PORTB5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>setBit(PORTB,<sp/>DDB5,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>execDelayMs(delay);<sp/></highlight><highlight class="comment">//<sp/>Eine<sp/>Sekunde<sp/>warten</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Die<sp/>LED<sp/>ausschalten</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>PORTB<sp/>&amp;=<sp/>~(1<sp/>&lt;&lt;<sp/>PORTB5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>setBit(PORTB,<sp/>DDB5,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>execDelayMs(delay);<sp/></highlight><highlight class="comment">//<sp/>Eine<sp/>Sekunde<sp/>warten</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="class_my_atmega328p_1ae9f22826b9792dff1dea0ae81655ba39" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyAtmega328p<sp/>::initUart(uint32_t<sp/>baudrate)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>uint16_t<sp/>ubrr<sp/>=<sp/>F_CPU<sp/>/<sp/>(16<sp/>*<sp/>baudrate)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>baud<sp/>rate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>UBRR0H<sp/>=<sp/>(uint8_t)(ubrr<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>UBRR0L<sp/>=<sp/>(uint8_t)ubrr;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Enable<sp/>receiver<sp/>and<sp/>transmitter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>UCSR0B<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>RXEN0)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>TXEN0);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>frame<sp/>format:<sp/>8data,<sp/>2stop<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>UCSR0C<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>UCSZ01)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>UCSZ00);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>UCSR0C<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>USBS0)<sp/>|<sp/>(3<sp/>&lt;&lt;<sp/>UCSZ00);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>printUart(</highlight><highlight class="stringliteral">&quot;\nHello<sp/>World!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyAtmega328p<sp/>::sendCharUart(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!(UCSR0A<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>UDRE0)));</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>UDR0<sp/>=<sp/>c;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="class_my_atmega328p_1a23a876fa091060f4ecc2c97867eda9fd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyAtmega328p<sp/>::printUart(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str)<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>strlen(str);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>len;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>sendCharUart(str[i]);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="class_my_atmega328p_1a7797458cad34ae94a44317aba2b89a01" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_atmega328p_1a23a876fa091060f4ecc2c97867eda9fd" kindref="member">MyAtmega328p::printUart</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;str)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>str.length();</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>len;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>sendCharUart(str.charAt(i));</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="class_my_atmega328p_1a026186c45b5f43ca2c6c5135e003190f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyAtmega328p<sp/>::setTC0Config(<ref refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93c" kindref="member">enum_tcmodes</ref><sp/>mode,<sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84" kindref="member">enum_tcprescalers</ref><sp/>prescaler,<sp/>uint8_t<sp/>value_top)<sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Konfiguriere<sp/>Timer/Counter<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>Mode<sp/><sp/>|<sp/>WGM02<sp/>|<sp/>WGM01<sp/>|<sp/>WGM00<sp/>|<sp/>Timer/Counter<sp/>Mode<sp/>of<sp/>Operation<sp/>|<sp/>TOP<sp/><sp/><sp/>|<sp/>Update<sp/>of<sp/>OCR0x<sp/>at<sp/>TOV<sp/>Flag<sp/>Set<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>0<sp/><sp/><sp/><sp/><sp/>|<sp/>0<sp/><sp/><sp/><sp/><sp/>|<sp/>0<sp/><sp/><sp/><sp/><sp/>|<sp/>0<sp/><sp/><sp/><sp/><sp/>|<sp/>Normal<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>0xFF<sp/><sp/>|<sp/>Immediate<sp/>MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>1<sp/><sp/><sp/><sp/><sp/>|<sp/>0<sp/><sp/><sp/><sp/><sp/>|<sp/>0<sp/><sp/><sp/><sp/><sp/>|<sp/>1<sp/><sp/><sp/><sp/><sp/>|<sp/>PWM,<sp/>Phase<sp/>Correct<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>0xFF<sp/><sp/>|<sp/>TOP<sp/>BOTTOM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>2<sp/><sp/><sp/><sp/><sp/>|<sp/>0<sp/><sp/><sp/><sp/><sp/>|<sp/>1<sp/><sp/><sp/><sp/><sp/>|<sp/>0<sp/><sp/><sp/><sp/><sp/>|<sp/>CTC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>OCRA<sp/><sp/>|<sp/>Immediate<sp/>MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>3<sp/><sp/><sp/><sp/><sp/>|<sp/>0<sp/><sp/><sp/><sp/><sp/>|<sp/>1<sp/><sp/><sp/><sp/><sp/>|<sp/>1<sp/><sp/><sp/><sp/><sp/>|<sp/>Fast<sp/>PWM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>0xFF<sp/><sp/>|<sp/>BOTTOM<sp/>MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>5<sp/><sp/><sp/><sp/><sp/>|<sp/>1<sp/><sp/><sp/><sp/><sp/>|<sp/>0<sp/><sp/><sp/><sp/><sp/>|<sp/>1<sp/><sp/><sp/><sp/><sp/>|<sp/>PWM,<sp/>Phase<sp/>Correct<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>OCRA<sp/><sp/>|<sp/>TOP<sp/>BOTTOM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>7<sp/><sp/><sp/><sp/><sp/>|<sp/>1<sp/><sp/><sp/><sp/><sp/>|<sp/>1<sp/><sp/><sp/><sp/><sp/>|<sp/>1<sp/><sp/><sp/><sp/><sp/>|<sp/>Fast<sp/>PWM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>OCRA<sp/><sp/>|<sp/>BOTTOM<sp/>TOP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(mode)<sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cad472717efbd11a2e3c7a10a2bcece779" kindref="member">CTC</ref>:</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ctc<sp/>modus<sp/>einrichten</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(TCCR0A,<sp/>WGM00,<sp/>0);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(TCCR0A,<sp/>WGM01,<sp/>1);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(TCCR0B,<sp/>WGM02,<sp/>0);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>prescaler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>setTC01Prescaler(prescaler,<sp/>TCCR0B,<sp/>CS02,<sp/>CS01,<sp/>CS00);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setze<sp/>den<sp/>Vergleichswert<sp/>für<sp/>den<sp/>CTC-Modus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="306"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>don&apos;t<sp/>use<sp/>this<sp/>calculation.<sp/>Do<sp/>this<sp/>in<sp/>the<sp/>main<sp/>code<sp/>instead!</highlight></codeline>
+<codeline lineno="307"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>auto<sp/>clkPerMillisekond<sp/>{<sp/>(<sp/>cpuFreq<sp/>/<sp/>n<sp/>)<sp/>/<sp/>1000<sp/>};</highlight></codeline>
+<codeline lineno="308"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>OCR0A<sp/>=<sp/>(<sp/>(<sp/>clkPerMillisekond<sp/>*<sp/>topTime<sp/>)<sp/>-<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="309"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>OCR0A<sp/>=<sp/>value_top;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>interrupt<sp/>aktivieren</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(TIMSK0,<sp/>OCIE0A);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sei();</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal">uint32_t<sp/>MyAtmega328p<sp/>::setTC01Prescaler(<ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84" kindref="member">enum_tcprescalers</ref><sp/>prescaler,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;reg,<sp/>uint8_t<sp/>bit_02,<sp/>uint8_t<sp/>bit_01,<sp/>uint8_t<sp/>bit_00)<sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Prescaler<sp/>Tabelle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|02<sp/>|01<sp/>|00<sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>0<sp/>|<sp/>0<sp/>|<sp/>0<sp/>|<sp/>No<sp/>clock<sp/>source<sp/>(Timer/Counter<sp/>stopped)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>0<sp/>|<sp/>0<sp/>|<sp/>1<sp/>|<sp/>clkI/O/1<sp/>(No<sp/>prescaling)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>0<sp/>|<sp/>1<sp/>|<sp/>0<sp/>|<sp/>clkI/O/8<sp/>(From<sp/>prescaler)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>0<sp/>|<sp/>1<sp/>|<sp/>1<sp/>|<sp/>clkI/O/64<sp/>(From<sp/>prescaler)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>1<sp/>|<sp/>0<sp/>|<sp/>0<sp/>|<sp/>clkI/O/256<sp/>(From<sp/>prescaler)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>1<sp/>|<sp/>0<sp/>|<sp/>1<sp/>|<sp/>clkI/O/1024<sp/>(From<sp/>prescaler)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>1<sp/>|<sp/>1<sp/>|<sp/>0<sp/>|<sp/>External<sp/>clock<sp/>source<sp/>on<sp/>T0<sp/>pin.<sp/>Clock<sp/>on<sp/>falling<sp/>edge.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|<sp/>1<sp/>|<sp/>1<sp/>|<sp/>1<sp/>|<sp/>External<sp/>clock<sp/>source<sp/>on<sp/>T0<sp/>pin.<sp/>Clock<sp/>on<sp/>rising<sp/>edge.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(prescaler)<sp/>{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ad2ef98ac0d98086868c235ef37670273" kindref="member">CLK_1</ref>:</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_00,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_01,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_02,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a4f4b40052b3e128cbef3e15dd579c50e" kindref="member">CLK_8</ref>:</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_00,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_01,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_02,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>8;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a0a39b4aae1959fc16bbe8382aa2f36de" kindref="member">CLK_64</ref>:</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_00,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_01,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_02,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>64;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84adb5e9424a002d86170784b48e6943810" kindref="member">CLK_256</ref>:</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_00,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_01,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_02,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>256;</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84add15888bea74c6eeca3a3fb06181b857" kindref="member">CLK_1024</ref>:</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_00,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_01,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_02,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1024;</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a33416c83ecdef3b829acc08e92983853" kindref="member">EXT_CLK_SOURCE_FALLING_EDGE</ref>:</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_00,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_01,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_02,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84abf7407a632cd1a1dc9eaa6fca42ee2a8" kindref="member">EXT_CLK_SOURCE_RISING_EDGE</ref>:</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_00,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_01,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_02,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_00,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_01,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setBit(reg,<sp/>bit_02,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="454" refid="class_my_atmega328p_1a91986a3df6ec4032907aacf06696a8a6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_atmega328p_1a91986a3df6ec4032907aacf06696a8a6" kindref="member">MyAtmega328p::execSleep</ref>(<ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374" kindref="member">enum_sleepmodes</ref><sp/>mode,<sp/>uint8_t<sp/>bits_power_reduction,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable_bod_sleep)<sp/>{</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Disable<sp/>interrupts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/>cli();</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Disable<sp/>sleep<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><ref refid="class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b" kindref="member">setBit</ref>(MCUCR,<sp/>SE,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>requested<sp/>sleep<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(mode)<sp/>{</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374afd6a0e4343048b10646dd2976cc5ad18" kindref="member">IDLE</ref>:</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd" kindref="member">clearBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM0)<sp/>|<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM1)<sp/>|<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM2));</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a19e4c86357ccabfaf43e2fabe2189f3c" kindref="member">ADC_NOISE_REDUCTION</ref>:</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1a552532ef8cb1a262be9029c7609a62c6" kindref="member">setBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM0));</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd" kindref="member">clearBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM1)<sp/>|<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM2));</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a2abda45f1b1e5bbe193611fb41ae7dfa" kindref="member">POWER_DOWN</ref>:</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1a552532ef8cb1a262be9029c7609a62c6" kindref="member">setBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM1));</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd" kindref="member">clearBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM2)<sp/>|<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM0));<sp/></highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a412ffca781db3a099f287df487667d19" kindref="member">POWER_SAVE</ref>:</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1a552532ef8cb1a262be9029c7609a62c6" kindref="member">setBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM0)<sp/>|<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM1));</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd" kindref="member">clearBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM2));</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374ae4634ae4352b512b38c5da9dc1610ca6" kindref="member">STANDBY</ref>:</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>recommend<sp/>for<sp/>use<sp/>with<sp/>external<sp/>crystals<sp/>or<sp/>resonators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd" kindref="member">clearBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM0));</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1a552532ef8cb1a262be9029c7609a62c6" kindref="member">setBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM1)<sp/>|<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM2));</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374ad57e897be0d28a3218fa9fc2eeb650e2" kindref="member">EXTENDED_STANDBY</ref>:</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>recommend<sp/>for<sp/>use<sp/>with<sp/>external<sp/>crystals<sp/>or<sp/>resonators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1a552532ef8cb1a262be9029c7609a62c6" kindref="member">setBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM0)<sp/>|<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM1)<sp/>|<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM2)<sp/>);<sp/></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Invalid<sp/>sleep<sp/>mode,<sp/>return<sp/>imidiately</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"></highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>power<sp/>reduction<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/>PRR<sp/>|=<sp/>bits_power_reduction;</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable_bod_sleep)<sp/>{</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Enable<sp/>BODS<sp/>bit<sp/>and<sp/>set<sp/>BODS<sp/>to<sp/>disable<sp/>BOD<sp/>in<sp/>sleep<sp/>mode<sp/>if<sp/>enableBODSleep<sp/>is<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b" kindref="member">setBit</ref>(MCUCR,<sp/>BODS);</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b" kindref="member">setBit</ref>(MCUCR,<sp/>BODSE);</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7" kindref="member">clearBit</ref>(MCUCR,<sp/>BODSE);</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Delay<sp/>for<sp/>three<sp/>clock<sp/>cycles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;nop&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;nop&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;nop&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"></highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Enable<sp/>sleep<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><ref refid="class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b" kindref="member">setBit</ref>(SMCR,<sp/>SE);</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Enable<sp/>interrupts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/>sei();</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"></highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Enter<sp/>sleep<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;sleep&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"></highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Execution<sp/>will<sp/>resume<sp/>here<sp/>after<sp/>waking<sp/>up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>power<sp/>reduction<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/>PRR<sp/>&amp;=<sp/>~bits_power_reduction;</highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable_bod_sleep)<sp/>{</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Re-enable<sp/>BOD<sp/>after<sp/>sleep<sp/>mode<sp/>if<sp/>enableBODSleep<sp/>is<sp/>true<sp/>(optional)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7" kindref="member">clearBit</ref>(MCUCR,<sp/>BODS);</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Disable<sp/>sleep<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="557"><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><ref refid="class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b" kindref="member">setBit</ref>(MCUCR,<sp/>SE,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><ref refid="class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd" kindref="member">clearBitMask</ref>(SMCR,<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM0)<sp/>|<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM1)<sp/>|<sp/><ref refid="_my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600" kindref="member">BITMASK</ref>(SM2));</highlight></codeline>
+<codeline lineno="560"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp"/>
+  </compounddef>
+</doxygen>

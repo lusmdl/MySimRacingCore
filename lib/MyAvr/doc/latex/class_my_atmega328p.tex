@@ -1,0 +1,216 @@
+\doxysection{My\+Atmega328p Class Reference}
+\hypertarget{class_my_atmega328p}{}\label{class_my_atmega328p}\index{MyAtmega328p@{MyAtmega328p}}
+
+
+class for Microchip ATMEGA 328p  
+
+
+
+
+{\ttfamily \#include $<$My\+Atmega328p.\+hpp$>$}
+
+Inheritance diagram for My\+Atmega328p\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_atmega328p}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_my_atmega328p_a5ba27c7a67683a56e9344f45013357b2}{My\+Atmega328p}} (unsigned long f\+\_\+cpu=F\+\_\+\+CPU)
+\item 
+void \mbox{\hyperlink{class_my_atmega328p_a026186c45b5f43ca2c6c5135e003190f}{set\+TC0\+Config}} (\mbox{\hyperlink{_my_avr_8hpp_a6254561796d46c748001adeaf5e6d93c}{enum\+\_\+tcmodes}} mode, \mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84}{enum\+\_\+tcprescalers}} prescaler, uint8\+\_\+t value\+\_\+top=255)
+\item 
+void \mbox{\hyperlink{class_my_atmega328p_a23a876fa091060f4ecc2c97867eda9fd}{print\+Uart}} (const char \texorpdfstring{$\ast$}{*}str)
+\item 
+void \mbox{\hyperlink{class_my_atmega328p_a7797458cad34ae94a44317aba2b89a01}{print\+Uart}} (const String \&str)
+\item 
+void \mbox{\hyperlink{class_my_atmega328p_a624c2bc2597cd99201a79695948d5b7d}{write\+To\+EEPROM}} (uint16\+\_\+t address, uint8\+\_\+t value)
+\item 
+void \mbox{\hyperlink{class_my_atmega328p_a2a0dd016860c999d1e4c6b5c8cbedb40}{write\+To\+EEPROM}} (uint16\+\_\+t address, const String \&str)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_my_atmega328p_a7c6d57660b7cbcb735225dfdeb569ec7}{read\+From\+EEPROM}} (uint16\+\_\+t address)
+\item 
+void \mbox{\hyperlink{class_my_atmega328p_ab35eca0553fbccec30f84528b9ea1473}{read\+From\+EEPROM}} (uint16\+\_\+t address, String \&str, size\+\_\+t size\+\_\+buffer)
+\item 
+void \mbox{\hyperlink{class_my_atmega328p_ae9f22826b9792dff1dea0ae81655ba39}{init\+Uart}} (uint32\+\_\+t baudrate)
+\item 
+void \mbox{\hyperlink{class_my_atmega328p_a3d77b3e0b30c518b80a0c33f7ae32cf1}{exec\+Test}} (uint16\+\_\+t delay)
+\item 
+void \mbox{\hyperlink{class_my_atmega328p_a91986a3df6ec4032907aacf06696a8a6}{exec\+Sleep}} (\mbox{\hyperlink{_my_avr_8hpp_a5ea866ecdf7cb2426827d8cc01425374}{enum\+\_\+sleepmodes}} mode, uint8\+\_\+t bits\+\_\+power\+\_\+reduction, bool enable\+\_\+bod\+\_\+sleep)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_my_controller}{My\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_my_controller_a7b49b818dd3b640cbeece0f42f00944d}{get\+Bit}} (volatile uint8\+\_\+t \&reg, uint8\+\_\+t bit)
+\item 
+void \mbox{\hyperlink{class_my_controller_ae7487dc0d9d6d550e354b0e7153ac76b}{set\+Bit}} (volatile uint8\+\_\+t \&reg, uint8\+\_\+t bit, bool value=true)
+\item 
+void \mbox{\hyperlink{class_my_controller_a552532ef8cb1a262be9029c7609a62c6}{set\+Bit\+Mask}} (volatile uint8\+\_\+t \&reg, uint8\+\_\+t bit\+\_\+mask, bool value=true)
+\item 
+void \mbox{\hyperlink{class_my_controller_a9861e8a403627e884a0bfbc837cf0723}{set\+Gpio\+Config}} (\mbox{\hyperlink{_my_avr_8hpp_a105ae23d3b40bf5ab26939bc88c849f8}{enum\+\_\+gpiomodes}} mode, volatile uint8\+\_\+t \&ddxn, volatile uint8\+\_\+t \&portxn, uint8\+\_\+t bit)
+\item 
+void \mbox{\hyperlink{class_my_controller_a394f574554f9120822501bac762ac7a1}{exec\+Nop}} ()
+\item 
+void \mbox{\hyperlink{class_my_controller_aad1dc8b4b2b15ed34db85f46514349a4}{exec\+Delay\+Us}} (uint16\+\_\+t us)
+\item 
+void \mbox{\hyperlink{class_my_controller_a452b611e91abf97cc6caeacc4949dbc4}{exec\+Delay\+Ms}} (uint32\+\_\+t ms)
+\item 
+void \mbox{\hyperlink{class_my_controller_ac11d8131f2a39a638ace4418adeebbd7}{clear\+Bit}} (volatile uint8\+\_\+t \&reg, uint8\+\_\+t bit)
+\item 
+void \mbox{\hyperlink{class_my_controller_af0956247c7fafc6d5797b3e0fa7d09cd}{clear\+Bit\+Mask}} (volatile uint8\+\_\+t \&reg, uint8\+\_\+t bit\+\_\+mask)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint64\+\_\+t \mbox{\hyperlink{class_my_atmega328p_a48b948166671df44293adacc41aade0d}{millis\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for Microchip ATMEGA 328p 
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_my_atmega328p_8hpp_source}{My\+Atmega328p.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_my_atmega328p_a5ba27c7a67683a56e9344f45013357b2}\label{class_my_atmega328p_a5ba27c7a67683a56e9344f45013357b2} 
+\index{MyAtmega328p@{MyAtmega328p}!MyAtmega328p@{MyAtmega328p}}
+\index{MyAtmega328p@{MyAtmega328p}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{MyAtmega328p()}{MyAtmega328p()}}
+{\footnotesize\ttfamily My\+Atmega328p\+::\+My\+Atmega328p (\begin{DoxyParamCaption}\item[{unsigned long}]{f\+\_\+cpu = {\ttfamily F\+\_\+CPU} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_my_atmega328p_a91986a3df6ec4032907aacf06696a8a6}\label{class_my_atmega328p_a91986a3df6ec4032907aacf06696a8a6} 
+\index{MyAtmega328p@{MyAtmega328p}!execSleep@{execSleep}}
+\index{execSleep@{execSleep}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{execSleep()}{execSleep()}}
+{\footnotesize\ttfamily void My\+Atmega328p\+::exec\+Sleep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_my_avr_8hpp_a5ea866ecdf7cb2426827d8cc01425374}{enum\+\_\+sleepmodes}}}]{mode,  }\item[{uint8\+\_\+t}]{bits\+\_\+power\+\_\+reduction,  }\item[{bool}]{enable\+\_\+bod\+\_\+sleep }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Atmega328p.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00454}{454}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+\Hypertarget{class_my_atmega328p_a3d77b3e0b30c518b80a0c33f7ae32cf1}\label{class_my_atmega328p_a3d77b3e0b30c518b80a0c33f7ae32cf1} 
+\index{MyAtmega328p@{MyAtmega328p}!execTest@{execTest}}
+\index{execTest@{execTest}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{execTest()}{execTest()}}
+{\footnotesize\ttfamily void My\+Atmega328p\+::exec\+Test (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{delay }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00145}{145}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+\Hypertarget{class_my_atmega328p_ae9f22826b9792dff1dea0ae81655ba39}\label{class_my_atmega328p_ae9f22826b9792dff1dea0ae81655ba39} 
+\index{MyAtmega328p@{MyAtmega328p}!initUart@{initUart}}
+\index{initUart@{initUart}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{initUart()}{initUart()}}
+{\footnotesize\ttfamily void My\+Atmega328p\+::init\+Uart (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00177}{177}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+\Hypertarget{class_my_atmega328p_a23a876fa091060f4ecc2c97867eda9fd}\label{class_my_atmega328p_a23a876fa091060f4ecc2c97867eda9fd} 
+\index{MyAtmega328p@{MyAtmega328p}!printUart@{printUart}}
+\index{printUart@{printUart}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{printUart()}{printUart()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void My\+Atmega328p\+::print\+Uart (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Atmega328p.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00231}{231}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+\Hypertarget{class_my_atmega328p_a7797458cad34ae94a44317aba2b89a01}\label{class_my_atmega328p_a7797458cad34ae94a44317aba2b89a01} 
+\index{MyAtmega328p@{MyAtmega328p}!printUart@{printUart}}
+\index{printUart@{printUart}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{printUart()}{printUart()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void My\+Atmega328p\+::print\+Uart (\begin{DoxyParamCaption}\item[{const String \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00254}{254}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+\Hypertarget{class_my_atmega328p_a7c6d57660b7cbcb735225dfdeb569ec7}\label{class_my_atmega328p_a7c6d57660b7cbcb735225dfdeb569ec7} 
+\index{MyAtmega328p@{MyAtmega328p}!readFromEEPROM@{readFromEEPROM}}
+\index{readFromEEPROM@{readFromEEPROM}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{readFromEEPROM()}{readFromEEPROM()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t My\+Atmega328p\+::read\+From\+EEPROM (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+\Hypertarget{class_my_atmega328p_ab35eca0553fbccec30f84528b9ea1473}\label{class_my_atmega328p_ab35eca0553fbccec30f84528b9ea1473} 
+\index{MyAtmega328p@{MyAtmega328p}!readFromEEPROM@{readFromEEPROM}}
+\index{readFromEEPROM@{readFromEEPROM}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{readFromEEPROM()}{readFromEEPROM()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void My\+Atmega328p\+::read\+From\+EEPROM (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{address,  }\item[{String \&}]{str,  }\item[{size\+\_\+t}]{size\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+\Hypertarget{class_my_atmega328p_a026186c45b5f43ca2c6c5135e003190f}\label{class_my_atmega328p_a026186c45b5f43ca2c6c5135e003190f} 
+\index{MyAtmega328p@{MyAtmega328p}!setTC0Config@{setTC0Config}}
+\index{setTC0Config@{setTC0Config}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{setTC0Config()}{setTC0Config()}}
+{\footnotesize\ttfamily void My\+Atmega328p\+::set\+TC0\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_my_avr_8hpp_a6254561796d46c748001adeaf5e6d93c}{enum\+\_\+tcmodes}}}]{mode,  }\item[{\mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84}{enum\+\_\+tcprescalers}}}]{prescaler,  }\item[{uint8\+\_\+t}]{value\+\_\+top = {\ttfamily 255} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00278}{278}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+\Hypertarget{class_my_atmega328p_a2a0dd016860c999d1e4c6b5c8cbedb40}\label{class_my_atmega328p_a2a0dd016860c999d1e4c6b5c8cbedb40} 
+\index{MyAtmega328p@{MyAtmega328p}!writeToEEPROM@{writeToEEPROM}}
+\index{writeToEEPROM@{writeToEEPROM}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{writeToEEPROM()}{writeToEEPROM()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void My\+Atmega328p\+::write\+To\+EEPROM (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{address,  }\item[{const String \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+\Hypertarget{class_my_atmega328p_a624c2bc2597cd99201a79695948d5b7d}\label{class_my_atmega328p_a624c2bc2597cd99201a79695948d5b7d} 
+\index{MyAtmega328p@{MyAtmega328p}!writeToEEPROM@{writeToEEPROM}}
+\index{writeToEEPROM@{writeToEEPROM}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{writeToEEPROM()}{writeToEEPROM()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void My\+Atmega328p\+::write\+To\+EEPROM (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{address,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{_my_atmega328p_8cpp_source}{My\+Atmega328p.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_my_atmega328p_a48b948166671df44293adacc41aade0d}\label{class_my_atmega328p_a48b948166671df44293adacc41aade0d} 
+\index{MyAtmega328p@{MyAtmega328p}!millis\_@{millis\_}}
+\index{millis\_@{millis\_}!MyAtmega328p@{MyAtmega328p}}
+\doxysubsubsection{\texorpdfstring{millis\_}{millis\_}}
+{\footnotesize\ttfamily volatile uint64\+\_\+t My\+Atmega328p\+::millis\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{_my_atmega328p_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{_my_atmega328p_8hpp_source}{My\+Atmega328p.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\mbox{\hyperlink{_my_atmega328p_8hpp}{My\+Atmega328p.\+hpp}}\item 
+C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\mbox{\hyperlink{_my_atmega328p_8cpp}{My\+Atmega328p.\+cpp}}\end{DoxyCompactItemize}

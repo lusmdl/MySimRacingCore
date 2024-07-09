@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__my_avr_8cpp_source" xml:lang="en-US">
+<title>MyAvr.cpp</title>
+<indexterm><primary>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__my_avr_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__my_avr_8cpp_source_1l00002"/>00002 <emphasis role="comment">//&#32;HEADER</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__my_avr_8hpp">MyAvr.hpp</link>&quot;</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00004"/>00004 
+<anchor xml:id="__my_avr_8cpp_source_1l00005"/>00005 
+<anchor xml:id="__my_avr_8cpp_source_1l00024"/><link linkend="_class_my_controller_1a7b49b818dd3b640cbeece0f42f00944d">00024</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_my_controller_1a7b49b818dd3b640cbeece0f42f00944d">MyController::getBit</link>(<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;&amp;reg,&#32;uint8_t&#32;bit)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00025"/>00025 
+<anchor xml:id="__my_avr_8cpp_source_1l00026"/>00026 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;((reg&#32;&amp;&#32;(1&#32;&lt;&lt;&#32;bit))&#32;!=&#32;0);
+<anchor xml:id="__my_avr_8cpp_source_1l00027"/>00027 }
+<anchor xml:id="__my_avr_8cpp_source_1l00028"/>00028 
+<anchor xml:id="__my_avr_8cpp_source_1l00029"/>00029 
+<anchor xml:id="__my_avr_8cpp_source_1l00046"/><link linkend="_class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b">00046</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b">MyController::setBit</link>(<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;&amp;reg,&#32;uint8_t&#32;bit,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;value)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00047"/>00047 
+<anchor xml:id="__my_avr_8cpp_source_1l00048"/>00048 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(value)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00049"/>00049 
+<anchor xml:id="__my_avr_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;reg&#32;|=&#32;(1&#32;&lt;&lt;&#32;bit);&#32;<emphasis role="comment">//&#32;set&#32;the&#32;bit&#32;to&#32;1</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00051"/>00051 &#32;&#32;}
+<anchor xml:id="__my_avr_8cpp_source_1l00052"/>00052 &#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;reg&#32;&amp;=&#32;~(1&#32;&lt;&lt;&#32;bit);&#32;<emphasis role="comment">//&#32;set&#32;the&#32;bit&#32;to&#32;0</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00054"/>00054 &#32;&#32;}
+<anchor xml:id="__my_avr_8cpp_source_1l00055"/>00055 }
+<anchor xml:id="__my_avr_8cpp_source_1l00056"/>00056 
+<anchor xml:id="__my_avr_8cpp_source_1l00057"/>00057 
+<anchor xml:id="__my_avr_8cpp_source_1l00073"/><link linkend="_class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7">00073</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7">MyController::clearBit</link>(<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;&amp;reg,&#32;uint8_t&#32;bit)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00074"/>00074 &#32;&#32;
+<anchor xml:id="__my_avr_8cpp_source_1l00075"/>00075 &#32;&#32;reg&#32;&amp;=&#32;~(1&#32;&lt;&lt;&#32;bit);&#32;<emphasis role="comment">//&#32;set&#32;the&#32;bit&#32;to&#32;0</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00076"/>00076 }
+<anchor xml:id="__my_avr_8cpp_source_1l00077"/>00077 
+<anchor xml:id="__my_avr_8cpp_source_1l00078"/>00078 
+<anchor xml:id="__my_avr_8cpp_source_1l00099"/><link linkend="_class_my_controller_1a552532ef8cb1a262be9029c7609a62c6">00099</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_controller_1a552532ef8cb1a262be9029c7609a62c6">MyController::setBitMask</link>(<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;&amp;reg,&#32;uint8_t&#32;bit_mask,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;value)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00100"/>00100 
+<anchor xml:id="__my_avr_8cpp_source_1l00101"/>00101 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(value)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00102"/>00102 
+<anchor xml:id="__my_avr_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;reg&#32;|=&#32;bit_mask;&#32;<emphasis role="comment">//&#32;set&#32;the&#32;bit&#32;to&#32;1</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00104"/>00104 &#32;&#32;}&#32;
+<anchor xml:id="__my_avr_8cpp_source_1l00105"/>00105 &#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00106"/>00106 
+<anchor xml:id="__my_avr_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;reg&#32;&amp;=&#32;~bit_mask;&#32;<emphasis role="comment">//&#32;set&#32;the&#32;bit&#32;to&#32;0</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00108"/>00108 &#32;&#32;}
+<anchor xml:id="__my_avr_8cpp_source_1l00109"/>00109 }
+<anchor xml:id="__my_avr_8cpp_source_1l00110"/>00110 
+<anchor xml:id="__my_avr_8cpp_source_1l00111"/>00111 
+<anchor xml:id="__my_avr_8cpp_source_1l00130"/><link linkend="_class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd">00130</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd">MyController::clearBitMask</link>(<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;&amp;reg,&#32;uint8_t&#32;bit_mask)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00131"/>00131 
+<anchor xml:id="__my_avr_8cpp_source_1l00132"/>00132 &#32;&#32;reg&#32;&amp;=&#32;~bit_mask;&#32;<emphasis role="comment">//&#32;set&#32;the&#32;bit&#32;to&#32;0</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00133"/>00133 }
+<anchor xml:id="__my_avr_8cpp_source_1l00134"/>00134 
+<anchor xml:id="__my_avr_8cpp_source_1l00135"/>00135 
+<anchor xml:id="__my_avr_8cpp_source_1l00152"/><link linkend="_class_my_controller_1a9861e8a403627e884a0bfbc837cf0723">00152</link> <emphasis role="keywordtype">void</emphasis>&#32;MyController&#32;::setGpioConfig(<link linkend="__my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8">enum_gpiomodes</link>&#32;mode,&#32;<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;&amp;ddxn,&#32;<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;&amp;portxn,&#32;uint8_t&#32;bit)
+<anchor xml:id="__my_avr_8cpp_source_1l00153"/>00153 {
+<anchor xml:id="__my_avr_8cpp_source_1l00154"/>00154 
+<anchor xml:id="__my_avr_8cpp_source_1l00155"/>00155 &#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(mode)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00156"/>00156 
+<anchor xml:id="__my_avr_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a63d584017f7c02340d67a87f3755085a">INPUT_TRI_STATE_1</link>:
+<anchor xml:id="__my_avr_8cpp_source_1l00158"/>00158 
+<anchor xml:id="__my_avr_8cpp_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;setBit(ddxn,&#32;bit,&#32;0);
+<anchor xml:id="__my_avr_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;setBit(portxn,&#32;bit,&#32;0);
+<anchor xml:id="__my_avr_8cpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_avr_8cpp_source_1l00162"/>00162 
+<anchor xml:id="__my_avr_8cpp_source_1l00163"/>00163 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a851c2ac60276ada62e8d9ba216c7a487">INPUT_PULLUP</link>:
+<anchor xml:id="__my_avr_8cpp_source_1l00164"/>00164 
+<anchor xml:id="__my_avr_8cpp_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;setBit(ddxn,&#32;bit,&#32;0);
+<anchor xml:id="__my_avr_8cpp_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;setBit(portxn,&#32;bit,&#32;1);
+<anchor xml:id="__my_avr_8cpp_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;setBit(MCUCR,&#32;PUD,&#32;0);
+<anchor xml:id="__my_avr_8cpp_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_avr_8cpp_source_1l00169"/>00169 
+<anchor xml:id="__my_avr_8cpp_source_1l00170"/>00170 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8ad6ef398fae2c8923732f80c01a9b4fdb">INPUT_TRI_STATE_2</link>:
+<anchor xml:id="__my_avr_8cpp_source_1l00171"/>00171 
+<anchor xml:id="__my_avr_8cpp_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;setBit(ddxn,&#32;bit,&#32;0);
+<anchor xml:id="__my_avr_8cpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;setBit(portxn,&#32;bit,&#32;1);
+<anchor xml:id="__my_avr_8cpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;setBit(MCUCR,&#32;PUD,&#32;1);
+<anchor xml:id="__my_avr_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_avr_8cpp_source_1l00176"/>00176 
+<anchor xml:id="__my_avr_8cpp_source_1l00177"/>00177 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a73010ac0f307d96c97238d8878f14b3e">OUTPUT_SINK</link>:
+<anchor xml:id="__my_avr_8cpp_source_1l00178"/>00178 
+<anchor xml:id="__my_avr_8cpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;setBit(ddxn,&#32;bit,&#32;1);
+<anchor xml:id="__my_avr_8cpp_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;setBit(portxn,&#32;bit,&#32;0);
+<anchor xml:id="__my_avr_8cpp_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_avr_8cpp_source_1l00182"/>00182 
+<anchor xml:id="__my_avr_8cpp_source_1l00183"/>00183 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8a8dd6b0345a569bf4a420f510341124b6">OUTPUT_SOURCE</link>:
+<anchor xml:id="__my_avr_8cpp_source_1l00184"/>00184 
+<anchor xml:id="__my_avr_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;setBit(ddxn,&#32;bit,&#32;1);
+<anchor xml:id="__my_avr_8cpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;setBit(portxn,&#32;bit,&#32;1);
+<anchor xml:id="__my_avr_8cpp_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_avr_8cpp_source_1l00188"/>00188 
+<anchor xml:id="__my_avr_8cpp_source_1l00189"/>00189 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__my_avr_8cpp_source_1l00190"/>00190 
+<anchor xml:id="__my_avr_8cpp_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_avr_8cpp_source_1l00192"/>00192 &#32;&#32;}
+<anchor xml:id="__my_avr_8cpp_source_1l00193"/>00193 }
+<anchor xml:id="__my_avr_8cpp_source_1l00194"/>00194 
+<anchor xml:id="__my_avr_8cpp_source_1l00195"/>00195 
+<anchor xml:id="__my_avr_8cpp_source_1l00206"/><link linkend="_class_my_controller_1a452b611e91abf97cc6caeacc4949dbc4">00206</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_controller_1a452b611e91abf97cc6caeacc4949dbc4">MyController::execDelayMs</link>(uint32_t&#32;ms)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00207"/>00207 
+<anchor xml:id="__my_avr_8cpp_source_1l00208"/>00208 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Anzahl&#32;der&#32;Mikrosekunden&#32;basierend&#32;auf&#32;den&#32;Millisekunden&#32;berechnen</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00209"/>00209 
+<anchor xml:id="__my_avr_8cpp_source_1l00210"/>00210 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;uint32_t&#32;sizeOf32Bit&#32;=&#32;0xFFFFFFFF;
+<anchor xml:id="__my_avr_8cpp_source_1l00211"/>00211 &#32;&#32;&#32;&#32;uint32_t&#32;us&#32;{sizeOf32Bit};
+<anchor xml:id="__my_avr_8cpp_source_1l00212"/>00212 
+<anchor xml:id="__my_avr_8cpp_source_1l00213"/>00213 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Prüfe&#32;ob&#32;zu&#32;viele&#32;millisekunden&#32;ausgewählt&#32;wurden</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00214"/>00214 
+<anchor xml:id="__my_avr_8cpp_source_1l00215"/>00215 &#32;&#32;&#32;&#32;uint32_t&#32;maxMillis&#32;=&#32;sizeOf32Bit/1000;
+<anchor xml:id="__my_avr_8cpp_source_1l00216"/>00216 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(ms&#32;&lt;&#32;(maxMillis))&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00217"/>00217 
+<anchor xml:id="__my_avr_8cpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;us&#32;=&#32;ms&#32;*&#32;1000;
+<anchor xml:id="__my_avr_8cpp_source_1l00219"/>00219 &#32;&#32;&#32;&#32;}&#32;
+<anchor xml:id="__my_avr_8cpp_source_1l00220"/>00220 
+<anchor xml:id="__my_avr_8cpp_source_1l00221"/>00221 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Anzahl&#32;der&#32;65535-Mikrosekunden-Pakete&#32;berechnen</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00222"/>00222 
+<anchor xml:id="__my_avr_8cpp_source_1l00223"/>00223 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;uint16_t&#32;sizeOf16Bit&#32;{0xFFFF};
+<anchor xml:id="__my_avr_8cpp_source_1l00224"/>00224 &#32;&#32;&#32;&#32;uint8_t&#32;numberOfLoops&#32;=&#32;(us&#32;/&#32;sizeOf16Bit);
+<anchor xml:id="__my_avr_8cpp_source_1l00225"/>00225 
+<anchor xml:id="__my_avr_8cpp_source_1l00226"/>00226 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Verzögere&#32;für&#32;jedes&#32;65535-Mikrosekunden-Paket</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00227"/>00227 
+<anchor xml:id="__my_avr_8cpp_source_1l00228"/>00228 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(uint8_t&#32;loops&#32;=&#32;0;&#32;loops&#32;&lt;&#32;numberOfLoops;&#32;loops++)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__my_avr_8cpp_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1aad1dc8b4b2b15ed34db85f46514349a4">execDelayUs</link>(sizeOf16Bit);
+<anchor xml:id="__my_avr_8cpp_source_1l00231"/>00231 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__my_avr_8cpp_source_1l00232"/>00232 
+<anchor xml:id="__my_avr_8cpp_source_1l00233"/>00233 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Verzögere&#32;den&#32;verbleibenden&#32;Teil</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00234"/>00234 &#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1aad1dc8b4b2b15ed34db85f46514349a4">execDelayUs</link>(us&#32;%&#32;sizeOf16Bit);
+<anchor xml:id="__my_avr_8cpp_source_1l00235"/>00235 }
+<anchor xml:id="__my_avr_8cpp_source_1l00236"/>00236 
+<anchor xml:id="__my_avr_8cpp_source_1l00237"/>00237 
+<anchor xml:id="__my_avr_8cpp_source_1l00248"/><link linkend="_class_my_controller_1aad1dc8b4b2b15ed34db85f46514349a4">00248</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_controller_1aad1dc8b4b2b15ed34db85f46514349a4">MyController::execDelayUs</link>(uint16_t&#32;us)&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00249"/>00249 
+<anchor xml:id="__my_avr_8cpp_source_1l00250"/>00250 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Anzahl&#32;der&#32;Iterationen&#32;berechnen,&#32;basierend&#32;auf&#32;der&#32;CPU-Frequenz</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00251"/>00251 
+<anchor xml:id="__my_avr_8cpp_source_1l00252"/>00252 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;uint8_t&#32;numberOfClkPerNOP&#32;{8};
+<anchor xml:id="__my_avr_8cpp_source_1l00253"/>00253 &#32;&#32;&#32;&#32;uint32_t&#32;iterations&#32;=&#32;((F_CPU&#32;/&#32;1000000)&#32;*&#32;us&#32;/&#32;numberOfClkPerNOP);
+<anchor xml:id="__my_avr_8cpp_source_1l00254"/>00254 
+<anchor xml:id="__my_avr_8cpp_source_1l00255"/>00255 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Delay&#32;durchführen</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00256"/>00256 &#32;&#32;&#32;&#32;<emphasis role="keyword">asm</emphasis>&#32;<emphasis role="keyword">volatile</emphasis>&#32;(
+<anchor xml:id="__my_avr_8cpp_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;1:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\n&quot;</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;nop&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\n&quot;</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;subi&#32;%A0,&#32;1&#32;\n&quot;</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;sbci&#32;%B0,&#32;0&#32;\n&quot;</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;sbci&#32;%C0,&#32;0&#32;\n&quot;</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;sbci&#32;%D0,&#32;0&#32;\n&quot;</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;brne&#32;1b&#32;&#32;&#32;&#32;&#32;\n&quot;</emphasis>
+<anchor xml:id="__my_avr_8cpp_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<emphasis role="stringliteral">&quot;=w&quot;</emphasis>&#32;(iterations)
+<anchor xml:id="__my_avr_8cpp_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>&#32;(iterations)
+<anchor xml:id="__my_avr_8cpp_source_1l00266"/>00266 &#32;&#32;&#32;&#32;);
+<anchor xml:id="__my_avr_8cpp_source_1l00267"/>00267 }
+<anchor xml:id="__my_avr_8cpp_source_1l00268"/>00268 
+<anchor xml:id="__my_avr_8cpp_source_1l00269"/>00269 
+<anchor xml:id="__my_avr_8cpp_source_1l00282"/><link linkend="_class_my_controller_1a394f574554f9120822501bac762ac7a1">00282</link> <emphasis role="keywordtype">void</emphasis>&#32;MyController&#32;::execNop()&#32;{
+<anchor xml:id="__my_avr_8cpp_source_1l00283"/>00283 
+<anchor xml:id="__my_avr_8cpp_source_1l00284"/>00284 &#32;&#32;<emphasis role="keyword">asm</emphasis>&#32;<emphasis role="keyword">volatile</emphasis>(<emphasis role="stringliteral">&quot;nop&quot;</emphasis>);
+<anchor xml:id="__my_avr_8cpp_source_1l00285"/>00285 }
+</programlisting></section>

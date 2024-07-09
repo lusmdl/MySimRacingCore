@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structpod__buttonstatus" xml:lang="en-US">
+<title>pod_buttonstatus Struct Reference</title>
+<indexterm><primary>pod_buttonstatus</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MyAvr.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_structpod__buttonstatus_1ab4e161628fecde5af7494971e2aabd39">pushed</link> {false}</para>
+</listitem>
+            <listitem><para>bool <link linkend="_structpod__buttonstatus_1a9d14dc30e81344522cea101a74714e9e">flagOldPush</link> {false}</para>
+</listitem>
+            <listitem><para>bool <link linkend="_structpod__buttonstatus_1acfff471d10511dac2fc6c1d612e48cbb">risingEdge</link> {false}</para>
+</listitem>
+            <listitem><para>bool <link linkend="_structpod__buttonstatus_1a245d018f7d46ec7fd57f58c802603de1">fallingEdge</link> {false}</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structpod__buttonstatus_1a1e93bc76f005f56b7629222841a5bb35">numberGetPushed</link> {0}</para>
+</listitem>
+            <listitem><para>bool <link linkend="_structpod__buttonstatus_1ad004f1ea69954b4f47528ffc1a9e525e">enableInvert</link> {false}</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>Examples</title><link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.cpp</link>, and <link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_matrix2x2_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.cpp</link>.</simplesect>
+<para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00148">148</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structpod__buttonstatus_1ad004f1ea69954b4f47528ffc1a9e525e"/><section>
+    <title>enableInvert</title>
+<indexterm><primary>enableInvert</primary><secondary>pod_buttonstatus</secondary></indexterm>
+<indexterm><primary>pod_buttonstatus</primary><secondary>enableInvert</secondary></indexterm>
+<para><computeroutput>bool pod_buttonstatus::enableInvert {false}</computeroutput></para><para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00164">164</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<anchor xml:id="_structpod__buttonstatus_1a245d018f7d46ec7fd57f58c802603de1"/><section>
+    <title>fallingEdge</title>
+<indexterm><primary>fallingEdge</primary><secondary>pod_buttonstatus</secondary></indexterm>
+<indexterm><primary>pod_buttonstatus</primary><secondary>fallingEdge</secondary></indexterm>
+<para><computeroutput>bool pod_buttonstatus::fallingEdge {false}</computeroutput></para><para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00158">158</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<anchor xml:id="_structpod__buttonstatus_1a9d14dc30e81344522cea101a74714e9e"/><section>
+    <title>flagOldPush</title>
+<indexterm><primary>flagOldPush</primary><secondary>pod_buttonstatus</secondary></indexterm>
+<indexterm><primary>pod_buttonstatus</primary><secondary>flagOldPush</secondary></indexterm>
+<para><computeroutput>bool pod_buttonstatus::flagOldPush {false}</computeroutput></para><para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00154">154</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<anchor xml:id="_structpod__buttonstatus_1a1e93bc76f005f56b7629222841a5bb35"/><section>
+    <title>numberGetPushed</title>
+<indexterm><primary>numberGetPushed</primary><secondary>pod_buttonstatus</secondary></indexterm>
+<indexterm><primary>pod_buttonstatus</primary><secondary>numberGetPushed</secondary></indexterm>
+<para><computeroutput>uint32_t pod_buttonstatus::numberGetPushed {0}</computeroutput></para><simplesect><title>Examples</title><link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_matrix2x2_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.cpp</link>.</simplesect>
+<para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00161">161</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<anchor xml:id="_structpod__buttonstatus_1ab4e161628fecde5af7494971e2aabd39"/><section>
+    <title>pushed</title>
+<indexterm><primary>pushed</primary><secondary>pod_buttonstatus</secondary></indexterm>
+<indexterm><primary>pod_buttonstatus</primary><secondary>pushed</secondary></indexterm>
+<para><computeroutput>bool pod_buttonstatus::pushed {false}</computeroutput></para><para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00151">151</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<anchor xml:id="_structpod__buttonstatus_1acfff471d10511dac2fc6c1d612e48cbb"/><section>
+    <title>risingEdge</title>
+<indexterm><primary>risingEdge</primary><secondary>pod_buttonstatus</secondary></indexterm>
+<indexterm><primary>pod_buttonstatus</primary><secondary>risingEdge</secondary></indexterm>
+<para><computeroutput>bool pod_buttonstatus::risingEdge {false}</computeroutput></para><para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00156">156</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/<link linkend="__my_avr_8hpp">MyAvr.hpp</link></section>
+</section>

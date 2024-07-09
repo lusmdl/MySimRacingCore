@@ -1,0 +1,85 @@
+\doxysection{My\+Button.\+hpp}
+\hypertarget{_my_button_8hpp_source}{}\label{_my_button_8hpp_source}\index{C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.hpp@{C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.hpp}}
+\mbox{\hyperlink{_my_button_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ MYBUTTON\_HPP}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ MYBUTTON\_HPP}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00004}00004\ \textcolor{comment}{//\ HEADER}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_my_avr_8hpp}{MyAvr.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00009}\mbox{\hyperlink{class_my_button}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_my_button}{MyButton}}\ :\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_my_controller}{MyController}},\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classinterface___subject}{interface\_Subject}}\ \{}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MEMBER}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Zeiger\ auf\ das\ Register\ des\ Tasters}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structpod__gpioregister}{pod\_gpioregister}}\ reg\_;}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//volatile\ uint8\_t*\ ptrRegister\_;}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bitposition\ des\ Tasters\ im\ Register}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00022}00022\ \ \ \ \ \ \ \ \ uint8\_t\ bit\_;}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tasterstatus\ (gedrückt\ oder\ nicht\ gedrückt)}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//bool\ pushed\_;}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Anzahl\ der\ Tasterbetätigungen}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//uint32\_t\ numberGetPushed\_;}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00029}00029\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ invert\ the\ HIGH\ Signal\ (usefull\ if\ pullup\ is\ in\ use)}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//bool\ enableInvert\_;}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structpod__buttonstatus}{pod\_buttonstatus}}\ button\_;}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ OOP\ BEHAVIOARAL\ DESIGN\ PATTERNS}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ COMMAND}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classinterface___command}{interface\_Command}}\ *command\_;}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ OBSERVER}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classinterface___observer}{interface\_Observer}}\ *observer\_;}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00045}00045\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00048}00048\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CONSTRUCTOR}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_my_button_a4110e661f305b955bfa2db05f93ab4d6}{MyButton}}(\textcolor{keyword}{volatile}\ uint8\_t\ \&pinxn,\ uint8\_t\ bit\_position,\ \textcolor{keywordtype}{bool}\ invert\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_my_button_a4110e661f305b955bfa2db05f93ab4d6}{MyButton}}(\mbox{\hyperlink{structpod__gpioregister}{pod\_gpioregister}}\ \&reg,\ uint8\_t\ bit\_position,\ \textcolor{keywordtype}{bool}\ invert\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GETTER}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structpod__buttonstatus}{pod\_buttonstatus}}\ \mbox{\hyperlink{class_my_button_adeb5ecc019c855cfaab8231042020aa6}{getStatus}}();}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SETTER}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_button_a90af28c3a5250dbd5b0e4a5febe607b5}{setStatus}}(uint32\_t\ value\_new\ =\ 0);}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_button_a845be1b8938b5ec3058070f6f624f39d}{setCmd}}(\mbox{\hyperlink{classinterface___command}{interface\_Command}}\ *cmd);}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ EXECUTE}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ OBSERVER}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_button_a698b202d6e68dd6f1d9244ae2a8b5660}{attachObserver}}(\mbox{\hyperlink{classinterface___observer}{interface\_Observer}}\ *observer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_button_a5c91bab48b7b2155e0acfb6bb82ddf60}{detachObserver}}(\mbox{\hyperlink{classinterface___observer}{interface\_Observer}}\ *observer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_button_a15fe0e4218e698530a548a8f92f58a25}{notifyObserver}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ COMMAND}}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_button_afa541be6b36b377940e5a8ca89e87d19}{execCmd}}();}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00077}00077\ \};}
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_my_button_8hpp_source_l00079}00079\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

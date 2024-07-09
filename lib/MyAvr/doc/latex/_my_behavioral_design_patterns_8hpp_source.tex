@@ -1,0 +1,85 @@
+\doxysection{My\+Behavioral\+Design\+Patterns.\+hpp}
+\hypertarget{_my_behavioral_design_patterns_8hpp_source}{}\label{_my_behavioral_design_patterns_8hpp_source}\index{C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp@{C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp}}
+\mbox{\hyperlink{_my_behavioral_design_patterns_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ MYBEHAVIORALDESINGPATTERNS\_HPP}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ MYBEHAVIORALDESINGPATTERNS\_HPP}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00004}00004\ \textcolor{comment}{//\ HEADER}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_my_avr_8hpp}{MyAvr.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00009}00009\ \textcolor{comment}{//\ Observer\ Design\ Pattern}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00010}00010\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00011}00011\ \textcolor{comment}{//\ Intent:\ Lets\ you\ define\ a\ subscription\ mechanism\ to\ notifyObserver\ multiple\ objects}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00012}00012\ \textcolor{comment}{//\ about\ any\ events\ that\ happen\ to\ the\ object\ they're\ observing.}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00013}00013\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00014}00014\ \textcolor{comment}{//\ Note\ that\ there's\ a\ lot\ of\ different\ terms\ with\ similar\ meaning\ associated}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00015}00015\ \textcolor{comment}{//\ with\ this\ pattern.\ Just\ remember\ that\ the\ Subject\ is\ also\ called\ the}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00016}00016\ \textcolor{comment}{//\ Publisher\ and\ the\ Observer\ is\ often\ called\ the\ Subscriber\ and\ vice\ versa.}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00017}00017\ \textcolor{comment}{//\ Also\ the\ verbs\ "{}observe"{},\ "{}listen"{}\ or\ "{}track"{}\ usually\ mean\ the\ same\ thing.}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00020}\mbox{\hyperlink{classinterface___observer}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classinterface___observer}{interface\_Observer}}\ \{}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ DESTRUCTOR}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00025}\mbox{\hyperlink{classinterface___observer_a54c06f9e71ea58a8f7a4a6baa2f1fa35}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classinterface___observer_a54c06f9e71ea58a8f7a4a6baa2f1fa35}{\string~interface\_Observer}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ EXECUTION}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00029}\mbox{\hyperlink{classinterface___observer_abb26b58bee249d3516fa31a041b39c33}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinterface___observer_abb26b58bee249d3516fa31a041b39c33}{update}}(\textcolor{keyword}{const}\ String\ \&message\_from\_subject)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00030}00030\ \};}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00032}\mbox{\hyperlink{classinterface___subject}{00032}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classinterface___subject}{interface\_Subject}}\ \{}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ The\ Subject\ owns\ some\ important\ state\ and\ notifies\ observers\ when\ the\ state\ changes.}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ DESTRUCTOR}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00039}\mbox{\hyperlink{classinterface___subject_a33ca041e3e7f4f5f088d725a26bf840f}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classinterface___subject_a33ca041e3e7f4f5f088d725a26bf840f}{\string~interface\_Subject}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ EXECUTION}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00043}\mbox{\hyperlink{classinterface___subject_ab137f79fb4dc057e7b7c1837b9d6748e}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinterface___subject_ab137f79fb4dc057e7b7c1837b9d6748e}{attachObserver}}(\mbox{\hyperlink{classinterface___observer}{interface\_Observer}}\ *observer)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00044}\mbox{\hyperlink{classinterface___subject_a9fba499145219811a12c0684b7768426}{00044}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinterface___subject_a9fba499145219811a12c0684b7768426}{detachObserver}}(\mbox{\hyperlink{classinterface___observer}{interface\_Observer}}\ *observer)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00045}\mbox{\hyperlink{classinterface___subject_a0010a0fb854ccb6317c79cff7c6a9ab2}{00045}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinterface___subject_a0010a0fb854ccb6317c79cff7c6a9ab2}{notifyObserver}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00046}00046\ \};}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00050}\mbox{\hyperlink{classinterface___command}{00050}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classinterface___command}{interface\_Command}}\ \{}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00051}00051\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ The\ Command\ interface\ declares\ a\ method\ for\ executing\ a\ command.}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ Some\ commands\ can\ implement\ simple\ operations\ on\ their\ own.}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ class\ MyCommandExample\ :\ public\ interface\_Command\ \{}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ public:}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ virtual\ void\ exec()\ const\ override\ \{}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00060}00060\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ implement\ code\ here}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//\ \};}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00063}00063\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00064}00064\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ DESTRUCTOR}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00068}\mbox{\hyperlink{classinterface___command_a18bae3c53de90a094c1e5214f2182073}{00068}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classinterface___command_a18bae3c53de90a094c1e5214f2182073}{\string~interface\_Command}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ EXECUTION}}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00072}\mbox{\hyperlink{classinterface___command_a44a839b075fcfeb83708daf4e186666d}{00072}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinterface___command_a44a839b075fcfeb83708daf4e186666d}{exec}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00073}00073\ \};}
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_my_behavioral_design_patterns_8hpp_source_l00079}00079\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MYBEHAVIORALDESINGPATTERNS\_HPP}}
+
+\end{DoxyCode}

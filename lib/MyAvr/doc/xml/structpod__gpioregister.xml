@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structpod__gpioregister" kind="struct" language="C++" prot="public">
+    <compoundname>pod_gpioregister</compoundname>
+    <includes refid="_my_avr_8hpp" local="no">MyAvr.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpod__gpioregister_1acae519b175670a1e742d5fd527ddc5c0" prot="public" static="no" mutable="no">
+        <type>volatile uint8_t *</type>
+        <definition>volatile uint8_t* pod_gpioregister::ptrDataDirection</definition>
+        <argsstring></argsstring>
+        <name>ptrDataDirection</name>
+        <qualifiedname>pod_gpioregister::ptrDataDirection</qualifiedname>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="142" column="22" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" bodystart="142" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpod__gpioregister_1a703fb7dad21dd88d7d79033b4da8d97e" prot="public" static="no" mutable="no">
+        <type>volatile uint8_t *</type>
+        <definition>volatile uint8_t* pod_gpioregister::ptrPort</definition>
+        <argsstring></argsstring>
+        <name>ptrPort</name>
+        <qualifiedname>pod_gpioregister::ptrPort</qualifiedname>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="143" column="22" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpod__gpioregister_1a635b2c0cd8f1cfd6802be460951d1e70" prot="public" static="no" mutable="no">
+        <type>volatile uint8_t *</type>
+        <definition>volatile uint8_t* pod_gpioregister::ptrPin</definition>
+        <argsstring></argsstring>
+        <name>ptrPin</name>
+        <qualifiedname>pod_gpioregister::ptrPin</qualifiedname>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="144" column="22" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" bodystart="144" bodyend="144"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="140" column="1" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" bodystart="140" bodyend="145"/>
+    <listofallmembers>
+      <member refid="structpod__gpioregister_1acae519b175670a1e742d5fd527ddc5c0" prot="public" virt="non-virtual"><scope>pod_gpioregister</scope><name>ptrDataDirection</name></member>
+      <member refid="structpod__gpioregister_1a635b2c0cd8f1cfd6802be460951d1e70" prot="public" virt="non-virtual"><scope>pod_gpioregister</scope><name>ptrPin</name></member>
+      <member refid="structpod__gpioregister_1a703fb7dad21dd88d7d79033b4da8d97e" prot="public" virt="non-virtual"><scope>pod_gpioregister</scope><name>ptrPort</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

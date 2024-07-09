@@ -1,0 +1,20 @@
+{
+  "name": "MyAvr",
+  "version": "1.0.1",
+  "description": "",
+  "keywords": ["AVR", "Atmega", "std"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lusmdl/MyAvr.git"
+  },
+  "authors": [
+    {
+      "name": "lusmdl",
+      "email": "Sonyxfvr46@outlook.de",
+      "url": "https://github.com/lusmdl"
+    }
+  ],
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": ["*"]
+}

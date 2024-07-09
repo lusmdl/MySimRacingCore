@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__my_button_8cpp_source" xml:lang="en-US">
+<title>MyButton.cpp</title>
+<indexterm><primary>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__my_button_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__my_button_8cpp_source_1l00002"/>00002 <emphasis role="comment">//&#32;HEADER</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__my_button_8hpp">MyButton.hpp</link>&quot;</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00004"/>00004 
+<anchor xml:id="__my_button_8cpp_source_1l00020"/><link linkend="_class_my_button_1a4110e661f305b955bfa2db05f93ab4d6">00020</link> MyButton&#32;::MyButton(<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;&amp;pinxn,&#32;uint8_t&#32;bit_position,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;invert)&#32;:&#32;
+<anchor xml:id="__my_button_8cpp_source_1l00021"/>00021 &#32;&#32;<emphasis role="comment">//ptrRegister_(&amp;pinxn),&#32;</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00022"/>00022 &#32;&#32;reg_&#32;{nullptr,&#32;nullptr,&#32;&amp;pinxn},
+<anchor xml:id="__my_button_8cpp_source_1l00023"/>00023 &#32;&#32;bit_&#32;(bit_position),&#32;
+<anchor xml:id="__my_button_8cpp_source_1l00024"/>00024 &#32;&#32;<emphasis role="comment">//pushed_(false),&#32;</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00025"/>00025 &#32;&#32;<emphasis role="comment">//numberGetPushed_(0),&#32;</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00026"/>00026 &#32;&#32;<emphasis role="comment">//enableInvert_(invert)&#32;</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00027"/>00027 &#32;&#32;button_&#32;{false,&#32;false,&#32;false,&#32;false,&#32;0,&#32;invert},
+<anchor xml:id="__my_button_8cpp_source_1l00028"/>00028 &#32;&#32;command_&#32;(nullptr),
+<anchor xml:id="__my_button_8cpp_source_1l00029"/>00029 &#32;&#32;observer_&#32;(nullptr)&#32;{}
+<anchor xml:id="__my_button_8cpp_source_1l00030"/>00030 
+<anchor xml:id="__my_button_8cpp_source_1l00031"/>00031 
+<anchor xml:id="__my_button_8cpp_source_1l00040"/><link linkend="_class_my_button_1aa9c954974094ed5f31ecb3d1607459b5">00040</link> MyButton&#32;::MyButton(<link linkend="_structpod__gpioregister">pod_gpioregister</link>&#32;&amp;reg,&#32;uint8_t&#32;bit_position,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;invert)&#32;:&#32;
+<anchor xml:id="__my_button_8cpp_source_1l00041"/>00041 &#32;&#32;reg_(reg),
+<anchor xml:id="__my_button_8cpp_source_1l00042"/>00042 &#32;&#32;bit_(bit_position),
+<anchor xml:id="__my_button_8cpp_source_1l00043"/>00043 &#32;&#32;button_{false,&#32;false,&#32;false,&#32;false,&#32;0,&#32;invert},
+<anchor xml:id="__my_button_8cpp_source_1l00044"/>00044 &#32;&#32;command_&#32;(nullptr),
+<anchor xml:id="__my_button_8cpp_source_1l00045"/>00045 &#32;&#32;observer_&#32;(nullptr)&#32;{}
+<anchor xml:id="__my_button_8cpp_source_1l00046"/>00046 
+<anchor xml:id="__my_button_8cpp_source_1l00047"/>00047 
+<anchor xml:id="__my_button_8cpp_source_1l00070"/><link linkend="_class_my_button_1adeb5ecc019c855cfaab8231042020aa6">00070</link> <link linkend="_structpod__buttonstatus">pod_buttonstatus</link>&#32;MyButton&#32;::getStatus()&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00071"/>00071 
+<anchor xml:id="__my_button_8cpp_source_1l00072"/>00072 &#32;&#32;<emphasis role="comment">//&#32;this&#32;method&#32;calculate&#32;all&#32;data&#32;based&#32;on&#32;the&#32;register&#32;value</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00073"/>00073 &#32;&#32;<emphasis role="comment">//&#32;WARNING:&#32;do&#32;not&#32;read&#32;the&#32;calculated&#32;values,&#32;always&#32;read&#32;the&#32;actual&#32;register&#32;value</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00074"/>00074 
+<anchor xml:id="__my_button_8cpp_source_1l00075"/>00075 &#32;&#32;<emphasis role="comment">//&#32;Führe&#32;eine&#32;NOP-Operation&#32;für&#32;die&#32;Synchronisation&#32;aus</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00076"/>00076 &#32;&#32;execNop();
+<anchor xml:id="__my_button_8cpp_source_1l00077"/>00077 
+<anchor xml:id="__my_button_8cpp_source_1l00078"/>00078 &#32;&#32;<emphasis role="comment">//&#32;reset&#32;edge&#32;flags</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00079"/>00079 &#32;&#32;
+<anchor xml:id="__my_button_8cpp_source_1l00080"/>00080 &#32;&#32;button_.fallingEdge&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00081"/>00081 &#32;&#32;button_.risingEdge&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00082"/>00082 
+<anchor xml:id="__my_button_8cpp_source_1l00083"/>00083 &#32;&#32;<emphasis role="comment">//&#32;acutal&#32;read&#32;register&#32;data,&#32;use&#32;this&#32;everytime&#32;in&#32;this&#32;method</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00084"/>00084 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;buttonPushed&#32;{<emphasis role="keyword">false</emphasis>};
+<anchor xml:id="__my_button_8cpp_source_1l00085"/>00085 &#32;&#32;
+<anchor xml:id="__my_button_8cpp_source_1l00086"/>00086 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(button_.enableInvert)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00087"/>00087 
+<anchor xml:id="__my_button_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;if&#32;the&#32;parameter&#32;is&#32;set,&#32;swap&#32;the&#32;bit</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;this&#32;is&#32;usefull&#32;if&#32;you&#32;use&#32;pullup&#32;resistors</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00090"/>00090 
+<anchor xml:id="__my_button_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;buttonPushed&#32;=&#32;getBit(*reg_.ptrPin,&#32;bit_)&#32;?&#32;false&#32;:&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00092"/>00092 &#32;&#32;}
+<anchor xml:id="__my_button_8cpp_source_1l00093"/>00093 &#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00094"/>00094 
+<anchor xml:id="__my_button_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;buttonPushed&#32;=&#32;getBit(*reg_.ptrPin,&#32;bit_)&#32;?&#32;true&#32;:&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00096"/>00096 &#32;&#32;}
+<anchor xml:id="__my_button_8cpp_source_1l00097"/>00097 
+<anchor xml:id="__my_button_8cpp_source_1l00098"/>00098 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(buttonPushed)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00099"/>00099 
+<anchor xml:id="__my_button_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;button_.pushed&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00101"/>00101 
+<anchor xml:id="__my_button_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(button_.flagOldPush&#32;==&#32;<emphasis role="keyword">false</emphasis>)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00103"/>00103 
+<anchor xml:id="__my_button_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;rising&#32;edge</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00105"/>00105 
+<anchor xml:id="__my_button_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;button_.risingEdge&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;button_.numberGetPushed++;
+<anchor xml:id="__my_button_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(observer_&#32;!=&#32;<emphasis role="keyword">nullptr</emphasis>)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__my_button_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;notifyObserver();
+<anchor xml:id="__my_button_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__my_button_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__my_button_8cpp_source_1l00113"/>00113 &#32;&#32;}&#32;
+<anchor xml:id="__my_button_8cpp_source_1l00114"/>00114 &#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00115"/>00115 
+<anchor xml:id="__my_button_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;button_.pushed&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00117"/>00117 
+<anchor xml:id="__my_button_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(button_.flagOldPush&#32;==&#32;<emphasis role="keyword">true</emphasis>)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00119"/>00119 
+<anchor xml:id="__my_button_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;falling&#32;edge</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00121"/>00121 
+<anchor xml:id="__my_button_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;button_.fallingEdge&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__my_button_8cpp_source_1l00124"/>00124 &#32;&#32;}
+<anchor xml:id="__my_button_8cpp_source_1l00125"/>00125 
+<anchor xml:id="__my_button_8cpp_source_1l00126"/>00126 &#32;&#32;<emphasis role="comment">//&#32;set&#32;old&#32;flag&#32;after</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00127"/>00127 &#32;&#32;button_.flagOldPush&#32;=&#32;buttonPushed;
+<anchor xml:id="__my_button_8cpp_source_1l00128"/>00128 
+<anchor xml:id="__my_button_8cpp_source_1l00129"/>00129 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;button_;
+<anchor xml:id="__my_button_8cpp_source_1l00130"/>00130 }
+<anchor xml:id="__my_button_8cpp_source_1l00131"/>00131 
+<anchor xml:id="__my_button_8cpp_source_1l00132"/>00132 
+<anchor xml:id="__my_button_8cpp_source_1l00147"/><link linkend="_class_my_button_1a90af28c3a5250dbd5b0e4a5febe607b5">00147</link> <emphasis role="keywordtype">void</emphasis>&#32;MyButton&#32;::setStatus(uint32_t&#32;value_new)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00148"/>00148 
+<anchor xml:id="__my_button_8cpp_source_1l00149"/>00149 &#32;&#32;button_.numberGetPushed&#32;=&#32;value_new;
+<anchor xml:id="__my_button_8cpp_source_1l00150"/>00150 &#32;&#32;
+<anchor xml:id="__my_button_8cpp_source_1l00151"/>00151 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(value_new&#32;==&#32;0)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00152"/>00152 
+<anchor xml:id="__my_button_8cpp_source_1l00153"/>00153 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;reset&#32;everything&#32;if&#32;new&#32;value&#32;is&#32;zero</emphasis>
+<anchor xml:id="__my_button_8cpp_source_1l00154"/>00154 
+<anchor xml:id="__my_button_8cpp_source_1l00155"/>00155 &#32;&#32;&#32;&#32;button_.pushed&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00156"/>00156 &#32;&#32;&#32;&#32;button_.flagOldPush&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;button_.fallingEdge&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;button_.risingEdge&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00159"/>00159 &#32;&#32;}
+<anchor xml:id="__my_button_8cpp_source_1l00160"/>00160 }
+<anchor xml:id="__my_button_8cpp_source_1l00161"/>00161 
+<anchor xml:id="__my_button_8cpp_source_1l00162"/>00162 
+<anchor xml:id="__my_button_8cpp_source_1l00169"/><link linkend="_class_my_button_1a845be1b8938b5ec3058070f6f624f39d">00169</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1a845be1b8938b5ec3058070f6f624f39d">MyButton::setCmd</link>(<link linkend="_classinterface___command">interface_Command</link>&#32;*cmd)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00170"/>00170 
+<anchor xml:id="__my_button_8cpp_source_1l00171"/>00171 &#32;&#32;command_&#32;=&#32;cmd;
+<anchor xml:id="__my_button_8cpp_source_1l00172"/>00172 }
+<anchor xml:id="__my_button_8cpp_source_1l00173"/>00173 
+<anchor xml:id="__my_button_8cpp_source_1l00174"/><link linkend="_class_my_button_1a698b202d6e68dd6f1d9244ae2a8b5660">00174</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1a698b202d6e68dd6f1d9244ae2a8b5660">MyButton::attachObserver</link>(<link linkend="_classinterface___observer">interface_Observer</link>&#32;*observer)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00175"/>00175 
+<anchor xml:id="__my_button_8cpp_source_1l00176"/>00176 &#32;&#32;observer_&#32;=&#32;observer;
+<anchor xml:id="__my_button_8cpp_source_1l00177"/>00177 }
+<anchor xml:id="__my_button_8cpp_source_1l00178"/>00178 
+<anchor xml:id="__my_button_8cpp_source_1l00179"/><link linkend="_class_my_button_1a5c91bab48b7b2155e0acfb6bb82ddf60">00179</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1a5c91bab48b7b2155e0acfb6bb82ddf60">MyButton::detachObserver</link>(<link linkend="_classinterface___observer">interface_Observer</link>&#32;*observer)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00180"/>00180 
+<anchor xml:id="__my_button_8cpp_source_1l00181"/>00181 &#32;&#32;observer_&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+<anchor xml:id="__my_button_8cpp_source_1l00182"/>00182 }
+<anchor xml:id="__my_button_8cpp_source_1l00183"/>00183 
+<anchor xml:id="__my_button_8cpp_source_1l00184"/><link linkend="_class_my_button_1a15fe0e4218e698530a548a8f92f58a25">00184</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1a15fe0e4218e698530a548a8f92f58a25">MyButton::notifyObserver</link>()&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00185"/>00185 
+<anchor xml:id="__my_button_8cpp_source_1l00186"/>00186 &#32;&#32;observer_-&gt;<link linkend="_classinterface___observer_1abb26b58bee249d3516fa31a041b39c33">update</link>(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__my_button_8cpp_source_1l00187"/>00187 }
+<anchor xml:id="__my_button_8cpp_source_1l00188"/>00188 
+<anchor xml:id="__my_button_8cpp_source_1l00189"/><link linkend="_class_my_button_1afa541be6b36b377940e5a8ca89e87d19">00189</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1afa541be6b36b377940e5a8ca89e87d19">MyButton::execCmd</link>()&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00190"/>00190 
+<anchor xml:id="__my_button_8cpp_source_1l00191"/>00191 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(command_)&#32;{
+<anchor xml:id="__my_button_8cpp_source_1l00192"/>00192 
+<anchor xml:id="__my_button_8cpp_source_1l00193"/>00193 &#32;&#32;&#32;&#32;command_-&gt;<link linkend="_classinterface___command_1a44a839b075fcfeb83708daf4e186666d">exec</link>();
+<anchor xml:id="__my_button_8cpp_source_1l00194"/>00194 &#32;&#32;}
+<anchor xml:id="__my_button_8cpp_source_1l00195"/>00195 }
+</programlisting></section>

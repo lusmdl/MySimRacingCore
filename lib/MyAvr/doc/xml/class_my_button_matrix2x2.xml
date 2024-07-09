@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_my_button_matrix2x2" kind="class" language="C++" prot="public">
+    <compoundname>MyButtonMatrix2x2</compoundname>
+    <basecompoundref refid="class_my_controller" prot="private" virt="non-virtual">MyController</basecompoundref>
+    <includes refid="_my_button_matrix2x2_8hpp" local="no">MyButtonMatrix2x2.hpp</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_my_button_matrix2x2_1af7b469e204e33a78156abe38cdd75432" prot="private" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t MyButtonMatrix2x2::BTN_MAX_</definition>
+        <argsstring></argsstring>
+        <name>BTN_MAX_</name>
+        <qualifiedname>MyButtonMatrix2x2::BTN_MAX_</qualifiedname>
+        <initializer>{4}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" line="14" column="30" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" bodystart="14" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_my_button_matrix2x2_1a7fa19068e5215d55de870c514e0b3339" prot="private" static="no" mutable="no">
+        <type><ref refid="structpod__gpioregister" kindref="compound">pod_gpioregister</ref></type>
+        <definition>pod_gpioregister MyButtonMatrix2x2::reg_</definition>
+        <argsstring></argsstring>
+        <name>reg_</name>
+        <qualifiedname>MyButtonMatrix2x2::reg_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" line="25" column="26" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_my_button_matrix2x2_1aa4d8133afff37b8cad90eb2d5849e09d" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t MyButtonMatrix2x2::bit_[BTN_MAX_]</definition>
+        <argsstring>[BTN_MAX_]</argsstring>
+        <name>bit_</name>
+        <qualifiedname>MyButtonMatrix2x2::bit_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" line="28" column="17" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_my_button_matrix2x2_1a32cbff48ee48ce5fa6acb160b52850b8" prot="private" static="no" mutable="no">
+        <type><ref refid="structpod__buttonstatus" kindref="compound">pod_buttonstatus</ref></type>
+        <definition>pod_buttonstatus MyButtonMatrix2x2::button_[BTN_MAX_]</definition>
+        <argsstring>[BTN_MAX_]</argsstring>
+        <name>button_</name>
+        <qualifiedname>MyButtonMatrix2x2::button_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" line="30" column="26" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_my_button_matrix2x2_1af023c5ac634843b34667fd9a2db4b26b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MyButtonMatrix2x2::MyButtonMatrix2x2</definition>
+        <argsstring>(volatile uint8_t &amp;ddxn, volatile uint8_t &amp;portxn, volatile uint8_t &amp;pinxn, uint8_t bit_position[BTN_MAX_])</argsstring>
+        <name>MyButtonMatrix2x2</name>
+        <qualifiedname>MyButtonMatrix2x2::MyButtonMatrix2x2</qualifiedname>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>ddxn</declname>
+        </param>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>portxn</declname>
+        </param>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>pinxn</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit_position</declname>
+          <array>[BTN_MAX_]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" line="39" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_button_matrix2x2_1a5a8ed26aebe83b6a9143bd5263ddd799" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MyButtonMatrix2x2::MyButtonMatrix2x2</definition>
+        <argsstring>(pod_gpioregister &amp;ptr, uint8_t bit_position[BTN_MAX_])</argsstring>
+        <name>MyButtonMatrix2x2</name>
+        <qualifiedname>MyButtonMatrix2x2::MyButtonMatrix2x2</qualifiedname>
+        <param>
+          <type><ref refid="structpod__gpioregister" kindref="compound">pod_gpioregister</ref> &amp;</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit_position</declname>
+          <array>[BTN_MAX_]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" line="40" column="9" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.cpp" bodystart="42" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_button_matrix2x2_1aee71f33a24c2807db2626e99aa83405e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpod__buttonstatus" kindref="compound">pod_buttonstatus</ref></type>
+        <definition>pod_buttonstatus MyButtonMatrix2x2::getButtonStatus</definition>
+        <argsstring>(uint8_t button)</argsstring>
+        <name>getButtonStatus</name>
+        <qualifiedname>MyButtonMatrix2x2::getButtonStatus</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>button</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" line="45" column="26" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.cpp" bodystart="68" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_button_matrix2x2_1a4c4e4f3985178ff134b176f3fa3287c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpod__buttonstatus" kindref="compound">pod_buttonstatus</ref></type>
+        <definition>pod_buttonstatus MyButtonMatrix2x2::setButtonStatus</definition>
+        <argsstring>(uint8_t button, uint32_t value_new=0)</argsstring>
+        <name>setButtonStatus</name>
+        <qualifiedname>MyButtonMatrix2x2::setButtonStatus</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value_new</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Sets the status of the button. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value_new</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value for the amount of button numbers pushed (default value is 0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" line="49" column="26" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.cpp" bodystart="144" bodyend="157"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MyButtonMatrix2x2</label>
+        <link refid="class_my_button_matrix2x2"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MyController</label>
+        <link refid="class_my_controller"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MyButtonMatrix2x2</label>
+        <link refid="class_my_button_matrix2x2"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MyController</label>
+        <link refid="class_my_controller"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" line="8" column="1" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp" bodystart="8" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_my_button_matrix2x2_1aa4d8133afff37b8cad90eb2d5849e09d" prot="private" virt="non-virtual"><scope>MyButtonMatrix2x2</scope><name>bit_</name></member>
+      <member refid="class_my_button_matrix2x2_1af7b469e204e33a78156abe38cdd75432" prot="private" virt="non-virtual"><scope>MyButtonMatrix2x2</scope><name>BTN_MAX_</name></member>
+      <member refid="class_my_button_matrix2x2_1a32cbff48ee48ce5fa6acb160b52850b8" prot="private" virt="non-virtual"><scope>MyButtonMatrix2x2</scope><name>button_</name></member>
+      <member refid="class_my_button_matrix2x2_1aee71f33a24c2807db2626e99aa83405e" prot="public" virt="non-virtual"><scope>MyButtonMatrix2x2</scope><name>getButtonStatus</name></member>
+      <member refid="class_my_button_matrix2x2_1af023c5ac634843b34667fd9a2db4b26b" prot="public" virt="non-virtual"><scope>MyButtonMatrix2x2</scope><name>MyButtonMatrix2x2</name></member>
+      <member refid="class_my_button_matrix2x2_1a5a8ed26aebe83b6a9143bd5263ddd799" prot="public" virt="non-virtual"><scope>MyButtonMatrix2x2</scope><name>MyButtonMatrix2x2</name></member>
+      <member refid="class_my_button_matrix2x2_1a7fa19068e5215d55de870c514e0b3339" prot="private" virt="non-virtual"><scope>MyButtonMatrix2x2</scope><name>reg_</name></member>
+      <member refid="class_my_button_matrix2x2_1a4c4e4f3985178ff134b176f3fa3287c6" prot="public" virt="non-virtual"><scope>MyButtonMatrix2x2</scope><name>setButtonStatus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

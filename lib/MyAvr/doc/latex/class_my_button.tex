@@ -1,0 +1,178 @@
+\doxysection{My\+Button Class Reference}
+\hypertarget{class_my_button}{}\label{class_my_button}\index{MyButton@{MyButton}}
+
+
+{\ttfamily \#include $<$My\+Button.\+hpp$>$}
+
+Inheritance diagram for My\+Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_button}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_my_button_a4110e661f305b955bfa2db05f93ab4d6}{My\+Button}} (volatile uint8\+\_\+t \&pinxn, uint8\+\_\+t bit\+\_\+position, bool invert=false)
+\item 
+\mbox{\hyperlink{class_my_button_aa9c954974094ed5f31ecb3d1607459b5}{My\+Button}} (\mbox{\hyperlink{structpod__gpioregister}{pod\+\_\+gpioregister}} \&reg, uint8\+\_\+t bit\+\_\+position, bool invert=false)
+\begin{DoxyCompactList}\small\item\em Constructor of the class \doxylink{class_my_button}{My\+Button} Initializes the member variables of the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpod__buttonstatus}{pod\+\_\+buttonstatus}} \mbox{\hyperlink{class_my_button_adeb5ecc019c855cfaab8231042020aa6}{get\+Status}} ()
+\item 
+void \mbox{\hyperlink{class_my_button_a90af28c3a5250dbd5b0e4a5febe607b5}{set\+Status}} (uint32\+\_\+t value\+\_\+new=0)
+\item 
+void \mbox{\hyperlink{class_my_button_a845be1b8938b5ec3058070f6f624f39d}{set\+Cmd}} (\mbox{\hyperlink{classinterface___command}{interface\+\_\+\+Command}} \texorpdfstring{$\ast$}{*}cmd)
+\item 
+virtual void \mbox{\hyperlink{class_my_button_a698b202d6e68dd6f1d9244ae2a8b5660}{attach\+Observer}} (\mbox{\hyperlink{classinterface___observer}{interface\+\_\+\+Observer}} \texorpdfstring{$\ast$}{*}observer) override
+\item 
+virtual void \mbox{\hyperlink{class_my_button_a5c91bab48b7b2155e0acfb6bb82ddf60}{detach\+Observer}} (\mbox{\hyperlink{classinterface___observer}{interface\+\_\+\+Observer}} \texorpdfstring{$\ast$}{*}observer) override
+\item 
+virtual void \mbox{\hyperlink{class_my_button_a15fe0e4218e698530a548a8f92f58a25}{notify\+Observer}} () override
+\item 
+void \mbox{\hyperlink{class_my_button_afa541be6b36b377940e5a8ca89e87d19}{exec\+Cmd}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classinterface___subject}{interface\+\_\+\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classinterface___subject_a33ca041e3e7f4f5f088d725a26bf840f}{\texorpdfstring{$\sim$}{\string~}interface\+\_\+\+Subject}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_my_button_8hpp_source_l00009}{9}} of file \mbox{\hyperlink{_my_button_8hpp_source}{My\+Button.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_my_button_a4110e661f305b955bfa2db05f93ab4d6}\label{class_my_button_a4110e661f305b955bfa2db05f93ab4d6} 
+\index{MyButton@{MyButton}!MyButton@{MyButton}}
+\index{MyButton@{MyButton}!MyButton@{MyButton}}
+\doxysubsubsection{\texorpdfstring{MyButton()}{MyButton()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily My\+Button\+::\+My\+Button (\begin{DoxyParamCaption}\item[{volatile uint8\+\_\+t \&}]{pinxn,  }\item[{uint8\+\_\+t}]{bit\+\_\+position,  }\item[{bool}]{invert = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_button_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_my_button_8cpp_source}{My\+Button.\+cpp}}.
+
+\Hypertarget{class_my_button_aa9c954974094ed5f31ecb3d1607459b5}\label{class_my_button_aa9c954974094ed5f31ecb3d1607459b5} 
+\index{MyButton@{MyButton}!MyButton@{MyButton}}
+\index{MyButton@{MyButton}!MyButton@{MyButton}}
+\doxysubsubsection{\texorpdfstring{MyButton()}{MyButton()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily My\+Button\+::\+My\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpod__gpioregister}{pod\+\_\+gpioregister}} \&}]{reg,  }\item[{uint8\+\_\+t}]{bit\+\_\+position,  }\item[{bool}]{invert = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class \doxylink{class_my_button}{My\+Button} Initializes the member variables of the class. 
+
+
+
+Definition at line \mbox{\hyperlink{_my_button_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{_my_button_8cpp_source}{My\+Button.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_my_button_a698b202d6e68dd6f1d9244ae2a8b5660}\label{class_my_button_a698b202d6e68dd6f1d9244ae2a8b5660} 
+\index{MyButton@{MyButton}!attachObserver@{attachObserver}}
+\index{attachObserver@{attachObserver}!MyButton@{MyButton}}
+\doxysubsubsection{\texorpdfstring{attachObserver()}{attachObserver()}}
+{\footnotesize\ttfamily void My\+Button\+::attach\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classinterface___observer}{interface\+\_\+\+Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classinterface___subject_ab137f79fb4dc057e7b7c1837b9d6748e}{interface\+\_\+\+Subject}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Button.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_button_8cpp_source_l00174}{174}} of file \mbox{\hyperlink{_my_button_8cpp_source}{My\+Button.\+cpp}}.
+
+\Hypertarget{class_my_button_a5c91bab48b7b2155e0acfb6bb82ddf60}\label{class_my_button_a5c91bab48b7b2155e0acfb6bb82ddf60} 
+\index{MyButton@{MyButton}!detachObserver@{detachObserver}}
+\index{detachObserver@{detachObserver}!MyButton@{MyButton}}
+\doxysubsubsection{\texorpdfstring{detachObserver()}{detachObserver()}}
+{\footnotesize\ttfamily void My\+Button\+::detach\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classinterface___observer}{interface\+\_\+\+Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classinterface___subject_a9fba499145219811a12c0684b7768426}{interface\+\_\+\+Subject}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Button.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_button_8cpp_source_l00179}{179}} of file \mbox{\hyperlink{_my_button_8cpp_source}{My\+Button.\+cpp}}.
+
+\Hypertarget{class_my_button_afa541be6b36b377940e5a8ca89e87d19}\label{class_my_button_afa541be6b36b377940e5a8ca89e87d19} 
+\index{MyButton@{MyButton}!execCmd@{execCmd}}
+\index{execCmd@{execCmd}!MyButton@{MyButton}}
+\doxysubsubsection{\texorpdfstring{execCmd()}{execCmd()}}
+{\footnotesize\ttfamily void My\+Button\+::exec\+Cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Button.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_button_8cpp_source_l00189}{189}} of file \mbox{\hyperlink{_my_button_8cpp_source}{My\+Button.\+cpp}}.
+
+\Hypertarget{class_my_button_adeb5ecc019c855cfaab8231042020aa6}\label{class_my_button_adeb5ecc019c855cfaab8231042020aa6} 
+\index{MyButton@{MyButton}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!MyButton@{MyButton}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpod__buttonstatus}{pod\+\_\+buttonstatus}} My\+Button\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_button_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{_my_button_8cpp_source}{My\+Button.\+cpp}}.
+
+\Hypertarget{class_my_button_a15fe0e4218e698530a548a8f92f58a25}\label{class_my_button_a15fe0e4218e698530a548a8f92f58a25} 
+\index{MyButton@{MyButton}!notifyObserver@{notifyObserver}}
+\index{notifyObserver@{notifyObserver}!MyButton@{MyButton}}
+\doxysubsubsection{\texorpdfstring{notifyObserver()}{notifyObserver()}}
+{\footnotesize\ttfamily void My\+Button\+::notify\+Observer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classinterface___subject_a0010a0fb854ccb6317c79cff7c6a9ab2}{interface\+\_\+\+Subject}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Button.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_button_8cpp_source_l00184}{184}} of file \mbox{\hyperlink{_my_button_8cpp_source}{My\+Button.\+cpp}}.
+
+\Hypertarget{class_my_button_a845be1b8938b5ec3058070f6f624f39d}\label{class_my_button_a845be1b8938b5ec3058070f6f624f39d} 
+\index{MyButton@{MyButton}!setCmd@{setCmd}}
+\index{setCmd@{setCmd}!MyButton@{MyButton}}
+\doxysubsubsection{\texorpdfstring{setCmd()}{setCmd()}}
+{\footnotesize\ttfamily void My\+Button\+::set\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classinterface___command}{interface\+\_\+\+Command}} \texorpdfstring{$\ast$}{*}}]{cmd }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Button.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_button_8cpp_source_l00169}{169}} of file \mbox{\hyperlink{_my_button_8cpp_source}{My\+Button.\+cpp}}.
+
+\Hypertarget{class_my_button_a90af28c3a5250dbd5b0e4a5febe607b5}\label{class_my_button_a90af28c3a5250dbd5b0e4a5febe607b5} 
+\index{MyButton@{MyButton}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!MyButton@{MyButton}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily void My\+Button\+::set\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value\+\_\+new = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_button_8cpp_source_l00147}{147}} of file \mbox{\hyperlink{_my_button_8cpp_source}{My\+Button.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\mbox{\hyperlink{_my_button_8hpp}{My\+Button.\+hpp}}\item 
+C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\mbox{\hyperlink{_my_button_8cpp}{My\+Button.\+cpp}}\end{DoxyCompactItemize}

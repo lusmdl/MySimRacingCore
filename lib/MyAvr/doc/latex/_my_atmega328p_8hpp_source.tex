@@ -1,0 +1,72 @@
+\doxysection{My\+Atmega328p.\+hpp}
+\hypertarget{_my_atmega328p_8hpp_source}{}\label{_my_atmega328p_8hpp_source}\index{C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp@{C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp}}
+\mbox{\hyperlink{_my_atmega328p_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ MYATMEGA328P\_HPP}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ MYATMEGA328P\_HPP}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00004}00004\ \textcolor{comment}{//\ HEADER}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_my_avr_8hpp}{MyAvr.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00019}\mbox{\hyperlink{class_my_atmega328p}{00019}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_my_atmega328p}{MyAtmega328p}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_my_controller}{MyController}}\ \{}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00020}00020\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ Klasse\ mit\ Methoden,\ rund\ um\ den\ Atmega328p\ von\ Microchip}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ µController}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00023}00023\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SETTER}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00028}00028\ \ \ \ \ \ \ \ \ uint32\_t\ setTC01Prescaler(\mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84}{enum\_tcprescalers}}\ prescaler\ ,\ \textcolor{keyword}{volatile}\ uint8\_t\ \&reg,\ uint8\_t\ bit\_02,\ uint8\_t\ bit\_01,\ uint8\_t\ bit\_00);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SENDING}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ sendCharUart(\textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MEMBER}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00041}\mbox{\hyperlink{class_my_atmega328p_a48b948166671df44293adacc41aade0d}{00041}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint64\_t\ \mbox{\hyperlink{class_my_atmega328p_a48b948166671df44293adacc41aade0d}{millis\_}};\ \textcolor{comment}{//\ Zeit\ in\ millisekunden\ in\ der\ der\ Controller\ läuft}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CONSTRUCTOR}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_my_atmega328p_a5ba27c7a67683a56e9344f45013357b2}{MyAtmega328p}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ f\_cpu\ =\ F\_CPU);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SETTER}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_a026186c45b5f43ca2c6c5135e003190f}{setTC0Config}}(\mbox{\hyperlink{_my_avr_8hpp_a6254561796d46c748001adeaf5e6d93c}{enum\_tcmodes}}\ mode,\ \mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84}{enum\_tcprescalers}}\ prescaler,\ uint8\_t\ value\_top\ =\ 255);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ PRINTER}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_a23a876fa091060f4ecc2c97867eda9fd}{printUart}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_a23a876fa091060f4ecc2c97867eda9fd}{printUart}}(\textcolor{keyword}{const}\ String\ \&str);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ WRITER}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_a624c2bc2597cd99201a79695948d5b7d}{writeToEEPROM}}(uint16\_t\ address,\ uint8\_t\ value);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_a624c2bc2597cd99201a79695948d5b7d}{writeToEEPROM}}(uint16\_t\ address,\ \textcolor{keyword}{const}\ String\ \&str);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ READER}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_my_atmega328p_a7c6d57660b7cbcb735225dfdeb569ec7}{readFromEEPROM}}(uint16\_t\ address);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_a7c6d57660b7cbcb735225dfdeb569ec7}{readFromEEPROM}}(uint16\_t\ address,\ String\ \&str,\ \textcolor{keywordtype}{size\_t}\ size\_buffer);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//INIT}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_ae9f22826b9792dff1dea0ae81655ba39}{initUart}}(uint32\_t\ baudrate);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ EXECUTER}}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_a3d77b3e0b30c518b80a0c33f7ae32cf1}{execTest}}(uint16\_t\ delay);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_a91986a3df6ec4032907aacf06696a8a6}{execSleep}}(\mbox{\hyperlink{_my_avr_8hpp_a5ea866ecdf7cb2426827d8cc01425374}{enum\_sleepmodes}}\ mode,\ uint8\_t\ bits\_power\_reduction,\ \textcolor{keywordtype}{bool}\ enable\_bod\_sleep);}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00074}00074\ \};}
+\DoxyCodeLine{\Hypertarget{_my_atmega328p_8hpp_source_l00075}00075\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classinterface___subject" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>interface_Subject</compoundname>
+    <derivedcompoundref refid="class_my_button" prot="public" virt="non-virtual">MyButton</derivedcompoundref>
+    <includes refid="_my_behavioral_design_patterns_8hpp" local="no">MyBehavioralDesignPatterns.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classinterface___subject_1a33ca041e3e7f4f5f088d725a26bf840f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual interface_Subject::~interface_Subject</definition>
+        <argsstring>()</argsstring>
+        <name>~interface_Subject</name>
+        <qualifiedname>interface_Subject::~interface_Subject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp" line="39" column="17" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classinterface___subject_1ab137f79fb4dc057e7b7c1837b9d6748e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void interface_Subject::attachObserver</definition>
+        <argsstring>(interface_Observer *observer)=0</argsstring>
+        <name>attachObserver</name>
+        <qualifiedname>interface_Subject::attachObserver</qualifiedname>
+        <reimplementedby refid="class_my_button_1a698b202d6e68dd6f1d9244ae2a8b5660">attachObserver</reimplementedby>
+        <param>
+          <type><ref refid="classinterface___observer" kindref="compound">interface_Observer</ref> *</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp" line="43" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classinterface___subject_1a9fba499145219811a12c0684b7768426" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void interface_Subject::detachObserver</definition>
+        <argsstring>(interface_Observer *observer)=0</argsstring>
+        <name>detachObserver</name>
+        <qualifiedname>interface_Subject::detachObserver</qualifiedname>
+        <reimplementedby refid="class_my_button_1a5c91bab48b7b2155e0acfb6bb82ddf60">detachObserver</reimplementedby>
+        <param>
+          <type><ref refid="classinterface___observer" kindref="compound">interface_Observer</ref> *</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp" line="44" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classinterface___subject_1a0010a0fb854ccb6317c79cff7c6a9ab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void interface_Subject::notifyObserver</definition>
+        <argsstring>()=0</argsstring>
+        <name>notifyObserver</name>
+        <qualifiedname>interface_Subject::notifyObserver</qualifiedname>
+        <reimplementedby refid="class_my_button_1a15fe0e4218e698530a548a8f92f58a25">notifyObserver</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp" line="45" column="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MyButton</label>
+        <link refid="class_my_button"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>interface_Subject</label>
+        <link refid="classinterface___subject"/>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp" line="32" column="1" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp" bodystart="32" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classinterface___subject_1ab137f79fb4dc057e7b7c1837b9d6748e" prot="public" virt="pure-virtual"><scope>interface_Subject</scope><name>attachObserver</name></member>
+      <member refid="classinterface___subject_1a9fba499145219811a12c0684b7768426" prot="public" virt="pure-virtual"><scope>interface_Subject</scope><name>detachObserver</name></member>
+      <member refid="classinterface___subject_1a0010a0fb854ccb6317c79cff7c6a9ab2" prot="public" virt="pure-virtual"><scope>interface_Subject</scope><name>notifyObserver</name></member>
+      <member refid="classinterface___subject_1a33ca041e3e7f4f5f088d725a26bf840f" prot="public" virt="virtual"><scope>interface_Subject</scope><name>~interface_Subject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

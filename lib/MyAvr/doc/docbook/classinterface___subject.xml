@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classinterface___subject" xml:lang="en-US">
+<title>interface_Subject Class Reference</title>
+<indexterm><primary>interface_Subject</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MyBehavioralDesignPatterns.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for interface_Subject:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classinterface___subject.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual <link linkend="_classinterface___subject_1a33ca041e3e7f4f5f088d725a26bf840f">~interface_Subject</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classinterface___subject_1ab137f79fb4dc057e7b7c1837b9d6748e">attachObserver</link> (<link linkend="_classinterface___observer">interface_Observer</link> *observer)=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classinterface___subject_1a9fba499145219811a12c0684b7768426">detachObserver</link> (<link linkend="_classinterface___observer">interface_Observer</link> *observer)=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classinterface___subject_1a0010a0fb854ccb6317c79cff7c6a9ab2">notifyObserver</link> ()=0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__my_behavioral_design_patterns_8hpp_source_1l00032">32</link> of file <link linkend="__my_behavioral_design_patterns_8hpp_source">MyBehavioralDesignPatterns.hpp</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classinterface___subject_1a33ca041e3e7f4f5f088d725a26bf840f"/><section>
+    <title>~interface_Subject()</title>
+<indexterm><primary>~interface_Subject</primary><secondary>interface_Subject</secondary></indexterm>
+<indexterm><primary>interface_Subject</primary><secondary>~interface_Subject</secondary></indexterm>
+<para><computeroutput>virtual interface_Subject::~interface_Subject ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__my_behavioral_design_patterns_8hpp_source_1l00039">39</link> of file <link linkend="__my_behavioral_design_patterns_8hpp_source">MyBehavioralDesignPatterns.hpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classinterface___subject_1ab137f79fb4dc057e7b7c1837b9d6748e"/><section>
+    <title>attachObserver()</title>
+<indexterm><primary>attachObserver</primary><secondary>interface_Subject</secondary></indexterm>
+<indexterm><primary>interface_Subject</primary><secondary>attachObserver</secondary></indexterm>
+<para><computeroutput>virtual void interface_Subject::attachObserver (<link linkend="_classinterface___observer">interface_Observer</link> * observer)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_my_button_1a698b202d6e68dd6f1d9244ae2a8b5660">MyButton</link>.</para>
+</section>
+<anchor xml:id="_classinterface___subject_1a9fba499145219811a12c0684b7768426"/><section>
+    <title>detachObserver()</title>
+<indexterm><primary>detachObserver</primary><secondary>interface_Subject</secondary></indexterm>
+<indexterm><primary>interface_Subject</primary><secondary>detachObserver</secondary></indexterm>
+<para><computeroutput>virtual void interface_Subject::detachObserver (<link linkend="_classinterface___observer">interface_Observer</link> * observer)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_my_button_1a5c91bab48b7b2155e0acfb6bb82ddf60">MyButton</link>.</para>
+</section>
+<anchor xml:id="_classinterface___subject_1a0010a0fb854ccb6317c79cff7c6a9ab2"/><section>
+    <title>notifyObserver()</title>
+<indexterm><primary>notifyObserver</primary><secondary>interface_Subject</secondary></indexterm>
+<indexterm><primary>interface_Subject</primary><secondary>notifyObserver</secondary></indexterm>
+<para><computeroutput>virtual void interface_Subject::notifyObserver ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_my_button_1a15fe0e4218e698530a548a8f92f58a25">MyButton</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/<link linkend="__my_behavioral_design_patterns_8hpp">MyBehavioralDesignPatterns.hpp</link></section>
+</section>

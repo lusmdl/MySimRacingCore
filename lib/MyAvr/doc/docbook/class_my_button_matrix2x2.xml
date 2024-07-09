@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_my_button_matrix2x2" xml:lang="en-US">
+<title>MyButtonMatrix2x2 Class Reference</title>
+<indexterm><primary>MyButtonMatrix2x2</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MyButtonMatrix2x2.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for MyButtonMatrix2x2:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_my_button_matrix2x2.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_my_button_matrix2x2_1af023c5ac634843b34667fd9a2db4b26b">MyButtonMatrix2x2</link> (volatile uint8_t &amp;ddxn, volatile uint8_t &amp;portxn, volatile uint8_t &amp;pinxn, uint8_t bit_position[BTN_MAX_])</para>
+</listitem>
+            <listitem><para><link linkend="_class_my_button_matrix2x2_1a5a8ed26aebe83b6a9143bd5263ddd799">MyButtonMatrix2x2</link> (<link linkend="_structpod__gpioregister">pod_gpioregister</link> &amp;ptr, uint8_t bit_position[BTN_MAX_])</para>
+</listitem>
+            <listitem><para><link linkend="_structpod__buttonstatus">pod_buttonstatus</link> <link linkend="_class_my_button_matrix2x2_1aee71f33a24c2807db2626e99aa83405e">getButtonStatus</link> (uint8_t button)</para>
+</listitem>
+            <listitem><para><link linkend="_structpod__buttonstatus">pod_buttonstatus</link> <link linkend="_class_my_button_matrix2x2_1a4c4e4f3985178ff134b176f3fa3287c6">setButtonStatus</link> (uint8_t button, uint32_t value_new=0)</para>
+
+<para>Sets the status of the button. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__my_button_matrix2x2_8hpp_source_1l00008">8</link> of file <link linkend="__my_button_matrix2x2_8hpp_source">MyButtonMatrix2x2.hpp</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_my_button_matrix2x2_1af023c5ac634843b34667fd9a2db4b26b"/><section>
+    <title>MyButtonMatrix2x2()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>MyButtonMatrix2x2</primary><secondary>MyButtonMatrix2x2</secondary></indexterm>
+<indexterm><primary>MyButtonMatrix2x2</primary><secondary>MyButtonMatrix2x2</secondary></indexterm>
+<para><computeroutput>MyButtonMatrix2x2::MyButtonMatrix2x2 (volatile uint8_t &amp; ddxn, volatile uint8_t &amp; portxn, volatile uint8_t &amp; pinxn, uint8_t bit_position[BTN_MAX_])</computeroutput></para></section>
+<anchor xml:id="_class_my_button_matrix2x2_1a5a8ed26aebe83b6a9143bd5263ddd799"/><section>
+    <title>MyButtonMatrix2x2()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>MyButtonMatrix2x2</primary><secondary>MyButtonMatrix2x2</secondary></indexterm>
+<indexterm><primary>MyButtonMatrix2x2</primary><secondary>MyButtonMatrix2x2</secondary></indexterm>
+<para><computeroutput>MyButtonMatrix2x2::MyButtonMatrix2x2 (<link linkend="_structpod__gpioregister">pod_gpioregister</link> &amp; ptr, uint8_t bit_position[BTN_MAX_])</computeroutput></para><para>
+Definition at line <link linkend="__my_button_matrix2x2_8cpp_source_1l00042">42</link> of file <link linkend="__my_button_matrix2x2_8cpp_source">MyButtonMatrix2x2.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_my_button_matrix2x2_1aee71f33a24c2807db2626e99aa83405e"/><section>
+    <title>getButtonStatus()</title>
+<indexterm><primary>getButtonStatus</primary><secondary>MyButtonMatrix2x2</secondary></indexterm>
+<indexterm><primary>MyButtonMatrix2x2</primary><secondary>getButtonStatus</secondary></indexterm>
+<para><computeroutput><link linkend="_structpod__buttonstatus">pod_buttonstatus</link> MyButtonMatrix2x2::getButtonStatus (uint8_t button)</computeroutput></para><para>
+Definition at line <link linkend="__my_button_matrix2x2_8cpp_source_1l00068">68</link> of file <link linkend="__my_button_matrix2x2_8cpp_source">MyButtonMatrix2x2.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_my_button_matrix2x2_1a4c4e4f3985178ff134b176f3fa3287c6"/><section>
+    <title>setButtonStatus()</title>
+<indexterm><primary>setButtonStatus</primary><secondary>MyButtonMatrix2x2</secondary></indexterm>
+<indexterm><primary>MyButtonMatrix2x2</primary><secondary>setButtonStatus</secondary></indexterm>
+<para><computeroutput><link linkend="_structpod__buttonstatus">pod_buttonstatus</link> MyButtonMatrix2x2::setButtonStatus (uint8_t button, uint32_t value_new = <computeroutput>0</computeroutput>
+)</computeroutput></para><para>
+
+<para>Sets the status of the button. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value_new</entry><entry>
+<para>The new value for the amount of button numbers pushed (default value is 0) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__my_button_matrix2x2_8cpp_source_1l00144">144</link> of file <link linkend="__my_button_matrix2x2_8cpp_source">MyButtonMatrix2x2.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/<link linkend="__my_button_matrix2x2_8hpp">MyButtonMatrix2x2.hpp</link>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/<link linkend="__my_button_matrix2x2_8cpp">MyButtonMatrix2x2.cpp</link></section>
+</section>

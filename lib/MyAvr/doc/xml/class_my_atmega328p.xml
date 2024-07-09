@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_my_atmega328p" kind="class" language="C++" prot="public">
+    <compoundname>MyAtmega328p</compoundname>
+    <basecompoundref refid="class_my_controller" prot="public" virt="non-virtual">MyController</basecompoundref>
+    <includes refid="_my_atmega328p_8hpp" local="no">MyAtmega328p.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_my_atmega328p_1a48b948166671df44293adacc41aade0d" prot="public" static="no" mutable="no">
+        <type>volatile uint64_t</type>
+        <definition>volatile uint64_t MyAtmega328p::millis_</definition>
+        <argsstring></argsstring>
+        <name>millis_</name>
+        <qualifiedname>MyAtmega328p::millis_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="41" column="27" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_my_atmega328p_1a04bb7dd781cc39bdd9f0596413019025" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t MyAtmega328p::setTC01Prescaler</definition>
+        <argsstring>(enum_tcprescalers prescaler, volatile uint8_t &amp;reg, uint8_t bit_02, uint8_t bit_01, uint8_t bit_00)</argsstring>
+        <name>setTC01Prescaler</name>
+        <qualifiedname>MyAtmega328p::setTC01Prescaler</qualifiedname>
+        <param>
+          <type><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84" kindref="member">enum_tcprescalers</ref></type>
+          <declname>prescaler</declname>
+        </param>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit_02</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit_01</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit_00</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="28" column="18" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="347" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1ab8973af2bda4732b6267f68f3ea48ea9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyAtmega328p::sendCharUart</definition>
+        <argsstring>(char c)</argsstring>
+        <name>sendCharUart</name>
+        <qualifiedname>MyAtmega328p::sendCharUart</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="32" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="212" bodyend="216"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_my_atmega328p_1a5ba27c7a67683a56e9344f45013357b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MyAtmega328p::MyAtmega328p</definition>
+        <argsstring>(unsigned long f_cpu=F_CPU)</argsstring>
+        <name>MyAtmega328p</name>
+        <qualifiedname>MyAtmega328p::MyAtmega328p</qualifiedname>
+        <param>
+          <type>unsigned long</type>
+          <declname>f_cpu</declname>
+          <defval>F_CPU</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="45" column="9" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1a026186c45b5f43ca2c6c5135e003190f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyAtmega328p::setTC0Config</definition>
+        <argsstring>(enum_tcmodes mode, enum_tcprescalers prescaler, uint8_t value_top=255)</argsstring>
+        <name>setTC0Config</name>
+        <qualifiedname>MyAtmega328p::setTC0Config</qualifiedname>
+        <param>
+          <type><ref refid="_my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93c" kindref="member">enum_tcmodes</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="_my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84" kindref="member">enum_tcprescalers</ref></type>
+          <declname>prescaler</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>value_top</declname>
+          <defval>255</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="49" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="278" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1a23a876fa091060f4ecc2c97867eda9fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyAtmega328p::printUart</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>printUart</name>
+        <qualifiedname>MyAtmega328p::printUart</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="53" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="231" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1a7797458cad34ae94a44317aba2b89a01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyAtmega328p::printUart</definition>
+        <argsstring>(const String &amp;str)</argsstring>
+        <name>printUart</name>
+        <qualifiedname>MyAtmega328p::printUart</qualifiedname>
+        <param>
+          <type>const String &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="54" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="254" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1a624c2bc2597cd99201a79695948d5b7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyAtmega328p::writeToEEPROM</definition>
+        <argsstring>(uint16_t address, uint8_t value)</argsstring>
+        <name>writeToEEPROM</name>
+        <qualifiedname>MyAtmega328p::writeToEEPROM</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="58" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="97" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1a2a0dd016860c999d1e4c6b5c8cbedb40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyAtmega328p::writeToEEPROM</definition>
+        <argsstring>(uint16_t address, const String &amp;str)</argsstring>
+        <name>writeToEEPROM</name>
+        <qualifiedname>MyAtmega328p::writeToEEPROM</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>const String &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="59" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="33" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1a7c6d57660b7cbcb735225dfdeb569ec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t MyAtmega328p::readFromEEPROM</definition>
+        <argsstring>(uint16_t address)</argsstring>
+        <name>readFromEEPROM</name>
+        <qualifiedname>MyAtmega328p::readFromEEPROM</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="63" column="17" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="123" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1ab35eca0553fbccec30f84528b9ea1473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyAtmega328p::readFromEEPROM</definition>
+        <argsstring>(uint16_t address, String &amp;str, size_t size_buffer)</argsstring>
+        <name>readFromEEPROM</name>
+        <qualifiedname>MyAtmega328p::readFromEEPROM</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>String &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size_buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="64" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="66" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1ae9f22826b9792dff1dea0ae81655ba39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyAtmega328p::initUart</definition>
+        <argsstring>(uint32_t baudrate)</argsstring>
+        <name>initUart</name>
+        <qualifiedname>MyAtmega328p::initUart</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>baudrate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="68" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="177" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1a3d77b3e0b30c518b80a0c33f7ae32cf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyAtmega328p::execTest</definition>
+        <argsstring>(uint16_t delay)</argsstring>
+        <name>execTest</name>
+        <qualifiedname>MyAtmega328p::execTest</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="72" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="145" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_atmega328p_1a91986a3df6ec4032907aacf06696a8a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyAtmega328p::execSleep</definition>
+        <argsstring>(enum_sleepmodes mode, uint8_t bits_power_reduction, bool enable_bod_sleep)</argsstring>
+        <name>execSleep</name>
+        <qualifiedname>MyAtmega328p::execSleep</qualifiedname>
+        <param>
+          <type><ref refid="_my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374" kindref="member">enum_sleepmodes</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bits_power_reduction</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable_bod_sleep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="73" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp" bodystart="454" bodyend="560"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>class for Microchip ATMEGA 328p </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MyAtmega328p</label>
+        <link refid="class_my_atmega328p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MyController</label>
+        <link refid="class_my_controller"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MyAtmega328p</label>
+        <link refid="class_my_atmega328p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MyController</label>
+        <link refid="class_my_controller"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" line="19" column="1" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp" bodystart="19" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>clearBit</name></member>
+      <member refid="class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>clearBitMask</name></member>
+      <member refid="class_my_controller_1a452b611e91abf97cc6caeacc4949dbc4" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>execDelayMs</name></member>
+      <member refid="class_my_controller_1aad1dc8b4b2b15ed34db85f46514349a4" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>execDelayUs</name></member>
+      <member refid="class_my_controller_1a394f574554f9120822501bac762ac7a1" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>execNop</name></member>
+      <member refid="class_my_atmega328p_1a91986a3df6ec4032907aacf06696a8a6" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>execSleep</name></member>
+      <member refid="class_my_atmega328p_1a3d77b3e0b30c518b80a0c33f7ae32cf1" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>execTest</name></member>
+      <member refid="class_my_controller_1a7b49b818dd3b640cbeece0f42f00944d" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>getBit</name></member>
+      <member refid="class_my_atmega328p_1ae9f22826b9792dff1dea0ae81655ba39" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>initUart</name></member>
+      <member refid="class_my_atmega328p_1a48b948166671df44293adacc41aade0d" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>millis_</name></member>
+      <member refid="class_my_atmega328p_1a5ba27c7a67683a56e9344f45013357b2" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>MyAtmega328p</name></member>
+      <member refid="class_my_atmega328p_1a23a876fa091060f4ecc2c97867eda9fd" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>printUart</name></member>
+      <member refid="class_my_atmega328p_1a7797458cad34ae94a44317aba2b89a01" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>printUart</name></member>
+      <member refid="class_my_atmega328p_1a7c6d57660b7cbcb735225dfdeb569ec7" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>readFromEEPROM</name></member>
+      <member refid="class_my_atmega328p_1ab35eca0553fbccec30f84528b9ea1473" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>readFromEEPROM</name></member>
+      <member refid="class_my_atmega328p_1ab8973af2bda4732b6267f68f3ea48ea9" prot="private" virt="non-virtual"><scope>MyAtmega328p</scope><name>sendCharUart</name></member>
+      <member refid="class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>setBit</name></member>
+      <member refid="class_my_controller_1a552532ef8cb1a262be9029c7609a62c6" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>setBitMask</name></member>
+      <member refid="class_my_controller_1a9861e8a403627e884a0bfbc837cf0723" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>setGpioConfig</name></member>
+      <member refid="class_my_atmega328p_1a04bb7dd781cc39bdd9f0596413019025" prot="private" virt="non-virtual"><scope>MyAtmega328p</scope><name>setTC01Prescaler</name></member>
+      <member refid="class_my_atmega328p_1a026186c45b5f43ca2c6c5135e003190f" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>setTC0Config</name></member>
+      <member refid="class_my_atmega328p_1a624c2bc2597cd99201a79695948d5b7d" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>writeToEEPROM</name></member>
+      <member refid="class_my_atmega328p_1a2a0dd016860c999d1e4c6b5c8cbedb40" prot="public" virt="non-virtual"><scope>MyAtmega328p</scope><name>writeToEEPROM</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

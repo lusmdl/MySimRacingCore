@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__my_button_8hpp_source" xml:lang="en-US">
+<title>MyButton.hpp</title>
+<indexterm><primary>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.hpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__my_button_8hpp_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;MYBUTTON_HPP</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;MYBUTTON_HPP</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00003"/>00003 
+<anchor xml:id="__my_button_8hpp_source_1l00004"/>00004 <emphasis role="comment">//&#32;HEADER</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00005"/>00005 
+<anchor xml:id="__my_button_8hpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__my_avr_8hpp">MyAvr.hpp</link>&quot;</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00007"/>00007 
+<anchor xml:id="__my_button_8hpp_source_1l00008"/>00008 
+<anchor xml:id="__my_button_8hpp_source_1l00009"/><link linkend="_class_my_button">00009</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_my_button">MyButton</link>&#32;:&#32;
+<anchor xml:id="__my_button_8hpp_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_my_controller">MyController</link>,&#32;
+<anchor xml:id="__my_button_8hpp_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classinterface___subject">interface_Subject</link>&#32;{
+<anchor xml:id="__my_button_8hpp_source_1l00012"/>00012 
+<anchor xml:id="__my_button_8hpp_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__my_button_8hpp_source_1l00014"/>00014 
+<anchor xml:id="__my_button_8hpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;MEMBER</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00016"/>00016 
+<anchor xml:id="__my_button_8hpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Zeiger&#32;auf&#32;das&#32;Register&#32;des&#32;Tasters</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structpod__gpioregister">pod_gpioregister</link>&#32;reg_;
+<anchor xml:id="__my_button_8hpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//volatile&#32;uint8_t*&#32;ptrRegister_;</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00020"/>00020 
+<anchor xml:id="__my_button_8hpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Bitposition&#32;des&#32;Tasters&#32;im&#32;Register</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;bit_;
+<anchor xml:id="__my_button_8hpp_source_1l00023"/>00023 
+<anchor xml:id="__my_button_8hpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Tasterstatus&#32;(gedrückt&#32;oder&#32;nicht&#32;gedrückt)</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//bool&#32;pushed_;</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__my_button_8hpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Anzahl&#32;der&#32;Tasterbetätigungen</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//uint32_t&#32;numberGetPushed_;</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__my_button_8hpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;invert&#32;the&#32;HIGH&#32;Signal&#32;(usefull&#32;if&#32;pullup&#32;is&#32;in&#32;use)</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//bool&#32;enableInvert_;</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00032"/>00032 
+<anchor xml:id="__my_button_8hpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structpod__buttonstatus">pod_buttonstatus</link>&#32;button_;
+<anchor xml:id="__my_button_8hpp_source_1l00034"/>00034 
+<anchor xml:id="__my_button_8hpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;OOP&#32;BEHAVIOARAL&#32;DESIGN&#32;PATTERNS</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00036"/>00036 
+<anchor xml:id="__my_button_8hpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;COMMAND</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00038"/>00038 
+<anchor xml:id="__my_button_8hpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classinterface___command">interface_Command</link>&#32;*command_;
+<anchor xml:id="__my_button_8hpp_source_1l00040"/>00040 
+<anchor xml:id="__my_button_8hpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;OBSERVER</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00042"/>00042 
+<anchor xml:id="__my_button_8hpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classinterface___observer">interface_Observer</link>&#32;*observer_;
+<anchor xml:id="__my_button_8hpp_source_1l00044"/>00044 
+<anchor xml:id="__my_button_8hpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keyword">protected</emphasis>:
+<anchor xml:id="__my_button_8hpp_source_1l00046"/>00046 
+<anchor xml:id="__my_button_8hpp_source_1l00047"/>00047 
+<anchor xml:id="__my_button_8hpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__my_button_8hpp_source_1l00049"/>00049 
+<anchor xml:id="__my_button_8hpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;CONSTRUCTOR</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__my_button_8hpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_button_1a4110e661f305b955bfa2db05f93ab4d6">MyButton</link>(<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;&amp;pinxn,&#32;uint8_t&#32;bit_position,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;invert&#32;=&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_button_8hpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_button_1a4110e661f305b955bfa2db05f93ab4d6">MyButton</link>(<link linkend="_structpod__gpioregister">pod_gpioregister</link>&#32;&amp;reg,&#32;uint8_t&#32;bit_position,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;invert&#32;=&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_button_8hpp_source_1l00054"/>00054 
+<anchor xml:id="__my_button_8hpp_source_1l00055"/>00055 
+<anchor xml:id="__my_button_8hpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;GETTER</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00057"/>00057 
+<anchor xml:id="__my_button_8hpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structpod__buttonstatus">pod_buttonstatus</link>&#32;<link linkend="_class_my_button_1adeb5ecc019c855cfaab8231042020aa6">getStatus</link>();
+<anchor xml:id="__my_button_8hpp_source_1l00059"/>00059 
+<anchor xml:id="__my_button_8hpp_source_1l00060"/>00060 
+<anchor xml:id="__my_button_8hpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;SETTER</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00062"/>00062 
+<anchor xml:id="__my_button_8hpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1a90af28c3a5250dbd5b0e4a5febe607b5">setStatus</link>(uint32_t&#32;value_new&#32;=&#32;0);
+<anchor xml:id="__my_button_8hpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1a845be1b8938b5ec3058070f6f624f39d">setCmd</link>(<link linkend="_classinterface___command">interface_Command</link>&#32;*cmd);
+<anchor xml:id="__my_button_8hpp_source_1l00065"/>00065 
+<anchor xml:id="__my_button_8hpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;EXECUTE</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00067"/>00067 
+<anchor xml:id="__my_button_8hpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;OBSERVER</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00069"/>00069 
+<anchor xml:id="__my_button_8hpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1a698b202d6e68dd6f1d9244ae2a8b5660">attachObserver</link>(<link linkend="_classinterface___observer">interface_Observer</link>&#32;*observer)&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="__my_button_8hpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1a5c91bab48b7b2155e0acfb6bb82ddf60">detachObserver</link>(<link linkend="_classinterface___observer">interface_Observer</link>&#32;*observer)&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="__my_button_8hpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1a15fe0e4218e698530a548a8f92f58a25">notifyObserver</link>()&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="__my_button_8hpp_source_1l00073"/>00073 
+<anchor xml:id="__my_button_8hpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;COMMAND</emphasis>
+<anchor xml:id="__my_button_8hpp_source_1l00075"/>00075 
+<anchor xml:id="__my_button_8hpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_button_1afa541be6b36b377940e5a8ca89e87d19">execCmd</link>();
+<anchor xml:id="__my_button_8hpp_source_1l00077"/>00077 };
+<anchor xml:id="__my_button_8hpp_source_1l00078"/>00078 
+<anchor xml:id="__my_button_8hpp_source_1l00079"/>00079 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

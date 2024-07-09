@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_my_controller" kind="class" language="C++" prot="public">
+    <compoundname>MyController</compoundname>
+    <derivedcompoundref refid="class_my_atmega328p" prot="public" virt="non-virtual">MyAtmega328p</derivedcompoundref>
+    <derivedcompoundref refid="class_my_button" prot="private" virt="non-virtual">MyButton</derivedcompoundref>
+    <derivedcompoundref refid="class_my_button_matrix2x2" prot="private" virt="non-virtual">MyButtonMatrix2x2</derivedcompoundref>
+    <includes refid="_my_avr_8hpp" local="no">MyAvr.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_my_controller_1a7b49b818dd3b640cbeece0f42f00944d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MyController::getBit</definition>
+        <argsstring>(volatile uint8_t &amp;reg, uint8_t bit)</argsstring>
+        <name>getBit</name>
+        <qualifiedname>MyController::getBit</qualifiedname>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="189" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyController::setBit</definition>
+        <argsstring>(volatile uint8_t &amp;reg, uint8_t bit, bool value=true)</argsstring>
+        <name>setBit</name>
+        <qualifiedname>MyController::setBit</qualifiedname>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="193" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp" bodystart="46" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_controller_1a552532ef8cb1a262be9029c7609a62c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyController::setBitMask</definition>
+        <argsstring>(volatile uint8_t &amp;reg, uint8_t bit_mask, bool value=true)</argsstring>
+        <name>setBitMask</name>
+        <qualifiedname>MyController::setBitMask</qualifiedname>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit_mask</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="194" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp" bodystart="99" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_controller_1a9861e8a403627e884a0bfbc837cf0723" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyController::setGpioConfig</definition>
+        <argsstring>(enum_gpiomodes mode, volatile uint8_t &amp;ddxn, volatile uint8_t &amp;portxn, uint8_t bit)</argsstring>
+        <name>setGpioConfig</name>
+        <qualifiedname>MyController::setGpioConfig</qualifiedname>
+        <param>
+          <type><ref refid="_my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8" kindref="member">enum_gpiomodes</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>ddxn</declname>
+        </param>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>portxn</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="195" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp" bodystart="152" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_controller_1a394f574554f9120822501bac762ac7a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyController::execNop</definition>
+        <argsstring>()</argsstring>
+        <name>execNop</name>
+        <qualifiedname>MyController::execNop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="199" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_controller_1aad1dc8b4b2b15ed34db85f46514349a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyController::execDelayUs</definition>
+        <argsstring>(uint16_t us)</argsstring>
+        <name>execDelayUs</name>
+        <qualifiedname>MyController::execDelayUs</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>us</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="200" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp" bodystart="248" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_controller_1a452b611e91abf97cc6caeacc4949dbc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyController::execDelayMs</definition>
+        <argsstring>(uint32_t ms)</argsstring>
+        <name>execDelayMs</name>
+        <qualifiedname>MyController::execDelayMs</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="201" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp" bodystart="206" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyController::clearBit</definition>
+        <argsstring>(volatile uint8_t &amp;reg, uint8_t bit)</argsstring>
+        <name>clearBit</name>
+        <qualifiedname>MyController::clearBit</qualifiedname>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="205" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyController::clearBitMask</definition>
+        <argsstring>(volatile uint8_t &amp;reg, uint8_t bit_mask)</argsstring>
+        <name>clearBitMask</name>
+        <qualifiedname>MyController::clearBitMask</qualifiedname>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit_mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="206" column="14" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MyAtmega328p</label>
+        <link refid="class_my_atmega328p"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MyButton</label>
+        <link refid="class_my_button"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MyButtonMatrix2x2</label>
+        <link refid="class_my_button_matrix2x2"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MyController</label>
+        <link refid="class_my_controller"/>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" line="173" column="1" bodyfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp" bodystart="173" bodyend="207"/>
+    <listofallmembers>
+      <member refid="class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7" prot="public" virt="non-virtual"><scope>MyController</scope><name>clearBit</name></member>
+      <member refid="class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd" prot="public" virt="non-virtual"><scope>MyController</scope><name>clearBitMask</name></member>
+      <member refid="class_my_controller_1a452b611e91abf97cc6caeacc4949dbc4" prot="public" virt="non-virtual"><scope>MyController</scope><name>execDelayMs</name></member>
+      <member refid="class_my_controller_1aad1dc8b4b2b15ed34db85f46514349a4" prot="public" virt="non-virtual"><scope>MyController</scope><name>execDelayUs</name></member>
+      <member refid="class_my_controller_1a394f574554f9120822501bac762ac7a1" prot="public" virt="non-virtual"><scope>MyController</scope><name>execNop</name></member>
+      <member refid="class_my_controller_1a7b49b818dd3b640cbeece0f42f00944d" prot="public" virt="non-virtual"><scope>MyController</scope><name>getBit</name></member>
+      <member refid="class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b" prot="public" virt="non-virtual"><scope>MyController</scope><name>setBit</name></member>
+      <member refid="class_my_controller_1a552532ef8cb1a262be9029c7609a62c6" prot="public" virt="non-virtual"><scope>MyController</scope><name>setBitMask</name></member>
+      <member refid="class_my_controller_1a9861e8a403627e884a0bfbc837cf0723" prot="public" virt="non-virtual"><scope>MyController</scope><name>setGpioConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__my_atmega328p_8hpp" xml:lang="en-US">
+<title>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp File Reference</title>
+<indexterm><primary>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;MyAvr.hpp&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_my_atmega328p">MyAtmega328p</link></para>
+
+<para>class for Microchip ATMEGA 328p </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

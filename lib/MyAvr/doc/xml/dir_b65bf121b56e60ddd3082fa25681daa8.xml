@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_b65bf121b56e60ddd3082fa25681daa8" kind="dir">
+    <compoundname>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib</compoundname>
+    <innerdir refid="dir_052db0ac63cf9ad38e622dda476147cd">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/"/>
+  </compounddef>
+</doxygen>

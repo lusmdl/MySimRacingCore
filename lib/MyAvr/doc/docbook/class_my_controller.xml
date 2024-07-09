@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_my_controller" xml:lang="en-US">
+<title>MyController Class Reference</title>
+<indexterm><primary>MyController</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MyAvr.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for MyController:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_my_controller.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_my_controller_1a7b49b818dd3b640cbeece0f42f00944d">getBit</link> (volatile uint8_t &amp;reg, uint8_t bit)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b">setBit</link> (volatile uint8_t &amp;reg, uint8_t bit, bool value=true)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_my_controller_1a552532ef8cb1a262be9029c7609a62c6">setBitMask</link> (volatile uint8_t &amp;reg, uint8_t bit_mask, bool value=true)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_my_controller_1a9861e8a403627e884a0bfbc837cf0723">setGpioConfig</link> (<link linkend="__my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8">enum_gpiomodes</link> mode, volatile uint8_t &amp;ddxn, volatile uint8_t &amp;portxn, uint8_t bit)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_my_controller_1a394f574554f9120822501bac762ac7a1">execNop</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_my_controller_1aad1dc8b4b2b15ed34db85f46514349a4">execDelayUs</link> (uint16_t us)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_my_controller_1a452b611e91abf97cc6caeacc4949dbc4">execDelayMs</link> (uint32_t ms)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7">clearBit</link> (volatile uint8_t &amp;reg, uint8_t bit)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd">clearBitMask</link> (volatile uint8_t &amp;reg, uint8_t bit_mask)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00173">173</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7"/><section>
+    <title>clearBit()</title>
+<indexterm><primary>clearBit</primary><secondary>MyController</secondary></indexterm>
+<indexterm><primary>MyController</primary><secondary>clearBit</secondary></indexterm>
+<para><computeroutput>void MyController::clearBit (volatile uint8_t &amp; reg, uint8_t bit)</computeroutput></para><simplesect><title>Examples</title><link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp</link>, and <link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</link>.</simplesect>
+<para>
+Definition at line <link linkend="__my_avr_8cpp_source_1l00073">73</link> of file <link linkend="__my_avr_8cpp_source">MyAvr.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd"/><section>
+    <title>clearBitMask()</title>
+<indexterm><primary>clearBitMask</primary><secondary>MyController</secondary></indexterm>
+<indexterm><primary>MyController</primary><secondary>clearBitMask</secondary></indexterm>
+<para><computeroutput>void MyController::clearBitMask (volatile uint8_t &amp; reg, uint8_t bit_mask)</computeroutput></para><simplesect><title>Examples</title><link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp</link>, and <link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</link>.</simplesect>
+<para>
+Definition at line <link linkend="__my_avr_8cpp_source_1l00130">130</link> of file <link linkend="__my_avr_8cpp_source">MyAvr.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_my_controller_1a452b611e91abf97cc6caeacc4949dbc4"/><section>
+    <title>execDelayMs()</title>
+<indexterm><primary>execDelayMs</primary><secondary>MyController</secondary></indexterm>
+<indexterm><primary>MyController</primary><secondary>execDelayMs</secondary></indexterm>
+<para><computeroutput>void MyController::execDelayMs (uint32_t ms)</computeroutput></para><simplesect><title>Examples</title><link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</link>.</simplesect>
+<para>
+Definition at line <link linkend="__my_avr_8cpp_source_1l00206">206</link> of file <link linkend="__my_avr_8cpp_source">MyAvr.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_my_controller_1aad1dc8b4b2b15ed34db85f46514349a4"/><section>
+    <title>execDelayUs()</title>
+<indexterm><primary>execDelayUs</primary><secondary>MyController</secondary></indexterm>
+<indexterm><primary>MyController</primary><secondary>execDelayUs</secondary></indexterm>
+<para><computeroutput>void MyController::execDelayUs (uint16_t us)</computeroutput></para><simplesect><title>Examples</title><link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</link>.</simplesect>
+<para>
+Definition at line <link linkend="__my_avr_8cpp_source_1l00248">248</link> of file <link linkend="__my_avr_8cpp_source">MyAvr.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_my_controller_1a394f574554f9120822501bac762ac7a1"/><section>
+    <title>execNop()</title>
+<indexterm><primary>execNop</primary><secondary>MyController</secondary></indexterm>
+<indexterm><primary>MyController</primary><secondary>execNop</secondary></indexterm>
+<para><computeroutput>void MyController::execNop ( )</computeroutput></para><para>
+Definition at line <link linkend="__my_avr_8cpp_source_1l00282">282</link> of file <link linkend="__my_avr_8cpp_source">MyAvr.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_my_controller_1a7b49b818dd3b640cbeece0f42f00944d"/><section>
+    <title>getBit()</title>
+<indexterm><primary>getBit</primary><secondary>MyController</secondary></indexterm>
+<indexterm><primary>MyController</primary><secondary>getBit</secondary></indexterm>
+<para><computeroutput>bool MyController::getBit (volatile uint8_t &amp; reg, uint8_t bit)</computeroutput></para><simplesect><title>Examples</title><link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</link>.</simplesect>
+<para>
+Definition at line <link linkend="__my_avr_8cpp_source_1l00024">24</link> of file <link linkend="__my_avr_8cpp_source">MyAvr.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b"/><section>
+    <title>setBit()</title>
+<indexterm><primary>setBit</primary><secondary>MyController</secondary></indexterm>
+<indexterm><primary>MyController</primary><secondary>setBit</secondary></indexterm>
+<para><computeroutput>void MyController::setBit (volatile uint8_t &amp; reg, uint8_t bit, bool value = <computeroutput>true</computeroutput>
+)</computeroutput></para><simplesect><title>Examples</title><link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp</link>, and <link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</link>.</simplesect>
+<para>
+Definition at line <link linkend="__my_avr_8cpp_source_1l00046">46</link> of file <link linkend="__my_avr_8cpp_source">MyAvr.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_my_controller_1a552532ef8cb1a262be9029c7609a62c6"/><section>
+    <title>setBitMask()</title>
+<indexterm><primary>setBitMask</primary><secondary>MyController</secondary></indexterm>
+<indexterm><primary>MyController</primary><secondary>setBitMask</secondary></indexterm>
+<para><computeroutput>void MyController::setBitMask (volatile uint8_t &amp; reg, uint8_t bit_mask, bool value = <computeroutput>true</computeroutput>
+)</computeroutput></para><simplesect><title>Examples</title><link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp</link>, and <link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</link>.</simplesect>
+<para>
+Definition at line <link linkend="__my_avr_8cpp_source_1l00099">99</link> of file <link linkend="__my_avr_8cpp_source">MyAvr.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_my_controller_1a9861e8a403627e884a0bfbc837cf0723"/><section>
+    <title>setGpioConfig()</title>
+<indexterm><primary>setGpioConfig</primary><secondary>MyController</secondary></indexterm>
+<indexterm><primary>MyController</primary><secondary>setGpioConfig</secondary></indexterm>
+<para><computeroutput>void MyController::setGpioConfig (<link linkend="__my_avr_8hpp_1a105ae23d3b40bf5ab26939bc88c849f8">enum_gpiomodes</link> mode, volatile uint8_t &amp; ddxn, volatile uint8_t &amp; portxn, uint8_t bit)</computeroutput></para><para>
+Definition at line <link linkend="__my_avr_8cpp_source_1l00152">152</link> of file <link linkend="__my_avr_8cpp_source">MyAvr.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/<link linkend="__my_avr_8hpp">MyAvr.hpp</link>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/<link linkend="__my_avr_8cpp">MyAvr.cpp</link></section>
+</section>

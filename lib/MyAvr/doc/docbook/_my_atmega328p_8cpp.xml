@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__my_atmega328p_8cpp" xml:lang="en-US">
+<title>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp File Reference</title>
+<indexterm><primary>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;MyAtmega328p.hpp&quot;<?linebreak?></programlisting></section>

@@ -1,0 +1,387 @@
+\doxysection{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Atmega328p.\+cpp}
+\hypertarget{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example}{}\label{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example}Constructor of the \doxylink{class_my_atmega328p}{My\+Atmega328p} class Initializes the CPU frequency of the microcontroller.
+
+Constructor of the \doxylink{class_my_atmega328p}{My\+Atmega328p} class Initializes the CPU frequency of the microcontroller.\begin{DoxyWarning}{Warning}
+This method is considered unsafe in situations where incorrect CPU frequency can lead to system instability.
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+It is important to verify the compatibility of the specified frequency with the microcontroller specifications.
+\end{DoxyNote}
+\doxylink{class_my_atmega328p}{My\+Atmega328p} my\+Controller(\+F\+\_\+\+CPU);
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ HEADER}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_my_atmega328p_8hpp}{MyAtmega328p.hpp}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{MyAtmega328p\ ::MyAtmega328p(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ f\_cpu)\ \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ MyAtmega328p\ ::writeToEEPROM(uint16\_t\ address,\ \textcolor{keyword}{const}\ String\ \&str)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (address\ >=\ 0\ \&\&\ address\ <\ E2END)\ \{\ \textcolor{comment}{//\ Speicherzugriff\ einschränken\ auf\ den\ EEPROM-\/Bereich}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{size\_t}\ length\ =\ str.length();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (length\ >\ E2END\ -\/\ address)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ length\ =\ E2END\ -\/\ address;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ eeprom\_write\_block(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(str.c\_str()),\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(address),\ length);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ MyAtmega328p\ ::readFromEEPROM(uint16\_t\ address,\ String\ \&str,\ \textcolor{keywordtype}{size\_t}\ size\_buffer)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (address\ >=\ 0\ \&\&\ address\ <\ E2END)\ \{\ \textcolor{comment}{//\ Überprüfen,\ ob\ Adresse\ innerhalb\ des\ EEPROM-\/Bereichs\ liegt}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{size\_t}\ length\ =\ E2END\ -\/\ address;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (length\ >\ size\_buffer)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ length\ =\ size\_buffer;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{char}*\ buffer\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{char}[length\ +\ 1];}
+\DoxyCodeLine{\ \ \ \ eeprom\_read\_block(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(buffer),\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(address),\ length);}
+\DoxyCodeLine{\ \ \ \ buffer[length]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\ \ \ \ str\ =\ buffer;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{delete}[]\ buffer;}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ MyAtmega328p\ ::writeToEEPROM(uint16\_t\ address,\ uint8\_t\ value)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (address\ >=\ 0\ \&\&\ address\ <\ E2END)\ \{\ \textcolor{comment}{//\ Speicher-\/Zugriff\ einschränken\ auf\ Adressebereich\ des\ EEPROM}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ eeprom\_write\_byte((uint8\_t*)address,\ value);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{uint8\_t\ MyAtmega328p\ ::readFromEEPROM(uint16\_t\ address)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (address\ >=\ 0\ \&\&\ address\ <\ E2END)\ \{\ \textcolor{comment}{//\ Überprüfen,\ ob\ Adresse\ innerhalb\ des\ EEPROM-\/Bereichs\ liegt}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ eeprom\_read\_byte((uint8\_t*)address);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{//\ Rückgabewert,\ wenn\ Adresse\ ungültig\ ist}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ MyAtmega328p\ ::execTest(uint16\_t\ delay)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Den\ digitalen\ Pin\ als\ Ausgang\ konfigurieren}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ DDRB\ |=\ (1\ <<\ DDB5);}}
+\DoxyCodeLine{\ \ setBit(DDRB,\ DDB5,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Die\ LED\ einschalten}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ PORTB\ |=\ (1\ <<\ PORTB5);}}
+\DoxyCodeLine{\ \ setBit(PORTB,\ DDB5,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ execDelayMs(delay);\ \textcolor{comment}{//\ Eine\ Sekunde\ warten}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Die\ LED\ ausschalten}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ PORTB\ \&=\ \string~(1\ <<\ PORTB5);}}
+\DoxyCodeLine{\ \ setBit(PORTB,\ DDB5,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ execDelayMs(delay);\ \textcolor{comment}{//\ Eine\ Sekunde\ warten}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ MyAtmega328p\ ::initUart(uint32\_t\ baudrate)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ uint16\_t\ ubrr\ =\ F\_CPU\ /\ (16\ *\ baudrate)\ -\/\ 1;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Set\ baud\ rate}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ UBRR0H\ =\ (uint8\_t)(ubrr\ >>\ 8);}
+\DoxyCodeLine{\ \ UBRR0L\ =\ (uint8\_t)ubrr;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Enable\ receiver\ and\ transmitter}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ UCSR0B\ =\ (1\ <<\ RXEN0)\ |\ (1\ <<\ TXEN0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Set\ frame\ format:\ 8data,\ 2stop\ bit}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ UCSR0C\ =\ (1\ <<\ UCSZ01)\ |\ (1\ <<\ UCSZ00);}}
+\DoxyCodeLine{\ \ UCSR0C\ =\ (1\ <<\ USBS0)\ |\ (3\ <<\ UCSZ00);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ printUart(\textcolor{stringliteral}{"{}\(\backslash\)nHello\ World!\(\backslash\)n"{}});}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ MyAtmega328p\ ::sendCharUart(\textcolor{keywordtype}{char}\ c)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}\ (!(UCSR0A\ \&\ (1\ <<\ UDRE0)));}
+\DoxyCodeLine{\ \ \ \ UDR0\ =\ c;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ MyAtmega328p\ ::printUart(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ len\ =\ strlen(str);}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ len;\ i++)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ sendCharUart(str[i]);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_a23a876fa091060f4ecc2c97867eda9fd}{MyAtmega328p::printUart}}(\textcolor{keyword}{const}\ String\ \&str)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ len\ =\ str.length();}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ len;\ i++)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ sendCharUart(str.charAt(i));}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ MyAtmega328p\ ::setTC0Config(\mbox{\hyperlink{_my_avr_8hpp_a6254561796d46c748001adeaf5e6d93c}{enum\_tcmodes}}\ mode,\ \mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84}{enum\_tcprescalers}}\ prescaler,\ uint8\_t\ value\_top)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Konfiguriere\ Timer/Counter\ 0}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ -\/}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ Mode\ \ |\ WGM02\ |\ WGM01\ |\ WGM00\ |\ Timer/Counter\ Mode\ of\ Operation\ |\ TOP\ \ \ |\ Update\ of\ OCR0x\ at\ TOV\ Flag\ Set\ on}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 0\ \ \ \ \ |\ 0\ \ \ \ \ |\ 0\ \ \ \ \ |\ 0\ \ \ \ \ |\ Normal\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ 0xFF\ \ |\ Immediate\ MAX}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 1\ \ \ \ \ |\ 0\ \ \ \ \ |\ 0\ \ \ \ \ |\ 1\ \ \ \ \ |\ PWM,\ Phase\ Correct\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ 0xFF\ \ |\ TOP\ BOTTOM}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 2\ \ \ \ \ |\ 0\ \ \ \ \ |\ 1\ \ \ \ \ |\ 0\ \ \ \ \ |\ CTC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ OCRA\ \ |\ Immediate\ MAX}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 3\ \ \ \ \ |\ 0\ \ \ \ \ |\ 1\ \ \ \ \ |\ 1\ \ \ \ \ |\ Fast\ PWM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ 0xFF\ \ |\ BOTTOM\ MAX}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 5\ \ \ \ \ |\ 1\ \ \ \ \ |\ 0\ \ \ \ \ |\ 1\ \ \ \ \ |\ PWM,\ Phase\ Correct\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ OCRA\ \ |\ TOP\ BOTTOM}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 7\ \ \ \ \ |\ 1\ \ \ \ \ |\ 1\ \ \ \ \ |\ 1\ \ \ \ \ |\ Fast\ PWM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ OCRA\ \ |\ BOTTOM\ TOP}}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{switch}\ (mode)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a6254561796d46c748001adeaf5e6d93cad472717efbd11a2e3c7a10a2bcece779}{CTC}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ ctc\ modus\ einrichten}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(TCCR0A,\ WGM00,\ 0);}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(TCCR0A,\ WGM01,\ 1);}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(TCCR0B,\ WGM02,\ 0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ prescaler}}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keyword}{auto}\ n\ =\ setTC01Prescaler(prescaler,\ TCCR0B,\ CS02,\ CS01,\ CS00);}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ Setze\ den\ Vergleichswert\ für\ den\ CTC-\/Modus}}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ \ \ don't\ use\ this\ calculation.\ Do\ this\ in\ the\ main\ code\ instead!}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ \ \ auto\ clkPerMillisekond\ \{\ (\ cpuFreq\ /\ n\ )\ /\ 1000\ \};}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ \ \ OCR0A\ =\ (\ (\ clkPerMillisekond\ *\ topTime\ )\ -\/\ 1\ );}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ \ \ */}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ OCR0A\ =\ value\_top;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ interrupt\ aktivieren}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(TIMSK0,\ OCIE0A);}
+\DoxyCodeLine{\ \ \ \ \ \ sei();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{uint32\_t\ MyAtmega328p\ ::setTC01Prescaler(\mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84}{enum\_tcprescalers}}\ prescaler,\ \textcolor{keyword}{volatile}\ uint8\_t\ \&reg,\ uint8\_t\ bit\_02,\ uint8\_t\ bit\_01,\ uint8\_t\ bit\_00)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Prescaler\ Tabelle}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ -\/}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |02\ |01\ |00\ |}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 0\ |\ 0\ |\ 0\ |\ No\ clock\ source\ (Timer/Counter\ stopped)}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 0\ |\ 0\ |\ 1\ |\ clkI/O/1\ (No\ prescaling)}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 0\ |\ 1\ |\ 0\ |\ clkI/O/8\ (From\ prescaler)}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 0\ |\ 1\ |\ 1\ |\ clkI/O/64\ (From\ prescaler)}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 1\ |\ 0\ |\ 0\ |\ clkI/O/256\ (From\ prescaler)}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 1\ |\ 0\ |\ 1\ |\ clkI/O/1024\ (From\ prescaler)}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 1\ |\ 1\ |\ 0\ |\ External\ clock\ source\ on\ T0\ pin.\ Clock\ on\ falling\ edge.}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ |\ 1\ |\ 1\ |\ 1\ |\ External\ clock\ source\ on\ T0\ pin.\ Clock\ on\ rising\ edge.}}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{switch}\ (prescaler)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84ad2ef98ac0d98086868c235ef37670273}{CLK\_1}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_00,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_01,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_02,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84a4f4b40052b3e128cbef3e15dd579c50e}{CLK\_8}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_00,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_01,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_02,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 8;}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84a0a39b4aae1959fc16bbe8382aa2f36de}{CLK\_64}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_00,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_01,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_02,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 64;}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84adb5e9424a002d86170784b48e6943810}{CLK\_256}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_00,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_01,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_02,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 256;}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84add15888bea74c6eeca3a3fb06181b857}{CLK\_1024}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_00,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_01,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_02,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1024;}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84a33416c83ecdef3b829acc08e92983853}{EXT\_CLK\_SOURCE\_FALLING\_EDGE}}:}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_00,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_01,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_02,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a9aa7f3e1598b10585757c2dab7cb9a84abf7407a632cd1a1dc9eaa6fca42ee2a8}{EXT\_CLK\_SOURCE\_RISING\_EDGE}}:}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_00,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_01,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_02,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_00,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_01,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ \ \ setBit(reg,\ bit\_02,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_atmega328p_a91986a3df6ec4032907aacf06696a8a6}{MyAtmega328p::execSleep}}(\mbox{\hyperlink{_my_avr_8hpp_a5ea866ecdf7cb2426827d8cc01425374}{enum\_sleepmodes}}\ mode,\ uint8\_t\ bits\_power\_reduction,\ \textcolor{keywordtype}{bool}\ enable\_bod\_sleep)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Disable\ interrupts}}
+\DoxyCodeLine{\ \ cli();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Disable\ sleep\ mode}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_my_controller_ae7487dc0d9d6d550e354b0e7153ac76b}{setBit}}(MCUCR,\ SE,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Set\ the\ requested\ sleep\ mode}}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{switch}(mode)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a5ea866ecdf7cb2426827d8cc01425374afd6a0e4343048b10646dd2976cc5ad18}{IDLE}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_my_controller_af0956247c7fafc6d5797b3e0fa7d09cd}{clearBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM0)\ |\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM1)\ |\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM2));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a5ea866ecdf7cb2426827d8cc01425374a19e4c86357ccabfaf43e2fabe2189f3c}{ADC\_NOISE\_REDUCTION}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_my_controller_a552532ef8cb1a262be9029c7609a62c6}{setBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM0));}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_my_controller_af0956247c7fafc6d5797b3e0fa7d09cd}{clearBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM1)\ |\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM2));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a5ea866ecdf7cb2426827d8cc01425374a2abda45f1b1e5bbe193611fb41ae7dfa}{POWER\_DOWN}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_my_controller_a552532ef8cb1a262be9029c7609a62c6}{setBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM1));}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_my_controller_af0956247c7fafc6d5797b3e0fa7d09cd}{clearBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM2)\ |\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM0));\ }
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a5ea866ecdf7cb2426827d8cc01425374a412ffca781db3a099f287df487667d19}{POWER\_SAVE}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_my_controller_a552532ef8cb1a262be9029c7609a62c6}{setBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM0)\ |\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM1));}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_my_controller_af0956247c7fafc6d5797b3e0fa7d09cd}{clearBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM2));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a5ea866ecdf7cb2426827d8cc01425374ae4634ae4352b512b38c5da9dc1610ca6}{STANDBY}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ only\ recommend\ for\ use\ with\ external\ crystals\ or\ resonators}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_my_controller_af0956247c7fafc6d5797b3e0fa7d09cd}{clearBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM0));}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_my_controller_a552532ef8cb1a262be9029c7609a62c6}{setBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM1)\ |\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM2));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_my_avr_8hpp_a5ea866ecdf7cb2426827d8cc01425374ad57e897be0d28a3218fa9fc2eeb650e2}{EXTENDED\_STANDBY}}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ only\ recommend\ for\ use\ with\ external\ crystals\ or\ resonators}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_my_controller_a552532ef8cb1a262be9029c7609a62c6}{setBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM0)\ |\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM1)\ |\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM2)\ );\ }
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ Invalid\ sleep\ mode,\ return\ imidiately}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Set\ the\ power\ reduction\ bits}}
+\DoxyCodeLine{\ \ PRR\ |=\ bits\_power\_reduction;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (enable\_bod\_sleep)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Enable\ BODS\ bit\ and\ set\ BODS\ to\ disable\ BOD\ in\ sleep\ mode\ if\ enableBODSleep\ is\ true}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_my_controller_ae7487dc0d9d6d550e354b0e7153ac76b}{setBit}}(MCUCR,\ BODS);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_my_controller_ae7487dc0d9d6d550e354b0e7153ac76b}{setBit}}(MCUCR,\ BODSE);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_my_controller_ac11d8131f2a39a638ace4418adeebbd7}{clearBit}}(MCUCR,\ BODSE);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Delay\ for\ three\ clock\ cycles}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{asm}\ \textcolor{keyword}{volatile}(\textcolor{stringliteral}{"{}nop"{}});}
+\DoxyCodeLine{\ \ \textcolor{keyword}{asm}\ \textcolor{keyword}{volatile}(\textcolor{stringliteral}{"{}nop"{}});}
+\DoxyCodeLine{\ \ \textcolor{keyword}{asm}\ \textcolor{keyword}{volatile}(\textcolor{stringliteral}{"{}nop"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Enable\ sleep\ mode}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_my_controller_ae7487dc0d9d6d550e354b0e7153ac76b}{setBit}}(SMCR,\ SE);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Enable\ interrupts}}
+\DoxyCodeLine{\ \ sei();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Enter\ sleep\ mode}}
+\DoxyCodeLine{\ \ \textcolor{keyword}{asm}\ \textcolor{keyword}{volatile}(\textcolor{stringliteral}{"{}sleep"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Execution\ will\ resume\ here\ after\ waking\ up}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Clear\ the\ power\ reduction\ bits}}
+\DoxyCodeLine{\ \ PRR\ \&=\ \string~bits\_power\_reduction;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (enable\_bod\_sleep)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Re-\/enable\ BOD\ after\ sleep\ mode\ if\ enableBODSleep\ is\ true\ (optional)}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_my_controller_ac11d8131f2a39a638ace4418adeebbd7}{clearBit}}(MCUCR,\ BODS);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Disable\ sleep\ mode}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_my_controller_ae7487dc0d9d6d550e354b0e7153ac76b}{setBit}}(MCUCR,\ SE,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_my_controller_af0956247c7fafc6d5797b3e0fa7d09cd}{clearBitMask}}(SMCR,\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM0)\ |\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM1)\ |\ \mbox{\hyperlink{_my_avr_8hpp_a308c5c722f9ed9393cf6e5026fc81600}{BITMASK}}(SM2));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

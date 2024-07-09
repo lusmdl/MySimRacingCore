@@ -1,0 +1,160 @@
+\doxysection{My\+Controller Class Reference}
+\hypertarget{class_my_controller}{}\label{class_my_controller}\index{MyController@{MyController}}
+
+
+{\ttfamily \#include $<$My\+Avr.\+hpp$>$}
+
+Inheritance diagram for My\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_my_controller_a7b49b818dd3b640cbeece0f42f00944d}{get\+Bit}} (volatile uint8\+\_\+t \&reg, uint8\+\_\+t bit)
+\item 
+void \mbox{\hyperlink{class_my_controller_ae7487dc0d9d6d550e354b0e7153ac76b}{set\+Bit}} (volatile uint8\+\_\+t \&reg, uint8\+\_\+t bit, bool value=true)
+\item 
+void \mbox{\hyperlink{class_my_controller_a552532ef8cb1a262be9029c7609a62c6}{set\+Bit\+Mask}} (volatile uint8\+\_\+t \&reg, uint8\+\_\+t bit\+\_\+mask, bool value=true)
+\item 
+void \mbox{\hyperlink{class_my_controller_a9861e8a403627e884a0bfbc837cf0723}{set\+Gpio\+Config}} (\mbox{\hyperlink{_my_avr_8hpp_a105ae23d3b40bf5ab26939bc88c849f8}{enum\+\_\+gpiomodes}} mode, volatile uint8\+\_\+t \&ddxn, volatile uint8\+\_\+t \&portxn, uint8\+\_\+t bit)
+\item 
+void \mbox{\hyperlink{class_my_controller_a394f574554f9120822501bac762ac7a1}{exec\+Nop}} ()
+\item 
+void \mbox{\hyperlink{class_my_controller_aad1dc8b4b2b15ed34db85f46514349a4}{exec\+Delay\+Us}} (uint16\+\_\+t us)
+\item 
+void \mbox{\hyperlink{class_my_controller_a452b611e91abf97cc6caeacc4949dbc4}{exec\+Delay\+Ms}} (uint32\+\_\+t ms)
+\item 
+void \mbox{\hyperlink{class_my_controller_ac11d8131f2a39a638ace4418adeebbd7}{clear\+Bit}} (volatile uint8\+\_\+t \&reg, uint8\+\_\+t bit)
+\item 
+void \mbox{\hyperlink{class_my_controller_af0956247c7fafc6d5797b3e0fa7d09cd}{clear\+Bit\+Mask}} (volatile uint8\+\_\+t \&reg, uint8\+\_\+t bit\+\_\+mask)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_my_avr_8hpp_source_l00173}{173}} of file \mbox{\hyperlink{_my_avr_8hpp_source}{My\+Avr.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_my_controller_ac11d8131f2a39a638ace4418adeebbd7}\label{class_my_controller_ac11d8131f2a39a638ace4418adeebbd7} 
+\index{MyController@{MyController}!clearBit@{clearBit}}
+\index{clearBit@{clearBit}!MyController@{MyController}}
+\doxysubsubsection{\texorpdfstring{clearBit()}{clearBit()}}
+{\footnotesize\ttfamily void My\+Controller\+::clear\+Bit (\begin{DoxyParamCaption}\item[{volatile uint8\+\_\+t \&}]{reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Atmega328p.\+cpp}}, and \mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Avr.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_avr_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{_my_avr_8cpp_source}{My\+Avr.\+cpp}}.
+
+\Hypertarget{class_my_controller_af0956247c7fafc6d5797b3e0fa7d09cd}\label{class_my_controller_af0956247c7fafc6d5797b3e0fa7d09cd} 
+\index{MyController@{MyController}!clearBitMask@{clearBitMask}}
+\index{clearBitMask@{clearBitMask}!MyController@{MyController}}
+\doxysubsubsection{\texorpdfstring{clearBitMask()}{clearBitMask()}}
+{\footnotesize\ttfamily void My\+Controller\+::clear\+Bit\+Mask (\begin{DoxyParamCaption}\item[{volatile uint8\+\_\+t \&}]{reg,  }\item[{uint8\+\_\+t}]{bit\+\_\+mask }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Atmega328p.\+cpp}}, and \mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Avr.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_avr_8cpp_source_l00130}{130}} of file \mbox{\hyperlink{_my_avr_8cpp_source}{My\+Avr.\+cpp}}.
+
+\Hypertarget{class_my_controller_a452b611e91abf97cc6caeacc4949dbc4}\label{class_my_controller_a452b611e91abf97cc6caeacc4949dbc4} 
+\index{MyController@{MyController}!execDelayMs@{execDelayMs}}
+\index{execDelayMs@{execDelayMs}!MyController@{MyController}}
+\doxysubsubsection{\texorpdfstring{execDelayMs()}{execDelayMs()}}
+{\footnotesize\ttfamily void My\+Controller\+::exec\+Delay\+Ms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Avr.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_avr_8cpp_source_l00206}{206}} of file \mbox{\hyperlink{_my_avr_8cpp_source}{My\+Avr.\+cpp}}.
+
+\Hypertarget{class_my_controller_aad1dc8b4b2b15ed34db85f46514349a4}\label{class_my_controller_aad1dc8b4b2b15ed34db85f46514349a4} 
+\index{MyController@{MyController}!execDelayUs@{execDelayUs}}
+\index{execDelayUs@{execDelayUs}!MyController@{MyController}}
+\doxysubsubsection{\texorpdfstring{execDelayUs()}{execDelayUs()}}
+{\footnotesize\ttfamily void My\+Controller\+::exec\+Delay\+Us (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{us }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Avr.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_avr_8cpp_source_l00248}{248}} of file \mbox{\hyperlink{_my_avr_8cpp_source}{My\+Avr.\+cpp}}.
+
+\Hypertarget{class_my_controller_a394f574554f9120822501bac762ac7a1}\label{class_my_controller_a394f574554f9120822501bac762ac7a1} 
+\index{MyController@{MyController}!execNop@{execNop}}
+\index{execNop@{execNop}!MyController@{MyController}}
+\doxysubsubsection{\texorpdfstring{execNop()}{execNop()}}
+{\footnotesize\ttfamily void My\+Controller\+::exec\+Nop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_avr_8cpp_source_l00282}{282}} of file \mbox{\hyperlink{_my_avr_8cpp_source}{My\+Avr.\+cpp}}.
+
+\Hypertarget{class_my_controller_a7b49b818dd3b640cbeece0f42f00944d}\label{class_my_controller_a7b49b818dd3b640cbeece0f42f00944d} 
+\index{MyController@{MyController}!getBit@{getBit}}
+\index{getBit@{getBit}!MyController@{MyController}}
+\doxysubsubsection{\texorpdfstring{getBit()}{getBit()}}
+{\footnotesize\ttfamily bool My\+Controller\+::get\+Bit (\begin{DoxyParamCaption}\item[{volatile uint8\+\_\+t \&}]{reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Avr.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_avr_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{_my_avr_8cpp_source}{My\+Avr.\+cpp}}.
+
+\Hypertarget{class_my_controller_ae7487dc0d9d6d550e354b0e7153ac76b}\label{class_my_controller_ae7487dc0d9d6d550e354b0e7153ac76b} 
+\index{MyController@{MyController}!setBit@{setBit}}
+\index{setBit@{setBit}!MyController@{MyController}}
+\doxysubsubsection{\texorpdfstring{setBit()}{setBit()}}
+{\footnotesize\ttfamily void My\+Controller\+::set\+Bit (\begin{DoxyParamCaption}\item[{volatile uint8\+\_\+t \&}]{reg,  }\item[{uint8\+\_\+t}]{bit,  }\item[{bool}]{value = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Atmega328p.\+cpp}}, and \mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Avr.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_avr_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{_my_avr_8cpp_source}{My\+Avr.\+cpp}}.
+
+\Hypertarget{class_my_controller_a552532ef8cb1a262be9029c7609a62c6}\label{class_my_controller_a552532ef8cb1a262be9029c7609a62c6} 
+\index{MyController@{MyController}!setBitMask@{setBitMask}}
+\index{setBitMask@{setBitMask}!MyController@{MyController}}
+\doxysubsubsection{\texorpdfstring{setBitMask()}{setBitMask()}}
+{\footnotesize\ttfamily void My\+Controller\+::set\+Bit\+Mask (\begin{DoxyParamCaption}\item[{volatile uint8\+\_\+t \&}]{reg,  }\item[{uint8\+\_\+t}]{bit\+\_\+mask,  }\item[{bool}]{value = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_atmega328p_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Atmega328p.\+cpp}}, and \mbox{\hyperlink{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_avr_8cpp-example}{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Avr.\+cpp}}.\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_my_avr_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{_my_avr_8cpp_source}{My\+Avr.\+cpp}}.
+
+\Hypertarget{class_my_controller_a9861e8a403627e884a0bfbc837cf0723}\label{class_my_controller_a9861e8a403627e884a0bfbc837cf0723} 
+\index{MyController@{MyController}!setGpioConfig@{setGpioConfig}}
+\index{setGpioConfig@{setGpioConfig}!MyController@{MyController}}
+\doxysubsubsection{\texorpdfstring{setGpioConfig()}{setGpioConfig()}}
+{\footnotesize\ttfamily void My\+Controller\+::set\+Gpio\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_my_avr_8hpp_a105ae23d3b40bf5ab26939bc88c849f8}{enum\+\_\+gpiomodes}}}]{mode,  }\item[{volatile uint8\+\_\+t \&}]{ddxn,  }\item[{volatile uint8\+\_\+t \&}]{portxn,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_my_avr_8cpp_source_l00152}{152}} of file \mbox{\hyperlink{_my_avr_8cpp_source}{My\+Avr.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\mbox{\hyperlink{_my_avr_8hpp}{My\+Avr.\+hpp}}\item 
+C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\mbox{\hyperlink{_my_avr_8cpp}{My\+Avr.\+cpp}}\end{DoxyCompactItemize}

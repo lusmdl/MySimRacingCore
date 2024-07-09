@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__my_atmega328p_8cpp_source" xml:lang="en-US">
+<title>MyAtmega328p.cpp</title>
+<indexterm><primary>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__my_atmega328p_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00002"/>00002 <emphasis role="comment">//&#32;HEADER</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__my_atmega328p_8hpp">MyAtmega328p.hpp</link>&quot;</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00004"/>00004 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00005"/>00005 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00017"/><link linkend="_class_my_atmega328p_1a5ba27c7a67683a56e9344f45013357b2">00017</link> MyAtmega328p&#32;::MyAtmega328p(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">long</emphasis>&#32;f_cpu)&#32;{}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00018"/>00018 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00019"/>00019 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00033"/><link linkend="_class_my_atmega328p_1a2a0dd016860c999d1e4c6b5c8cbedb40">00033</link> <emphasis role="keywordtype">void</emphasis>&#32;MyAtmega328p&#32;::writeToEEPROM(uint16_t&#32;address,&#32;<emphasis role="keyword">const</emphasis>&#32;String&#32;&amp;str)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00034"/>00034 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00035"/>00035 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00036"/>00036 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(address&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;address&#32;&lt;&#32;E2END)&#32;{&#32;<emphasis role="comment">//&#32;Speicherzugriff&#32;einschränken&#32;auf&#32;den&#32;EEPROM-Bereich</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00037"/>00037 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;length&#32;=&#32;str.length();
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(length&#32;&gt;&#32;E2END&#32;-&#32;address)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00040"/>00040 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;length&#32;=&#32;E2END&#32;-&#32;address;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;eeprom_write_block(<emphasis role="keyword">reinterpret_cast&lt;</emphasis><emphasis role="keyword">const&#32;</emphasis><emphasis role="keywordtype">void</emphasis>*<emphasis role="keyword">&gt;</emphasis>(str.c_str()),&#32;<emphasis role="keyword">reinterpret_cast&lt;</emphasis><emphasis role="keywordtype">void</emphasis>*<emphasis role="keyword">&gt;</emphasis>(address),&#32;length);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00044"/>00044 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00045"/>00045 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00046"/>00046 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00047"/>00047 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00066"/><link linkend="_class_my_atmega328p_1ab35eca0553fbccec30f84528b9ea1473">00066</link> <emphasis role="keywordtype">void</emphasis>&#32;MyAtmega328p&#32;::readFromEEPROM(uint16_t&#32;address,&#32;String&#32;&amp;str,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;size_buffer)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00067"/>00067 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00068"/>00068 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(address&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;address&#32;&lt;&#32;E2END)&#32;{&#32;<emphasis role="comment">//&#32;Überprüfen,&#32;ob&#32;Adresse&#32;innerhalb&#32;des&#32;EEPROM-Bereichs&#32;liegt</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00069"/>00069 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;length&#32;=&#32;E2END&#32;-&#32;address;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(length&#32;&gt;&#32;size_buffer)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00072"/>00072 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;length&#32;=&#32;size_buffer;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;buffer&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>[length&#32;+&#32;1];
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;eeprom_read_block(<emphasis role="keyword">reinterpret_cast&lt;</emphasis><emphasis role="keywordtype">void</emphasis>*<emphasis role="keyword">&gt;</emphasis>(buffer),&#32;<emphasis role="keyword">reinterpret_cast&lt;</emphasis><emphasis role="keyword">const&#32;</emphasis><emphasis role="keywordtype">void</emphasis>*<emphasis role="keyword">&gt;</emphasis>(address),&#32;length);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;buffer[length]&#32;=&#32;<emphasis role="charliteral">&apos;\0&apos;</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;str&#32;=&#32;buffer;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;buffer;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00080"/>00080 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00081"/>00081 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00082"/>00082 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00083"/>00083 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00097"/><link linkend="_class_my_atmega328p_1a624c2bc2597cd99201a79695948d5b7d">00097</link> <emphasis role="keywordtype">void</emphasis>&#32;MyAtmega328p&#32;::writeToEEPROM(uint16_t&#32;address,&#32;uint8_t&#32;value)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00098"/>00098 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00099"/>00099 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(address&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;address&#32;&lt;&#32;E2END)&#32;{&#32;<emphasis role="comment">//&#32;Speicher-Zugriff&#32;einschränken&#32;auf&#32;Adressebereich&#32;des&#32;EEPROM</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00100"/>00100 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;eeprom_write_byte((uint8_t*)address,&#32;value);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00102"/>00102 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00103"/>00103 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00104"/>00104 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00105"/>00105 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00123"/><link linkend="_class_my_atmega328p_1a7c6d57660b7cbcb735225dfdeb569ec7">00123</link> uint8_t&#32;MyAtmega328p&#32;::readFromEEPROM(uint16_t&#32;address)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00124"/>00124 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00125"/>00125 &#32;&#32;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00126"/>00126 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(address&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;address&#32;&lt;&#32;E2END)&#32;{&#32;<emphasis role="comment">//&#32;Überprüfen,&#32;ob&#32;Adresse&#32;innerhalb&#32;des&#32;EEPROM-Bereichs&#32;liegt</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00127"/>00127 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;eeprom_read_byte((uint8_t*)address);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00129"/>00129 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00130"/>00130 &#32;&#32;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00131"/>00131 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;&#32;<emphasis role="comment">//&#32;Rückgabewert,&#32;wenn&#32;Adresse&#32;ungültig&#32;ist</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00132"/>00132 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00133"/>00133 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00134"/>00134 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00145"/><link linkend="_class_my_atmega328p_1a3d77b3e0b30c518b80a0c33f7ae32cf1">00145</link> <emphasis role="keywordtype">void</emphasis>&#32;MyAtmega328p&#32;::execTest(uint16_t&#32;delay)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00146"/>00146 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00147"/>00147 &#32;&#32;<emphasis role="comment">//&#32;Den&#32;digitalen&#32;Pin&#32;als&#32;Ausgang&#32;konfigurieren</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00148"/>00148 &#32;&#32;<emphasis role="comment">//&#32;DDRB&#32;|=&#32;(1&#32;&lt;&lt;&#32;DDB5);</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00149"/>00149 &#32;&#32;setBit(DDRB,&#32;DDB5,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00150"/>00150 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00151"/>00151 &#32;&#32;<emphasis role="comment">//&#32;Die&#32;LED&#32;einschalten</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00152"/>00152 &#32;&#32;<emphasis role="comment">//&#32;PORTB&#32;|=&#32;(1&#32;&lt;&lt;&#32;PORTB5);</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00153"/>00153 &#32;&#32;setBit(PORTB,&#32;DDB5,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00154"/>00154 &#32;&#32;execDelayMs(delay);&#32;<emphasis role="comment">//&#32;Eine&#32;Sekunde&#32;warten</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00155"/>00155 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00156"/>00156 &#32;&#32;<emphasis role="comment">//&#32;Die&#32;LED&#32;ausschalten</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00157"/>00157 &#32;&#32;<emphasis role="comment">//&#32;PORTB&#32;&amp;=&#32;~(1&#32;&lt;&lt;&#32;PORTB5);</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00158"/>00158 &#32;&#32;setBit(PORTB,&#32;DDB5,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00159"/>00159 &#32;&#32;execDelayMs(delay);&#32;<emphasis role="comment">//&#32;Eine&#32;Sekunde&#32;warten</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00160"/>00160 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00161"/>00161 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00162"/>00162 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00177"/><link linkend="_class_my_atmega328p_1ae9f22826b9792dff1dea0ae81655ba39">00177</link> <emphasis role="keywordtype">void</emphasis>&#32;MyAtmega328p&#32;::initUart(uint32_t&#32;baudrate)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00178"/>00178 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00179"/>00179 &#32;&#32;uint16_t&#32;ubrr&#32;=&#32;F_CPU&#32;/&#32;(16&#32;*&#32;baudrate)&#32;-&#32;1;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00180"/>00180 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00181"/>00181 &#32;&#32;<emphasis role="comment">//&#32;Set&#32;baud&#32;rate</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00182"/>00182 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00183"/>00183 &#32;&#32;UBRR0H&#32;=&#32;(uint8_t)(ubrr&#32;&gt;&gt;&#32;8);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00184"/>00184 &#32;&#32;UBRR0L&#32;=&#32;(uint8_t)ubrr;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00185"/>00185 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00186"/>00186 &#32;&#32;<emphasis role="comment">//&#32;Enable&#32;receiver&#32;and&#32;transmitter</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00187"/>00187 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00188"/>00188 &#32;&#32;UCSR0B&#32;=&#32;(1&#32;&lt;&lt;&#32;RXEN0)&#32;|&#32;(1&#32;&lt;&lt;&#32;TXEN0);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00189"/>00189 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00190"/>00190 &#32;&#32;<emphasis role="comment">//&#32;Set&#32;frame&#32;format:&#32;8data,&#32;2stop&#32;bit</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00191"/>00191 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00192"/>00192 &#32;&#32;<emphasis role="comment">//&#32;UCSR0C&#32;=&#32;(1&#32;&lt;&lt;&#32;UCSZ01)&#32;|&#32;(1&#32;&lt;&lt;&#32;UCSZ00);</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00193"/>00193 &#32;&#32;UCSR0C&#32;=&#32;(1&#32;&lt;&lt;&#32;USBS0)&#32;|&#32;(3&#32;&lt;&lt;&#32;UCSZ00);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00194"/>00194 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00195"/>00195 &#32;&#32;printUart(<emphasis role="stringliteral">&quot;\nHello&#32;World!\n&quot;</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00196"/>00196 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00197"/>00197 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00198"/>00198 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00212"/>00212 <emphasis role="keywordtype">void</emphasis>&#32;MyAtmega328p&#32;::sendCharUart(<emphasis role="keywordtype">char</emphasis>&#32;c)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00213"/>00213 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00214"/>00214 &#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!(UCSR0A&#32;&amp;&#32;(1&#32;&lt;&lt;&#32;UDRE0)));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00215"/>00215 &#32;&#32;&#32;&#32;UDR0&#32;=&#32;c;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00216"/>00216 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00217"/>00217 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00218"/>00218 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00231"/><link linkend="_class_my_atmega328p_1a23a876fa091060f4ecc2c97867eda9fd">00231</link> <emphasis role="keywordtype">void</emphasis>&#32;MyAtmega328p&#32;::printUart(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*str)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00232"/>00232 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00233"/>00233 &#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len&#32;=&#32;strlen(str);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00234"/>00234 &#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;len;&#32;i++)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00235"/>00235 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00236"/>00236 &#32;&#32;&#32;&#32;sendCharUart(str[i]);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00237"/>00237 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00238"/>00238 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00239"/>00239 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00240"/>00240 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00254"/><link linkend="_class_my_atmega328p_1a7797458cad34ae94a44317aba2b89a01">00254</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_atmega328p_1a23a876fa091060f4ecc2c97867eda9fd">MyAtmega328p::printUart</link>(<emphasis role="keyword">const</emphasis>&#32;String&#32;&amp;str)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00255"/>00255 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00256"/>00256 &#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len&#32;=&#32;str.length();
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00257"/>00257 &#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;len;&#32;i++)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00258"/>00258 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00259"/>00259 &#32;&#32;&#32;&#32;sendCharUart(str.charAt(i));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00260"/>00260 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00261"/>00261 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00262"/>00262 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00263"/>00263 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00278"/><link linkend="_class_my_atmega328p_1a026186c45b5f43ca2c6c5135e003190f">00278</link> <emphasis role="keywordtype">void</emphasis>&#32;MyAtmega328p&#32;::setTC0Config(<link linkend="__my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93c">enum_tcmodes</link>&#32;mode,&#32;<link linkend="__my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84">enum_tcprescalers</link>&#32;prescaler,&#32;uint8_t&#32;value_top)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00279"/>00279 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00280"/>00280 &#32;&#32;<emphasis role="comment">//&#32;Konfiguriere&#32;Timer/Counter&#32;0</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00281"/>00281 &#32;&#32;<emphasis role="comment">//&#32;-</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00282"/>00282 &#32;&#32;<emphasis role="comment">//&#32;|&#32;Mode&#32;&#32;|&#32;WGM02&#32;|&#32;WGM01&#32;|&#32;WGM00&#32;|&#32;Timer/Counter&#32;Mode&#32;of&#32;Operation&#32;|&#32;TOP&#32;&#32;&#32;|&#32;Update&#32;of&#32;OCR0x&#32;at&#32;TOV&#32;Flag&#32;Set&#32;on</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00283"/>00283 &#32;&#32;<emphasis role="comment">//&#32;|&#32;0&#32;&#32;&#32;&#32;&#32;|&#32;0&#32;&#32;&#32;&#32;&#32;|&#32;0&#32;&#32;&#32;&#32;&#32;|&#32;0&#32;&#32;&#32;&#32;&#32;|&#32;Normal&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;0xFF&#32;&#32;|&#32;Immediate&#32;MAX</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00284"/>00284 &#32;&#32;<emphasis role="comment">//&#32;|&#32;1&#32;&#32;&#32;&#32;&#32;|&#32;0&#32;&#32;&#32;&#32;&#32;|&#32;0&#32;&#32;&#32;&#32;&#32;|&#32;1&#32;&#32;&#32;&#32;&#32;|&#32;PWM,&#32;Phase&#32;Correct&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;0xFF&#32;&#32;|&#32;TOP&#32;BOTTOM</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00285"/>00285 &#32;&#32;<emphasis role="comment">//&#32;|&#32;2&#32;&#32;&#32;&#32;&#32;|&#32;0&#32;&#32;&#32;&#32;&#32;|&#32;1&#32;&#32;&#32;&#32;&#32;|&#32;0&#32;&#32;&#32;&#32;&#32;|&#32;CTC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;OCRA&#32;&#32;|&#32;Immediate&#32;MAX</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00286"/>00286 &#32;&#32;<emphasis role="comment">//&#32;|&#32;3&#32;&#32;&#32;&#32;&#32;|&#32;0&#32;&#32;&#32;&#32;&#32;|&#32;1&#32;&#32;&#32;&#32;&#32;|&#32;1&#32;&#32;&#32;&#32;&#32;|&#32;Fast&#32;PWM&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;0xFF&#32;&#32;|&#32;BOTTOM&#32;MAX</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00287"/>00287 &#32;&#32;<emphasis role="comment">//&#32;|&#32;5&#32;&#32;&#32;&#32;&#32;|&#32;1&#32;&#32;&#32;&#32;&#32;|&#32;0&#32;&#32;&#32;&#32;&#32;|&#32;1&#32;&#32;&#32;&#32;&#32;|&#32;PWM,&#32;Phase&#32;Correct&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;OCRA&#32;&#32;|&#32;TOP&#32;BOTTOM</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00288"/>00288 &#32;&#32;<emphasis role="comment">//&#32;|&#32;7&#32;&#32;&#32;&#32;&#32;|&#32;1&#32;&#32;&#32;&#32;&#32;|&#32;1&#32;&#32;&#32;&#32;&#32;|&#32;1&#32;&#32;&#32;&#32;&#32;|&#32;Fast&#32;PWM&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;OCRA&#32;&#32;|&#32;BOTTOM&#32;TOP</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00289"/>00289 &#32;&#32;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00290"/>00290 &#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(mode)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00291"/>00291 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00292"/>00292 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a6254561796d46c748001adeaf5e6d93cad472717efbd11a2e3c7a10a2bcece779">CTC</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00293"/>00293 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;ctc&#32;modus&#32;einrichten</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00295"/>00295 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;setBit(TCCR0A,&#32;WGM00,&#32;0);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;setBit(TCCR0A,&#32;WGM01,&#32;1);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;setBit(TCCR0B,&#32;WGM02,&#32;0);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00299"/>00299 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;prescaler</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;n&#32;=&#32;setTC01Prescaler(prescaler,&#32;TCCR0B,&#32;CS02,&#32;CS01,&#32;CS00);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00302"/>00302 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00303"/>00303 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00304"/>00304 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Setze&#32;den&#32;Vergleichswert&#32;für&#32;den&#32;CTC-Modus</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00305"/>00305 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00306"/>00306 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;don&apos;t&#32;use&#32;this&#32;calculation.&#32;Do&#32;this&#32;in&#32;the&#32;main&#32;code&#32;instead!</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00307"/>00307 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;auto&#32;clkPerMillisekond&#32;{&#32;(&#32;cpuFreq&#32;/&#32;n&#32;)&#32;/&#32;1000&#32;};</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00308"/>00308 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;OCR0A&#32;=&#32;(&#32;(&#32;clkPerMillisekond&#32;*&#32;topTime&#32;)&#32;-&#32;1&#32;);</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00309"/>00309 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00310"/>00310 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;OCR0A&#32;=&#32;value_top;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00312"/>00312 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;interrupt&#32;aktivieren</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00314"/>00314 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00315"/>00315 &#32;&#32;&#32;&#32;&#32;&#32;setBit(TIMSK0,&#32;OCIE0A);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00316"/>00316 &#32;&#32;&#32;&#32;&#32;&#32;sei();
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00317"/>00317 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00319"/>00319 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00320"/>00320 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00323"/>00323 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00324"/>00324 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00325"/>00325 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00326"/>00326 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00347"/>00347 uint32_t&#32;MyAtmega328p&#32;::setTC01Prescaler(<link linkend="__my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84">enum_tcprescalers</link>&#32;prescaler,&#32;<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;&amp;reg,&#32;uint8_t&#32;bit_02,&#32;uint8_t&#32;bit_01,&#32;uint8_t&#32;bit_00)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00348"/>00348 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00349"/>00349 &#32;&#32;<emphasis role="comment">//&#32;Prescaler&#32;Tabelle</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00350"/>00350 &#32;&#32;<emphasis role="comment">//&#32;-</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00351"/>00351 &#32;&#32;<emphasis role="comment">//&#32;|02&#32;|01&#32;|00&#32;|</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00352"/>00352 &#32;&#32;<emphasis role="comment">//&#32;|&#32;0&#32;|&#32;0&#32;|&#32;0&#32;|&#32;No&#32;clock&#32;source&#32;(Timer/Counter&#32;stopped)</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00353"/>00353 &#32;&#32;<emphasis role="comment">//&#32;|&#32;0&#32;|&#32;0&#32;|&#32;1&#32;|&#32;clkI/O/1&#32;(No&#32;prescaling)</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00354"/>00354 &#32;&#32;<emphasis role="comment">//&#32;|&#32;0&#32;|&#32;1&#32;|&#32;0&#32;|&#32;clkI/O/8&#32;(From&#32;prescaler)</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00355"/>00355 &#32;&#32;<emphasis role="comment">//&#32;|&#32;0&#32;|&#32;1&#32;|&#32;1&#32;|&#32;clkI/O/64&#32;(From&#32;prescaler)</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00356"/>00356 &#32;&#32;<emphasis role="comment">//&#32;|&#32;1&#32;|&#32;0&#32;|&#32;0&#32;|&#32;clkI/O/256&#32;(From&#32;prescaler)</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00357"/>00357 &#32;&#32;<emphasis role="comment">//&#32;|&#32;1&#32;|&#32;0&#32;|&#32;1&#32;|&#32;clkI/O/1024&#32;(From&#32;prescaler)</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00358"/>00358 &#32;&#32;<emphasis role="comment">//&#32;|&#32;1&#32;|&#32;1&#32;|&#32;0&#32;|&#32;External&#32;clock&#32;source&#32;on&#32;T0&#32;pin.&#32;Clock&#32;on&#32;falling&#32;edge.</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00359"/>00359 &#32;&#32;<emphasis role="comment">//&#32;|&#32;1&#32;|&#32;1&#32;|&#32;1&#32;|&#32;External&#32;clock&#32;source&#32;on&#32;T0&#32;pin.&#32;Clock&#32;on&#32;rising&#32;edge.</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00360"/>00360 &#32;&#32;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00361"/>00361 &#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(prescaler)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00362"/>00362 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00363"/>00363 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84ad2ef98ac0d98086868c235ef37670273">CLK_1</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00364"/>00364 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_00,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_01,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00367"/>00367 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_02,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00368"/>00368 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00369"/>00369 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00370"/>00370 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00371"/>00371 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a4f4b40052b3e128cbef3e15dd579c50e">CLK_8</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00372"/>00372 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_00,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00374"/>00374 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_01,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_02,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00376"/>00376 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;8;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00379"/>00379 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00380"/>00380 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a0a39b4aae1959fc16bbe8382aa2f36de">CLK_64</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00381"/>00381 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00382"/>00382 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_00,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00383"/>00383 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_01,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00384"/>00384 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_02,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00385"/>00385 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00386"/>00386 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;64;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00387"/>00387 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00388"/>00388 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00389"/>00389 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84adb5e9424a002d86170784b48e6943810">CLK_256</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00390"/>00390 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_00,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00392"/>00392 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_01,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00393"/>00393 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_02,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00394"/>00394 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00395"/>00395 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;256;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00396"/>00396 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00397"/>00397 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00398"/>00398 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84add15888bea74c6eeca3a3fb06181b857">CLK_1024</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00399"/>00399 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00400"/>00400 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_00,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00401"/>00401 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_01,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00402"/>00402 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_02,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00403"/>00403 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00404"/>00404 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1024;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00405"/>00405 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00406"/>00406 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00407"/>00407 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84a33416c83ecdef3b829acc08e92983853">EXT_CLK_SOURCE_FALLING_EDGE</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00408"/>00408 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_00,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00409"/>00409 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_01,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00410"/>00410 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_02,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00411"/>00411 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00412"/>00412 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00413"/>00413 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00414"/>00414 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a9aa7f3e1598b10585757c2dab7cb9a84abf7407a632cd1a1dc9eaa6fca42ee2a8">EXT_CLK_SOURCE_RISING_EDGE</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00415"/>00415 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_00,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_01,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00417"/>00417 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_02,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00418"/>00418 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00419"/>00419 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00420"/>00420 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00421"/>00421 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00422"/>00422 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_00,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00423"/>00423 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_01,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00424"/>00424 &#32;&#32;&#32;&#32;&#32;&#32;setBit(reg,&#32;bit_02,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00425"/>00425 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00426"/>00426 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00427"/>00427 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00428"/>00428 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00429"/>00429 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00430"/>00430 }
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00431"/>00431 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00432"/>00432 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00454"/><link linkend="_class_my_atmega328p_1a91986a3df6ec4032907aacf06696a8a6">00454</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_my_atmega328p_1a91986a3df6ec4032907aacf06696a8a6">MyAtmega328p::execSleep</link>(<link linkend="__my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374">enum_sleepmodes</link>&#32;mode,&#32;uint8_t&#32;bits_power_reduction,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;enable_bod_sleep)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00455"/>00455 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00456"/>00456 &#32;&#32;<emphasis role="comment">//&#32;Disable&#32;interrupts</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00457"/>00457 &#32;&#32;cli();
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00458"/>00458 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00459"/>00459 &#32;&#32;<emphasis role="comment">//&#32;Disable&#32;sleep&#32;mode</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00460"/>00460 &#32;&#32;<link linkend="_class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b">setBit</link>(MCUCR,&#32;SE,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00461"/>00461 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00462"/>00462 &#32;&#32;<emphasis role="comment">//&#32;Set&#32;the&#32;requested&#32;sleep&#32;mode</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00463"/>00463 &#32;&#32;<emphasis role="keywordflow">switch</emphasis>(mode)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00464"/>00464 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00465"/>00465 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374afd6a0e4343048b10646dd2976cc5ad18">IDLE</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00466"/>00466 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00467"/>00467 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd">clearBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM0)&#32;|&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM1)&#32;|&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM2));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00468"/>00468 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00469"/>00469 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00470"/>00470 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00471"/>00471 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a19e4c86357ccabfaf43e2fabe2189f3c">ADC_NOISE_REDUCTION</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00472"/>00472 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00473"/>00473 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1a552532ef8cb1a262be9029c7609a62c6">setBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM0));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00474"/>00474 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd">clearBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM1)&#32;|&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM2));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00475"/>00475 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00476"/>00476 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00477"/>00477 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00478"/>00478 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a2abda45f1b1e5bbe193611fb41ae7dfa">POWER_DOWN</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00479"/>00479 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00480"/>00480 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1a552532ef8cb1a262be9029c7609a62c6">setBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM1));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00481"/>00481 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd">clearBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM2)&#32;|&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM0));&#32;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00482"/>00482 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00483"/>00483 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00484"/>00484 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00485"/>00485 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374a412ffca781db3a099f287df487667d19">POWER_SAVE</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00486"/>00486 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00487"/>00487 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1a552532ef8cb1a262be9029c7609a62c6">setBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM0)&#32;|&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM1));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00488"/>00488 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd">clearBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM2));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00489"/>00489 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00490"/>00490 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00491"/>00491 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00492"/>00492 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374ae4634ae4352b512b38c5da9dc1610ca6">STANDBY</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00493"/>00493 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00494"/>00494 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;only&#32;recommend&#32;for&#32;use&#32;with&#32;external&#32;crystals&#32;or&#32;resonators</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00495"/>00495 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00496"/>00496 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd">clearBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM0));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00497"/>00497 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1a552532ef8cb1a262be9029c7609a62c6">setBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM1)&#32;|&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM2));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00498"/>00498 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00499"/>00499 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00500"/>00500 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00501"/>00501 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__my_avr_8hpp_1a5ea866ecdf7cb2426827d8cc01425374ad57e897be0d28a3218fa9fc2eeb650e2">EXTENDED_STANDBY</link>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00502"/>00502 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00503"/>00503 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;only&#32;recommend&#32;for&#32;use&#32;with&#32;external&#32;crystals&#32;or&#32;resonators</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00504"/>00504 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00505"/>00505 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1a552532ef8cb1a262be9029c7609a62c6">setBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM0)&#32;|&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM1)&#32;|&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM2)&#32;);&#32;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00506"/>00506 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00507"/>00507 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00508"/>00508 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00509"/>00509 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00510"/>00510 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00511"/>00511 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Invalid&#32;sleep&#32;mode,&#32;return&#32;imidiately</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00512"/>00512 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00513"/>00513 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00514"/>00514 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00515"/>00515 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00516"/>00516 &#32;&#32;<emphasis role="comment">//&#32;Set&#32;the&#32;power&#32;reduction&#32;bits</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00517"/>00517 &#32;&#32;PRR&#32;|=&#32;bits_power_reduction;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00518"/>00518 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00519"/>00519 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enable_bod_sleep)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00520"/>00520 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00521"/>00521 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Enable&#32;BODS&#32;bit&#32;and&#32;set&#32;BODS&#32;to&#32;disable&#32;BOD&#32;in&#32;sleep&#32;mode&#32;if&#32;enableBODSleep&#32;is&#32;true</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00522"/>00522 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00523"/>00523 &#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b">setBit</link>(MCUCR,&#32;BODS);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00524"/>00524 &#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b">setBit</link>(MCUCR,&#32;BODSE);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00525"/>00525 &#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7">clearBit</link>(MCUCR,&#32;BODSE);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00526"/>00526 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00527"/>00527 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00528"/>00528 &#32;&#32;<emphasis role="comment">//&#32;Delay&#32;for&#32;three&#32;clock&#32;cycles</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00529"/>00529 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00530"/>00530 &#32;&#32;<emphasis role="keyword">asm</emphasis>&#32;<emphasis role="keyword">volatile</emphasis>(<emphasis role="stringliteral">&quot;nop&quot;</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00531"/>00531 &#32;&#32;<emphasis role="keyword">asm</emphasis>&#32;<emphasis role="keyword">volatile</emphasis>(<emphasis role="stringliteral">&quot;nop&quot;</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00532"/>00532 &#32;&#32;<emphasis role="keyword">asm</emphasis>&#32;<emphasis role="keyword">volatile</emphasis>(<emphasis role="stringliteral">&quot;nop&quot;</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00533"/>00533 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00534"/>00534 &#32;&#32;<emphasis role="comment">//&#32;Enable&#32;sleep&#32;mode</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00535"/>00535 &#32;&#32;<link linkend="_class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b">setBit</link>(SMCR,&#32;SE);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00536"/>00536 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00537"/>00537 &#32;&#32;<emphasis role="comment">//&#32;Enable&#32;interrupts</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00538"/>00538 &#32;&#32;sei();
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00539"/>00539 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00540"/>00540 &#32;&#32;<emphasis role="comment">//&#32;Enter&#32;sleep&#32;mode</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00541"/>00541 &#32;&#32;<emphasis role="keyword">asm</emphasis>&#32;<emphasis role="keyword">volatile</emphasis>(<emphasis role="stringliteral">&quot;sleep&quot;</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00542"/>00542 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00543"/>00543 &#32;&#32;<emphasis role="comment">//&#32;Execution&#32;will&#32;resume&#32;here&#32;after&#32;waking&#32;up</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00544"/>00544 &#32;&#32;<emphasis role="comment">//...</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00545"/>00545 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00546"/>00546 &#32;&#32;<emphasis role="comment">//&#32;Clear&#32;the&#32;power&#32;reduction&#32;bits</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00547"/>00547 &#32;&#32;PRR&#32;&amp;=&#32;~bits_power_reduction;
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00548"/>00548 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00549"/>00549 &#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(enable_bod_sleep)&#32;{
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00550"/>00550 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00551"/>00551 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Re-enable&#32;BOD&#32;after&#32;sleep&#32;mode&#32;if&#32;enableBODSleep&#32;is&#32;true&#32;(optional)</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00552"/>00552 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00553"/>00553 &#32;&#32;&#32;&#32;<link linkend="_class_my_controller_1ac11d8131f2a39a638ace4418adeebbd7">clearBit</link>(MCUCR,&#32;BODS);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00554"/>00554 &#32;&#32;}
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00555"/>00555 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00556"/>00556 &#32;&#32;<emphasis role="comment">//&#32;Disable&#32;sleep&#32;mode</emphasis>
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00557"/>00557 
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00558"/>00558 &#32;&#32;<link linkend="_class_my_controller_1ae7487dc0d9d6d550e354b0e7153ac76b">setBit</link>(MCUCR,&#32;SE,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00559"/>00559 &#32;&#32;<link linkend="_class_my_controller_1af0956247c7fafc6d5797b3e0fa7d09cd">clearBitMask</link>(SMCR,&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM0)&#32;|&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM1)&#32;|&#32;<link linkend="__my_avr_8hpp_1a308c5c722f9ed9393cf6e5026fc81600">BITMASK</link>(SM2));
+<anchor xml:id="__my_atmega328p_8cpp_source_1l00560"/>00560 }
+</programlisting></section>

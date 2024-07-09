@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structpod__gpioregister" xml:lang="en-US">
+<title>pod_gpioregister Struct Reference</title>
+<indexterm><primary>pod_gpioregister</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MyAvr.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>volatile uint8_t * <link linkend="_structpod__gpioregister_1acae519b175670a1e742d5fd527ddc5c0">ptrDataDirection</link> {nullptr}</para>
+</listitem>
+            <listitem><para>volatile uint8_t * <link linkend="_structpod__gpioregister_1a703fb7dad21dd88d7d79033b4da8d97e">ptrPort</link> {nullptr}</para>
+</listitem>
+            <listitem><para>volatile uint8_t * <link linkend="_structpod__gpioregister_1a635b2c0cd8f1cfd6802be460951d1e70">ptrPin</link> {nullptr}</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>Examples</title><link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.cpp</link>, and <link linkend="__c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_matrix2x2_8cpp-example">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.cpp</link>.</simplesect>
+<para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00140">140</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structpod__gpioregister_1acae519b175670a1e742d5fd527ddc5c0"/><section>
+    <title>ptrDataDirection</title>
+<indexterm><primary>ptrDataDirection</primary><secondary>pod_gpioregister</secondary></indexterm>
+<indexterm><primary>pod_gpioregister</primary><secondary>ptrDataDirection</secondary></indexterm>
+<para><computeroutput>volatile uint8_t* pod_gpioregister::ptrDataDirection {nullptr}</computeroutput></para><para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00142">142</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<anchor xml:id="_structpod__gpioregister_1a635b2c0cd8f1cfd6802be460951d1e70"/><section>
+    <title>ptrPin</title>
+<indexterm><primary>ptrPin</primary><secondary>pod_gpioregister</secondary></indexterm>
+<indexterm><primary>pod_gpioregister</primary><secondary>ptrPin</secondary></indexterm>
+<para><computeroutput>volatile uint8_t* pod_gpioregister::ptrPin {nullptr}</computeroutput></para><para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00144">144</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<anchor xml:id="_structpod__gpioregister_1a703fb7dad21dd88d7d79033b4da8d97e"/><section>
+    <title>ptrPort</title>
+<indexterm><primary>ptrPort</primary><secondary>pod_gpioregister</secondary></indexterm>
+<indexterm><primary>pod_gpioregister</primary><secondary>ptrPort</secondary></indexterm>
+<para><computeroutput>volatile uint8_t* pod_gpioregister::ptrPort {nullptr}</computeroutput></para><para>
+Definition at line <link linkend="__my_avr_8hpp_source_1l00143">143</link> of file <link linkend="__my_avr_8hpp_source">MyAvr.hpp</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/<link linkend="__my_avr_8hpp">MyAvr.hpp</link></section>
+</section>

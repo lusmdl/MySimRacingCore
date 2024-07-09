@@ -1,0 +1,146 @@
+\doxysection{C\+:/\+Users/\+Sonyx/\+Documents/\+Platform\+IO/\+Librarys/\+My\+Avr/lib/\+My\+Avr/src/\+My\+Button\+Matrix2x2.\+cpp}
+\hypertarget{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_matrix2x2_8cpp-example}{}\label{_c_1_2_users_2_sonyx_2_documents_2_platform_i_o_2_librarys_2_my_avr_2lib_2_my_avr_2src_2_my_button_matrix2x2_8cpp-example}the object of the class \doxylink{class_my_button_matrix2x2}{My\+Button\+Matrix2x2} with the given parameters.
+
+the object of the class \doxylink{class_my_button_matrix2x2}{My\+Button\+Matrix2x2} with the given parameters.
+\begin{DoxyParams}{Parameters}
+{\em DDXn} & Reference to the Data Direction Register of the corresponding port \\
+\hline
+{\em PORTXn} & Reference to the Output Register of the corresponding port \\
+\hline
+{\em PINXn} & Reference to the Input Register of the corresponding port \\
+\hline
+{\em bit\+\_\+position} & Array of bit positions for the button matrix\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This method may be unsafe in certain conditions and unexpected behavior could occur.
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+It is important to ensure the correct mapping of bit positions for button matrix functionality.
+\end{DoxyNote}
+\doxylink{class_my_button_matrix2x2}{My\+Button\+Matrix2x2} matrix(PORTD, PORTD, PIND, \{0, 1, 2, 3\});
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ HEADER}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_my_button_matrix2x2_8hpp}{MyButtonMatrix2x2.hpp}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{MyButtonMatrix2x2\ ::MyButtonMatrix2x2(\textcolor{keyword}{volatile}\ uint8\_t\ \&ddxn,\ \textcolor{keyword}{volatile}\ uint8\_t\ \&portxn,\ \textcolor{keyword}{volatile}\ uint8\_t\ \&pinxn,\ uint8\_t\ bit\_position[]\ )\ :\ }
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ umbau\ auf\ POD\ struct}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//reg\_.ptrDataDirection\ (\&ddxn),\ }}
+\DoxyCodeLine{\ \ \textcolor{comment}{//reg\_.ptrPort(\&portxn),\ }}
+\DoxyCodeLine{\ \ \textcolor{comment}{//reg\_.ptrPin(\&pinxn)\ }}
+\DoxyCodeLine{\ \ reg\_\ \{\&ddxn,\ \&portxn,\ \&pinxn\}\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ BTN\_MAX\_;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ init\ each\ member}}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ bit\_[i]\ =\ bit\_position[i];}
+\DoxyCodeLine{\ \ \ \ button\_[i].enableInvert\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ button\_[i].fallingEdge\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ button\_[i].flagOldPush\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ button\_[i].numberGetPushed\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ button\_[i].pushed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ button\_[i].risingEdge\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{MyButtonMatrix2x2\ ::MyButtonMatrix2x2(\mbox{\hyperlink{structpod__gpioregister}{pod\_gpioregister}}\&\ ptr,\ uint8\_t\ bit\_position[BTN\_MAX\_])\ :}
+\DoxyCodeLine{\ \ reg\_\ (ptr)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ BTN\_MAX\_;\ i++)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ init\ each\ member}}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ bit\_[i]\ =\ bit\_position[i];}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{structpod__buttonstatus}{pod\_buttonstatus}}\ MyButtonMatrix2x2\ ::getButtonStatus(uint8\_t\ button)\ \{\ \ }
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ uint8\_t\ sense\ =\ button\ \%\ 2;}
+\DoxyCodeLine{\ \ uint8\_t\ ground\ =\ (button\ <\ 2)\ ?\ 2\ :\ 3;}
+\DoxyCodeLine{\ \ uint8\_t\ live[2]\ \{0,0\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ uint8\_t\ count\ =\ 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ BTN\_MAX\_;\ i++)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ sense\ ||\ i\ ==\ ground)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ nothing\ to\ see\ here}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \}\ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ live[count]\ =\ i;}
+\DoxyCodeLine{\ \ \ \ \ \ count++;\ \ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ setGpioConfig(\mbox{\hyperlink{_my_avr_8hpp_a105ae23d3b40bf5ab26939bc88c849f8a851c2ac60276ada62e8d9ba216c7a487}{INPUT\_PULLUP}},\ *reg\_.ptrDataDirection,\ *reg\_.ptrPort,\ bit\_[sense]);}
+\DoxyCodeLine{\ \ setGpioConfig(\mbox{\hyperlink{_my_avr_8hpp_a105ae23d3b40bf5ab26939bc88c849f8a73010ac0f307d96c97238d8878f14b3e}{OUTPUT\_SINK}},\ *reg\_.ptrDataDirection,\ *reg\_.ptrPort,\ bit\_[ground]);}
+\DoxyCodeLine{\ \ setGpioConfig(\mbox{\hyperlink{_my_avr_8hpp_a105ae23d3b40bf5ab26939bc88c849f8a8dd6b0345a569bf4a420f510341124b6}{OUTPUT\_SOURCE}},\ *reg\_.ptrDataDirection,\ *reg\_.ptrPort,\ bit\_[live[0]]);}
+\DoxyCodeLine{\ \ setGpioConfig(\mbox{\hyperlink{_my_avr_8hpp_a105ae23d3b40bf5ab26939bc88c849f8a8dd6b0345a569bf4a420f510341124b6}{OUTPUT\_SOURCE}},\ *reg\_.ptrDataDirection,\ *reg\_.ptrPort,\ bit\_[live[1]]);}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ execNop();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ reset\ edge\ flags}}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ button\_[button].fallingEdge\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ button\_[button].risingEdge\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ acutal\ read\ register\ data,\ use\ this\ everytime\ in\ this\ method}}
+\DoxyCodeLine{\ \ \textcolor{keywordtype}{bool}\ buttonPushed\ =\ getBit(*reg\_.ptrPin,\ bit\_[sense])\ ?\ false\ :\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (buttonPushed)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ button\_[button].pushed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (button\_[button].flagOldPush\ ==\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ rising\ edge}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ button\_[button].risingEdge\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ \ \ button\_[button].numberGetPushed++;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}\ }
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ button\_[button].pushed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (button\_[button].flagOldPush\ ==\ \textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ falling\ edge}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ button\_[button].fallingEdge\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ set\ old\ flag\ after}}
+\DoxyCodeLine{\ \ button\_[button].flagOldPush\ =\ buttonPushed;}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ button\_[button];}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{structpod__buttonstatus}{pod\_buttonstatus}}\ MyButtonMatrix2x2\ ::setButtonStatus(uint8\_t\ button,\ uint32\_t\ value\_new)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ button\_[button].\mbox{\hyperlink{structpod__buttonstatus_a1e93bc76f005f56b7629222841a5bb35}{numberGetPushed}}\ =\ value\_new;}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (value\_new\ ==\ 0)\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ reset\ everything\ if\ new\ value\ is\ zero}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ button\_[button].pushed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ button\_[button].flagOldPush\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ button\_[button].fallingEdge\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ button\_[button].risingEdge\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

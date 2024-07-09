@@ -1,0 +1,580 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_atmega328p_i_s_r_8h" kind="file" language="C++">
+    <compoundname>Atmega328pISR.h</compoundname>
+    <includes local="no">avr/interrupt.h</includes>
+    <includedby refid="_my_avr_8hpp" local="yes">C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h</label>
+        <link refid="_atmega328p_i_s_r_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>avr/interrupt.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h</label>
+        <link refid="_atmega328p_i_s_r_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.cpp</label>
+        <link refid="_my_atmega328p_8cpp"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAtmega328p.hpp</label>
+        <link refid="_my_atmega328p_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.cpp</label>
+        <link refid="_my_avr_8cpp"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyAvr.hpp</label>
+        <link refid="_my_avr_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyBehavioralDesignPatterns.hpp</label>
+        <link refid="_my_behavioral_design_patterns_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.cpp</label>
+        <link refid="_my_button_8cpp"/>
+      </node>
+      <node id="7">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButton.hpp</label>
+        <link refid="_my_button_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.cpp</label>
+        <link refid="_my_button_matrix2x2_8cpp"/>
+      </node>
+      <node id="9">
+        <label>C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/MyButtonMatrix2x2.hpp</label>
+        <link refid="_my_button_matrix2x2_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(INT0_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>INT0_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="10" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="10" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a22acfb428840c6d9aa212764589cf6c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(INT1_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>INT1_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="13" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="13" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1aa64c6dce15e9de9105b4ae9533c9a267" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(PCINT0_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>PCINT0_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="16" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="16" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1afe6035149a64d5f448fbda08e9d1b67f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(PCINT1_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>PCINT1_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="19" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="19" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a9c4665742c6b6eb1f0bb9dde41f7cba3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(PCINT2_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>PCINT2_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="22" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="22" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a43905d6fb5c4d433a49f527fa6ab811f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(WDT_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>WDT_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="25" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="25" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a5686c229bdef50123688ab6cb1404230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER2_COMPA_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER2_COMPA_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="28" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="28" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1aa282d056dc0e67857fc700fdce321f30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER2_COMPB_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER2_COMPB_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="31" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="31" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a7cfcbe42bd266750aeb6e5d71e5ea479" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER2_OVF_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER2_OVF_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="34" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="34" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a5da59e05fa5ade4be7c7656aee78291a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER1_CAPT_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER1_CAPT_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="37" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="37" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1ad39420cdd896dd12c68e36313139d0a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER1_COMPA_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER1_COMPA_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="40" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="40" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a317c504c8745a1256efed69e0dbf6e66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER1_COMPB_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER1_COMPB_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="43" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="43" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1ab16889ae984b9b798989a0d239283cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER1_OVF_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER1_OVF_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="46" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="46" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1aec43762dc86e029b395d4e5819192c2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER0_COMPA_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER0_COMPA_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="49" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="49" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1aa513bd38a02761593d0217c8497033ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER0_COMPB_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER0_COMPB_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="52" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="52" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1add2d7cdddfb682dcc0391e60cf42c7d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER0_OVF_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER0_OVF_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="55" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="55" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1af9cad97352f5ba9bbd800446131125a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(SPI_STC_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>SPI_STC_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="58" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="58" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a09ce999e15ad60b8a3f07d08af1946f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(USART_RX_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>USART_RX_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="61" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="61" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1ad878deb12efde50ce23b8afa0cd310d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(USART_UDRE_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>USART_UDRE_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="64" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="64" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a2e1a1228dec9ed3dac10f2d3fa96bede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(USART_TX_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>USART_TX_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="67" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="67" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a05c2e5b588ced1cd7312f5b0edc5b295" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(ADC_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>ADC_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="70" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="70" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a1830429d15e4ec8062725ab771275327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(EE_READY_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>EE_READY_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="73" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="73" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a36cd53f29e25f87810b0a5156616fb99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(ANALOG_COMP_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>ANALOG_COMP_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="76" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="76" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a474f42eedbdc093683fdb4b88be3c48f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TWI_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TWI_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="79" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="79" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_atmega328p_i_s_r_8h_1a61f8938fa30cab6dcc0759243add5cb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(SPM_READY_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>SPM_READY_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" line="82" column="5" declfile="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h" declline="82" declcolumn="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ATMEGA328PISR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ATMEGA328PISR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/interrupt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>External<sp/>Interrupt<sp/>Request<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(INT0_vect);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>External<sp/>Interrupt<sp/>Request<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_atmega328p_i_s_r_8h_1a22acfb428840c6d9aa212764589cf6c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(INT1_vect);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pin<sp/>Change<sp/>Interrupt<sp/>Request<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_atmega328p_i_s_r_8h_1aa64c6dce15e9de9105b4ae9533c9a267" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(PCINT0_vect);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pin<sp/>Change<sp/>Interrupt<sp/>Request<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="_atmega328p_i_s_r_8h_1afe6035149a64d5f448fbda08e9d1b67f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(PCINT1_vect);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pin<sp/>Change<sp/>Interrupt<sp/>Request<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="_atmega328p_i_s_r_8h_1a9c4665742c6b6eb1f0bb9dde41f7cba3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(PCINT2_vect);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Watchdog<sp/>Time-out<sp/>Interrupt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="_atmega328p_i_s_r_8h_1a43905d6fb5c4d433a49f527fa6ab811f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(WDT_vect);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer/Counter2<sp/>Compare<sp/>Match<sp/>A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="_atmega328p_i_s_r_8h_1a5686c229bdef50123688ab6cb1404230" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TIMER2_COMPA_vect);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer/Counter2<sp/>Compare<sp/>Match<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="_atmega328p_i_s_r_8h_1aa282d056dc0e67857fc700fdce321f30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TIMER2_COMPB_vect);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer/Counter2<sp/>Overflow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_atmega328p_i_s_r_8h_1a7cfcbe42bd266750aeb6e5d71e5ea479" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TIMER2_OVF_vect);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer/Counter1<sp/>Capture<sp/>Event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_atmega328p_i_s_r_8h_1a5da59e05fa5ade4be7c7656aee78291a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TIMER1_CAPT_vect);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer/Counter1<sp/>Compare<sp/>Match<sp/>A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_atmega328p_i_s_r_8h_1ad39420cdd896dd12c68e36313139d0a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TIMER1_COMPA_vect);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer/Counter1<sp/>Compare<sp/>Match<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="_atmega328p_i_s_r_8h_1a317c504c8745a1256efed69e0dbf6e66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TIMER1_COMPB_vect);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer/Counter1<sp/>Overflow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="_atmega328p_i_s_r_8h_1ab16889ae984b9b798989a0d239283cac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TIMER1_OVF_vect);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer/Counter0<sp/>Compare<sp/>Match<sp/>A<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_atmega328p_i_s_r_8h_1aec43762dc86e029b395d4e5819192c2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TIMER0_COMPA_vect);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer/Counter0<sp/>Compare<sp/>Match<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="_atmega328p_i_s_r_8h_1aa513bd38a02761593d0217c8497033ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TIMER0_COMPB_vect);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer/Counter0<sp/>Overflow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="_atmega328p_i_s_r_8h_1add2d7cdddfb682dcc0391e60cf42c7d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TIMER0_OVF_vect);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SPI<sp/>Serial<sp/>Transfer<sp/>Complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="_atmega328p_i_s_r_8h_1af9cad97352f5ba9bbd800446131125a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(SPI_STC_vect);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>USART<sp/>Rx<sp/>Complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="_atmega328p_i_s_r_8h_1a09ce999e15ad60b8a3f07d08af1946f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(USART_RX_vect);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>USART,<sp/>Data<sp/>Register<sp/>Empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="_atmega328p_i_s_r_8h_1ad878deb12efde50ce23b8afa0cd310d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(USART_UDRE_vect);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>USART<sp/>Tx<sp/>Complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="_atmega328p_i_s_r_8h_1a2e1a1228dec9ed3dac10f2d3fa96bede" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(USART_TX_vect);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ADC<sp/>Conversion<sp/>Complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="_atmega328p_i_s_r_8h_1a05c2e5b588ced1cd7312f5b0edc5b295" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(ADC_vect);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>EEPROM<sp/>Ready</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="_atmega328p_i_s_r_8h_1a1830429d15e4ec8062725ab771275327" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(EE_READY_vect);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Analog<sp/>Comparator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="_atmega328p_i_s_r_8h_1a36cd53f29e25f87810b0a5156616fb99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(ANALOG_COMP_vect);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2-wire<sp/>Serial<sp/>Interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="_atmega328p_i_s_r_8h_1a474f42eedbdc093683fdb4b88be3c48f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(TWI_vect);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>Program<sp/>Memory<sp/>Ready</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="_atmega328p_i_s_r_8h_1a61f8938fa30cab6dcc0759243add5cb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_atmega328p_i_s_r_8h_1afea150fcd685610cb9f7672fce361e53" kindref="member">ISR</ref>(SPM_READY_vect);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Sonyx/Documents/PlatformIO/Librarys/MyAvr/lib/MyAvr/src/Atmega328pISR.h"/>
+  </compounddef>
+</doxygen>
