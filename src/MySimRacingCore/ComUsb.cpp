@@ -47,9 +47,8 @@ void ComUsb::sendData() {
     // Code to send data via USB
 
     for (uint8_t i = 0; i < BTN_NUMBER; i++) {
-        
+
         joy_.setButton(i, btns_->data_[i].pushed);
-        btns_->data_[i].pushed = 0;
     }
 
 
