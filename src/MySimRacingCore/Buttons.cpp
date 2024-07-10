@@ -1,74 +1,57 @@
 #include "Buttons.hpp"
 
 
-Buttons::Buttons() {
-
-    uint8_t matrixPinsA[] {BTN_MATRIX_A_L1, BTN_MATRIX_A_L2, BTN_MATRIX_A_R1, BTN_MATRIX_A_R2};
-    btnA_ = new MyButtonMatrix2x2(BTN_MATRIX_A_DDR, BTN_MATRIX_A_PORT, BTN_MATRIX_A_PIN, matrixPinsA);
-
-    uint8_t matrixPinsB[] {BTN_MATRIX_B_L1, BTN_MATRIX_B_L2, BTN_MATRIX_B_R1, BTN_MATRIX_B_R2};
-    btnB_ = new MyButtonMatrix2x2(BTN_MATRIX_B_DDR, BTN_MATRIX_B_PORT, BTN_MATRIX_B_PIN, matrixPinsB);
-
-    uint8_t matrixPinsC[] {BTN_MATRIX_C_L1, BTN_MATRIX_C_L2, BTN_MATRIX_C_R1, BTN_MATRIX_C_R2};
-    btnC_ = new MyButtonMatrix2x2(BTN_MATRIX_C_DDR, BTN_MATRIX_C_PORT, BTN_MATRIX_C_PIN, matrixPinsC);
-
-    uint8_t matrixPinsD[] {BTN_MATRIX_D_L1, BTN_MATRIX_D_L2, BTN_MATRIX_D_R1, BTN_MATRIX_D_R2};
-    btnD_ = new MyButtonMatrix2x2(BTN_MATRIX_D_DDR, BTN_MATRIX_D_PORT, BTN_MATRIX_D_PIN, matrixPinsD);
-
-}
+Buttons::Buttons() : 
+    rowpins_{BTN_MATRIX_R1, BTN_MATRIX_R2, BTN_MATRIX_R3, BTN_MATRIX_R4},
+    columnspins_{BTN_MATRIX_L1, BTN_MATRIX_L2, BTN_MATRIX_L3, BTN_MATRIX_L4},
+    keyarray_{
+        {'A', 'B', 'C', 'D'},
+        {'E', 'F', 'G', 'H'},
+        {'I', 'J', 'K', 'L'},
+        {'M', 'N', 'O', 'P'}
+    },
+    keys_(makeKeymap(keyarray_), rowpins_, columnspins_, BTN_MATRIX_R, BTN_MATRIX_L)
+    
+{}
 
 Buttons::~Buttons() {
+    // Keine dynamische Speicherfreigabe erforderlich
 }
 
 void Buttons::begin() {
+    // Initialisieren der Keypad- oder Hardware-Komponenten
 }
 
-void Buttons::listner() {
+void Buttons::listener() {
+    // Abfragen und Verarbeiten von Tastendrücken
+    
+    char keyPressed = keys_.getKey();
+    if (keyPressed) {
+        
+        #ifdef LSMDL_DEBUGMODE
+        Serial.print("Key Pressed Event at key ");
+        Serial.println(keyPressed);
+        #endif
+        
+        char k = 'A'; // for the mapping to my pod_buttonmatrix
+        for (uint8_t i = 0; i < BTN_NUMBER; i++) {
 
-    uint8_t btnIndex = 0;
-    const uint8_t btnNumber = 4;
+            // check if the tag of the key matches
 
-    for (uint8_t i = 0; i < btnNumber; i++) {
+            if (k == keyPressed) {
 
-        // check 2x2 Matrix A
+                // when match increase the pushed counter
 
-        if (btnA_->getButtonStatus(i).fallingEdge) {
+                data_[i].pushed++;
+                
+                #ifdef LSMDL_DEBUGMODE
+                Serial.print("inc pod_button ");
+                Serial.println(String(i));
+                #endif  
+            }
 
-            matrix_[btnIndex].pushed++;
+            // don´t forget to increase the letter
+            k++; 
         }
-        btnIndex++; // for the next getter
-    }
-
-    for (uint8_t i = 0; i < btnNumber; i++) {
-
-        // check 2x2 Matrix B
-
-        if (btnB_->getButtonStatus(i).fallingEdge) {
-
-            matrix_[btnIndex].pushed++;
-        }
-        btnIndex++; // for the next getter
-    }
-
-    for (uint8_t i = 0; i < btnNumber; i++) {
-
-        // check 2x2 Matrix C
-
-        if (btnC_->getButtonStatus(i).fallingEdge) {
-
-            matrix_[btnIndex].pushed++;
-        }
-        btnIndex++; // for the next getter
-    }
-
-    for (uint8_t i = 0; i < btnNumber; i++) {
-
-        // check 2x2 Matrix D
-
-        if (btnD_->getButtonStatus(i).fallingEdge) {
-
-            matrix_[btnIndex].pushed++;
-        }
-        btnIndex++; // for the next getter
     }
 }

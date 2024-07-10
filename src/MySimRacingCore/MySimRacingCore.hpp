@@ -1,8 +1,6 @@
 #ifndef MY_SIM_RACING_CORE_HPP
 #define MY_SIM_RACING_CORE_HPP
 
-#include <MyAvr.hpp>
-
 #include "ComUsb.hpp"
 #include "Buttons.hpp"
 //#include "Pedals.hpp"
@@ -21,7 +19,6 @@ class MySimRacingCore {
 
     private:
 
-        MyAtmega32u4 controller_;
         Buttons buttons_;
         ComUsb com_;
         //Pedals pedals_;

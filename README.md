@@ -21,7 +21,7 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 
 - [**Platform IO**](https://platformio.org/install/ide?install=vscode): Used for programming the ATmega32u4 microcontroller.
 - [**Arduino Joystick With Force Feedback Library**](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary.git)
-- [**My AVR Library**](https://github.com/lusmdl/MyAvr.git)
+- [**Keypad Library**](https://github.com/Chris--A/Keypad.git): Used for the 4x4 Matrix
 
 ## Contributing
 

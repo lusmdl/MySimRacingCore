@@ -1,6 +1,7 @@
 #ifndef PROJECT_CONFIG_H
 #define PROJECT_CONFIG_H
 
+#define LSMDL_DEBUGMODE // activates the debug function of the Serial Monitor 
 
 // Pin definitions for analog sensors
 
@@ -14,39 +15,18 @@
 
 // Pin definitions for digital sensors (buttons)
 
+#define BTN_MATRIX_L        4 // column
+#define BTN_MATRIX_R        4 // row
 #define BTN_NUMBER          16 // number of buttons
 
-#define BTN_MATRIX_A_L1     PB0 // RXLED/SS (R7 must be removed)
-#define BTN_MATRIX_A_L2     PB1 // SCK
-#define BTN_MATRIX_A_R1     PB2 // MOSI
-#define BTN_MATRIX_A_R2     PB3 // MISO
-#define BTN_MATRIX_A_DDR    DDRB
-#define BTN_MATRIX_A_PORT   PORTB
-#define BTN_MATRIX_A_PIN    PIND
-
-#define BTN_MATRIX_B_L1     PB4 // IO8
-#define BTN_MATRIX_B_L2     PB5 // IO9
-#define BTN_MATRIX_B_R1     PB2 // MOSI
-#define BTN_MATRIX_B_R2     PB3 // MISO
-#define BTN_MATRIX_B_DDR    DDRB
-#define BTN_MATRIX_B_PORT   PORTB
-#define BTN_MATRIX_B_PIN    PIND
-
-#define BTN_MATRIX_C_L1     PB0 // RXLED/SS (R7 must be removed)
-#define BTN_MATRIX_C_L2     PB1 // SCK
-#define BTN_MATRIX_C_R1     PB6 // IO10
-#define BTN_MATRIX_C_R2     PB7 // IO11
-#define BTN_MATRIX_C_DDR    DDRB
-#define BTN_MATRIX_C_PORT   PORTB
-#define BTN_MATRIX_C_PIN    PINB
-
-#define BTN_MATRIX_D_L1     PB4 // IO8
-#define BTN_MATRIX_D_L2     PB5 // IO9
-#define BTN_MATRIX_D_R1     PB6 // IO10
-#define BTN_MATRIX_D_R2     PB7 // IO11
-#define BTN_MATRIX_D_DDR    DDRB
-#define BTN_MATRIX_D_PORT   PORTB
-#define BTN_MATRIX_D_PIN    PINB
+#define BTN_MATRIX_L1       5
+#define BTN_MATRIX_L2       6
+#define BTN_MATRIX_L3       7
+#define BTN_MATRIX_L4       12
+#define BTN_MATRIX_R1       14
+#define BTN_MATRIX_R2       15
+#define BTN_MATRIX_R3       16
+#define BTN_MATRIX_R4       4
 
 // Pin definitions for steering encoder (1k ext pullup resistor)
 #define ENCODER_A_PIN       PD0 // D0/TX

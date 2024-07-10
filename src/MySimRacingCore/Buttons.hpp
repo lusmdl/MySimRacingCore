@@ -1,7 +1,7 @@
 #ifndef BUTTONS_HPP
 #define BUTTONS_HPP
 
-#include <MyAvr.hpp>
+#include <Keypad.h>
 #include "ProjectConfig.hpp"
 
 struct pod_buttonmatrix {
@@ -16,16 +16,16 @@ class Buttons {
         Buttons();
         ~Buttons();
         void begin();
-        void listner();
-        pod_buttonmatrix matrix_[BTN_NUMBER];
+        void listener();
+        pod_buttonmatrix data_[BTN_NUMBER];
 
 
     private:
-
-        MyButtonMatrix2x2 *btnA_;
-        MyButtonMatrix2x2 *btnB_;
-        MyButtonMatrix2x2 *btnC_;
-        MyButtonMatrix2x2 *btnD_;
+    
+        uint8_t rowpins_[BTN_MATRIX_R];
+        uint8_t columnspins_[BTN_MATRIX_L];
+        char keyarray_[BTN_MATRIX_R][BTN_MATRIX_L];
+        Keypad keys_;
 };
 
 
