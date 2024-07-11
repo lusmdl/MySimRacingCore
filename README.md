@@ -5,6 +5,11 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 ## Features
 
 - 16 buttons
+- X-Axis with FFB
+- Accelerate-Axis
+- Brake-Axis
+- Rx-Axis
+- Ry-Axis
 
 
 
@@ -14,10 +19,10 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 
 ## Hardware Requirements
 
-- **ATmega32u4 Microcontroller**: The core of the project, responsible for processing inputs and outputs.
-- **Steering Wheel**: Connects to the microcontroller for precise steering control.
-- **Pedals**: Throttle, brake, and clutch pedals integrated with the controller.
-- **Additional Accessories**: Optional accessories like shifters, buttons, and displays.
+- **ATmega32u4 Microcontroller**: I used the original arduino micro board
+- **Steering Wheel**: I used a cheap optical encoder with A and B line
+- **Pedals**: I used a old Xbox360 racing Wheele pedal set. It only needs to work with potis.
+- **Buttons**: I used 4 2x2 Matrixes
 
 ## Software Requirements
 
