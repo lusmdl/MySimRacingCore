@@ -8,8 +8,8 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 - X-Axis with FFB
 - Accelerate-Axis
 - Brake-Axis
-- Rx-Axis
-- Ry-Axis
+- X-Rotation-Axis (Joystick)
+- Y-Rotation-Axis (Joystick)
 
 
 
@@ -20,13 +20,16 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 ## Hardware Requirements
 
 - **ATmega32u4 Microcontroller**: I used the original arduino micro board
-- **Steering Wheel**: I used a cheap optical encoder with A and B line
-- **Pedals**: I used a old Xbox360 racing Wheele pedal set. It only needs to work with potis.
-- **Buttons**: I used 4 2x2 Matrixes
+- **Steering Wheel**: I used a cheap optical encoder with A and B line from china
+- **Pedals**: I used a old xbox360 racing wheele pedal set. It only needs to work with potis.
+- **Buttons**: I used 4 2x2 matrixes
+- **Joystick**: I used one joystick with an button
+- **LCD**: I used 1602 with an I2C module attached
 
 ## Software Requirements
 
 - [**Platform IO**](https://platformio.org/install/ide?install=vscode): Used for programming the ATmega32u4 microcontroller.
+- [**AVR Lib**](https://github.com/avrdudes/avr-libc.git): standard lib with platformIO.
 - [**Arduino Joystick With Force Feedback Library**](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary.git)
 - [**Keypad Library**](https://github.com/Chris--A/Keypad.git): Used for the 4x4 Matrix
 
