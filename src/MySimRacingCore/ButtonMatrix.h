@@ -5,7 +5,7 @@
  * 
  * @brief Definition of data structures for managing button matrix states.
  * 
- * This header file defines the data structure `pod_buttonmatrix` which represents
+ * This header file defines the data structures like `pod_buttonmatrix` which represents
  * the state of buttons in a matrix. These data structures facilitate module
  * interchangeability and are used to ensure smooth data transfer between software modules.
  * 
