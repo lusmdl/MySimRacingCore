@@ -3,11 +3,9 @@
 
 #include <Keypad.h>
 #include "ProjectConfig.hpp"
+#include "ButtonMatrix.h"
 
-struct pod_buttonmatrix {
 
-    uint8_t pushed;
-};
 
 class Buttons {
 

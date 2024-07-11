@@ -3,27 +3,25 @@
 
 #include "ComUsb.hpp"
 #include "Buttons.hpp"
-//#include "Pedals.hpp"
-//#include "Shifting.hpp"
-//#include "WheeleBase.hpp"
-
+#include "Encoder.hpp"
 
 
 class MySimRacingCore {
+
+    
 
 
     public:
         MySimRacingCore();
         void setup();
         void loop();
+        void encoderHandleInterrupt();
 
     private:
 
         Buttons buttons_;
+        Encoder encoder_;
         ComUsb com_;
-        //Pedals pedals_;
-        //Shifting shift_;
-        //WheelBase wheele_;
 
 };
 

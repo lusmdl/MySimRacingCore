@@ -4,6 +4,8 @@ MySimRacingCore::MySimRacingCore() :
     com_(buttons_)
     {}
 
+
+
 void MySimRacingCore::setup() {
 
     
@@ -25,3 +27,9 @@ void MySimRacingCore::loop() {
     
     com_.sendData();
 }
+
+void MySimRacingCore::encoderHandleInterrupt() {
+    
+    encoder_.handleInterrupt();
+}
+
