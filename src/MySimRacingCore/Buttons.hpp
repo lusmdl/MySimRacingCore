@@ -26,7 +26,10 @@ class Buttons {
         uint8_t columnspins_[BTN_MATRIX_L];
         char keyarray_[BTN_MATRIX_R][BTN_MATRIX_L];
         Keypad keys_;
-        uint8_t mapalphabet_[BTN_NUMBER];
+
+        int getmap(char key);
+        char getmap(int key);
+        char lasteventkey_; // store the key - otherwise i have problems
 };
 
 

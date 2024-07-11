@@ -19,7 +19,7 @@ void MySimRacingCore::setup() {
 
 void MySimRacingCore::loop() {
 
-    _delay_ms(100);
+    _delay_ms(1);
 
     buttons_.listener();
     
