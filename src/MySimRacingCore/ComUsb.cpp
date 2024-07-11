@@ -53,14 +53,5 @@ void ComUsb::sendData() {
 
 
     joy_.sendState();
-
-    /*
-    joy_.pressButton(12);
-    joy_.sendState();
-    _delay_ms(1000);
-    joy_.releaseButton(12);
-    joy_.sendState();
-    _delay_ms(1000);
-    */
     
 }

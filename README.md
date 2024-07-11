@@ -4,6 +4,8 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 
 ## Features
 
+- 16 buttons
+
 
 
 ## Getting Started
