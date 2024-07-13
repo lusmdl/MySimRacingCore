@@ -1,42 +1,56 @@
+/**
+ * @file ProjectConfig.hpp
+ * 
+ * @brief Definition of Project Pins and other important constatnt Values
+ */
+
 #ifndef PROJECT_CONFIG_H
 #define PROJECT_CONFIG_H
 
-#define LSMDL_DEBUGMODE // activates the debug function of the Serial Monitor 
+//#define LSMDL_DEBUGMODE // activates the debug function of the Serial Monitor 
+
+#ifdef LSMDL_DEBUGMODE
+#warning "This code is in DEBUG mode!!! The Macro 'LSMDL_DEBUGMODE' in include/ProjectCofig.hpp has to be comment out"
+#endif
 
 // Pin definitions for analog sensors
 
-#define THROTTLE_PIN        0//A0
-#define BRAKE_PIN           0//A1
-#define CLUTCH_PIN          0//A2
-#define HANDBRAKE_PIN       0//A3 
-#define SHIFTER_X_PIN       0//A4 
-#define SHIFTER_Y_PIN       0//A5
+#define THROTTLE_PIN        0   //A0
+#define BRAKE_PIN           0   //A1
+#define CLUTCH_PIN          0   //A2
+#define HANDBRAKE_PIN       0   //A3 
+#define SHIFTER_X_PIN       PF1 //A4 
+#define SHIFTER_Y_PIN       PF0 //A5
 
 
-// Pin definitions for digital sensors (buttons)
+// Pin definitions for Button Matrix
 
-#define BTN_MATRIX_L        4 // column
-#define BTN_MATRIX_R        4 // row
-#define BTN_NUMBER          16 // number of buttons
+#define BTN_MATRIX_L        4   // column
+#define BTN_MATRIX_R        4   // row
+#define BTN_NUMBER          16  // number of buttons
 
-#define BTN_MATRIX_L1       5
-#define BTN_MATRIX_L2       6
-#define BTN_MATRIX_L3       7
-#define BTN_MATRIX_L4       12
-#define BTN_MATRIX_R1       14
-#define BTN_MATRIX_R2       15
-#define BTN_MATRIX_R3       16
-#define BTN_MATRIX_R4       4
+#define BTN_MATRIX_L1       5   // PC6
+#define BTN_MATRIX_L2       6   // PD7
+#define BTN_MATRIX_L3       7   // PE6
+#define BTN_MATRIX_L4       12  // PD6
+#define BTN_MATRIX_R1       14  // SCK
+#define BTN_MATRIX_R2       15  // MOSI
+#define BTN_MATRIX_R3       16  // MISO
+#define BTN_MATRIX_R4       4   // PD4
+
 
 // Pin definitions for steering encoder (1k ext pullup resistor)
+
 #define ENCODER_A_PIN       PD0 // D0/TX
 #define ENCODER_B_PIN       PD1 // D1/RX
 
+
 // Force feedback motor control pins
 
-#define MOTOR_EN_PIN        0//D8
-#define MOTOR_LPWM_PIN      0//D9
-#define MOTOR_RPWM_PIN      0//D10
+#define MOTOR_EN_PIN        0   // D8
+#define MOTOR_LPWM_PIN      0   // D9
+#define MOTOR_RPWM_PIN      0   // D10
+
 
 // EEPROM addresses to store settings
 

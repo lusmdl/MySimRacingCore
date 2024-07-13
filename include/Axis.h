@@ -1,7 +1,5 @@
-#ifndef AXIS_H
-#define AXIS_H
 /**
- * @file Axis.h
+ * @file Axis.hpp
  * 
  * @brief Definition of data structures for managing axis values.
  * 
@@ -13,13 +11,15 @@
  * 
  */
 
+#ifndef AXIS_H
+#define AXIS_H
 
-// every axis has the same behavior
-// this data structur should provide a standard
-struct data_axis {
+/// @brief every axis has the same behavior. this data structur should provide a standard
+struct pod_axis {
         
     double act; // actual value
     double min; // minimum allowable value
     double max; // maximum allowable value
 };
-#endif // AXIS_H
+
+#endif

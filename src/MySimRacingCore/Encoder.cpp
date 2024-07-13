@@ -1,3 +1,8 @@
+/**
+ * @file Encoder.hpp
+ * @brief Implementations of the Encoder class.
+ */
+
 #include "Encoder.hpp"
 
 

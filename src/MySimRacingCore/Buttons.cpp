@@ -1,10 +1,19 @@
+/**
+ * @file Buttons.cpp
+ * @brief Implementation of the Buttons class.
+ */
+
 #include "Buttons.hpp"
 
-
-Buttons::Buttons() : 
+/**
+ * @brief Constructor for Buttons class.
+ * 
+ * Initializes the row and column pins, key array, and keypad object.
+ */
+Buttons::Buttons() :
     rowpins_{BTN_MATRIX_R1, BTN_MATRIX_R2, BTN_MATRIX_R3, BTN_MATRIX_R4},
     columnspins_{BTN_MATRIX_L1, BTN_MATRIX_L2, BTN_MATRIX_L3, BTN_MATRIX_L4},
-    keyarray_{ // the getmap method make shure the key names are correct
+    keyarray_{ // The getmap method ensures the key names are correct
         {getmap(0),     getmap(1),  getmap(2),      getmap(3)},
         {getmap(4),     getmap(5),  getmap(6),      getmap(7)},
         {getmap(8),     getmap(9),  getmap(10),     getmap(11)},
@@ -14,41 +23,50 @@ Buttons::Buttons() :
     lasteventkey_('\0')
 {}
 
+/**
+ * @brief Destructor for Buttons class.
+ * 
+ * No dynamic memory allocation is required.
+ */
 Buttons::~Buttons() {
-    // Keine dynamische Speicherfreigabe erforderlich
+    // No dynamic memory allocation required
 }
 
+/**
+ * @brief Initializes the keypad or hardware components.
+ */
 void Buttons::begin() {
-
-    // Initialisieren der Keypad- oder Hardware-Komponenten
-
     keys_.setDebounceTime(1);
     keys_.setHoldTime(1);
 }
 
+/**
+ * @brief Listens and processes key presses.
+ * 
+ * Polls the keypad and processes key press events. Updates the data_ array with key press counts.
+ */
 void Buttons::listener() {
-    // Abfragen und Verarbeiten von Tastendrücken
-    
-    char eventKey = keys_.getKey(); // nessesarry to get the data for the other methods
-    
-    #ifdef LSMDL_DEBUGMODE
-    if (eventKey) {
 
+    // Poll and process key presses
+    
+    char eventKey = keys_.getKey(); // Necessary to get the data for the other methods
+    
+    if (eventKey) {
+        #ifdef LSMDL_DEBUGMODE
         Serial.print("Key Pressed Event at key " + String(eventKey) + "\n");
+        #endif
         lasteventkey_ = eventKey;
     }
-    #endif
 
     #ifdef LSMDL_DEBUGMODE
-    if (keys_.keyStateChanged()){
-        
+    if (keys_.keyStateChanged()) {
         Serial.print("Key state change at key " + String(lasteventkey_) + "\n");
     }
     #endif
 
-    // only one key can be pressed at each cycle!
 
-    switch (keys_.getState()) {
+    switch (keys_.getState()) { // Only one key can be pressed at each cycle!!
+
         case PRESSED:
             // Handle pressed event
             
@@ -78,14 +96,28 @@ void Buttons::listener() {
 
             break;
     }
-
-    
 }
 
+/**
+ * @brief Gets the data of a specific button.
+ * 
+ * @param button The button index.
+ * @return pod_button The data of the specified button.
+ */
+pod_button Buttons::getData(uint8_t button) {
+
+    return data_[button];
+}
+
+/**
+ * @brief Maps a character key to an integer index.
+ * 
+ * @param key The character key.
+ * @return int The integer index corresponding to the key.
+ */
 int Buttons::getmap(char key) {
 
     switch (key) {
-
         case 'A': return 0;
         case 'B': return 1;
         case 'C': return 2;
@@ -102,15 +134,19 @@ int Buttons::getmap(char key) {
         case 'N': return 13;
         case 'O': return 14;
         case 'P': return 15;
-        default: return 255; // Rückgabe eines ungültigen Werts für nicht definierte Tasten
+        default: return 255; // Return an invalid value for undefined keys
     }
 }
 
-
+/**
+ * @brief Maps an integer index to a character key.
+ * 
+ * @param key The integer index.
+ * @return char The character key corresponding to the index.
+ */
 char Buttons::getmap(int key) {
 
     switch (key) {
-
         case 0: return 'A';
         case 1: return 'B';
         case 2: return 'C';
@@ -127,7 +163,6 @@ char Buttons::getmap(int key) {
         case 13: return 'N';
         case 14: return 'O';
         case 15: return 'P';
-        default: return '\0'; // Rückgabe eines Nullzeichens für ungültige Indizes
+        default: return '\0'; // Return a null character for invalid indices
     }
 }
-

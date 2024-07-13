@@ -1,3 +1,8 @@
+/**
+ * @file Encoder.hpp
+ * @brief Definition of the Encoder class.
+ */
+
 #ifndef ENCODER_HPP
 #define ENCODER_HPP
 
@@ -10,11 +15,6 @@
 #error "This code is designed to work with ATmega32U4 microcontrollers only. Please use a compatible microcontroller or modify the encoder code to match your hardware."
 #endif
 
-struct pod_encoder
-{
-    data_axis turn; // in degree [°]
-};
-
 
 class Encoder {
 public:
@@ -22,10 +22,13 @@ public:
     void begin();
     int getPosition() const;
     void handleInterrupt();
+    pod_axis getData();
 
 private:
+    pod_axis data_;
     volatile int position_;
     volatile uint8_t lastState_;
+
 };
 
 #endif // ENCODER_HPP
