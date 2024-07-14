@@ -9,7 +9,8 @@
 ADCAxis::ADCAxis(uint8_t pin) : 
     pin_(pin),
     rawMin_(0), 
-    rawMax_(1023) 
+    rawMax_(1023),
+    rawAct_(0)
 {
     // Constructor initializes pin, act, min, and max values
 
@@ -31,6 +32,13 @@ void ADCAxis::begin() {
 void ADCAxis::updateRawData() {
 
     rawAct_ = readADC();
+
+    #ifdef LSMDL_DEBUGMODE
+    Serial.print("actual raw ADC value from ");
+    Serial.print(reinterpret_cast<uintptr_t>(this), HEX); 
+    Serial.print(". The value is: " + String(rawAct_) + "\n");
+    _delay_ms(100);
+    #endif
 
 }
 
@@ -104,6 +112,16 @@ pod_axis ADCAxis::getData() {
     // scaledRange = 50 - (-50) = 100
     // valueProportion = -1356 / 200 = -6.78
     // data_.act = -50 + (-6.78 * 100) = -50 - 678 = -728
+
+    
+
+    #ifdef LSMDL_DEBUGMODE
+    Serial.print("actual data values from ");
+    Serial.print(reinterpret_cast<uintptr_t>(this), HEX); 
+    Serial.print(". The data structur:\tmin\tact\tmax\t\n\t\t\t\t\t\t");
+    Serial.print(String(data_.min) + "\t" + String(data_.act) + "\t" + String(data_.max) + "\n"); 
+    _delay_ms(100);
+    #endif
 
     return data_;
 }

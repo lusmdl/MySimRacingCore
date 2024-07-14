@@ -10,19 +10,14 @@
  * 
  * Initializes the rotationX and rotationY ADCAxis objects.
  */
-Joyst::Joyst() {
-
-    rotationX = new ADCAxis(SHIFTER_X_PIN); // Assuming pin 0 for X-axis
-    rotationY = new ADCAxis(SHIFTER_Y_PIN); // Assuming pin 1 for Y-axis
-}
+Joyst::Joyst() :
+    rotationX(SHIFTER_X_PIN), // Assuming SHIFTER_X_PIN is defined in ProjectConfig.hpp
+    rotationY(SHIFTER_Y_PIN)  // Assuming SHIFTER_Y_PIN is defined in ProjectConfig.hpp
+{}
 
 /**
  * @brief Destructor for Joyst class.
- * 
- * Cleans up the allocated ADCAxis objects.
  */
 Joyst::~Joyst() {
 
-    delete rotationX;
-    delete rotationY;
 }

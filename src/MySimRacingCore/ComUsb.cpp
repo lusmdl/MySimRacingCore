@@ -12,8 +12,9 @@
  * 
  * @param btns Reference to the Buttons object.
  */
-ComUsb::ComUsb(Buttons &btns) :
+ComUsb::ComUsb(Buttons &btns, Joyst &joyst) :
     btns_(&btns),
+    joyst_(&joyst),
     joy_(
         JOYSTICK_DEFAULT_REPORT_ID, // REPORT_ID        Hid report id
         JOYSTICK_TYPE_MULTI_AXIS,   // JOYSTICK_TYPE    Type of device: JOYSTICK, GAMEPAD, MULTI_AXIS
@@ -45,17 +46,17 @@ ComUsb::~ComUsb() {}
  */
 void ComUsb::begin() {
     
-    joy_.setXAxisRange(-32768, 32767);
-    //joy_.setYAxisRange(-32768, 32767);
-    joy_.setZAxisRange(-32768, 32767);
-    joy_.setRxAxisRange(-32768, 32767);
-    joy_.setRyAxisRange(-32768, 32767);
-    //joy_.setRzAxisRange(-32768, 32767);
-    //joy_.setRudderRange(-32768, 32767);
-    //joy_.setThrottleRange(-32768, 32767);
-    joy_.setAcceleratorRange(-32768, 32767);
-    joy_.setBrakeRange(-32768, 32767);
-    //joy_.setSteeringRange(-32768, 32767);
+    joy_.setXAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    //joy_.setYAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    joy_.setZAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    joy_.setRxAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    joy_.setRyAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    //joy_.setRzAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    //joy_.setRudderRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    //joy_.setThrottleRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    joy_.setAcceleratorRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    joy_.setBrakeRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    //joy_.setSteeringRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
 
     joy_.begin(false); // sendState() method is necessary if (false)
 }
@@ -71,5 +72,60 @@ void ComUsb::sendData() {
 
         joy_.setButton(i, btns_->getData(i).pushed);
     }
+
+    #ifdef LSMDL_DEBUGMODE
+    Serial.print("The USB send Axis Value for Rotation X is: " + String(calculateAxis(joyst_->rotationX.getData())) + "\n");
+    Serial.print("The USB send Axis Value for Rotation Y is: " + String(calculateAxis(joyst_->rotationY.getData())) + "\n");
+    //_delay_ms(100);
+    #endif
+
+    joy_.setRxAxis(calculateAxis(joyst_->rotationX.getData()));
+    joy_.setRyAxis(calculateAxis(joyst_->rotationY.getData()));
+
     joy_.sendState();
 }
+
+/**
+ * @brief Calculates the ADC axis value.
+ * 
+ * Maps the input data range to the USB axis range.
+ * 
+ * @param data The pod_axis data structure.
+ * @return int The calculated ADC axis value.
+ */
+int16_t ComUsb::calculateAxis(pod_axis data) {
+
+    #ifdef LSMDL_DEBUGMODE
+    Serial.print("calculateAxis!!!\n");
+    #endif
+
+    // Map the input range [0, 100] to the output range [-32768, 32767]
+
+    double dataDelta = data.max - data.min;
+    double axisDelta = static_cast<double>(MAX_AXIS_VALUE) - static_cast<double>(MIN_AXIS_VALUE);
+
+    // Calculate the scale factor
+    double scale = axisDelta / dataDelta;
+
+    // Calculate the output value
+    double dataActCal = (data.act - data.min);
+    double axisActWithoutOffset = dataActCal * scale;
+    double axisActWithOffset = axisActWithoutOffset + static_cast<double>(MIN_AXIS_VALUE);
+    int16_t axisAct = static_cast<int16_t>(axisActWithOffset);
+
+    #ifdef LSMDL_DEBUGMODE
+    Serial.print("The calculated values:");
+    //Serial.println("\tdata_delta " + String(dataDelta));
+    //Serial.println("\taxis_delta "+ String(axisDelta));
+    //Serial.println("\tscale "+ String(scale));
+    //Serial.println("\tdataActCal " + String(dataActCal));
+    //Serial.println("\axisActWithoutOffset " + String(axisActWithoutOffset));
+    Serial.println("\axisActWithOffset " + String(axisActWithOffset));
+    //Serial.println("\axisAct " + String(axisAct));
+    Serial.println("calculation end!!!");
+    _delay_ms(100);
+    #endif
+
+    return axisAct;
+}
+

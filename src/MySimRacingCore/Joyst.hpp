@@ -12,8 +12,8 @@ class Joyst {
         Joyst();
         ~Joyst();
 
-        ADCAxis *rotationX;
-        ADCAxis *rotationY;
+        ADCAxis rotationX;
+        ADCAxis rotationY;
         
 
 

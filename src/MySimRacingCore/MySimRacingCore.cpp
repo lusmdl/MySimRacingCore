@@ -11,7 +11,7 @@
  * Initializes the ComUsb object with the Buttons object.
  */
 MySimRacingCore::MySimRacingCore() :
-    com_(buttons_)
+    com_(buttons_, joy_)
 {}
 
 /**
@@ -43,8 +43,18 @@ void MySimRacingCore::loop() {
     _delay_ms(1);
 
     buttons_.listener();
+
     joy_.rotationX.updateRawData();
+
+    #ifdef LSMDL_DEBUGMODE
+    joy_.rotationX.getData();
+    #endif
+
     joy_.rotationY.updateRawData();
+
+    #ifdef LSMDL_DEBUGMODE
+    joy_.rotationY.getData();
+    #endif
 
     com_.sendData();
 }
