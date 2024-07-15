@@ -15,19 +15,22 @@
 #endif
 
 // LCD Display
-#define LCD_ADDR            0x27
-#define LCD_CHARS           16
-#define LCD_LINES           2
+#define LCD_ADDR                0x27
+#define LCD_CHARS               16
+#define LCD_LINES               2
+
+//TWI CONFIG
+#define TWI_ADDR_MY_WHEEL_BTN   8
 
 
 // Pin definitions for analog sensors
 
-#define THROTTLE_PIN        0   //A0
-#define BRAKE_PIN           0   //A1
-#define CLUTCH_PIN          0   //A2
-#define HANDBRAKE_PIN       0   //A3 
-#define SHIFTER_X_PIN       PF1 //A4 
-#define SHIFTER_Y_PIN       PF0 //A5
+#define THROTTLE_PIN            0   //A0
+#define BRAKE_PIN               0   //A1
+#define CLUTCH_PIN              0   //A2
+#define HANDBRAKE_PIN           0   //A3 
+#define SHIFTER_X_PIN           PF1 //A4 
+#define SHIFTER_Y_PIN           PF0 //A5
 
 
 // Pin definitions for Button Matrix

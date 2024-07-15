@@ -4,7 +4,8 @@
  */
 
 #include <Arduino.h>
-#include "MySimRacingCore/MySimRacingCore.hpp"
+#include "Core/MySimRacingCore.hpp"
+
 
 MySimRacingCore core;
 

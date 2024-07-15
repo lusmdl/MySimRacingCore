@@ -11,6 +11,7 @@
  * Initializes the ComUsb object with the Buttons object.
  */
 MySimRacingCore::MySimRacingCore() :
+    buttons_(Wire),
     com_(buttons_, joy_)
 {}
 
