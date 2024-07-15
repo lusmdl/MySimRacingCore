@@ -4,10 +4,29 @@
  */
 
 #include <Arduino.h>
-#include "Core/MySimRacingCore.hpp"
 
 
-MySimRacingCore core;
+
+#include "Core/ComUsb.hpp"
+#include "Core/Buttons.hpp"
+#include "Core/Encoder.hpp"
+#include "Core/Joyst.hpp"
+#ifndef LSMDL_DEBUGMODE
+#include "Core/SetupDisplay.hpp"
+#endif
+    
+    
+void encoderHandleInterrupt();
+
+Buttons buttons(Wire);
+Encoder encoder;
+Joyst joy;
+
+#ifndef LSMDL_DEBUGMODE
+SetupDisplay display;
+#endif
+
+ComUsb com(buttons, joy);
 
 /**
  * @brief Arduino setup function.
@@ -16,7 +35,20 @@ MySimRacingCore core;
  */
 void setup() {
 
-    core.setup();
+    #ifdef LSMDL_DEBUGMODE
+    Serial.begin(9600);
+    #endif
+
+    #ifndef LSMDL_DEBUGMODE
+    display.begin();
+    #endif
+
+    buttons.begin();
+    joy.rotationX_.begin();
+    joy.rotationY_.begin();
+    joy.beginButton();
+
+    com.begin();
 }
 
 /**
@@ -26,7 +58,20 @@ void setup() {
  */
 void loop() {
 
-    core.loop();
+    _delay_ms(1);
+
+    buttons.listener();
+
+    joy.rotationX_.updateRawData();
+    joy.rotationY_.updateRawData();
+
+    #ifdef LSMDL_DEBUGMODE
+    joy_.rotationX_.getData();
+    joy_.rotationY_.getData();
+    _delay_ms(100);
+    #endif
+
+    com.sendData();
 }
 
 /**
@@ -36,7 +81,7 @@ void loop() {
  */
 ISR(INT0_vect) {
 
-    core.encoderHandleInterrupt();
+    encoder.handleInterrupt();
 }
 
 /**
@@ -46,5 +91,5 @@ ISR(INT0_vect) {
  */
 ISR(INT1_vect) {
     
-    core.encoderHandleInterrupt();
+    encoder.handleInterrupt();
 }

@@ -22,7 +22,7 @@ void Encoder::begin() {
     EIMSK |= (1 << INT0) | (1 << INT1);
 
     // Initialize lastState_ with the initial state of the encoder pins
-    lastState_ = (PIND & ((1 << PIND2) | (1 << PIND3))) >> 2;
+    lastState_ = (ENCODER_REG_PIN & ((1 << ENCODER_A_PIN) | (1 << ENCODER_B_PIN))) >> 2;
 
     #endif
 
@@ -64,7 +64,7 @@ void Encoder::handleInterrupt() {
     // PIND is the register that holds the state of digital pins 0-7.
     // (PIND & ((1 << PIND2) | (1 << PIND3))) isolates the bits for pins 2 and 3.
     // >> 2 shifts the bits right, placing them at the lower bits (0 and 1) of the state variable.
-    uint8_t state = (PIND & ((1 << PIND2) | (1 << PIND3))) >> 2; 
+    uint8_t state = (ENCODER_REG_PIN & ((1 << ENCODER_A_PIN) | (1 << ENCODER_B_PIN))) >> 2; 
 
     // Calculate the transition state
     // 

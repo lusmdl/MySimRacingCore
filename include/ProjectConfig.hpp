@@ -51,8 +51,9 @@
 
 // Pin definitions for steering encoder (1k ext pullup resistor)
 
-#define ENCODER_A_PIN       PD2 // D0/TX
-#define ENCODER_B_PIN       PD3 // D1/RX
+#define ENCODER_A_PIN       PD2 // D0/TX - don´t edit this !!!!!
+#define ENCODER_B_PIN       PD3 // D1/RX - don´t edit this !!!!!
+#define ENCODER_REG_PIN     PIND
 
 
 // Force feedback motor control pins

@@ -9,6 +9,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "Axis.h"
+#include "ProjectConfig.hpp"
 
 // Ensure the code is only compiled for ATmega32U4
 #ifndef __AVR_ATmega32U4__

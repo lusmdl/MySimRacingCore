@@ -10,7 +10,6 @@
 #include <Joystick.h>
 #include "Buttons.hpp"
 #include "Joyst.hpp"
-#include <math.h>
 
 #ifdef LSMDL_DEBUGMODE
 #include <WString.h>
