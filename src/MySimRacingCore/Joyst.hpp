@@ -2,6 +2,7 @@
 #define JOYST_HPP
 
 #include "ADCAxis.hpp"
+#include "Button.h"
 #include "ProjectConfig.hpp"
 
 
@@ -12,9 +13,10 @@ class Joyst {
         Joyst();
         ~Joyst();
 
-        ADCAxis rotationX;
-        ADCAxis rotationY;
-        
+        ADCAxis rotationX_;
+        ADCAxis rotationY_;
+        void beginButton();
+        pod_button getButtonStatus();
 
 
 
@@ -22,6 +24,9 @@ class Joyst {
 
     private:
 
+        pod_button buttonSW_;
+
+        uint8_t readButton();
 
 
 

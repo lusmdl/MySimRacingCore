@@ -13,6 +13,12 @@
 #warning "This code is in DEBUG mode!!! The Macro 'LSMDL_DEBUGMODE' in include/ProjectCofig.hpp has to be comment out"
 #endif
 
+// LCD Display
+#define LCD_ADDR            0x27
+#define LCD_CHARS           16
+#define LCD_LINES           2
+
+
 // Pin definitions for analog sensors
 
 #define THROTTLE_PIN        0   //A0
@@ -27,7 +33,7 @@
 
 #define BTN_MATRIX_L        4   // column
 #define BTN_MATRIX_R        4   // row
-#define BTN_NUMBER          16  // number of buttons
+#define BTN_NUMBER          17  // number of buttons
 
 #define BTN_MATRIX_L1       5   // PC6
 #define BTN_MATRIX_L2       6   // PD7
@@ -50,6 +56,7 @@
 #define MOTOR_EN_PIN        0   // D8
 #define MOTOR_LPWM_PIN      0   // D9
 #define MOTOR_RPWM_PIN      0   // D10
+
 
 
 // EEPROM addresses to store settings

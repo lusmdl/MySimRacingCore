@@ -10,6 +10,7 @@
 #include "Buttons.hpp"
 #include "Encoder.hpp"
 #include "Joyst.hpp"
+#include "SetupDisplay.hpp"
 
 class MySimRacingCore {
 
@@ -25,6 +26,7 @@ class MySimRacingCore {
         Buttons buttons_;
         Encoder encoder_;
         Joyst joy_;
+        SetupDisplay display_;
 
         ComUsb com_;
 };
