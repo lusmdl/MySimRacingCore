@@ -68,12 +68,8 @@ void ComUsb::begin() {
  */
 void ComUsb::sendData() {
 
-    for (uint8_t i = 0; i < BTN_NUMBER; i++) {
-
-        joy_.setButton(i, btns_->getData(i).pushed);
-    }
-
     #ifdef LSMDL_DEBUGMODE
+    Serial.print("Read Joystick Switch: " + String(joyst_->getButtonStatus().pushed)+ "\n");
     Serial.print("The USB send Axis Value for Rotation X is: " + String(calculateAxis(joyst_->rotationX_.getData())) + "\n");
     Serial.print("The USB send Axis Value for Rotation Y is: " + String(calculateAxis(joyst_->rotationY_.getData())) + "\n");
     //_delay_ms(100);
@@ -81,10 +77,15 @@ void ComUsb::sendData() {
 
     joy_.setRxAxis(calculateAxis(joyst_->rotationX_.getData()));
     joy_.setRyAxis(calculateAxis(joyst_->rotationY_.getData()));
-    #ifdef LSMDL_DEBUGMODE
-    Serial.print("Read Joystick Switch: " + String(joyst_->getButtonStatus().pushed)+ "\n");
-    #endif
-    joy_.setButton(17, joyst_->getButtonStatus().pushed);
+    
+    joy_.setButton(0, (joyst_->getButtonStatus().pushed || btns_->getData(0).pushed));
+
+
+    for (uint8_t i = 1; i < BTN_NUMBER; i++) {
+
+        joy_.setButton(i, btns_->getData(i).pushed);
+
+    }
 
     joy_.sendState();
 }
