@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "Micro_Rev1j")(type "KiCad")(uri "$(KIPRJMOD)/Micro_Rev1j.pretty")(options "")(descr ""))
-)
