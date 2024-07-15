@@ -1,9 +1,11 @@
+
 #ifndef SETUP_DISPLAY_HPP
 #define SETUP_DISPLAY_HPP
 
+#include "ProjectConfig.hpp"
+#ifndef LSMDL_DEBUGMODE
 #include <LiquidCrystal_I2C.h>
 #include <avr/delay.h>
-#include "ProjectConfig.hpp"
 
 class SetupDisplay {
 
@@ -29,5 +31,5 @@ class SetupDisplay {
 
 
 
-
+#endif
 #endif

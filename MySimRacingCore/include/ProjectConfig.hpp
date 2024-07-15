@@ -7,10 +7,11 @@
 #ifndef PROJECT_CONFIG_H
 #define PROJECT_CONFIG_H
 
-//#define LSMDL_DEBUGMODE // activates the debug function of the Serial Monitor 
+#define LSMDL_DEBUGMODE // activates the debug function of the Serial Monitor 
 
 #ifdef LSMDL_DEBUGMODE
 #warning "This code is in DEBUG mode!!! The Macro 'LSMDL_DEBUGMODE' in include/ProjectCofig.hpp has to be comment out"
+#warning "The LCD feature is disabled because of the RAM storage
 #endif
 
 // LCD Display
@@ -33,7 +34,7 @@
 
 #define BTN_MATRIX_L        4   // column
 #define BTN_MATRIX_R        4   // row
-#define BTN_NUMBER          17  // number of buttons
+#define BTN_NUMBER          32  // number of buttons
 
 #define BTN_MATRIX_L1       5   // PC6
 #define BTN_MATRIX_L2       6   // PD7
@@ -47,8 +48,8 @@
 
 // Pin definitions for steering encoder (1k ext pullup resistor)
 
-#define ENCODER_A_PIN       PD0 // D0/TX
-#define ENCODER_B_PIN       PD1 // D1/RX
+#define ENCODER_A_PIN       PD2 // D0/TX
+#define ENCODER_B_PIN       PD3 // D1/RX
 
 
 // Force feedback motor control pins

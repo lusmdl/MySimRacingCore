@@ -26,7 +26,9 @@ void MySimRacingCore::setup() {
     Serial.begin(9600);
     #endif
 
+    #ifndef LSMDL_DEBUGMODE
     display_.begin();
+    #endif
 
     buttons_.begin();
     joy_.rotationX_.begin();
@@ -47,18 +49,16 @@ void MySimRacingCore::setup() {
 void MySimRacingCore::loop() {
     _delay_ms(1);
 
+
     buttons_.listener();
 
     joy_.rotationX_.updateRawData();
-
-    #ifdef LSMDL_DEBUGMODE
-    joy_.rotationX_.getData();
-    #endif
-
     joy_.rotationY_.updateRawData();
 
     #ifdef LSMDL_DEBUGMODE
+    joy_.rotationX_.getData();
     joy_.rotationY_.getData();
+    _delay_ms(100);
     #endif
 
     com_.sendData();

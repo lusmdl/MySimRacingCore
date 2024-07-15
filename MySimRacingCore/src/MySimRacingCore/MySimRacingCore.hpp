@@ -10,7 +10,9 @@
 #include "Buttons.hpp"
 #include "Encoder.hpp"
 #include "Joyst.hpp"
+#ifndef LSMDL_DEBUGMODE
 #include "SetupDisplay.hpp"
+#endif
 
 class MySimRacingCore {
 
@@ -26,8 +28,11 @@ class MySimRacingCore {
         Buttons buttons_;
         Encoder encoder_;
         Joyst joy_;
-        SetupDisplay display_;
 
+        #ifndef LSMDL_DEBUGMODE
+        SetupDisplay display_;
+        #endif
+    
         ComUsb com_;
 };
 

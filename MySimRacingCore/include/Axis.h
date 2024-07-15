@@ -17,9 +17,9 @@
 /// @brief every axis has the same behavior. this data structur should provide a standard
 struct pod_axis {
         
-    double act; // actual value
-    double min; // minimum allowable value
-    double max; // maximum allowable value
+    float act; // actual value
+    float min; // minimum allowable value
+    float max; // maximum allowable value
 };
 
 #endif

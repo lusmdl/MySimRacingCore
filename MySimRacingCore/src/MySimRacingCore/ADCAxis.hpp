@@ -33,8 +33,8 @@ class ADCAxis {
         ADCAxis(uint8_t pin);
         void begin();
         void updateRawData();
-        void setMinHere(double min);
-        void setMaxHere(double max);
+        void setMinHere(float min);
+        void setMaxHere(float max);
         pod_axis getData();
 
 

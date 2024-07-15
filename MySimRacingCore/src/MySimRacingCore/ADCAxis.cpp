@@ -64,7 +64,7 @@ int ADCAxis::readADC() {
  * 
  * @param min The minimum value to be set
  */
-void ADCAxis::setMinHere(double min) {
+void ADCAxis::setMinHere(float min) {
 
     rawMin_ = rawAct_;
     data_.min = min;
@@ -76,7 +76,7 @@ void ADCAxis::setMinHere(double min) {
  * 
  * @param max The maximum value to be set
  */
-void ADCAxis::setMaxHere(double max) {
+void ADCAxis::setMaxHere(float max) {
     rawMax_ = rawAct_;
     data_.max = max;
 }
@@ -91,35 +91,25 @@ void ADCAxis::setMaxHere(double max) {
 pod_axis ADCAxis::getData() {
 
     // Calculate the range of the raw values
-    auto rawRange = rawMax_ - rawMin_;
+    //int rawRange = rawMax_ - rawMin_;
     
     // Calculate the difference between the current raw value and the minimum raw value
-    auto rawValueOffset = rawAct_ - rawMin_;
+    //int rawValueOffset = rawAct_ - rawMin_;
     
     // Calculate the range of the scaled values
-    auto scaledRange = data_.max - data_.min;
+    //float scaledRange = data_.max - data_.min;
     
     // Calculate the proportion of the raw value within its range
-    auto valueProportion = static_cast<double>(rawValueOffset) / rawRange;
+    //float valueProportion = static_cast<float>(rawAct_ - rawMin_) / static_cast<float>(rawMax_ - rawMin_);
     
     // Calculate the scaled actual value
-    data_.act = data_.min + valueProportion * scaledRange;
-
-    // Example calculation with rawValue = -1256:
-    // rawMin_ = 100, rawMax_ = 300, data_.min = -50, data_.max = 50
-    // rawRange = 300 - 100 = 200
-    // rawValueOffset = -1256 - 100 = -1356
-    // scaledRange = 50 - (-50) = 100
-    // valueProportion = -1356 / 200 = -6.78
-    // data_.act = -50 + (-6.78 * 100) = -50 - 678 = -728
-
-    
+    //data_.act = data_.min + valueProportion * scaledRange;
+    data_.act = data_.min + (static_cast<float>(rawAct_ - rawMin_) / static_cast<float>(rawMax_ - rawMin_)) * (data_.max - data_.min);
 
     #ifdef LSMDL_DEBUGMODE
     Serial.print("actual data values from ");
     Serial.print(reinterpret_cast<uintptr_t>(this), HEX); 
-    Serial.print(". The data structur:\tmin\tact\tmax\t\n\t\t\t\t\t\t");
-    Serial.print(String(data_.min) + "\t" + String(data_.act) + "\t" + String(data_.max) + "\n"); 
+    Serial.print(". The data structur:\tmin= " + String(data_.min) + "act\t" + String(data_.act) + "max\t" + String(data_.max) + "\n"); 
     _delay_ms(100);
     #endif
 

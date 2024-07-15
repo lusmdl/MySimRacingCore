@@ -1,5 +1,5 @@
 #include "SetupDisplay.hpp"
-
+#ifndef LSMDL_DEBUGMODE
 SetupDisplay::SetupDisplay() {
 
 }
@@ -59,3 +59,4 @@ void SetupDisplay::pageBoot() {
     lcd_->print("success");
 
 }
+#endif
