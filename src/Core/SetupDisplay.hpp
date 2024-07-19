@@ -7,6 +7,7 @@
 #include <LiquidCrystal_I2C.h>
 #include <avr/delay.h>
 #include "Joyst.hpp"
+#include "TextBoxes.h"
 
 class SetupDisplay {
 
@@ -23,9 +24,17 @@ class SetupDisplay {
 
         uint8_t page_;
 
-        void setNewPage( uint8_t page);
-
         bool askForSetup();
+        void clearLine(uint8_t line);
+        void printLine(uint8_t line, String txt);
+        void waitForButtonRelease();
+
+        // pages
+
+        void setupRxMax();
+        void setupRxMin();
+        void setupRyMax();
+        void setupRyMin();
 
 };
 
