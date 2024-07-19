@@ -68,7 +68,7 @@ void ComUsb::begin() {
  */
 void ComUsb::sendData() {
 
-    #ifdef LSMDL_DEBUGMODE
+    #ifdef LUSMDL_DEBUGMODE
     Serial.print("Read Joystick Switch: " + String(joyst_->getButtonStatus().pushed)+ "\n");
     Serial.print("The USB send Axis Value for Rotation X is: " + String(calculateAxis(joyst_->rotationX_.getData())) + "\n");
     Serial.print("The USB send Axis Value for Rotation Y is: " + String(calculateAxis(joyst_->rotationY_.getData())) + "\n");
@@ -100,7 +100,7 @@ void ComUsb::sendData() {
  */
 int16_t ComUsb::calculateAxis(pod_axis data) {
 
-    #ifdef LSMDL_DEBUGMODE
+    #ifdef LUSMDL_DEBUGMODE
     Serial.print("calculateAxis!!!\n");
     #endif
 
@@ -118,7 +118,7 @@ int16_t ComUsb::calculateAxis(pod_axis data) {
     double axisActWithOffset = axisActWithoutOffset + static_cast<double>(MIN_AXIS_VALUE);
     int16_t axisAct = static_cast<int16_t>(axisActWithOffset);
 
-    #ifdef LSMDL_DEBUGMODE
+    #ifdef LUSMDL_DEBUGMODE
     Serial.print("The calculated values:");
     //Serial.println("\tdata_delta " + String(dataDelta));
     //Serial.println("\taxis_delta "+ String(axisDelta));

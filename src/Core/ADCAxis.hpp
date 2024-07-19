@@ -14,7 +14,7 @@
 #include "Axis.h"
 #include "ProjectConfig.hpp"
 
-#ifdef LSMDL_DEBUGMODE
+#ifdef LUSMDL_DEBUGMODE
 #include <WString.h>
 #include <Arduino.h>
 #endif

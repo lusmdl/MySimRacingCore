@@ -11,8 +11,8 @@
 #include "Core/Buttons.hpp"
 #include "Core/Encoder.hpp"
 #include "Core/Joyst.hpp"
-#ifndef LSMDL_DEBUGMODE
 #include "Core/SetupDisplay.hpp"
+#ifndef LUSMDL_DEBUGMODE
 #endif
     
     
@@ -22,11 +22,13 @@ Buttons buttons(Wire);
 Encoder encoder;
 Joyst joy;
 
-#ifndef LSMDL_DEBUGMODE
-SetupDisplay display;
-#endif
+//#ifndef LUSMDL_DEBUGMODE
+SetupDisplay display(joy);
+//#endif
 
 ComUsb com(buttons, joy);
+
+bool runSetup {1}; // save if a setup is running
 
 /**
  * @brief Arduino setup function.
@@ -35,13 +37,14 @@ ComUsb com(buttons, joy);
  */
 void setup() {
 
-    #ifdef LSMDL_DEBUGMODE
+    #ifdef LUSMDL_DEBUGMODE
     Serial.begin(9600);
     #endif
 
-    #ifndef LSMDL_DEBUGMODE
+
+    //#ifndef LUSMDL_DEBUGMODE
     display.begin();
-    #endif
+    //#endif
 
     buttons.begin();
     joy.rotationX_.begin();
@@ -58,18 +61,23 @@ void setup() {
  */
 void loop() {
 
+    #ifdef LUSMDL_DEBUGMODE
+    Serial.print("\n\n------------------------------------------------------------------\n");
+    _delay_ms(100);
+    #endif
+
     _delay_ms(1);
+
+    if (runSetup) {
+
+        runSetup = display.runSetup();
+    }
 
     buttons.listener();
 
     joy.rotationX_.updateRawData();
     joy.rotationY_.updateRawData();
 
-    #ifdef LSMDL_DEBUGMODE
-    joy_.rotationX_.getData();
-    joy_.rotationY_.getData();
-    _delay_ms(100);
-    #endif
 
     com.sendData();
 }

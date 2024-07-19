@@ -7,10 +7,10 @@
 #ifndef PROJECT_CONFIG_H
 #define PROJECT_CONFIG_H
 
-//#define LSMDL_DEBUGMODE // activates the debug function of the Serial Monitor 
+//#define LUSMDL_DEBUGMODE // activates the debug function of the Serial Monitor 
 
-#ifdef LSMDL_DEBUGMODE
-#warning "This code is in DEBUG mode!!! The Macro 'LSMDL_DEBUGMODE' in include/ProjectCofig.hpp has to be comment out"
+#ifdef LUSMDL_DEBUGMODE
+#warning "This code is in DEBUG mode!!! The Macro 'LUSMDL_DEBUGMODE' in include/ProjectCofig.hpp has to be comment out"
 #warning "The LCD feature is disabled because of the RAM storage
 #endif
 

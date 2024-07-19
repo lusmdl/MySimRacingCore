@@ -3,26 +3,29 @@
 #define SETUP_DISPLAY_HPP
 
 #include "ProjectConfig.hpp"
-#ifndef LSMDL_DEBUGMODE
+//#ifndef LUSMDL_DEBUGMODE
 #include <LiquidCrystal_I2C.h>
 #include <avr/delay.h>
+#include "Joyst.hpp"
 
 class SetupDisplay {
 
     public:
 
-        SetupDisplay();
+        SetupDisplay(Joyst &joyst);
         ~SetupDisplay();
         void begin();
-        void show();
-        void setNewPage( uint8_t page);
+        bool runSetup();
 
     private:
         LiquidCrystal_I2C *lcd_;
+        Joyst *joyst_;
 
         uint8_t page_;
 
-        void pageBoot();
+        void setNewPage( uint8_t page);
+
+        bool askForSetup();
 
 };
 
@@ -31,5 +34,5 @@ class SetupDisplay {
 
 
 
-#endif
+//#endif
 #endif
