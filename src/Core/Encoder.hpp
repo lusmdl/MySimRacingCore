@@ -21,15 +21,17 @@ class Encoder {
 public:
     Encoder();
     void begin();
-    int getPosition() const;
     void handleInterrupt();
     pod_axis getData();
 
 private:
     pod_axis data_;
     volatile int position_;
+    int zero_;
+    int max_;
     volatile uint8_t lastState_;
 
+    int getPosition() const;
 };
 
 #endif // ENCODER_HPP

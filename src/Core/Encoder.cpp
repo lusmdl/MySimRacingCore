@@ -107,4 +107,9 @@ void Encoder::handleInterrupt() {
     lastState_ = state;
 }
 
+pod_axis Encoder::getData() {
 
+
+    
+    return pod_axis();
+}

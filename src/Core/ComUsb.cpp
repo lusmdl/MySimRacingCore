@@ -12,9 +12,10 @@
  * 
  * @param btns Reference to the Buttons object.
  */
-ComUsb::ComUsb(Buttons &btns, Joyst &joyst) :
+ComUsb::ComUsb(Buttons &btns, Joyst &joyst, Encoder &encoder) :
     btns_(&btns),
     joyst_(&joyst),
+    encoder_(&encoder),
     joy_(
         JOYSTICK_DEFAULT_REPORT_ID, // REPORT_ID        Hid report id
         JOYSTICK_TYPE_MULTI_AXIS,   // JOYSTICK_TYPE    Type of device: JOYSTICK, GAMEPAD, MULTI_AXIS
@@ -77,6 +78,8 @@ void ComUsb::sendData() {
 
     joy_.setRxAxis(calculateAxis(joyst_->rotationX_.getData()));
     joy_.setRyAxis(calculateAxis(joyst_->rotationY_.getData()));
+
+    //joy_.setXAxis(calculateAxis(encoder_->getData()));
     
     joy_.setButton(0, (joyst_->getButtonStatus().pushed || btns_->getData(0).pushed));
 

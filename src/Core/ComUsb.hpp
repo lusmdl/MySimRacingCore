@@ -10,6 +10,7 @@
 #include <Joystick.h>
 #include "Buttons.hpp"
 #include "Joyst.hpp"
+#include "Encoder.hpp"
 
 #ifdef LUSMDL_DEBUGMODE
 #include <WString.h>
@@ -20,7 +21,7 @@ class ComUsb {
     
     public:
 
-        ComUsb(Buttons &btns, Joyst &joyst);
+        ComUsb(Buttons &btns, Joyst &joyst, Encoder &encoder);
         ~ComUsb();
         void begin();
         void sendData();
@@ -29,6 +30,7 @@ class ComUsb {
 
         Buttons *btns_;
         Joyst *joyst_;
+        Encoder *encoder_;
         
         Joystick_ joy_;
 

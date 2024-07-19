@@ -26,7 +26,7 @@ Joyst joy;
 SetupDisplay display(joy);
 //#endif
 
-ComUsb com(buttons, joy);
+ComUsb com(buttons, joy, encoder);
 
 bool runSetup {1}; // save if a setup is running
 
