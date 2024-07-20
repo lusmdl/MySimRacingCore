@@ -1,9 +1,10 @@
 #include "SetupDisplay.hpp"
-//#ifndef LUSMDL_DEBUGMODE
+#ifndef LUSMDL_DEBUGMODE
 
 
-SetupDisplay::SetupDisplay(Joyst &joyst):
+SetupDisplay::SetupDisplay(Joyst &joyst, Encoder &encoder):
     joyst_(&joyst),
+    encoder_(&encoder),
     page_(0)
 {}
 
@@ -56,6 +57,14 @@ bool SetupDisplay::runSetup() {
 
         case 4 : // Rotary Y Axis
             setupRyMin();
+            break;
+
+        case 5 :
+            setupSteeringZero();
+            break;
+
+        case 6 :
+            printLine(1,String(encoder_->getPosition()));
             break;
 
         default:
@@ -123,16 +132,19 @@ void SetupDisplay::clearLine(uint8_t line) {
 
 void SetupDisplay::printLine(uint8_t line, String txt) {
 
+    /*
     lcd_->setCursor(0, line);
+    lcd_->print(TXT_CLEAR);  
+    lcd_->setCursor(0, line);
+    lcd_->print(txt); 
+    */
 
-    //lcd_->print(txt);
-    
+    lcd_->setCursor(0, line);
     String data = txt.substring(0, LCD_CHARS); // truncate to 16 characters if longer
     while (data.length() < LCD_CHARS) { // pad with spaces if shorter
         data += " ";
     }
     lcd_->print(data);
-    
 }
 
 
@@ -163,8 +175,7 @@ void SetupDisplay::setupRxMax() {
 
         lcd_->setCursor(0,0);
         lcd_->print("set Rx Max");
-        lcd_->setCursor(0,1);
-        lcd_->print(String(joyst_->rotationX_.getData().act));
+        printLine(1, String(joyst_->rotationX_.getData().act));
     }
 }
 
@@ -190,8 +201,7 @@ void SetupDisplay::setupRxMin() {
 
         lcd_->setCursor(0,0);
         lcd_->print("set Rx Min");
-        lcd_->setCursor(0,1);
-        lcd_->print(String(joyst_->rotationX_.getData().act));
+        printLine(1, String(joyst_->rotationX_.getData().act));
     }
 }
 
@@ -217,7 +227,7 @@ void SetupDisplay::setupRyMax() {
         lcd_->setCursor(0,0);
         lcd_->print("set Ry Max");
         lcd_->setCursor(0,1);
-        lcd_->print(String(joyst_->rotationY_.getData().act));
+        printLine(1, String(joyst_->rotationY_.getData().act));
     }
 }
 
@@ -243,9 +253,33 @@ void SetupDisplay::setupRyMin() {
 
         lcd_->setCursor(0,0);
         lcd_->print("set Ry Min");
-        lcd_->setCursor(0,1);
-        lcd_->print(String(joyst_->rotationY_.getData().act));
+        printLine(1, String(joyst_->rotationY_.getData().act));
     }
 }
 
-// #endif
+void SetupDisplay::setupSteeringZero() {
+
+    if(joyst_->getButtonStatus().pushed) {
+
+        waitForButtonRelease();
+        
+        printLine(0, TXT_DONE);
+        printLine(1, String(encoder_->getPosition()));
+        encoder_->setZeroHere();
+
+        _delay_ms(500);
+        
+        clearLine(0);
+        clearLine(1);
+
+        page_++;
+    }
+    else {
+
+        lcd_->setCursor(0,0);
+        lcd_->print("set steering 0");
+        printLine(1, String(encoder_->getPosition()));
+    }
+}
+
+#endif

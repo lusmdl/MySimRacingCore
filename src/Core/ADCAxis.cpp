@@ -36,10 +36,9 @@ void ADCAxis::updateRawData() {
     #ifdef LUSMDL_DEBUGMODE
     Serial.print("actual raw ADC value from ");
     Serial.print(reinterpret_cast<uintptr_t>(this), HEX); 
-    Serial.print(". The value is: " + String(rawAct_) + "\n");
+    Serial.print(":\t\t\t" + String(rawAct_) + "\n");
     _delay_ms(100);
     #endif
-
 }
 
 int ADCAxis::readADC() {
@@ -105,13 +104,6 @@ pod_axis ADCAxis::getData() {
     // Calculate the scaled actual value
     //data_.act = data_.min + valueProportion * scaledRange;
     data_.act = data_.min + (static_cast<float>(rawAct_ - rawMin_) / static_cast<float>(rawMax_ - rawMin_)) * (data_.max - data_.min);
-
-    #ifdef LUSMDL_DEBUGMODE
-    Serial.print("actual data values from ");
-    Serial.println(reinterpret_cast<uintptr_t>(this), HEX); 
-    Serial.print("The data structur:\tmin= " + String(data_.min) + "act\t" + String(data_.act) + "max\t" + String(data_.max) + "\n"); 
-    _delay_ms(100);
-    #endif
 
     return data_;
 }

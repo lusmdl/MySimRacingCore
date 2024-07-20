@@ -11,8 +11,8 @@
 #include "Core/Buttons.hpp"
 #include "Core/Encoder.hpp"
 #include "Core/Joyst.hpp"
-#include "Core/SetupDisplay.hpp"
 #ifndef LUSMDL_DEBUGMODE
+#include "Core/SetupDisplay.hpp"
 #endif
     
     
@@ -22,9 +22,9 @@ Buttons buttons(Wire);
 Encoder encoder;
 Joyst joy;
 
-//#ifndef LUSMDL_DEBUGMODE
-SetupDisplay display(joy);
-//#endif
+#ifndef LUSMDL_DEBUGMODE
+SetupDisplay display(joy, encoder);
+#endif
 
 ComUsb com(buttons, joy, encoder);
 
@@ -41,15 +41,17 @@ void setup() {
     Serial.begin(9600);
     #endif
 
-
-    //#ifndef LUSMDL_DEBUGMODE
+    #ifndef LUSMDL_DEBUGMODE
     display.begin();
-    //#endif
+    encoder.begin();
+    #endif
 
     buttons.begin();
     joy.rotationX_.begin();
     joy.rotationY_.begin();
     joy.beginButton();
+    
+    encoder.begin();
 
     com.begin();
 }
@@ -61,17 +63,19 @@ void setup() {
  */
 void loop() {
 
+    _delay_ms(1);
+    
     #ifdef LUSMDL_DEBUGMODE
     Serial.print("\n\n------------------------------------------------------------------\n");
     _delay_ms(100);
     #endif
 
-    _delay_ms(1);
-
+    #ifndef LUSMDL_DEBUGMODE
     if (runSetup) {
 
         runSetup = display.runSetup();
     }
+    #endif
 
     buttons.listener();
 

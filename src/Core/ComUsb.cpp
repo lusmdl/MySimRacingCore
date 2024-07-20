@@ -70,9 +70,9 @@ void ComUsb::begin() {
 void ComUsb::sendData() {
 
     #ifdef LUSMDL_DEBUGMODE
-    Serial.print("Read Joystick Switch: " + String(joyst_->getButtonStatus().pushed)+ "\n");
-    Serial.print("The USB send Axis Value for Rotation X is: " + String(calculateAxis(joyst_->rotationX_.getData())) + "\n");
-    Serial.print("The USB send Axis Value for Rotation Y is: " + String(calculateAxis(joyst_->rotationY_.getData())) + "\n");
+    Serial.print("Read Joystick Switch:\t\t\t\t" + String(joyst_->getButtonStatus().pushed)+ "\n");
+    Serial.print("The USB send Axis Value for Rotation X is:\t" + String(calculateAxis(joyst_->rotationX_.getData())) + "\n");
+    Serial.print("The USB send Axis Value for Rotation Y is:\t" + String(calculateAxis(joyst_->rotationY_.getData())) + "\n");
     //_delay_ms(100);
     #endif
 
@@ -103,9 +103,17 @@ void ComUsb::sendData() {
  */
 int16_t ComUsb::calculateAxis(pod_axis data) {
 
-    #ifdef LUSMDL_DEBUGMODE
-    Serial.print("calculateAxis!!!\n");
-    #endif
+    // make sure every act value is in range
+
+    if (data.act > data.max) {
+
+        data.act = data.max;
+    }
+    else if (data.act < data.min) {
+
+        data.act = data.min;
+    }
+
 
     // Map the input range [0, 100] to the output range [-32768, 32767]
 
@@ -120,19 +128,6 @@ int16_t ComUsb::calculateAxis(pod_axis data) {
     double axisActWithoutOffset = dataActCal * scale;
     double axisActWithOffset = axisActWithoutOffset + static_cast<double>(MIN_AXIS_VALUE);
     int16_t axisAct = static_cast<int16_t>(axisActWithOffset);
-
-    #ifdef LUSMDL_DEBUGMODE
-    Serial.print("The calculated values:");
-    //Serial.println("\tdata_delta " + String(dataDelta));
-    //Serial.println("\taxis_delta "+ String(axisDelta));
-    //Serial.println("\tscale "+ String(scale));
-    //Serial.println("\tdataActCal " + String(dataActCal));
-    //Serial.println("\axisActWithoutOffset " + String(axisActWithoutOffset));
-    Serial.println("\axisActWithOffset " + String(axisActWithOffset));
-    //Serial.println("\axisAct " + String(axisAct));
-    Serial.println("calculation end!!!");
-    _delay_ms(100);
-    #endif
 
     return axisAct;
 }

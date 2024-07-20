@@ -33,6 +33,11 @@ int Encoder::getPosition() const {
     return position_;
 }
 
+void Encoder::setZeroHere() {
+    
+    position_ = 0;
+}
+
 /**
  * @brief Handles the interrupt triggered by changes on the encoder's A and B lines.
  *
