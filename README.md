@@ -36,7 +36,7 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 
 ## Contributing
 
-We welcome contributions from the community! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) to learn how you can help improve this project.
+We welcome contributions from the community!
 
 ## License
 
