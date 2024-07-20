@@ -16,6 +16,7 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 
 ## Getting Started
 
+You can use the pre compiled hex file. Or you use compile it [yourself](Installation and Setup).
 
 
 ## Hardware Requirements
@@ -34,9 +35,50 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 - [**Arduino AVR Core**](https://github.com/arduino/ArduinoCore-avr.git): used `Arduino.h`, `Wire.h` and `EEPROM.h`
 - [**Arduino Joystick With Force Feedback Library**](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary.git): used for USB communication with the game
 
+## Installation and Setup
+
+1. **Install PlatformIO**:
+   - Follow the [installation guide](https://platformio.org/install) to set up PlatformIO in your preferred environment (VSCode, Atom, etc.).
+
+2. **Clone the Repository**:
+
+   ```sh
+   git clone https://github.com/lusmdl/MySimRacingCor.git
+   ```
+
+3. **Open the Project**:
+   - Open the cloned repository folder in your PlatformIO environment.
+
+4. **Build and Upload**:
+   - Connect your Arduino Micro.
+   - Build and upload the code using PlatformIO:
+
+   ```sh
+   pio run --target upload
+   ```
+
+### Arduino Micro Setup
+
+
+## Usage
+
+1. **Connecting the Hardware**:
+   - Connect the accessorys to the Arduino Micro as per your configuration.
+   - Connect the Arduino Micro to the PC.
+
+2. **Running the Code**:
+   - Power up your setup.
+   - The Arduino Micro will continuously push the accessorys states and update the Game data via USB.
+
 ## Contributing
 
 We welcome contributions from the community!
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a new Pull Request.
 
 ## License
 
