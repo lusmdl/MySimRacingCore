@@ -26,7 +26,7 @@ Encoder encoder;
 Joyst joy;
 
 #ifndef LUSMDL_DEBUGMODE
-SetupDisplay display(joy, encoder);
+SetupDisplay display(joy, encoder, EEPROM);
 #endif
 
 ComUsb com(buttons, joy, encoder);
