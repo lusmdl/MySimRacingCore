@@ -8,8 +8,11 @@
 
 Encoder::Encoder() : 
     position_(0), 
-    lastState_(0) 
-{}
+    lastState_(0)
+{
+    data_.max = STEERING_MAX_DEG;
+    data_.min = STEERING_MAX_DEG * (-1);
+}
 
 void Encoder::begin() {
 
@@ -114,7 +117,18 @@ void Encoder::handleInterrupt() {
 
 pod_axis Encoder::getData() {
 
+    data_.act = position_ * factor_;
 
     
-    return pod_axis();
+    return data_;
 }
+
+void Encoder::setFullTurnHere() {
+
+    // set the full turn marker at the current position (360°)
+    fullturn_ = position_;
+
+    // calculate the factor
+    factor_ = (STEERING_FULL_TURN / fullturn_);
+}
+

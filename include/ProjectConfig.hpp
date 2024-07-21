@@ -55,6 +55,9 @@
 #define ENCODER_B_PIN       PD3 // D1/RX - don´t edit this !!!!!
 #define ENCODER_REG_PIN     PIND
 
+#define STEERING_MAX_DEG    1080.00
+#define STEERING_FULL_TURN  360.00
+
 
 // Force feedback motor control pins
 

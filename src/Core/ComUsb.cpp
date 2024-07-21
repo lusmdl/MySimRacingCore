@@ -76,19 +76,24 @@ void ComUsb::sendData() {
     //_delay_ms(100);
     #endif
 
+    // joystick
+
     joy_.setRxAxis(calculateAxis(joyst_->rotationX_.getData()));
     joy_.setRyAxis(calculateAxis(joyst_->rotationY_.getData()));
-
-    //joy_.setXAxis(calculateAxis(encoder_->getData()));
-    
     joy_.setButton(0, (joyst_->getButtonStatus().pushed || btns_->getData(0).pushed));
 
+    // wheel buttons
 
     for (uint8_t i = 1; i < BTN_NUMBER; i++) {
 
         joy_.setButton(i, btns_->getData(i).pushed);
 
     }
+
+    // steering
+    
+    joy_.setXAxis(calculateAxis(encoder_->getData()));
+
 
     joy_.sendState();
 }

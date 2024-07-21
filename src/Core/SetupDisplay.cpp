@@ -64,7 +64,11 @@ bool SetupDisplay::runSetup() {
             break;
 
         case 6 :
-            printLine(1,String(encoder_->getPosition()));
+            setupSteeringTurn();
+            break;
+
+        case 7 :
+            printLine(1,String(encoder_->getData().act));
             break;
 
         default:
@@ -277,7 +281,32 @@ void SetupDisplay::setupSteeringZero() {
     else {
 
         lcd_->setCursor(0,0);
-        lcd_->print("set steering 0");
+        lcd_->print("set wheel 0");
+        printLine(1, String(encoder_->getPosition()));
+    }
+}
+
+void SetupDisplay::setupSteeringTurn() {
+
+    if(joyst_->getButtonStatus().pushed) {
+
+        waitForButtonRelease();
+        
+        printLine(0, TXT_DONE);
+        printLine(1, String(encoder_->getPosition()));
+        encoder_->setFullTurnHere();
+
+        _delay_ms(500);
+        
+        clearLine(0);
+        clearLine(1);
+
+        page_++;
+    }
+    else {
+
+        lcd_->setCursor(0,0);
+        lcd_->print("set wheel 360 deg");
         printLine(1, String(encoder_->getPosition()));
     }
 }

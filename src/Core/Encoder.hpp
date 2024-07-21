@@ -24,6 +24,7 @@ public:
     void handleInterrupt();
     int getPosition() const;
     void setZeroHere();
+    void setFullTurnHere();
     pod_axis getData();
 
 private:
@@ -31,6 +32,7 @@ private:
     volatile int position_;
     volatile uint8_t lastState_;
     int fullturn_;
+    float factor_;
 
 };
 
