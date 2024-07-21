@@ -2,9 +2,10 @@
 #ifndef LUSMDL_DEBUGMODE
 
 
-SetupDisplay::SetupDisplay(Joyst &joyst, Encoder &encoder):
+SetupDisplay::SetupDisplay(Joyst &joyst, Encoder &encoder, EEPROMClass &eeprom):
     joyst_(&joyst),
     encoder_(&encoder),
+    eeprom_(&eeprom),
     page_(0)
 {}
 
@@ -158,6 +159,7 @@ void SetupDisplay::waitForButtonRelease() {
     while (joyst_->getButtonStatus().pushed){}
 }
 
+
 void SetupDisplay::setupRxMax() {
 
     if(joyst_->getButtonStatus().pushed) {
@@ -166,7 +168,7 @@ void SetupDisplay::setupRxMax() {
         
         printLine(0, TXT_DONE);
         printLine(1, String(joyst_->rotationX_.getData().act));
-        joyst_->rotationX_.setMaxHere(100.00);
+        eeprom_->put(STORE_ADDR_RX_MAX, joyst_->rotationX_.setMax(100.00));
 
         _delay_ms(500);
         
@@ -192,7 +194,7 @@ void SetupDisplay::setupRxMin() {
 
         printLine(0, TXT_DONE);
         printLine(1, String(joyst_->rotationX_.getData().act));
-        joyst_->rotationX_.setMinHere(00.00);
+        joyst_->rotationX_.setMin(00.00);
 
         _delay_ms(500);
         
@@ -217,7 +219,7 @@ void SetupDisplay::setupRyMax() {
         
         printLine(0, TXT_DONE);
         printLine(1, String(joyst_->rotationY_.getData().act));
-        joyst_->rotationY_.setMaxHere(100.00);
+        joyst_->rotationY_.setMax(100.00);
 
         _delay_ms(500);
         
@@ -244,7 +246,7 @@ void SetupDisplay::setupRyMin() {
 
         printLine(0, TXT_DONE);
         printLine(1, String(joyst_->rotationY_.getData().act));
-        joyst_->rotationY_.setMinHere(00.00);
+        joyst_->rotationY_.setMin(00.00);
 
         _delay_ms(500);
         

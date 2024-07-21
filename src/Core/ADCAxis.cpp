@@ -63,10 +63,12 @@ int ADCAxis::readADC() {
  * 
  * @param min The minimum value to be set
  */
-void ADCAxis::setMinHere(float min) {
+int ADCAxis::setMin(float min) {
 
     rawMin_ = rawAct_;
     data_.min = min;
+
+    return rawMin_;
 }
 
 
@@ -75,9 +77,11 @@ void ADCAxis::setMinHere(float min) {
  * 
  * @param max The maximum value to be set
  */
-void ADCAxis::setMaxHere(float max) {
+int ADCAxis::setMax(float max) {
     rawMax_ = rawAct_;
     data_.max = max;
+
+    return rawMax_;
 }
 
 

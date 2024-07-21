@@ -15,7 +15,9 @@
 #include "Core/SetupDisplay.hpp"
 #endif
     
-    
+#include <EEPROM.h>
+
+
     
 void encoderHandleInterrupt();
 
@@ -37,6 +39,7 @@ bool runSetup {1}; // save if a setup is running
  * This function is called once when the Arduino starts.
  */
 void setup() {
+    EEPROM.begin();
 
     #ifdef LUSMDL_DEBUGMODE
     Serial.begin(9600);

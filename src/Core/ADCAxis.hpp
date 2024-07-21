@@ -33,8 +33,11 @@ class ADCAxis {
         ADCAxis(uint8_t pin);
         void begin();
         void updateRawData();
-        void setMinHere(float min);
-        void setMaxHere(float max);
+        int readADC();
+        int setMin(float min);
+        int setMin(float min, int raw);
+        int setMax(float max);
+        int setMax(float max, int raw);
         pod_axis getData();
 
 
@@ -47,7 +50,6 @@ class ADCAxis {
 
         pod_axis data_;
 
-        int readADC();
 };
 
 #endif // ADC_AXIS_HPP

@@ -5,6 +5,8 @@
 #include "ProjectConfig.hpp"
 #ifndef LUSMDL_DEBUGMODE
 #include <LiquidCrystal_I2C.h>
+#include <EEPROM.h>
+#include "EepromAddresses.h"
 #include <avr/delay.h>
 #include "Joyst.hpp"
 #include "TextBoxes.h"
@@ -14,7 +16,7 @@ class SetupDisplay {
 
     public:
 
-        SetupDisplay(Joyst &joyst, Encoder &encoder);
+        SetupDisplay(Joyst &joyst, Encoder &encoder, EEPROMClass &eeprom);
         ~SetupDisplay();
         void begin();
         bool runSetup();
@@ -23,6 +25,7 @@ class SetupDisplay {
         LiquidCrystal_I2C *lcd_;
         Joyst *joyst_;
         Encoder *encoder_;
+        EEPROMClass *eeprom_;
 
         uint8_t page_;
 
