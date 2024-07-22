@@ -23,8 +23,9 @@ public:
     void begin();
     void handleInterrupt();
     int getPosition() const;
-    void setZeroHere();
-    void setFullTurnHere();
+    void setZero();
+    float setFactor();
+    void setFactor(float new_factor);
     pod_axis getData();
 
 private:

@@ -71,6 +71,11 @@ int ADCAxis::setMin(float min) {
     return rawMin_;
 }
 
+void ADCAxis::setMin(float min, int raw) {
+
+    rawMin_ = raw;
+    data_.min = min;
+}
 
 /**
  * @brief Sets the maximum value for the axis based on current raw value
@@ -82,6 +87,12 @@ int ADCAxis::setMax(float max) {
     data_.max = max;
 
     return rawMax_;
+}
+
+void ADCAxis::setMax(float min, int raw) {
+
+    rawMax_ = raw;
+    data_.max = min;
 }
 
 

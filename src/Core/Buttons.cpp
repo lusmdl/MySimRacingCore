@@ -39,6 +39,9 @@ void Buttons::begin() {
 void Buttons::listener() {
 
     const uint8_t TWI_MSG_BYTES {2};
+        
+    uint8_t byteLow; // Receive the first byte
+    uint8_t byteHigh; // Receive the second byte
 
     wire_->requestFrom(TWI_ADDR_MY_WHEEL_BTN, TWI_MSG_BYTES);    // request 2 bytes from peripheral device 
     
@@ -46,18 +49,39 @@ void Buttons::listener() {
 
         // Check if the peripheral sent the expected number of bytes
         
-        uint8_t byte1 = wire_->read(); // Receive the first byte
-        uint8_t byte2 = wire_->read(); // Receive the second byte
+        byteLow = wire_->read(); // Receive the first byte
+        byteHigh = wire_->read(); // Receive the second byte
 
         // Map the received bytes to the button data structure
 
         for (int i = 0; i < 8; ++i) {
-            data_[i].pushed = (byte1 & (1 << i)) ? 1 : 0; // Map each bit to a button state
+            data_[i].pushed = (byteLow & (1 << i)) ? 1 : 0; // Map each bit to a button state
         }
         for (int i = 0; i < 8; ++i) {
-            data_[8 + i].pushed = (byte2 & (1 << i)) ? 1 : 0; // Map each bit to a button state
+            data_[8 + i].pushed = (byteHigh & (1 << i)) ? 1 : 0; // Map each bit to a button state
         }
     }
+
+    /*
+    wire_->requestFrom(TWI_ADDR_MY_BTN_BOX, TWI_MSG_BYTES);    // request 2 bytes from peripheral device 
+    
+    if (wire_->available() == TWI_MSG_BYTES) {
+
+        // Check if the peripheral sent the expected number of bytes
+        
+        byteLow = wire_->read(); // Receive the first byte
+        byteHigh = wire_->read(); // Receive the second byte
+
+        // Map the received bytes to the button data structure
+
+        for (int i = 0; i < 8; ++i) {
+            data_[i].pushed = (byteLow & (1 << i)) ? 1 : 0; // Map each bit to a button state
+        }
+        for (int i = 0; i < 8; ++i) {
+            data_[8 + i].pushed = (byteHigh & (1 << i)) ? 1 : 0; // Map each bit to a button state
+        }
+    }
+    */
     
 }
 

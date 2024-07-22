@@ -21,7 +21,12 @@ ComUsb::ComUsb(Buttons &btns, Joyst &joyst, Encoder &encoder) :
         JOYSTICK_TYPE_MULTI_AXIS,   // JOYSTICK_TYPE    Type of device: JOYSTICK, GAMEPAD, MULTI_AXIS
         BTN_NUMBER,                 // button count     [0-32]
         0,                          // Hat Switch count [0,1,2]
+        #ifdef FFB
         true,                       // X Axis enable    True or False
+        #endif
+        #ifndef FFB
+        false,                      // X Axis enable    True or False
+        #endif
         false,                      // Y Axis enable    True or False
         true,                       // Z Axis enable    True or False
         true,                       // Rx Axis enable   True or False
@@ -31,7 +36,12 @@ ComUsb::ComUsb(Buttons &btns, Joyst &joyst, Encoder &encoder) :
         false,                      // Throttle enable  True or False
         true,                       // Accelerator enable True or False
         true,                       // Brake enable     True or False
+        #ifdef FFB
         false                       // Steering enable  True or False
+        #endif
+        #ifndef FFB
+        true                        // Steering enable  True or False
+        #endif
     )
 {}
 
@@ -47,7 +57,6 @@ ComUsb::~ComUsb() {}
  */
 void ComUsb::begin() {
     
-    joy_.setXAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
     //joy_.setYAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
     joy_.setZAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
     joy_.setRxAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
@@ -57,8 +66,13 @@ void ComUsb::begin() {
     //joy_.setThrottleRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
     joy_.setAcceleratorRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
     joy_.setBrakeRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
-    //joy_.setSteeringRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
-
+    #ifdef FFB
+    joy_.setXAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    #endif
+    #ifndef FFB
+    joy_.setSteeringRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    #endif
+    
     joy_.begin(false); // sendState() method is necessary if (false)
 }
 
@@ -92,8 +106,12 @@ void ComUsb::sendData() {
 
     // steering
     
+    #ifdef FBB
     joy_.setXAxis(calculateAxis(encoder_->getData()));
-
+    #endif
+    #ifndef FFB
+    joy_.setSteering(calculateAxis(encoder_->getData()));
+    #endif
 
     joy_.sendState();
 }

@@ -32,8 +32,8 @@ void Joyst::beginButton() {
 
     #ifdef __AVR_ATmega32U4__
     // Configure the button pin (D11 -> PB7) as input with pull-up resistor
-    DDRB &= ~(1 << DDB7); // Set PB7 as input
-    PORTB |= (1 << PORTB7); // Enable pull-up resistor on PB7
+    DDRB &= ~(1 << JOYSTICK_BTN_PIN); // Set PB7 as input
+    PORTB |= (1 << JOYSTICK_BTN_PIN); // Enable pull-up resistor on PB7
     #endif
 }
 
@@ -59,7 +59,7 @@ uint8_t Joyst::readButton() {
     
     #ifdef __AVR_ATmega32U4__
     // Read the button pin (D11 -> PB7)
-    if (PINB & (1 << PINB7)) {
+    if (PINB & (1 << JOYSTICK_BTN_PIN)) {
         // Button not pressed
         return 0;
     } else {

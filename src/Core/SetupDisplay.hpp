@@ -6,7 +6,6 @@
 #ifndef LUSMDL_DEBUGMODE
 #include <LiquidCrystal_I2C.h>
 #include <EEPROM.h>
-#include "EepromAddresses.h"
 #include <avr/delay.h>
 #include "Joyst.hpp"
 #include "TextBoxes.h"
@@ -20,6 +19,7 @@ class SetupDisplay {
         ~SetupDisplay();
         void begin();
         bool runSetup();
+        void showSteering();
 
     private:
         LiquidCrystal_I2C *lcd_;
@@ -28,6 +28,15 @@ class SetupDisplay {
         EEPROMClass *eeprom_;
 
         uint8_t page_;
+
+        static const float MAX_AXIS             = 100.00;
+        static const float MIN_AXIS             = 00.00; 
+
+        static const int STORE_ADDR_RX_MAX      = 0;
+        static const int STORE_ADDR_RX_MIN      = 16;
+        static const int STORE_ADDR_RY_MAX      = 32;
+        static const int STORE_ADDR_RY_MIN      = 48;
+        static const int STORE_ADDR_FACTOR      = 80;
 
         bool askForSetup();
         void clearLine(uint8_t line);

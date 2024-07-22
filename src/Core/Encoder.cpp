@@ -36,7 +36,7 @@ int Encoder::getPosition() const {
     return position_;
 }
 
-void Encoder::setZeroHere() {
+void Encoder::setZero() {
     
     position_ = 0;
 }
@@ -123,12 +123,18 @@ pod_axis Encoder::getData() {
     return data_;
 }
 
-void Encoder::setFullTurnHere() {
+float Encoder::setFactor() {
 
     // set the full turn marker at the current position (360°)
     fullturn_ = position_;
 
     // calculate the factor
     factor_ = (STEERING_FULL_TURN / fullturn_);
+
+    return factor_;
 }
 
+void Encoder::setFactor(float new_factor) {
+
+    factor_ = new_factor;
+}

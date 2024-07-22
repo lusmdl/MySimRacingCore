@@ -14,7 +14,35 @@ SetupDisplay::~SetupDisplay() {}
 
 
 void SetupDisplay::begin() {
+
+    int eepromInt;
+    float eepromFloat;
+
+    // restore Rx-Axis
+
+    eeprom_->get(STORE_ADDR_RX_MAX, eepromInt);
+    joyst_->rotationX_.setMax(MAX_AXIS, eepromInt);
+
+    eeprom_->get(STORE_ADDR_RX_MIN, eepromInt);
+    joyst_->rotationX_.setMin(MIN_AXIS, eepromInt);
+
+
+    // restore Ry-Axis
+
+    eeprom_->get(STORE_ADDR_RY_MAX, eepromInt);
+    joyst_->rotationY_.setMax(MAX_AXIS, eepromInt);
+
+    eeprom_->get(STORE_ADDR_RY_MIN, eepromInt);
+    joyst_->rotationY_.setMin(MIN_AXIS, eepromInt);
     
+
+    // restor Steering
+    eeprom_->get(STORE_ADDR_FACTOR, eepromFloat);
+    encoder_->setFactor(eepromFloat);
+
+
+    // lcd setup
+
     lcd_ = new LiquidCrystal_I2C(LCD_ADDR, LCD_CHARS, LCD_LINES);
 
     lcd_->init();
@@ -27,7 +55,11 @@ bool SetupDisplay::runSetup() {
 
     switch (page_) {
 
-        case 0 : // ask user, if want´s to make setup wizard
+        case 0 :
+            setupSteeringZero();
+            break;
+
+        case 1 : // ask user, if want´s to make setup wizard
             if(askForSetup()) {
 
                 // begin with wizard
@@ -44,24 +76,20 @@ bool SetupDisplay::runSetup() {
             }
             break;
 
-        case 1 : // Rotary X Axis
+        case 2 : // Rotary X Axis
             setupRxMax();            
             break;
 
-        case 2 : // Rotary X Axis
+        case 3 : // Rotary X Axis
             setupRxMin();
             break;
 
-        case 3 : // Rotary Y Axis
+        case 4 : // Rotary Y Axis
             setupRyMax();            
             break;
 
-        case 4 : // Rotary Y Axis
+        case 5 : // Rotary Y Axis
             setupRyMin();
-            break;
-
-        case 5 :
-            setupSteeringZero();
             break;
 
         case 6 :
@@ -69,11 +97,11 @@ bool SetupDisplay::runSetup() {
             break;
 
         case 7 :
-            printLine(1,String(encoder_->getData().act));
+            showSteering();
             break;
 
         default:
-
+            
             printLine(0,TXT_FAIL);
             return 0;
             break;
@@ -81,6 +109,10 @@ bool SetupDisplay::runSetup() {
     return 1;
 }
 
+void SetupDisplay::showSteering() {
+
+    printLine(1,String(encoder_->getData().act));
+}
 
 bool SetupDisplay::askForSetup() {
 
@@ -168,7 +200,7 @@ void SetupDisplay::setupRxMax() {
         
         printLine(0, TXT_DONE);
         printLine(1, String(joyst_->rotationX_.getData().act));
-        eeprom_->put(STORE_ADDR_RX_MAX, joyst_->rotationX_.setMax(100.00));
+        eeprom_->put(STORE_ADDR_RX_MAX, joyst_->rotationX_.setMax(MAX_AXIS));
 
         _delay_ms(500);
         
@@ -194,7 +226,7 @@ void SetupDisplay::setupRxMin() {
 
         printLine(0, TXT_DONE);
         printLine(1, String(joyst_->rotationX_.getData().act));
-        joyst_->rotationX_.setMin(00.00);
+        eeprom_->put(STORE_ADDR_RX_MIN, joyst_->rotationX_.setMin(MIN_AXIS));
 
         _delay_ms(500);
         
@@ -219,7 +251,7 @@ void SetupDisplay::setupRyMax() {
         
         printLine(0, TXT_DONE);
         printLine(1, String(joyst_->rotationY_.getData().act));
-        joyst_->rotationY_.setMax(100.00);
+        eeprom_->put(STORE_ADDR_RY_MAX, joyst_->rotationY_.setMax(MAX_AXIS));
 
         _delay_ms(500);
         
@@ -246,7 +278,7 @@ void SetupDisplay::setupRyMin() {
 
         printLine(0, TXT_DONE);
         printLine(1, String(joyst_->rotationY_.getData().act));
-        joyst_->rotationY_.setMin(00.00);
+        eeprom_->put(STORE_ADDR_RY_MIN, joyst_->rotationY_.setMin(MIN_AXIS));
 
         _delay_ms(500);
         
@@ -271,7 +303,7 @@ void SetupDisplay::setupSteeringZero() {
         
         printLine(0, TXT_DONE);
         printLine(1, String(encoder_->getPosition()));
-        encoder_->setZeroHere();
+        encoder_->setZero();
 
         _delay_ms(500);
         
@@ -296,7 +328,7 @@ void SetupDisplay::setupSteeringTurn() {
         
         printLine(0, TXT_DONE);
         printLine(1, String(encoder_->getPosition()));
-        encoder_->setFullTurnHere();
+        eeprom_->put(STORE_ADDR_FACTOR, encoder_->setFactor());
 
         _delay_ms(500);
         

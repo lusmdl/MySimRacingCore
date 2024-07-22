@@ -39,6 +39,7 @@ bool runSetup {1}; // save if a setup is running
  * This function is called once when the Arduino starts.
  */
 void setup() {
+    
     EEPROM.begin();
 
     #ifdef LUSMDL_DEBUGMODE
@@ -78,6 +79,10 @@ void loop() {
     if (runSetup) {
 
         runSetup = display.runSetup();
+    }
+    else {
+
+        display.showSteering();
     }
     #endif
 

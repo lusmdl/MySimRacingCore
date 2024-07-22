@@ -8,6 +8,7 @@
 #define PROJECT_CONFIG_H
 
 //#define LUSMDL_DEBUGMODE // activates the debug function of the Serial Monitor 
+//#define FFB // activates the force feedback feature
 
 #ifdef LUSMDL_DEBUGMODE
 #warning This code is in DEBUG mode!!! The Macro 'LUSMDL_DEBUGMODE' in include/ProjectCofig.hpp has to be comment out
@@ -15,22 +16,32 @@
 #endif
 
 // LCD Display
+
 #define LCD_ADDR                0x27
 #define LCD_CHARS               16
 #define LCD_LINES               2
 
-//TWI CONFIG
+//I²C Buttons
+
 #define TWI_ADDR_MY_WHEEL_BTN   8
+#define TWI_ADDR_MY_BTN_BOX     9
 
 
-// Pin definitions for analog sensors
+// Pedals
 
 #define THROTTLE_PIN            0   //A0
 #define BRAKE_PIN               0   //A1
 #define CLUTCH_PIN              0   //A2
+
+// Handbrake
+
 #define HANDBRAKE_PIN           0   //A3 
+
+// Joystick
+
 #define SHIFTER_X_PIN           PF1 //A4 
 #define SHIFTER_Y_PIN           PF0 //A5
+#define JOYSTICK_BTN_PIN        PORTB7
 
 
 // Pin definitions for Button Matrix

@@ -35,9 +35,9 @@ class ADCAxis {
         void updateRawData();
         int readADC();
         int setMin(float min);
-        int setMin(float min, int raw);
+        void setMin(float min, int raw);
         int setMax(float max);
-        int setMax(float max, int raw);
+        void setMax(float max, int raw);
         pod_axis getData();
 
 
