@@ -35,6 +35,8 @@ private:
     int fullturn_;
     float factor_;
 
+    static const float STEERING_MAX_DEG     = 540.00;
+    static const float STEERING_FULL_TURN   = 360.00;
 };
 
 #endif // ENCODER_HPP
