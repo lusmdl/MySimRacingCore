@@ -31,7 +31,7 @@ ComUsb com(buttons, joy, pedal, encoder);
 
 // declaration of global variables
 
-bool runSetup               {1}; // save if a setup is running
+bool runSetup              {1}; // save if a setup is running
 unsigned int numberOfCycle {0}; // count the cycles
 
 // forward declaration of public functions
@@ -75,6 +75,8 @@ void setup() {
  */
 void loop() {
 
+    numberOfCycle++;
+    
     static const unsigned int TIME_FAST     = 3;
     static const unsigned int TIME_NORMAL   = 50;
     static const unsigned int TIME_SLOW     = 1000;
