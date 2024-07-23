@@ -82,12 +82,11 @@ void setup() {
  */
 void loop() {
 
-    delay(1);
 
     numberOfCycle++;
 
-    static const unsigned int TIME_FAST     = 5;
-    static const unsigned int TIME_NORMAL   = 25;
+    static const unsigned int TIME_FAST     = 2;
+    static const unsigned int TIME_NORMAL   = 20;
     static const unsigned int TIME_SLOW     = 200;
     
     if((numberOfCycle % TIME_FAST) == 0) {
