@@ -7,7 +7,7 @@
 #define COM_USB_HPP
 
 #include "ProjectConfig.hpp"
-#include <Joystick.h>
+#include "Joystick.h"
 #include "Buttons.hpp"
 #include "Joyst.hpp"
 #include "Encoder.hpp"
@@ -25,6 +25,7 @@ class ComUsb {
         ~ComUsb();
         void begin();
         void sendData();
+        void receiveData();
 
     private:
 

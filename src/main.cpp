@@ -3,9 +3,11 @@
  * @brief Main file for MySimRacingCore project.
  */
 
+// libs
+
 #include <Arduino.h>
 
-
+// source code modules
 
 #include "Core/ComUsb.hpp"
 #include "Core/Buttons.hpp"
@@ -14,24 +16,28 @@
 #ifndef LUSMDL_DEBUGMODE
 #include "Core/SetupDisplay.hpp"
 #endif
-    
-#include <EEPROM.h>
 
-
-    
-void encoderHandleInterrupt();
+// objects
 
 Buttons buttons(Wire);
 Encoder encoder;
 Joyst joy;
-
 #ifndef LUSMDL_DEBUGMODE
 SetupDisplay display(joy, encoder, EEPROM);
 #endif
-
 ComUsb com(buttons, joy, encoder);
 
-bool runSetup {1}; // save if a setup is running
+// declaration of global variables
+
+bool runSetup               {1}; // save if a setup is running
+unsigned int numberOfCycle {0}; // count the cycles
+
+// forward declaration of public functions
+
+void encoderHandleInterrupt();
+void loopFast();
+void loopNormal();
+void loopSlow();
 
 /**
  * @brief Arduino setup function.
@@ -68,31 +74,35 @@ void setup() {
  */
 void loop() {
 
-    _delay_ms(1);
+    static const unsigned int TIME_FAST     = 3;
+    static const unsigned int TIME_NORMAL   = 50;
+    static const unsigned int TIME_SLOW     = 500;
     
+    if((numberOfCycle % TIME_FAST) == 0) {
+
+        // here are task which has priority
+
+        loopFast();
+    }
+    
+    if((numberOfCycle % TIME_NORMAL) == 0) {
+
+        // here are task which has no priority
+
+        loopNormal();
+    }
+    
+    if((numberOfCycle % TIME_SLOW) == 0) {
+
+        // here are tasks which slow down the code
+
+        loopSlow();
+    }
+
     #ifdef LUSMDL_DEBUGMODE
     Serial.print("\n\n------------------------------------------------------------------\n");
     _delay_ms(100);
     #endif
-
-    #ifndef LUSMDL_DEBUGMODE
-    if (runSetup) {
-
-        runSetup = display.runSetup();
-    }
-    else {
-
-        display.showSteering();
-    }
-    #endif
-
-    buttons.listener();
-
-    joy.rotationX_.updateRawData();
-    joy.rotationY_.updateRawData();
-
-
-    com.sendData();
 }
 
 /**
@@ -113,4 +123,41 @@ ISR(INT0_vect) {
 ISR(INT1_vect) {
     
     encoder.handleInterrupt();
+}
+
+void loopFast() {
+
+    // read analog Axis
+
+    joy.rotationX_.updateRawData();
+    joy.rotationY_.updateRawData();
+
+    // send USB Game data
+
+    com.sendData();
+}
+
+void loopNormal() {
+
+    // receive USB Game data
+
+    com.receiveData();
+
+    // read buttons over I²C
+
+    buttons.listener();
+}
+
+void loopSlow() {
+
+    #ifndef LUSMDL_DEBUGMODE
+    if (runSetup) {
+
+        runSetup = display.runSetup();
+    }
+    else {
+
+        display.showSteering();
+    }
+    #endif
 }

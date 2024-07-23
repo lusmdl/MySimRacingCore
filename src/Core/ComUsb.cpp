@@ -74,6 +74,7 @@ void ComUsb::begin() {
     #endif
     
     joy_.begin(false); // sendState() method is necessary if (false)
+    
 }
 
 /**
@@ -114,6 +115,11 @@ void ComUsb::sendData() {
     #endif
 
     joy_.sendState();
+}
+
+void ComUsb::receiveData() {
+
+    joy_.getUSBPID();
 }
 
 /**

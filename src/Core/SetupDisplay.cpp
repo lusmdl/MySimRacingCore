@@ -153,7 +153,7 @@ bool SetupDisplay::askForSetup() {
 
     _delay_ms(500);
 
-    lcd_->noBacklight();
+    //lcd_->noBacklight(); don´t switch off the light
     lcd_->clear();
 
     return false; // feedback, that no setup wizard is needed
