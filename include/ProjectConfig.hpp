@@ -62,8 +62,8 @@
 
 // Pin definitions for steering encoder (1k ext pullup resistor)
 
-#define ENCODER_A_PIN           PIND2 // D0/TX - don´t edit this !!!!!
-#define ENCODER_B_PIN           PIND3 // D1/RX - don´t edit this !!!!!
+#define ENCODER_A_PIN           0 // D0/TX - don´t edit this !!!!!
+#define ENCODER_B_PIN           1 // D1/RX - don´t edit this !!!!!
 #define ENCODER_REG_PIN         PIND
 
 

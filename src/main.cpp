@@ -6,6 +6,7 @@
 // libs
 
 #include <Arduino.h>
+#include "DigitalWriteFast.h"
 
 // source code modules
 
@@ -21,7 +22,7 @@
 // objects
 
 Buttons buttons(Wire);
-Encoder encoder;
+Encoder encoder(ENCODER_A_PIN, ENCODER_B_PIN);
 Joyst joy;
 Pedals pedal;
 #ifndef LUSMDL_DEBUGMODE
@@ -36,10 +37,11 @@ unsigned int numberOfCycle {0}; // count the cycles
 
 // forward declaration of public functions
 
-void encoderHandleInterrupt();
 void loopFast();
 void loopNormal();
 void loopSlow();
+void handleInterrupt();
+
 
 /**
  * @brief Arduino setup function.
@@ -55,7 +57,12 @@ void setup() {
     #endif
 
     #ifndef LUSMDL_DEBUGMODE
-    encoder.begin(); // encoder pins are stolen by the uart
+    
+    attachInterrupt(digitalPinToInterrupt(encoder.pinA_), handleInterrupt, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(encoder.pinB_), handleInterrupt, CHANGE);
+
+
+
     display.begin();
     #endif
 
@@ -75,11 +82,13 @@ void setup() {
  */
 void loop() {
 
+    delay(1);
+
     numberOfCycle++;
 
     static const unsigned int TIME_FAST     = 5;
     static const unsigned int TIME_NORMAL   = 25;
-    static const unsigned int TIME_SLOW     = 100;
+    static const unsigned int TIME_SLOW     = 200;
     
     if((numberOfCycle % TIME_FAST) == 0) {
 
@@ -108,26 +117,6 @@ void loop() {
     #endif
 }
 
-/**
- * @brief Interrupt Service Routine for INT0.
- * 
- * This ISR is triggered by events on the INT0 pin (external interrupt 0).
- */
-ISR(INT0_vect) {
-
-    encoder.handleInterrupt();
-}
-
-/**
- * @brief Interrupt Service Routine for INT1.
- * 
- * This ISR is triggered by events on the INT1 pin (external interrupt 1).
- */
-ISR(INT1_vect) {
-    
-    encoder.handleInterrupt();
-}
-
 void loopFast() {
 
     
@@ -138,6 +127,10 @@ void loopFast() {
 
 void loopNormal() {
 
+    // receive USB Game data
+
+    com.receiveData();
+
     // read analog Axis
 
     joy.rotationX_.updateRawData();
@@ -147,9 +140,6 @@ void loopNormal() {
     pedal.brake_.updateRawData();
 
 
-    // receive USB Game data
-
-    com.receiveData();
 
 
 }
@@ -170,4 +160,15 @@ void loopSlow() {
         display.showSteering();
     }
     #endif
+}
+
+void handleInterrupt(void) {
+    int sig1 = digitalReadFast(encoder.pinA_);
+    int sig2 = digitalReadFast(encoder.pinB_);
+    int8_t thisState = sig1 | (sig2 << 1);
+
+    if (encoder.oldState_ != thisState) {
+        encoder.position_ += encoder.KNOBDIR[thisState | (encoder.oldState_ << 2)];
+        encoder.oldState_ = thisState;
+    }
 }

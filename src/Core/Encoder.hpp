@@ -19,24 +19,31 @@
 
 class Encoder {
 public:
-    Encoder();
+    Encoder(uint8_t pinA, uint8_t pinB);
+
     void begin();
-    void handleInterrupt();
     int getPosition() const;
     void setZero();
     float setFactor();
     void setFactor(float new_factor);
     pod_axis getData();
 
+    uint8_t pinA_;
+    uint8_t pinB_;
+    volatile int32_t position_;
+    volatile int8_t oldState_;
+
+    static const int8_t KNOBDIR[];
+    static const float STEERING_MAX_DEG;
+    static const float STEERING_FULL_TURN;
+
+
 private:
     pod_axis data_;
-    volatile int position_;
-    volatile uint8_t lastState_;
     int fullturn_;
     float factor_;
-
-    static const float STEERING_MAX_DEG     = 540.00;
-    static const float STEERING_FULL_TURN   = 360.00;
 };
+
+
 
 #endif // ENCODER_HPP

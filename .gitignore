@@ -5,3 +5,7 @@
 .vscode/launch.json
 .vscode/ipch
 
+# kicad
+doc/kicad/circuit/#auto_saved_files#
+doc/kicad/circuit/~*
+doc/kicad/circuit/circuit-backups/circuit*
