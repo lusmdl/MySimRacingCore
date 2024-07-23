@@ -76,10 +76,10 @@ void setup() {
 void loop() {
 
     numberOfCycle++;
-    
-    static const unsigned int TIME_FAST     = 3;
-    static const unsigned int TIME_NORMAL   = 50;
-    static const unsigned int TIME_SLOW     = 1000;
+
+    static const unsigned int TIME_FAST     = 5;
+    static const unsigned int TIME_NORMAL   = 25;
+    static const unsigned int TIME_SLOW     = 100;
     
     if((numberOfCycle % TIME_FAST) == 0) {
 
@@ -130,13 +130,6 @@ ISR(INT1_vect) {
 
 void loopFast() {
 
-    // read analog Axis
-
-    joy.rotationX_.updateRawData();
-    joy.rotationY_.updateRawData();
-
-    pedal.throttle_.updateRawData();
-    pedal.brake_.updateRawData();
     
     // send USB Game data
 
@@ -145,16 +138,27 @@ void loopFast() {
 
 void loopNormal() {
 
+    // read analog Axis
+
+    joy.rotationX_.updateRawData();
+    joy.rotationY_.updateRawData();
+
+    pedal.throttle_.updateRawData();
+    pedal.brake_.updateRawData();
+
+
     // receive USB Game data
 
     com.receiveData();
 
-    // read buttons over I²C
 
-    buttons.listener();
 }
 
 void loopSlow() {
+
+    // read buttons over I²C
+
+    buttons.listener();
 
     #ifndef LUSMDL_DEBUGMODE
     if (runSetup) {
