@@ -13,6 +13,7 @@
 #include "Core/Buttons.hpp"
 #include "Core/Encoder.hpp"
 #include "Core/Joyst.hpp"
+#include "Core/Pedals.hpp"
 #ifndef LUSMDL_DEBUGMODE
 #include "Core/SetupDisplay.hpp"
 #endif
@@ -22,10 +23,11 @@
 Buttons buttons(Wire);
 Encoder encoder;
 Joyst joy;
+Pedals pedal;
 #ifndef LUSMDL_DEBUGMODE
-SetupDisplay display(joy, encoder, EEPROM);
+SetupDisplay display(joy, pedal, encoder, EEPROM);
 #endif
-ComUsb com(buttons, joy, encoder);
+ComUsb com(buttons, joy, pedal, encoder);
 
 // declaration of global variables
 
@@ -53,16 +55,15 @@ void setup() {
     #endif
 
     #ifndef LUSMDL_DEBUGMODE
+    encoder.begin(); // encoder pins are stolen by the uart
     display.begin();
-    encoder.begin();
     #endif
 
     buttons.begin();
+
     joy.rotationX_.begin();
     joy.rotationY_.begin();
     joy.beginButton();
-    
-    encoder.begin();
 
     com.begin();
 }
@@ -76,7 +77,7 @@ void loop() {
 
     static const unsigned int TIME_FAST     = 3;
     static const unsigned int TIME_NORMAL   = 50;
-    static const unsigned int TIME_SLOW     = 500;
+    static const unsigned int TIME_SLOW     = 1000;
     
     if((numberOfCycle % TIME_FAST) == 0) {
 
@@ -132,6 +133,9 @@ void loopFast() {
     joy.rotationX_.updateRawData();
     joy.rotationY_.updateRawData();
 
+    pedal.throttle_.updateRawData();
+    pedal.brake_.updateRawData();
+    
     // send USB Game data
 
     com.sendData();

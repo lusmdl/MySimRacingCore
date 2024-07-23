@@ -12,9 +12,10 @@
  * 
  * @param btns Reference to the Buttons object.
  */
-ComUsb::ComUsb(Buttons &btns, Joyst &joyst, Encoder &encoder) :
+ComUsb::ComUsb(Buttons &btns, Joyst &joyst, Pedals &pedal, Encoder &encoder) :
     btns_(&btns),
     joyst_(&joyst),
+    pedal_(&pedal),
     encoder_(&encoder),
     joy_(
         JOYSTICK_DEFAULT_REPORT_ID, // REPORT_ID        Hid report id
@@ -28,7 +29,7 @@ ComUsb::ComUsb(Buttons &btns, Joyst &joyst, Encoder &encoder) :
         false,                      // X Axis enable    True or False
         #endif
         false,                      // Y Axis enable    True or False
-        true,                       // Z Axis enable    True or False
+        false,//true,                       // Z Axis enable    True or False
         true,                       // Rx Axis enable   True or False
         true,                       // Ry Axis enable   True or False
         false,                      // Rz Axis enable   True or False
@@ -96,6 +97,11 @@ void ComUsb::sendData() {
     joy_.setRxAxis(calculateAxis(joyst_->rotationX_.getData()));
     joy_.setRyAxis(calculateAxis(joyst_->rotationY_.getData()));
     joy_.setButton(0, (joyst_->getButtonStatus().pushed || btns_->getData(0).pushed));
+
+    // pedals
+
+    joy_.setAccelerator(calculateAxis(pedal_->throttle_.getData()));
+    joy_.setBrake(calculateAxis(pedal_->brake_.getData()));
 
     // wheel buttons
 

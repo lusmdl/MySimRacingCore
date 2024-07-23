@@ -2,8 +2,9 @@
 #ifndef LUSMDL_DEBUGMODE
 
 
-SetupDisplay::SetupDisplay(Joyst &joyst, Encoder &encoder, EEPROMClass &eeprom):
+SetupDisplay::SetupDisplay(Joyst &joyst, Pedals &pedal, Encoder &encoder, EEPROMClass &eeprom):
     joyst_(&joyst),
+    pedal_(&pedal),
     encoder_(&encoder),
     eeprom_(&eeprom),
     page_(0)
@@ -34,9 +35,28 @@ void SetupDisplay::begin() {
 
     eeprom_->get(STORE_ADDR_RY_MIN, eepromInt);
     joyst_->rotationY_.setMin(MIN_AXIS, eepromInt);
+
+
+    // restore Throttle-Axis
+
+    eeprom_->get(STORE_ADDR_THROTTLE_MAX, eepromInt);
+    pedal_->throttle_.setMax(MAX_AXIS, eepromInt);
+    
+    eeprom_->get(STORE_ADDR_THROTTLE_MIN, eepromInt);
+    pedal_->throttle_.setMin(MIN_AXIS, eepromInt);
+
+
+    // restore Brake-Axis
+
+    eeprom_->get(STORE_ADDR_BRAKE_MAX, eepromInt);
+    pedal_->brake_.setMax(MAX_AXIS, eepromInt);
+    
+    eeprom_->get(STORE_ADDR_BRAKE_MIN, eepromInt);
+    pedal_->brake_.setMin(MIN_AXIS, eepromInt);
     
 
     // restor Steering
+
     eeprom_->get(STORE_ADDR_FACTOR, eepromFloat);
     encoder_->setFactor(eepromFloat);
 
@@ -97,21 +117,33 @@ bool SetupDisplay::runSetup() {
             break;
 
         case 7 :
-            showSteering();
+            setupThrottleMax();
+            break;
+
+        case 8 :
+            setupThrottleMin();
+            break;
+
+        case 9 :
+            setupBrakeMax();
+            break;
+
+        case 10 :
+            setupBrakeMin();
             break;
 
         default:
             
-            printLine(0,TXT_FAIL);
-            return 0;
+            printLine(0,TXT_RESET);
+            return false;
             break;
     }
-    return 1;
+    return true;
 }
 
 void SetupDisplay::showSteering() {
 
-    printLine(1,String(encoder_->getData().act));
+    printLine(1,"   " + String(encoder_->getData().act));
 }
 
 bool SetupDisplay::askForSetup() {
@@ -301,9 +333,9 @@ void SetupDisplay::setupSteeringZero() {
 
         waitForButtonRelease();
         
+        encoder_->setZero();
         printLine(0, TXT_DONE);
         printLine(1, String(encoder_->getPosition()));
-        encoder_->setZero();
 
         _delay_ms(500);
         
@@ -342,6 +374,110 @@ void SetupDisplay::setupSteeringTurn() {
         lcd_->setCursor(0,0);
         lcd_->print("set wheel 360 deg");
         printLine(1, String(encoder_->getPosition()));
+    }
+}
+
+void SetupDisplay::setupThrottleMax() {
+
+    if(joyst_->getButtonStatus().pushed) {
+
+        waitForButtonRelease();
+        
+        printLine(0, TXT_DONE);
+        printLine(1, String(pedal_->throttle_.getData().act));
+        eeprom_->put(STORE_ADDR_THROTTLE_MAX, pedal_->throttle_.setMax(MAX_AXIS));
+
+        _delay_ms(500);
+        
+        clearLine(0);
+        clearLine(1);
+
+        page_++;
+    }
+    else {
+
+        lcd_->setCursor(0,0);
+        lcd_->print("set Thottle Max");
+        lcd_->setCursor(0,1);
+        printLine(1, String(pedal_->throttle_.getData().act));
+    }
+}
+
+void SetupDisplay::setupThrottleMin() {
+
+    if(joyst_->getButtonStatus().pushed) {
+
+        waitForButtonRelease();
+        
+
+        printLine(0, TXT_DONE);
+        printLine(1, String(pedal_->throttle_.getData().act));
+        eeprom_->put(STORE_ADDR_THROTTLE_MIN, pedal_->throttle_.setMin(MIN_AXIS));
+
+        _delay_ms(500);
+        
+        clearLine(0);
+        clearLine(1);
+
+        page_++;
+    }
+    else {
+
+        lcd_->setCursor(0,0);
+        lcd_->print("set Throttle Min");
+        printLine(1, String(pedal_->throttle_.getData().act));
+    }
+}
+
+void SetupDisplay::setupBrakeMax() {
+
+    if(joyst_->getButtonStatus().pushed) {
+
+        waitForButtonRelease();
+        
+        printLine(0, TXT_DONE);
+        printLine(1, String(pedal_->brake_.getData().act));
+        eeprom_->put(STORE_ADDR_BRAKE_MAX, pedal_->brake_.setMax(MAX_AXIS));
+
+        _delay_ms(500);
+        
+        clearLine(0);
+        clearLine(1);
+
+        page_++;
+    }
+    else {
+
+        lcd_->setCursor(0,0);
+        lcd_->print("set Brake Max");
+        lcd_->setCursor(0,1);
+        printLine(1, String(pedal_->brake_.getData().act));
+    }
+}
+
+void SetupDisplay::setupBrakeMin() {
+
+    if(joyst_->getButtonStatus().pushed) {
+
+        waitForButtonRelease();
+        
+
+        printLine(0, TXT_DONE);
+        printLine(1, String(pedal_->brake_.getData().act));
+        eeprom_->put(STORE_ADDR_BRAKE_MIN, pedal_->brake_.setMin(MIN_AXIS));
+
+        _delay_ms(500);
+        
+        clearLine(0);
+        clearLine(1);
+
+        page_++;
+    }
+    else {
+
+        lcd_->setCursor(0,0);
+        lcd_->print("set Brake Min");
+        printLine(1, String(pedal_->brake_.getData().act));
     }
 }
 

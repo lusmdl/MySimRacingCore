@@ -18,9 +18,7 @@ Joyst::Joyst() :
 /**
  * @brief Destructor for Joyst class.
  */
-Joyst::~Joyst() {
-
-}
+Joyst::~Joyst() {}
 
 
 /**
