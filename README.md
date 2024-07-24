@@ -41,9 +41,7 @@ You can use the pre compiled hex file. Or you use compile it [yourself](Installa
 
 2. **Clone the Repository**:
 
-   - ```sh
-   git clone https://github.com/lusmdl/MySimRacingCor.git
-   ```
+   - ```git clone https://github.com/lusmdl/MySimRacingCor.git```
 
 3. **Open the Project**:
    - Open the cloned repository folder in your PlatformIO environment.
