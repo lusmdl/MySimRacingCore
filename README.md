@@ -41,7 +41,7 @@ You can use the pre compiled hex file. Or you use compile it [yourself](Installa
 
 2. **Clone the Repository**:
 
-   ```sh
+   - ```sh
    git clone https://github.com/lusmdl/MySimRacingCor.git
    ```
 
