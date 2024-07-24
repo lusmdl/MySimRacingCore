@@ -5,10 +5,9 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 ## Features
 
 - 32 buttons (includes joystick button (1))
-- X-Axis with FFB (Steering)
+- Steering-Axis without FFB (Steering)
 - Accelerate-Axis
 - Brake-Axis
-- Z-Axis (clutch/Handbrake)
 - X-Rotation-Axis (Joystick)
 - Y-Rotation-Axis (Joystick)
 
