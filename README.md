@@ -5,10 +5,9 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 ## Features
 
 - 32 buttons (includes joystick button (1))
-- X-Axis with FFB (Steering)
+- Steering-Axis without FFB (Steering)
 - Accelerate-Axis
 - Brake-Axis
-- Z-Axis (clutch/Handbrake)
 - X-Rotation-Axis (Joystick)
 - Y-Rotation-Axis (Joystick)
 
@@ -38,24 +37,24 @@ You can use the pre compiled hex file. Or you use compile it [yourself](Installa
 ## Installation and Setup
 
 1. **Install PlatformIO**:
-   - Follow the [installation guide](https://platformio.org/install) to set up PlatformIO in your preferred environment (VSCode, Atom, etc.).
+- Follow the [installation guide](https://platformio.org/install) to set up PlatformIO in your preferred environment (VSCode, Atom, etc.).
 
 2. **Clone the Repository**:
 
-   ```sh
-   git clone https://github.com/lusmdl/MySimRacingCor.git
-   ```
+```sh
+git clone https://github.com/lusmdl/MySimRacingCor.git
+```
 
 3. **Open the Project**:
-   - Open the cloned repository folder in your PlatformIO environment.
+- Open the cloned repository folder in your PlatformIO environment.
 
 4. **Build and Upload**:
-   - Connect your Arduino Micro.
-   - Build and upload the code using PlatformIO:
+- Connect your Arduino Micro.
+- Build and upload the code using PlatformIO:
 
-   ```sh
-   pio run --target upload
-   ```
+```sh
+pio run --target upload
+```
 
 ### Arduino Micro Setup
 
@@ -63,12 +62,12 @@ You can use the pre compiled hex file. Or you use compile it [yourself](Installa
 ## Usage
 
 1. **Connecting the Hardware**:
-   - Connect the accessorys to the Arduino Micro as per your configuration.
-   - Connect the Arduino Micro to the PC.
+- Connect the accessorys to the Arduino Micro as per your configuration.
+- Connect the Arduino Micro to the PC.
 
 2. **Running the Code**:
-   - Power up your setup.
-   - The Arduino Micro will continuously push the accessorys states and update the Game data via USB.
+- Power up your setup.
+- The Arduino Micro will continuously push the accessorys states and update the Game data via USB.
 
 ## Contributing
 
