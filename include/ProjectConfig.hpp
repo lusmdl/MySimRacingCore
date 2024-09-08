@@ -64,13 +64,13 @@
 
 #define ENCODER_A_PIN           0 // D0/TX - don´t edit this !!!!!
 #define ENCODER_B_PIN           1 // D1/RX - don´t edit this !!!!!
-#define ENCODER_REG_PIN         PIND
+//#define ENCODER_REG_PIN         PIND
 
 
 // Force feedback motor control pins
 
-#define MOTOR_EN_PIN        0   // D8
-#define MOTOR_LPWM_PIN      0   // D9
-#define MOTOR_RPWM_PIN      0   // D10
+//#define MOTOR_EN_PIN        0   // D8
+//#define MOTOR_LPWM_PIN      0   // D9
+//#define MOTOR_RPWM_PIN      0   // D10
 
 #endif // PROJECT_CONFIG_H

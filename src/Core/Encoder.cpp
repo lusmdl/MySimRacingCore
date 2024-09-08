@@ -13,7 +13,6 @@ const int8_t Encoder::KNOBDIR[] = {
   1, 0, 0, -1,
   0, -1, 1, 0
 };
-
 const float Encoder::STEERING_MAX_DEG     = 540.00;
 const float Encoder::STEERING_FULL_TURN   = 360.00;
 
@@ -30,8 +29,7 @@ Encoder::Encoder(uint8_t pinA, uint8_t pinB) :
     data_.min = STEERING_MAX_DEG * (-1);
 }
 
-void Encoder::begin() {
-}
+void Encoder::begin() {}
 
 int Encoder::getPosition() const {
     return position_;
