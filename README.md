@@ -15,7 +15,7 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 
 ## Getting Started
 
-You can use the pre compiled hex file. Or you use compile it [yourself](Installation and Setup).
+You can use the pre compiled hex file. Or you use compile it yourself.
 
 
 ## Hardware Requirements
@@ -26,6 +26,7 @@ You can use the pre compiled hex file. Or you use compile it [yourself](Installa
 - **Buttons**: I used 4 2x2 matrixes
 - **Joystick**: I used one joystick with a button
 - **LCD**: I used 1602 with an I2C module attached
+- **PCBA**: The [KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingCore/blob/main/doc/Pictures/PCBA.png) files are in this repository
 
 ## Software Requirements
 
