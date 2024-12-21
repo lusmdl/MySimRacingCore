@@ -1,0 +1,13 @@
+"ID";"Bezeichner";"Footprint";"Stückzahl";"Bezeichnung";"Anbieter und Referenz";
+1;"J1.2";"PinSocket_1x17_P2.54mm_Vertical_SMD_Pin1Left";1;"Analog";;;
+2;"J1.1";"PinSocket_1x17_P2.54mm_Vertical_SMD_Pin1Left";1;"Digital";;;
+3;"J6,J8";"RJ45_Molex_0855135013_Vertical";2;"RJ45";;;
+4;"R2,R1";"R_0805_2012Metric_Pad1.20x1.40mm_HandSolder";2;"1k";;;
+5;"J2";"PinHeader_1x03_P2.54mm_Vertical_SMD_Pin1Left";1;"Handbrake";;;
+6;"J3";"PinHeader_1x05_P2.54mm_Vertical_SMD_Pin1Left";1;"Encoder";;;
+7;"J7.1.2";"PinSocket_1x16_P2.54mm_Vertical_SMD_Pin1Left";1;"PCF8574 LCD Socekt";;;
+8;"J7.1.1";"PinSocket_1x16_P2.54mm_Vertical_SMD_Pin1Left";1;"LCD Socket";;;
+9;"J7.2";"PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left";1;"PCF8574 I²C";;;
+10;"J4";"PinHeader_1x05_P2.54mm_Vertical_SMD_Pin1Left";1;"Joystick";;;
+11;"J5";"PinHeader_1x05_P2.54mm_Vertical_SMD_Pin1Left";1;"Pedals";;;
+12;"SW1";"SW_Push_1P1T_NO_6x6mm_H9.5mm";1;"Reset";;;

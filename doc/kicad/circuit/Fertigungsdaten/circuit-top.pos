@@ -1,0 +1,20 @@
+### Footprint positions - created on 2024-12-21T11:06:01+0100 ###
+### Printed by KiCad version 8.0.7
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                 Package                                            PosX       PosY       Rot  Side
+J1.1      Digital             PinSocket_1x17_P2.54mm_Vertical_SMD_Pin1Left    23.0000     3.6500   90.0000  top
+J1.2      Analog              PinSocket_1x17_P2.54mm_Vertical_SMD_Pin1Left    23.0000    18.8900   90.0000  top
+J2        Handbrake           PinHeader_1x03_P2.54mm_Vertical_SMD_Pin1Left    11.2900    25.6650  -90.0000  top
+J3        Encoder             PinHeader_1x05_P2.54mm_Vertical_SMD_Pin1Left     8.7900    33.1550  -90.0000  top
+J4        Joystick            PinHeader_1x05_P2.54mm_Vertical_SMD_Pin1Left     8.7900    40.1450  -90.0000  top
+J5        Pedals              PinHeader_1x05_P2.54mm_Vertical_SMD_Pin1Left     8.7900    47.1550  -90.0000  top
+J6        RJ45                RJ45_Molex_0855135013_Vertical                  57.3100     9.0000   90.0000  top
+J7.1.1    LCD_Socket          PinSocket_1x16_P2.54mm_Vertical_SMD_Pin1Left    38.5000    49.8500  -90.0000  top
+J7.1.2    PCF8574_LCD_Socekt  PinSocket_1x16_P2.54mm_Vertical_SMD_Pin1Left    38.5000    41.6000  -90.0000  top
+J7.2      PCF8574_I²C        PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left    39.5300    25.4550   90.0000  top
+J8        RJ45                RJ45_Molex_0855135013_Vertical                  57.3100    28.2000   90.0000  top
+R1        1k                  R_0805_2012Metric_Pad1.20x1.40mm_HandSolder      4.7900    25.8100   90.0000  top
+R2        1k                  R_0805_2012Metric_Pad1.20x1.40mm_HandSolder      2.7900    25.8100   90.0000  top
+SW1       Reset               SW_Push_1P1T_NO_6x6mm_H9.5mm                    26.4250    25.6500  180.0000  top
+## End
