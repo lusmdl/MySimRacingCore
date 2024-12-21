@@ -16,6 +16,11 @@ SetupDisplay::~SetupDisplay() {}
 
 void SetupDisplay::begin() {
 
+    // In this method, we initialized the settings
+    // This schould be performed every time, otherwise the microcontroller does not have the correct settings
+
+    // temporary used variables for restoring
+
     int eepromInt;
     float eepromFloat;
 
