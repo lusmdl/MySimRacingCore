@@ -403,7 +403,6 @@ enum enum_modesledcolor {
 int attribute_; // Description of attribute
 ```
 
-
 ### `fUcKtHeCaSe`
 
 **Used for:**
@@ -597,6 +596,25 @@ bool ExampleClass::getValue();
 1. Clearly describe what your pull request does and which issues it solves.
 2. Include any necessary screenshots, code samples, or relevant information.
 3. Request reviews from other team members before merging.
+
+## Versioning Explanation
+
+The version number follows the format `vMAJOR.MINOR.PATCH`, where each number is incremented based on the type of changes made.
+
+### **MAJOR `v1.0.0 → v2.0.0`**: Incremented for **backward-incompatible changes** (breaking changes).
+
+- **Example 1:** Removing a function that other parts of the code depend on, making the old code stop working.
+- **Example 2:** Changing how a configuration file is read, which would break programs that rely on the old format.
+
+### **MINOR `v1.0.0 → v1.1.0`**: Incremented for **adding new features** that are **backward-compatible** (doesn’t break existing code).
+
+- **Example 1:** Adding a new function to log data without affecting the existing functionality of the program.
+- **Example 2:** Adding an option for users to customize the behavior of an existing feature, such as allowing different input values.
+
+### **PATCH `v1.0.0 → v1.0.1`**: Incremented for **bug fixes** or **small improvements** that don’t change existing functionality.
+
+- **Example 1:** Fixing a bug where a button press wasn't detected correctly, ensuring the program behaves as expected.
+- **Example 2:** Improving performance slightly, such as optimizing a loop, without changing the program’s output or behavior.
 
 ---
 
