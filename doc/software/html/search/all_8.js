@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['c_20and_20c_20projects_0',['Common Contributing Guidelines for C and C++ Projects',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html',1,'']]],
+  ['camelcase_20tt_1',['&lt;tt&gt;camelCase&lt;/tt&gt;',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md21',1,'']]],
+  ['can_20be_20used_20to_20make_20game_20handle_20with_20vibration_20game_20steering_20wheel_20with_20force_20feedback_20etc_20multi_20axis_20force_20feedback_20feature_20is_20added_2',['This is a joy library for Atmega32UX chip with force feedback, which can be used to make game handle with vibration, game steering wheel with force feedback, etc.Multi-axis-force-feedback feature is added.',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md43',1,'']]],
+  ['case_20tt_3',['&lt;tt&gt;skewer-case&lt;/tt&gt;',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md26',1,'']]],
+  ['chip_20with_20force_20feedback_20which_20can_20be_20used_20to_20make_20game_20handle_20with_20vibration_20game_20steering_20wheel_20with_20force_20feedback_20etc_20multi_20axis_20force_20feedback_20feature_20is_20added_4',['This is a joy library for Atmega32UX chip with force feedback, which can be used to make game handle with vibration, game steering wheel with force feedback, etc.Multi-axis-force-feedback feature is added.',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md43',1,'']]],
+  ['code_20p1_5',['example code p1',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md48',1,'']]],
+  ['code_20p2_6',['example code p2',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md50',1,'']]],
+  ['code_20p3_7',['example code p3',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md52',1,'']]],
+  ['com_20mheironimus_20arduinojoysticklibrary_20heironimus_20a_20and_20a_20href_20https_3a_20github_20com_20hoantv_20vnwheel_20hoantv_20a_20s_20work，very_20grateful_20for_20their_20work_8',['This library is based on &lt;a href=&quot;https://github.com/MHeironimus/ArduinoJoystickLibrary&quot; &gt;Heironimus&lt;/a&gt; and &lt;a href=&quot;https://github.com/hoantv/VNWheel&quot; &gt;hoantv&lt;/a&gt; &apos;s work，very grateful for their work.',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md56',1,'']]],
+  ['commenting_20principles_9',['Commenting Principles',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md33',1,'']]],
+  ['comments_10',['Comments',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md34',1,'Block Comments'],['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md32',1,'Comments'],['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md35',1,'Line Comments']]],
+  ['common_20contributing_20guidelines_20for_20c_20and_20c_20projects_11',['Common Contributing Guidelines for C and C++ Projects',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html',1,'']]],
+  ['comusb_12',['ComUsb',['../class_com_usb.html',1,'ComUsb'],['../class_com_usb.html#a69f8d9bbafb68d3119fab44e9617dfae',1,'ComUsb::ComUsb()']]],
+  ['comusb_2ecpp_13',['ComUsb.cpp',['../_com_usb_8cpp.html',1,'']]],
+  ['comusb_2ehpp_14',['ComUsb.hpp',['../_com_usb_8hpp.html',1,'']]],
+  ['contributing_15',['Contributing',['../md__r_e_a_d_m_e.html#autotoc_md66',1,'']]],
+  ['contributing_20guidelines_20for_20c_20and_20c_20projects_16',['Common Contributing Guidelines for C and C++ Projects',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html',1,'']]],
+  ['control_17',['Version Control',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md1',1,'']]],
+  ['controller_18',['Sim Racing Core Controller',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['conventions_19',['Naming Conventions',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md16',1,'']]],
+  ['core_20controller_20',['Sim Racing Core Controller',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['cpp_20tt_20strong_21',['Cpp tt strong',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md7',1,'&lt;strong&gt;File: &lt;tt&gt;main.cpp&lt;/tt&gt;&lt;/strong&gt;'],['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md9',1,'&lt;strong&gt;File: &lt;tt&gt;MyClass.cpp&lt;/tt&gt;&lt;/strong&gt;']]],
+  ['create_20tt_20joystick_20tt_20object_22',['1. create &lt;tt&gt;JoyStick&lt;/tt&gt; object',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md46',1,'']]],
+  ['created_20the_20x_20axis_20and_20y_20axis_20are_20bound_20as_20the_20force_20feedback_20axis_20by_20default_20the_20gains_20of_20various_20forces_20effect_20are_20set_20through_20the_20struct_20and_20the_20interface_20as_20following_3a_23',['2. After the object is created, the x-axis and y-axis are bound as the force feedback axis by default.The gains of various forces effect are set through the struct and the interface as following:',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md47',1,'']]]
+];

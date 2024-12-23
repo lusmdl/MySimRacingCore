@@ -70,9 +70,14 @@ pio run --target upload
 - Power up your setup.
 - The Arduino Micro will continuously push the accessorys states and update the Game data via USB.
 
+## Documentation
+The detailed documentation for this project can be found under [doc/software/html/index.html](doc/software/html/index.html)
+
 ## Contributing
 
 We welcome contributions from the community!
+
+First, read the [general contributing conventions for projects from me](CONTRIBUTING.md).
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
