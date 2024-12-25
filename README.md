@@ -25,7 +25,7 @@ You can use the pre compiled hex file. Or you use compile it yourself.
 - **LCD**: I used 1602 with an I2C module attached
 
 > Example PCB for the project
-![KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingCore/blob/main/doc/Pictures/PCBA.png)
+![KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingCore/blob/main/doc/hardware/Pictures/PCBA.png)
 
 ## Software Requirements
 
