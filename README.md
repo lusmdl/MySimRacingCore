@@ -11,22 +11,21 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 - X-Rotation-Axis (Joystick)
 - Y-Rotation-Axis (Joystick)
 
-
-
 ## Getting Started
 
 You can use the pre compiled hex file. Or you use compile it yourself.
-
 
 ## Hardware Requirements
 
 - **ATmega32u4 Microcontroller**: I used the original arduino micro board
 - **Steering Wheel**: I used a cheap optical encoder with A and B line from china
 - **Pedals**: I used a old xbox360 racing wheele pedal set. It only needs to work with potis.
-- **Buttons**: I used 4 2x2 matrixes
+- **Buttons**: Look at this project [here](https://github.com/lusmdl/MySimRacingButtonBox)!
 - **Joystick**: I used one joystick with a button
 - **LCD**: I used 1602 with an I2C module attached
-- **PCBA**: The [KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingCore/blob/main/doc/Pictures/PCBA.png) files are in this repository
+
+> Example PCB for the project
+![KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingCore/blob/main/doc/Pictures/PCBA.png)
 
 ## Software Requirements
 
