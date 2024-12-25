@@ -1,6 +1,7 @@
 # Sim Racing Core Controller
 
 Welcome to the Sim Racing Core Controller repository!
+
 This project focuses on programming the ATmega32u4 microcontroller to serve as the core of a high-performance sim racing setup. 
 The controller independently handles all tasks, including steering, pedals, and accessory management, ensuring a streamlined and immersive racing experience—all without external setup software.
 
