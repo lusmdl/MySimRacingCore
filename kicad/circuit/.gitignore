@@ -1,0 +1,21 @@
+# KiCad Backup Files
+*.bak
+*.swp
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_bom-bak
+
+# KiCad Cache and Compiled Files
+*.kicad_cache/
+*.kicad_mod/
+*.kicad_wks/
+
+# KiCad Autorouting (optional, if using)
+*.kicad_autoroute/
+
+# KiCad User Specific Files
+__pycache__/
+*.pyc
+
+# KiCad Backup Folders (ending with "backups")
+*backups/
