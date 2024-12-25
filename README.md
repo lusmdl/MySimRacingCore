@@ -26,7 +26,7 @@ This repository is designed to prioritize simplicity and reliability, with clean
 You can use the pre compiled hex file. 
 Or you compile it yourself.
 
-## Hardware Requirements
+### Hardware Requirements
 
 - **ATmega32u4 Microcontroller**: I use the original arduino micro board
 - **Steering Wheel**: I use a cheap optical encoder with A and B line from china
@@ -38,14 +38,14 @@ Or you compile it yourself.
 > Example PCB for the project
 ![KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingCore/blob/main/doc/hardware/Pictures/PCBA.png)
 
-## Software Requirements
+### Software Requirements
 
 - [**Platform IO**](https://platformio.org/install/ide?install=vscode): Used for programming the ATmega32u4 microcontroller.
 - [**AVR Lib**](https://github.com/avrdudes/avr-libc.git): standard lib for programming atmega microcontrollers with platformIO.
 - [**Arduino AVR Core**](https://github.com/arduino/ArduinoCore-avr.git): used `Arduino.h`, `Wire.h` and `EEPROM.h`
 - [**Arduino Joystick With Force Feedback Library**](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary.git): used for USB communication with the game
 
-## Software Installation and Setup
+### Software Installation and Setup
 
 1. **Install PlatformIO**:
 - Follow the [installation guide](https://platformio.org/install) to set up PlatformIO in your preferred environment (VSCode, Atom, etc.).
@@ -67,8 +67,13 @@ git clone https://github.com/lusmdl/MySimRacingCore.git
 pio run --target upload
 ```
 
+
 ### Hardware Setup
 
+To get started, you’ll need to assemble the accessories and adapt them to the Arduino Micro.
+
+Special attention is required for the I2C interface and the encoder, as proper pull-up resistors are essential for reliable operation. 
+To simplify this process, I’ve designed a custom PCB that integrates the Arduino Micro with all necessary accessories and I2C clients.
 
 ## Usage
 
@@ -79,6 +84,14 @@ pio run --target upload
 2. **Running the Code**:
 - Power up your setup.
 - The Arduino Micro will continuously push the accessorys states and update the Game data via USB.
+
+3. **Setup the Wheelebase**
+- Hit the joystick butten while booting..
+- follow the instructions an the lcd
+
+4. **Start your game and try it**
+
+5. **Give feedback and report bugs**
 
 ## Documentation
 - **Software**: [doc/software/html/index.html](doc/software/html/index.html)
