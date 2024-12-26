@@ -1,10 +1,20 @@
 # Sim Racing Core Controller
 
-Welcome to the Sim Racing Core Controller repository! This project focuses on programming an ATmega32u4 microcontroller to serve as the central processing unit for a high-performance sim racing setup. The controller is designed to manage steering, pedals, and other accessories, providing a seamless and immersive racing experience.
+Welcome to the Sim Racing Core Controller repository!
+
+This project focuses on programming the ATmega32u4 microcontroller to serve as the core of a high-performance sim racing setup. 
+The controller independently handles all tasks, including steering, pedals, and accessory management, ensuring a streamlined and immersive racing experience—all without external setup software.
+
+Other projects require PC-based software. 
+This solution does everything directly on the microcontroller. 
+Sensor calibration, configuration, and adjustments are all handled locally and stored in the microcontroller’s memory. 
+The system can be operated intuitively via a simple interface.
+
+This repository is designed to prioritize simplicity and reliability, with clean, maintainable code that’s easy to understand and adapt to your needs.
 
 ## Features
 
-- 32 buttons (includes joystick button (1))
+- 32 buttons (includes joystick button (1) for setup)
 - Steering-Axis without FFB (Steering)
 - Accelerate-Axis
 - Brake-Axis
@@ -13,28 +23,29 @@ Welcome to the Sim Racing Core Controller repository! This project focuses on pr
 
 ## Getting Started
 
-You can use the pre compiled hex file. Or you use compile it yourself.
+You can use the pre compiled hex file. 
+Or you compile it yourself.
 
-## Hardware Requirements
+### Hardware Requirements
 
-- **ATmega32u4 Microcontroller**: I used the original arduino micro board
-- **Steering Wheel**: I used a cheap optical encoder with A and B line from china
-- **Pedals**: I used a old xbox360 racing wheele pedal set. It only needs to work with potis.
-- **Buttons**: Look at this project [here](https://github.com/lusmdl/MySimRacingButtonBox)!
-- **Joystick**: I used one joystick with a button
-- **LCD**: I used 1602 with an I2C module attached
+- **ATmega32u4 Microcontroller**: I use the original arduino micro board
+- **Steering Wheel**: I use a cheap optical encoder with A and B line from china
+- **Pedals**: I use a old xbox360 racing wheele pedal set. It only needs to work with potis.
+- **Buttons**: The microcontroller get the 16 bit data from I2C Interface Adress 8 & 9 button data. You need a diffrent device for this. Look at my other project [here](https://github.com/lusmdl/MySimRacingButtonBox)!
+- **Joystick**: I use a hall-effect sony dualshock joystick
+- **LCD**: I use 1602 with an I2C module attached
 
 > Example PCB for the project
 ![KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingCore/blob/main/doc/hardware/Pictures/PCBA.png)
 
-## Software Requirements
+### Software Requirements
 
 - [**Platform IO**](https://platformio.org/install/ide?install=vscode): Used for programming the ATmega32u4 microcontroller.
-- [**AVR Lib**](https://github.com/avrdudes/avr-libc.git): standard lib with platformIO.
+- [**AVR Lib**](https://github.com/avrdudes/avr-libc.git): standard lib for programming atmega microcontrollers with platformIO.
 - [**Arduino AVR Core**](https://github.com/arduino/ArduinoCore-avr.git): used `Arduino.h`, `Wire.h` and `EEPROM.h`
 - [**Arduino Joystick With Force Feedback Library**](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary.git): used for USB communication with the game
 
-## Installation and Setup
+### Software Installation and Setup
 
 1. **Install PlatformIO**:
 - Follow the [installation guide](https://platformio.org/install) to set up PlatformIO in your preferred environment (VSCode, Atom, etc.).
@@ -42,7 +53,7 @@ You can use the pre compiled hex file. Or you use compile it yourself.
 2. **Clone the Repository**:
 
 ```sh
-git clone https://github.com/lusmdl/MySimRacingCor.git
+git clone https://github.com/lusmdl/MySimRacingCore.git
 ```
 
 3. **Open the Project**:
@@ -56,8 +67,13 @@ git clone https://github.com/lusmdl/MySimRacingCor.git
 pio run --target upload
 ```
 
-### Arduino Micro Setup
 
+### Hardware Setup
+
+To get started, you’ll need to assemble the accessories and adapt them to the Arduino Micro.
+
+Special attention is required for the I2C interface and the encoder, as proper pull-up resistors are essential for reliable operation. 
+To simplify this process, I’ve designed a custom PCB that integrates the Arduino Micro with all necessary accessories and I2C clients.
 
 ## Usage
 
@@ -69,8 +85,16 @@ pio run --target upload
 - Power up your setup.
 - The Arduino Micro will continuously push the accessorys states and update the Game data via USB.
 
+3. **Setup the Wheelebase**
+- Hit the joystick butten while booting..
+- follow the instructions an the lcd
+
+4. **Start your game and try it**
+
+5. **Give feedback and report bugs**
+
 ## Documentation
-The detailed documentation for this project can be found under [doc/software/html/index.html](doc/software/html/index.html)
+- **Software**: [doc/software/html/index.html](doc/software/html/index.html)
 
 ## Contributing
 
