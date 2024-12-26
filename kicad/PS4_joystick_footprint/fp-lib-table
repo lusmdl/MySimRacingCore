@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "PS4_joystick_footprint_lib")(type "KiCad")(uri "${KIPRJMOD}/PS4_joystick_footprint_lib.pretty")(options "")(descr ""))
+)

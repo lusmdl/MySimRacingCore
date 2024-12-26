@@ -1,4 +1,4 @@
-## Footprint report - date 2024-12-25T20:01:45+0100
+## Footprint report - date 2024-12-26T15:37:26+0100
 ## Created by KiCad version 8.0.7
 ## Unit = mm, Angle = deg.
 
@@ -543,7 +543,7 @@ $EndMODULE  J8
 $MODULE R1
 footprint Resistor_SMD:R_0402_1005Metric
 attribut smd
-position 135.200000 92.290000  orientation 0.00
+position 132.590000 92.290000  orientation 180.00
 layer front
 $PAD "1"
 Shape Roundrect Layer front
@@ -562,7 +562,7 @@ $EndMODULE  R1
 $MODULE R2
 footprint Resistor_SMD:R_0402_1005Metric
 attribut smd
-position 132.590000 92.290000  orientation 180.00
+position 135.200000 92.290000  orientation 0.00
 layer front
 $PAD "1"
 Shape Roundrect Layer front
@@ -581,7 +581,7 @@ $EndMODULE  R2
 $MODULE R3
 footprint Resistor_SMD:R_0402_1005Metric
 attribut smd
-position 145.190000 88.400000  orientation 0.00
+position 144.990000 89.700000  orientation 0.00
 layer front
 $PAD "1"
 Shape Roundrect Layer front
@@ -600,7 +600,7 @@ $EndMODULE  R3
 $MODULE R4
 footprint Resistor_SMD:R_0402_1005Metric
 attribut smd
-position 145.190000 87.300000  orientation 0.00
+position 144.990000 88.600000  orientation 0.00
 layer front
 $PAD "1"
 Shape Roundrect Layer front
