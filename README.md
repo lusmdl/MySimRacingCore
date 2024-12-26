@@ -33,7 +33,7 @@ This repository is designed to prioritize simplicity and reliability, with clean
 - **LCD**: I use 1602 with an I2C module attached
 
 > Example PCBs for this project
-![KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingCore/blob/main/doc/hardware/Pictures/PCBA.png)
+![KiCad-PCB-Design](/doc/hardware/Pictures/PCBA.png)
 ![KiCad-PCB-Design](/doc/hardware/Pictures/joystick-_PCBA.png)
 
 ### Software Requirements
