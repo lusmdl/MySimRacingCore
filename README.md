@@ -94,7 +94,7 @@ To simplify this process, I’ve designed a custom PCB that integrates the Ardui
 5. **Give feedback and report bugs**
 
 ## Documentation
-- **Software**: [doc/software/html/index.html](doc/software/html/index.html)
+- **Software**: [doc/software/html/index.html](/doc/software/html/index.html)
 
 ## Contributing
 
