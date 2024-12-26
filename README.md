@@ -34,7 +34,7 @@ This repository is designed to prioritize simplicity and reliability, with clean
 
 > Example PCBs for this project
 ![KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingCore/blob/main/doc/hardware/Pictures/PCBA.png)
-![KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingCore/blob/main/doc/hardware/Pictures/joystick_PCBA.png)
+![KiCad-PCB-Design](/doc/hardware/Pictures/joystick-_PCBA.png)
 
 ### Software Requirements
 
