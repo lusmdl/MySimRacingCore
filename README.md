@@ -23,9 +23,6 @@ This repository is designed to prioritize simplicity and reliability, with clean
 
 ## Getting Started
 
-You can use the pre compiled hex file. 
-Or you compile it yourself.
-
 ### Hardware Requirements
 
 - **ATmega32u4 Microcontroller**: I use the original arduino micro board
@@ -47,6 +44,8 @@ Or you compile it yourself.
 - [**Arduino Joystick With Force Feedback Library**](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary.git): used for USB communication with the game
 
 ### Software Installation and Setup
+
+> You can use the pre compiled hex file. Or you compile it yourself.
 
 1. **Install PlatformIO**:
 - Follow the [installation guide](https://platformio.org/install) to set up PlatformIO in your preferred environment (VSCode, Atom, etc.).
