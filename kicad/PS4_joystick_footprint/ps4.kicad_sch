@@ -1948,7 +1948,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Y"
 			(at 83.82 146.05 0)
 			(effects
 				(font
@@ -2016,7 +2016,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "A"
 			(at 83.82 134.62 0)
 			(effects
 				(font
@@ -2291,7 +2291,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "B"
 			(at 68.58 146.05 0)
 			(effects
 				(font
@@ -2454,7 +2454,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "X"
 			(at 68.58 134.62 0)
 			(effects
 				(font
