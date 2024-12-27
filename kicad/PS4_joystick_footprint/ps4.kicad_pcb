@@ -3163,17 +3163,6 @@
 		)
 	)
 	(gr_rect
-		(start 4.213019 7.08255)
-		(end 5.483019 8.34255)
-		(stroke
-			(width 0.15)
-			(type solid)
-		)
-		(fill solid)
-		(layer "F.SilkS")
-		(uuid "f22aec33-aa2e-4707-b66e-73afcf5d01d2")
-	)
-	(gr_rect
 		(start 88.9 125.1)
 		(end 144.4 155.1)
 		(stroke
@@ -3184,16 +3173,16 @@
 		(layer "Edge.Cuts")
 		(uuid "97a7388c-c797-476c-9a82-2cf12d5a67d0")
 	)
-	(gr_text "JCLJLCJLCJLC"
-		(at 15.875 17.78 0)
-		(layer "B.SilkS")
-		(uuid "b9dd990a-b666-4709-a5c6-3c46b3f8a45a")
+	(gr_text "github.com/little-scale/PS4_joystick_footprint"
+		(at 93.7 130.1 0)
+		(layer "F.SilkS")
+		(uuid "52769531-08aa-4a17-8720-7dccc3c6de92")
 		(effects
 			(font
-				(size 1.5 1.5)
-				(thickness 0.3)
+				(size 0.8 0.8)
+				(thickness 0.15)
 			)
-			(justify mirror)
+			(justify left bottom)
 		)
 	)
 	(segment
