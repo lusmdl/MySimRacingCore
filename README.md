@@ -27,7 +27,7 @@ This repository is designed to prioritize simplicity and reliability, with clean
 
 - **ATmega32u4 Microcontroller**: I use the original arduino micro board
 - **Steering Wheel**: I use a cheap optical encoder with A and B line from china
-- **Pedals**: I use a old xbox360 racing wheele pedal set. It only needs to work with potis.
+- **Pedals**: I use a old xbox360 racing wheel pedal set. It only needs to work with potis.
 - **Buttons**: The microcontroller get the 16 bit data from I2C Interface Adress 8 & 9 button data. You need a diffrent device for this. Look at my other project [here](https://github.com/lusmdl/MySimRacingButtonBox)!
 - **Joystick**: I use a Hall-effect joystick from the Sony DualShock series and have designed a custom PCB to integrate it seamlessly. Special thanks to [little-scale](https://github.com/little-scale) for providing the [PS4 joystick footprint](https://github.com/little-scale/PS4_joystick_footprint), which served as the foundation for my design.
 - **LCD**: I use 1602 with an I2C module attached
