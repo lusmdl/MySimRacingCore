@@ -1956,7 +1956,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3S-1000"
 			(at 83.82 146.05 0)
 			(effects
 				(font
@@ -2024,7 +2024,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3S-1000"
 			(at 83.82 134.62 0)
 			(effects
 				(font
@@ -2052,10 +2052,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "139b03ed-4173-4484-bd35-14467209854e")
+			(uuid "139b03ed-4173-4484-bd35-14467209854f")
 		)
 		(pin "2"
-			(uuid "e9dc5e26-8da0-46e3-8dc8-fcd9b14f5525")
+			(uuid "e9dc5e26-8da0-46e3-8dc8-fcd9b14f5526")
 		)
 		(instances
 			(project ""
@@ -2299,7 +2299,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3S-1000"
 			(at 68.58 146.05 0)
 			(effects
 				(font
@@ -2327,10 +2327,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "139b03ed-4173-4484-bd35-14467209854e")
+			(uuid "139b03ed-4173-4484-bd35-144672098550")
 		)
 		(pin "2"
-			(uuid "e9dc5e26-8da0-46e3-8dc8-fcd9b14f5525")
+			(uuid "e9dc5e26-8da0-46e3-8dc8-fcd9b14f5527")
 		)
 		(instances
 			(project ""
@@ -2462,7 +2462,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3S-1000"
 			(at 68.58 134.62 0)
 			(effects
 				(font
@@ -2490,10 +2490,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "139b03ed-4173-4484-bd35-14467209854e")
+			(uuid "139b03ed-4173-4484-bd35-144672098551")
 		)
 		(pin "2"
-			(uuid "e9dc5e26-8da0-46e3-8dc8-fcd9b14f5525")
+			(uuid "e9dc5e26-8da0-46e3-8dc8-fcd9b14f5528")
 		)
 		(instances
 			(project ""
