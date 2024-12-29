@@ -1,19 +1,20 @@
-### Footprint positions - created on 2024-12-26T15:37:19+0100 ###
+### Footprint positions - created on 2024-12-29T09:44:43+0100 ###
 ### Printed by KiCad version 8.0.7
 ## Unit = mm, Angle = deg.
 ## Side : top
-# Ref     Val          Package                                            PosX       PosY       Rot  Side
-J1.1      Digital      PinSocket_1x17_P2.54mm_Vertical_SMD_Pin1Left    23.0000     3.6500   90.0000  top
-J1.2      Analog       PinSocket_1x17_P2.54mm_Vertical_SMD_Pin1Left    23.0000    18.8900   90.0000  top
-J2        Pedals       PinHeader_2x03_P2.54mm_Vertical_SMD              6.3250    26.4600  180.0000  top
-J3        Joystick     PinHeader_2x03_P2.54mm_Vertical_SMD             18.2750    26.4600  180.0000  top
-J4        Encoder      PinHeader_2x03_P2.54mm_Vertical_SMD             30.3250    26.4600  180.0000  top
-J5        Handbrake    PinHeader_2x02_P2.54mm_Vertical_SMD              6.3250    34.7300  180.0000  top
-J6        PCF8574_I²C  PinHeader_2x02_P2.54mm_Vertical_SMD             42.1300    27.9750   90.0000  top
-J7        RJ45         RJ45_Molex_0855135013_Vertical                  57.3100    28.2000   90.0000  top
-J8        RJ45         RJ45_Molex_0855135013_Vertical                  57.3100     9.0000   90.0000  top
-R1        1k           R_0402_1005Metric                               32.5900     7.7100  180.0000  top
-R2        1k           R_0402_1005Metric                               35.2000     7.7100    0.0000  top
-R3        4.7k         R_0402_1005Metric                               44.9900    10.3000    0.0000  top
-R4        4.7k         R_0402_1005Metric                               44.9900    11.4000    0.0000  top
+# Ref     Val                    Package                                            PosX       PosY       Rot  Side
+J1.1      Digital                PinSocket_1x17_P2.54mm_Vertical_SMD_Pin1Left    23.0000     3.6500   90.0000  top
+J1.2      Analog                 PinSocket_1x17_P2.54mm_Vertical_SMD_Pin1Left    23.0000    18.8900   90.0000  top
+J2        Pedals                 PinHeader_2x03_P2.54mm_Vertical_SMD              6.3250    26.4600  180.0000  top
+J3        Joystick               PinHeader_2x03_P2.54mm_Vertical_SMD             18.2750    26.4600  180.0000  top
+J4        Encoder                PinHeader_2x03_P2.54mm_Vertical_SMD             30.3250    26.4600  180.0000  top
+J5        Handbrake              PinHeader_2x02_P2.54mm_Vertical_SMD              6.3250    33.9700  180.0000  top
+J6        PCF8574_I²C           PinHeader_2x02_P2.54mm_Vertical_SMD             30.3250    33.9700  180.0000  top
+J7        RJ45                   RJ45_Molex_0855135013_Vertical                  57.3100    28.2000   90.0000  top
+J8        RJ45                   RJ45_Molex_0855135013_Vertical                  57.3100     9.0000   90.0000  top
+J9        BTS7906B_Motor_Driver  PinHeader_2x03_P2.54mm_Vertical_SMD             40.8400    27.9750  -90.0000  top
+R1        1k                     R_0402_1005Metric                               32.5900     7.7100  180.0000  top
+R2        1k                     R_0402_1005Metric                               35.2000     7.7100    0.0000  top
+R3        4.7k                   R_0402_1005Metric                               44.9900    10.3000    0.0000  top
+R4        4.7k                   R_0402_1005Metric                               44.9900    11.4000    0.0000  top
 ## End

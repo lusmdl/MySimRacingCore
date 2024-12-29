@@ -1,11 +1,11 @@
-## Footprint report - date 2024-12-26T15:37:26+0100
+## Footprint report - date 2024-12-29T09:44:52+0100
 ## Created by KiCad version 8.0.7
 ## Unit = mm, Angle = deg.
 
 $BeginDESCRIPTION
 
 $BOARD
-upper_left_corner 99.950000 60.938750
+upper_left_corner 99.950000 60.950000
 lower_right_corner 169.050000 100.050000
 $EndBOARD
 
@@ -359,7 +359,7 @@ $EndMODULE  J4
 $MODULE J5
 footprint Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical_SMD
 attribut smd
-position 106.325000 65.270000  orientation 180.00
+position 106.325000 66.030000  orientation 180.00
 layer front
 $PAD "1"
 Shape Rect Layer front
@@ -390,7 +390,7 @@ $EndMODULE  J5
 $MODULE J6
 footprint Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical_SMD
 attribut smd
-position 142.130000 72.025000  orientation 90.00
+position 130.325000 66.030000  orientation 180.00
 layer front
 $PAD "1"
 Shape Rect Layer front
@@ -539,6 +539,49 @@ drill  0.000000
 shape_offset  0.000000  0.000000
 $EndPAD
 $EndMODULE  J8
+
+$MODULE J9
+footprint Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical_SMD
+attribut smd
+position 140.840000 72.025000  orientation -90.00
+layer front
+$PAD "1"
+Shape Rect Layer front
+position -2.525000 -2.540000  size  3.150000  1.000000  orientation 360.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "2"
+Shape Rect Layer front
+position  2.525000 -2.540000  size  3.150000  1.000000  orientation 360.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "3"
+Shape Rect Layer front
+position -2.525000  0.000000  size  3.150000  1.000000  orientation 360.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "4"
+Shape Rect Layer front
+position  2.525000  0.000000  size  3.150000  1.000000  orientation 360.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "5"
+Shape Rect Layer front
+position -2.525000  2.540000  size  3.150000  1.000000  orientation 360.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "6"
+Shape Rect Layer front
+position  2.525000  2.540000  size  3.150000  1.000000  orientation 360.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  J9
 
 $MODULE R1
 footprint Resistor_SMD:R_0402_1005Metric
