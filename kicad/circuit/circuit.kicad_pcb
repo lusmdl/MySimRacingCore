@@ -113,7 +113,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "Fertigungsdaten/")
+			(outputdirectory "circuit_Fertigungsdaten/")
 		)
 	)
 	(net 0 "")
@@ -3597,7 +3597,7 @@
 			)
 		)
 		(property "Value" "BTS7906B Motor Driver"
-			(at 0 -5 270)
+			(at 0 -5 -90)
 			(layer "F.SilkS")
 			(uuid "a7574726-e856-4474-b693-8580ff95a4b9")
 			(effects
@@ -4032,7 +4032,7 @@
 			(uuid "83798d46-c1b6-4432-a941-c3bd149f586e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "7bc4e9ad-81af-4c56-91fe-f843d9e9887a")
 			(effects

@@ -1,0 +1,12 @@
+### Footprint positions - created on 2025-01-13T22:16:16+0100 ###
+### Printed by KiCad version 8.0.7
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val             Package                               PosX       PosY       Rot  Side
+J1        Conn_01x11_Pin  PinHeader_1x11_P2.54mm_Vertical     3.0000     2.1400  180.0000  top
+SW1       X               SW_SPST_B3S-1000                   30.6000    14.6000   90.0000  top
+SW2       A               SW_SPST_B3S-1000                   41.1000     4.1000    0.0000  top
+SW3       B               SW_SPST_B3S-1000                   51.6000    14.6000  -90.0000  top
+SW4       Y               SW_SPST_B3S-1000                   41.1000    25.1000    0.0000  top
+U1        COM-09032       PS4_joystick                       15.6750    11.1252    0.0000  top
+## End
