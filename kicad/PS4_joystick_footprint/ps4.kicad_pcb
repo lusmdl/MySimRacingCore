@@ -7,6 +7,12 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "PS4 Joystick with buttons PCB")
+		(date "2025-01-14")
+		(rev "v1.0.0")
+		(company "https://github.com/lusmdl")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(31 "B.Cu" signal)

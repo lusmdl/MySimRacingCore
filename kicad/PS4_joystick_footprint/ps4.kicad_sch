@@ -4,6 +4,12 @@
 	(generator_version "8.0")
 	(uuid "5aa25748-904e-4465-bad4-f422c48ad736")
 	(paper "A4")
+	(title_block
+		(title "PS4 Joystick with buttons PCB")
+		(date "2025-01-14")
+		(rev "v1.0.0")
+		(company "https://github.com/lusmdl")
+	)
 	(lib_symbols
 		(symbol "COM-09032:COM-09032"
 			(pin_names
