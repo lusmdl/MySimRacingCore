@@ -1,4 +1,4 @@
-24153197452511349
+24139430078301331
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -98587,73 +98587,17 @@ Varistor VF
 0
 2
 2
-footprints
-Arduino_101_Shield
-https://store.arduino.cc/genuino-101
-
+mounting holes lib
+MountingHole_1.2mm
+Mounting Hole 2.1mm, no annular
+mounting hole 2.1mm no annular
 0
-38
-38
-footprints
-Arduino_Due_Shield
-https://store.arduino.cc/arduino-due
-
 0
-92
-91
-footprints
-Arduino_Leonardo_Shield
-https://store.arduino.cc/arduino-leonardo-with-headers
-
 0
-38
-37
-footprints
-Arduino_Mega2560_Shield
-https://store.arduino.cc/arduino-mega-2560-rev3
-
+mounting holes lib
+MountingHole_3.2mm
+Mounting Hole 3.2mm, no annular, M3
+mounting hole 3.2mm no annular m3
 0
-92
-91
-footprints
-Arduino_Micro_Socket
-https://store.arduino.cc/arduino-micro
-
 0
-34
-32
-footprints
-Arduino_Micro_Socket_oskar
-https://store.arduino.cc/arduino-micro
-
 0
-34
-32
-footprints
-Arduino_Mini_Socket
-https://store.arduino.cc/arduino-mini-05
-
-0
-35
-35
-footprints
-Arduino_Nano_Socket
-https://store.arduino.cc/arduino-nano
-
-0
-30
-30
-footprints
-Arduino_Uno_Shield
-https://store.arduino.cc/arduino-uno-rev3
-
-0
-38
-37
-footprints
-Arduino_Zero_Shield
-https://store.arduino.cc/genuino-zero
-
-0
-38
-38
