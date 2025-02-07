@@ -1,4 +1,6 @@
 # Sim Racing Core Controller
+![Real PCBA´s](/doc/hardware/Pictures/real%20PCBAs.jpg)
+
 
 Welcome to the Sim Racing Core Controller repository!
 
@@ -35,6 +37,7 @@ This repository is designed to prioritize simplicity and reliability, with clean
 > Example PCBs for this project
 ![KiCad-PCB-Design](/doc/hardware/Pictures/PCBA.png)
 ![KiCad-PCB-Design](/doc/hardware/Pictures/joystick-_PCBA.png)
+![KiCad-PCB-Design](https://github.com/lusmdl/MySimRacingButtonBox/blob/main/doc/hardware/pictures/pcba.png)
 
 ### Software Requirements
 
