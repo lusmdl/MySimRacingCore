@@ -90,7 +90,7 @@ To simplify this process, I’ve designed a custom PCB that integrates the Ardui
 
 3. **Setup the Wheelebase**
 - Hit the joystick butten while booting..
-- follow the instructions an the lcd
+- follow the instructions on the lcd
 
 4. **Start your game and try it**
 
