@@ -62,7 +62,7 @@ void Buttons::listener() {
         }
     }
 
-    /*
+    
     wire_->requestFrom(TWI_ADDR_MY_BTN_BOX, TWI_MSG_BYTES);    // request 2 bytes from peripheral device 
     
     if (wire_->available() == TWI_MSG_BYTES) {
@@ -75,14 +75,13 @@ void Buttons::listener() {
         // Map the received bytes to the button data structure
 
         for (int i = 0; i < 8; ++i) {
-            data_[i].pushed = (byteLow & (1 << i)) ? 1 : 0; // Map each bit to a button state
+            data_[16 + i].pushed = (byteLow & (1 << i)) ? 1 : 0; // Map each bit to a button state
         }
         for (int i = 0; i < 8; ++i) {
-            data_[8 + i].pushed = (byteHigh & (1 << i)) ? 1 : 0; // Map each bit to a button state
+            data_[24 + i].pushed = (byteHigh & (1 << i)) ? 1 : 0; // Map each bit to a button state
         }
     }
-    */
-    
+        
 }
 
 /**
