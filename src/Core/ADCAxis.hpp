@@ -38,6 +38,7 @@ class ADCAxis {
         void setMin(float min, int raw);
         int setMax(float max);
         void setMax(float max, int raw);
+        pod_axis getDataJoystick();
         pod_axis getData();
 
 

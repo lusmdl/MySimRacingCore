@@ -122,3 +122,33 @@ pod_axis ADCAxis::getData() {
 
     return data_;
 }
+
+/**
+ * @brief Adjusts the actual joystick value to the center if within a tolerance range.
+ * 
+ * This function retrieves the ADC axis data and checks if the actual value (`act`) 
+ * falls within a defined tolerance around 50%. If so, the value is adjusted to 50.0 
+ * to ensure a centered position. If the value is outside this range, it remains unchanged. 
+ * The minimum (`min`) and maximum (`max`) values are not modified.
+ * 
+ * @return pod_axis A structure containing the corrected or original ADC axis data.
+ */
+pod_axis ADCAxis::getDataJoystick() {
+
+    float center = (data_.max - data_.min) * 0.5 ;   // Target center position
+    float tolerance = center * 0.05; // Allowed tolerance around center
+
+    // Copy original data
+
+    pod_axis d = getData();    
+
+    // Adjust act value if within tolerance range
+    if (d.act >= (center - tolerance) && d.act <= (center + tolerance)) {
+
+        // Smooth value to center
+
+        d.act = center;
+    }
+
+    return d; // Return modified or original value
+}
