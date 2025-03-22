@@ -32,7 +32,7 @@ ComUsb com(buttons, joy, pedal, encoder);
 
 // declaration of global variables
 
-bool runSetup              {1}; // save if a setup is running
+bool runSetup              {1}; // store the state, if a setup is running
 unsigned int numberOfCycle {0}; // count the cycles
 
 // forward declaration of public functions
@@ -118,7 +118,6 @@ void loop() {
 
 void loopFast() {
 
-    
     // send USB Game data
 
     com.sendData();
@@ -126,20 +125,16 @@ void loopFast() {
 
 void loopNormal() {
 
-    // receive USB Game data
-
-    com.receiveData();
-
     // read analog Axis
-
+    
     joy.rotationX_.updateRawData();
     joy.rotationY_.updateRawData();
-
+    
     pedal.throttle_.updateRawData();
     pedal.brake_.updateRawData();
-
-
-
+    
+    
+    
 
 }
 
@@ -151,17 +146,27 @@ void loopSlow() {
 
     #ifndef LUSMDL_DEBUGMODE
     if (runSetup) {
-
+        
         runSetup = display.runSetup();
     }
     else {
-
+        
         display.showSteering();
     }
     #endif
 }
 
+//ISR
+
+ISR(TIMER3_COMPA_vect){
+    
+    // receive USB Game data
+    
+    com.receiveData();
+}
+
 void handleInterrupt(void) {
+    
     int sig1 = digitalReadFast(encoder.pinA_);
     int sig2 = digitalReadFast(encoder.pinB_);
     int8_t thisState = sig1 | (sig2 << 1);

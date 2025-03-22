@@ -74,6 +74,19 @@ void ComUsb::begin() {
     joy_.setSteeringRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
     #endif
     
+    //set Timer3
+    // The ISR of timer 3 have to be set in the main.cpp!!!
+
+    cli();
+    TCCR3A = 0; //set TCCR1A 0
+    TCCR3B = 0; //set TCCR1B 0
+    TCNT3  = 0; //counter init
+    OCR3A = 399;
+    TCCR3B |= (1 << WGM32); //open CTC mode
+    TCCR3B |= (1 << CS31); //set CS11 1(8-fold Prescaler)
+    TIMSK3 |= (1 << OCIE3A);
+    sei();
+
     joy_.begin(false); // sendState() method is necessary if (false)
     
 }
@@ -124,6 +137,8 @@ void ComUsb::sendData() {
 }
 
 void ComUsb::receiveData() {
+
+    // have to be called in the ISR of timer 3 in main.cpp
 
     joy_.getUSBPID();
 }
