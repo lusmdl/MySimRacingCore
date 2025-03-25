@@ -151,7 +151,7 @@ void loopSlow() {
     }
     else {
         
-        display.showSteering();
+        //display.showSteering(); // I just comment it out because i hade some issues with it at -90 degree. The programm crashed. No clue why -lusmdl
     }
     #endif
 }

@@ -167,16 +167,16 @@ int16_t ComUsb::calculateAxis(pod_axis data) {
 
     // Map the input range [0, 100] to the output range [-32768, 32767]
 
-    double dataDelta = data.max - data.min;
-    double axisDelta = static_cast<double>(MAX_AXIS_VALUE) - static_cast<double>(MIN_AXIS_VALUE);
+    float dataDelta = data.max - data.min;
+    float axisDelta = static_cast<float>(MAX_AXIS_VALUE) - static_cast<float>(MIN_AXIS_VALUE);
 
     // Calculate the scale factor
-    double scale = axisDelta / dataDelta;
+    float scale = axisDelta / dataDelta;
 
     // Calculate the output value
-    double dataActCal = (data.act - data.min);
-    double axisActWithoutOffset = dataActCal * scale;
-    double axisActWithOffset = axisActWithoutOffset + static_cast<double>(MIN_AXIS_VALUE);
+    float dataActCal = (data.act - data.min);
+    float axisActWithoutOffset = dataActCal * scale;
+    float axisActWithOffset = axisActWithoutOffset + static_cast<float>(MIN_AXIS_VALUE);
     int16_t axisAct = static_cast<int16_t>(axisActWithOffset);
 
     return axisAct;
