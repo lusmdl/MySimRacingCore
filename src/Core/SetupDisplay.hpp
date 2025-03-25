@@ -19,8 +19,9 @@ class SetupDisplay {
         SetupDisplay(Joyst &joyst, Pedals &pedal, Encoder &encoder, EEPROMClass &eeprom);
         ~SetupDisplay();
         void begin();
-        bool runSetup();
+        uint8_t runSetup();
         void showSteering();
+        void dark();
 
     private:
         LiquidCrystal_I2C *lcd_;

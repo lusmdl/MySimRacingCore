@@ -32,7 +32,7 @@ ComUsb com(buttons, joy, pedal, encoder);
 
 // declaration of global variables
 
-bool runSetup              {1}; // store the state, if a setup is running
+uint8_t runSetup            {1}; // store the state, if a setup is running
 unsigned int numberOfCycle {0}; // count the cycles
 
 // forward declaration of public functions
@@ -145,13 +145,26 @@ void loopSlow() {
     buttons.listener();
 
     #ifndef LUSMDL_DEBUGMODE
-    if (runSetup) {
-        
+    switch (runSetup)
+    {
+    case 1: // setup run
+
         runSetup = display.runSetup();
-    }
-    else {
+        break;
+
+    case 0: // no backlight (just one time)
+
+        display.dark();
+        runSetup = 3;
+        break;
+    case 3: // show steering angle
         
         //display.showSteering(); // I just comment it out because i hade some issues with it at -90 degree. The programm crashed. No clue why -lusmdl
+        break;    
+    
+    default:
+        runSetup = 3;
+        break;
     }
     #endif
 }

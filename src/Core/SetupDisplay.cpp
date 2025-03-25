@@ -76,7 +76,7 @@ void SetupDisplay::begin() {
 }
 
 
-bool SetupDisplay::runSetup() {
+uint8_t SetupDisplay::runSetup() {
 
     switch (page_) {
 
@@ -140,10 +140,10 @@ bool SetupDisplay::runSetup() {
         default:
             
             printLine(0,TXT_RESET);
-            return false;
+            return 2;
             break;
     }
-    return true;
+    return 1;
 }
 
 void SetupDisplay::showSteering() {
@@ -484,6 +484,11 @@ void SetupDisplay::setupBrakeMin() {
         lcd_->print("set Brake Min");
         printLine(1, String(pedal_->brake_.getData().act));
     }
+}
+
+void SetupDisplay::dark() {
+
+    lcd_->noBacklight();
 }
 
 #endif
