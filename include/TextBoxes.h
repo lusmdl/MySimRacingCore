@@ -8,6 +8,8 @@
 #define TXT_DEBUG       "debug mode      "
 #define TXT_RESET       "hit reset button"
 #define TXT_CLEAR       "                "
+#define TXT_JOYSTICK    "release joystick"
+#define TXT_JOYSTICK2   "now             "
 
 
 #endif

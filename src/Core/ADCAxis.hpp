@@ -31,14 +31,12 @@ class ADCAxis {
     public:
         
         ADCAxis(uint8_t pin);
-        void begin();
         void updateRawData();
         int readADC();
         int setMin(float min);
         void setMin(float min, int raw);
         int setMax(float max);
         void setMax(float max, int raw);
-        pod_axis getDataJoystick();
         pod_axis getData();
         pod_axis getData(float min_tolerance, float max_tolerance);
 

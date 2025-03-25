@@ -12,7 +12,10 @@
  */
 Joyst::Joyst() :
     rotationX_(SHIFTER_X_PIN), // Assuming SHIFTER_X_PIN is defined in ProjectConfig.hpp
-    rotationY_(SHIFTER_Y_PIN)  // Assuming SHIFTER_Y_PIN is defined in ProjectConfig.hpp
+    rotationY_(SHIFTER_Y_PIN),  // Assuming SHIFTER_Y_PIN is defined in ProjectConfig.hpp
+    centerRx_(50.0),
+    centerRy_(50.0),
+    tolerance_(2)
 {}
 
 /**
@@ -65,4 +68,88 @@ uint8_t Joyst::readButton() {
         return 1;
     }
     #endif
+}
+
+void Joyst::setRxCenter(float center) {
+
+    centerRx_ = center;
+}
+
+void Joyst::setRyCenter(float center) {
+
+    centerRy_ = center;
+}
+
+int Joyst::getRxCenter() {
+
+    return centerRx_;
+}
+
+int Joyst::getRyCenter() {
+
+    return centerRy_;
+}
+
+/**
+ * @brief Adjusts the actual joystick value to the center if within a tolerance range.
+ * 
+ * This function retrieves the ADC axis data and checks if the actual value (`act`) 
+ * falls within a defined tolerance around 50%. If so, the value is adjusted to 50.0 
+ * to ensure a centered position. If the value is outside this range, it remains unchanged. 
+ * The minimum (`min`) and maximum (`max`) values are not modified.
+ * 
+ * @return pod_axis A structure containing the corrected or original ADC axis data.
+ */
+pod_axis Joyst::getDataRx() {
+
+    // Copy original data
+
+    pod_axis d = rotationX_.getData();    
+
+    d.act = checkTolerance(d.act, centerRx_, tolerance_, (d.max-d.max)*0.5);
+
+    return d; // Return modified or original value
+}
+
+/**
+ * @brief Adjusts the actual joystick value to the center if within a tolerance range.
+ * 
+ * This function retrieves the ADC axis data and checks if the actual value (`act`) 
+ * falls within a defined tolerance around 50%. If so, the value is adjusted to 50.0 
+ * to ensure a centered position. If the value is outside this range, it remains unchanged. 
+ * The minimum (`min`) and maximum (`max`) values are not modified.
+ * 
+ * @return pod_axis A structure containing the corrected or original ADC axis data.
+ */
+pod_axis Joyst::getDataRy() {
+
+    // Copy original data
+
+    pod_axis d = rotationY_.getData();    
+
+    d.act = checkTolerance(d.act, centerRy_, tolerance_, (d.max-d.max)*0.5);
+
+    return d; // Return modified or original value
+}
+
+/**
+ * 
+ * @brief Check a target value with area around (tolerance) and give back a smothed value or the actual value
+ * 
+ * 
+ * 
+ * 
+ */
+float Joyst::checkTolerance(float act, float target, float tolerance,  float smooth_value) {
+
+    // Adjust act value if within tolerance range
+
+    if (act > (target - tolerance) && act < (target + tolerance)) {
+
+        // Smooth value to center
+
+        return smooth_value;
+    }
+
+    return act;
 }

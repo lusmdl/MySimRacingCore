@@ -44,6 +44,8 @@ class SetupDisplay {
         static const int STORE_ADDR_THROTTLE_MIN    = 112;
         static const int STORE_ADDR_BRAKE_MAX       = 128;
         static const int STORE_ADDR_BRAKE_MIN       = 144;
+        static const int STORE_ADDR_RX_CENTER       = 160;
+        static const int STORE_ADDR_RY_CENTER       = 176;
 
         bool askForSetup();
         void clearLine(uint8_t line);
