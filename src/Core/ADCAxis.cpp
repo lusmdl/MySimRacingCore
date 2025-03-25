@@ -123,6 +123,30 @@ pod_axis ADCAxis::getData() {
     return data_;
 }
 
+
+pod_axis ADCAxis::getData(float min_tolerance, float max_tolerance) {
+
+    pod_axis d = getData();
+
+    if (d.act <= (d.min + min_tolerance)) {
+
+        // under min tolerance
+
+        d.act = d.min;
+    }
+
+    if (d.act >= (d.max - max_tolerance)) {
+
+        // over max tolerance
+
+        d.act = d.max;
+    }
+
+    return d;
+}
+
+
+
 /**
  * @brief Adjusts the actual joystick value to the center if within a tolerance range.
  * 

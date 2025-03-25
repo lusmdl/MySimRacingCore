@@ -113,8 +113,8 @@ void ComUsb::sendData() {
 
     // pedals
 
-    joy_.setAccelerator(calculateAxis(pedal_->throttle_.getData()));
-    joy_.setBrake(calculateAxis(pedal_->brake_.getData()));
+    joy_.setAccelerator(calculateAxis(pedal_->throttle_.getData(0.1 , 0.5)));
+    joy_.setBrake(calculateAxis(pedal_->brake_.getData(0.5 , 0.01)));
 
     // wheel buttons
 
