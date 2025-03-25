@@ -29,8 +29,6 @@ Encoder::Encoder(uint8_t pinA, uint8_t pinB) :
     data_.min = STEERING_MAX_DEG * (-1);
 }
 
-void Encoder::begin() {}
-
 int Encoder::getPosition() const {
     return position_;
 }
