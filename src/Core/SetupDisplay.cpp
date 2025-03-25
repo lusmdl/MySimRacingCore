@@ -32,8 +32,8 @@ void SetupDisplay::begin() {
     eeprom_->get(STORE_ADDR_RX_MIN, eepromInt);
     joyst_->rotationX_.setMin(MIN_AXIS, eepromInt);
 
-    eeprom_->get(STORE_ADDR_RX_CENTER, eepromInt);
-    joyst_->setRxCenter(eepromInt);
+    //eeprom_->get(STORE_ADDR_RX_CENTER, eepromInt);
+    //joyst_->setRxCenter(eepromInt);
     
     eeprom_->get(STORE_ADDR_RY_MAX, eepromInt);
     joyst_->rotationY_.setMax(MAX_AXIS, eepromInt);
@@ -41,8 +41,8 @@ void SetupDisplay::begin() {
     eeprom_->get(STORE_ADDR_RY_MIN, eepromInt);
     joyst_->rotationY_.setMin(MIN_AXIS, eepromInt);
 
-    eeprom_->get(STORE_ADDR_RY_CENTER, eepromInt);
-    joyst_->setRyCenter(eepromInt);
+    //eeprom_->get(STORE_ADDR_RY_CENTER, eepromInt);
+    //joyst_->setRyCenter(eepromInt);
 
     // restore Throttle-Axis
 

@@ -13,9 +13,9 @@
 Joyst::Joyst() :
     rotationX_(SHIFTER_X_PIN), // Assuming SHIFTER_X_PIN is defined in ProjectConfig.hpp
     rotationY_(SHIFTER_Y_PIN),  // Assuming SHIFTER_Y_PIN is defined in ProjectConfig.hpp
-    centerRx_(50.0),
-    centerRy_(50.0),
-    tolerance_(2)
+    centerRx_(50.00),
+    centerRy_(50.00),
+    tolerance_(2.00)
 {}
 
 /**

@@ -32,8 +32,8 @@ class SetupDisplay {
 
         uint8_t page_;
 
-        static const float MAX_AXIS                 = 100.00;
-        static const float MIN_AXIS                 = 00.00; 
+        static constexpr float MAX_AXIS             = 100.00;
+        static constexpr float MIN_AXIS             = 00.00; 
 
         static const int STORE_ADDR_RX_MAX          = 0;
         static const int STORE_ADDR_RX_MIN          = 16;

@@ -34,7 +34,7 @@ class Joyst {
 
         float centerRx_;
         float centerRy_;
-        unsigned short tolerance_;
+        float tolerance_;
         
         float checkTolerance(float act, float target, float tolerance, float smooth_value);
         uint8_t readButton();
