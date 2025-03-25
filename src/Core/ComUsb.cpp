@@ -107,8 +107,8 @@ void ComUsb::sendData() {
 
     // joystick
 
-    joy_.setRxAxis(calculateAxis(joyst_->rotationX_.getDataJoystick()));
-    joy_.setRyAxis(calculateAxis(joyst_->rotationY_.getDataJoystick()));
+    joy_.setRxAxis(calculateAxis(joyst_->rotationX_.getData()));
+    joy_.setRyAxis(calculateAxis(joyst_->rotationY_.getData()));
     joy_.setButton(0, (joyst_->getButtonStatus().pushed || btns_->getData(0).pushed));
 
     // pedals
