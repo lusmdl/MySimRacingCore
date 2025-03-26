@@ -24,11 +24,11 @@ ADCAxis::ADCAxis(uint8_t pin) :
            | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0); // Prescaler of 128
 }
 
-void ADCAxis::begin() {
+/*void ADCAxis::begin() {
 
 
 }
-
+*/
 void ADCAxis::updateRawData() {
 
     rawAct_ = readADC();
@@ -157,7 +157,7 @@ pod_axis ADCAxis::getData(float min_tolerance, float max_tolerance) {
  * 
  * @return pod_axis A structure containing the corrected or original ADC axis data.
  */
-pod_axis ADCAxis::getDataJoystick() {
+/*pod_axis ADCAxis::getDataJoystick() {
 
     float center = (data_.max - data_.min) * 0.5 ;   // Target center position
     float tolerance = center * 0.05; // Allowed tolerance around center
@@ -176,3 +176,4 @@ pod_axis ADCAxis::getDataJoystick() {
 
     return d; // Return modified or original value
 }
+*/

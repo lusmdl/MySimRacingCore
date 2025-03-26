@@ -60,16 +60,15 @@ void setup() {
     
     attachInterrupt(digitalPinToInterrupt(encoder.pinA_), handleInterrupt, CHANGE);
     attachInterrupt(digitalPinToInterrupt(encoder.pinB_), handleInterrupt, CHANGE);
-
-
+    
 
     display.begin();
     #endif
 
     buttons.begin();
 
-    joy.rotationX_.begin();
-    joy.rotationY_.begin();
+    //joy.rotationX_.begin();
+    //joy.rotationY_.begin();
     joy.beginButton();
 
     com.begin();

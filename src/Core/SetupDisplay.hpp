@@ -32,18 +32,20 @@ class SetupDisplay {
 
         uint8_t page_;
 
-        static const float MAX_AXIS                 = 100.00;
-        static const float MIN_AXIS                 = 00.00; 
+        static constexpr float MAX_AXIS                 = 100.00;
+        static constexpr float MIN_AXIS                 = 00.00; 
 
-        static const int STORE_ADDR_RX_MAX          = 0;
-        static const int STORE_ADDR_RX_MIN          = 16;
-        static const int STORE_ADDR_RY_MAX          = 32;
-        static const int STORE_ADDR_RY_MIN          = 48;
-        static const int STORE_ADDR_FACTOR          = 64;
-        static const int STORE_ADDR_THROTTLE_MAX    = 96;
-        static const int STORE_ADDR_THROTTLE_MIN    = 112;
-        static const int STORE_ADDR_BRAKE_MAX       = 128;
-        static const int STORE_ADDR_BRAKE_MIN       = 144;
+        static constexpr int STORE_ADDR_RX_MAX          = 0;
+        static constexpr int STORE_ADDR_RX_MIN          = 16;
+        static constexpr int STORE_ADDR_RY_MAX          = 32;
+        static constexpr int STORE_ADDR_RY_MIN          = 48;
+        static constexpr int STORE_ADDR_FACTOR          = 64;
+        static constexpr int STORE_ADDR_THROTTLE_MAX    = 96;
+        static constexpr int STORE_ADDR_THROTTLE_MIN    = 112;
+        static constexpr int STORE_ADDR_BRAKE_MAX       = 128;
+        static constexpr int STORE_ADDR_BRAKE_MIN       = 144;
+        static constexpr int STORE_ADDR_RX_CENTER       = 160;
+        static constexpr int STORE_ADDR_RY_CENTER       = 176;
 
         bool askForSetup();
         void clearLine(uint8_t line);
