@@ -137,4 +137,3 @@ pod_axis ADCAxis::getData(float min_tolerance, float max_tolerance) {
 
     return d;
 }
-
