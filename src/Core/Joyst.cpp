@@ -16,6 +16,7 @@ Joyst::Joyst() :
     centerRx_(00.00),
     centerRy_(00.00),
     TOLERANCE_(2.00)
+
 {}
 
 /**
@@ -71,7 +72,7 @@ uint8_t Joyst::readButton() {
 }
 
 void Joyst::setRxCenter(float center) {
- 
+
     centerRx_ = center;
 }
 
@@ -117,6 +118,7 @@ pod_axis Joyst::getDataRx() {
     pod_axis d = rotationX_.getData();    
 
     d.act = checkTolerance(d.act, centerRx_, TOLERANCE_, (d.max-d.max)*0.5);
+
 
     return d; // Return modified or original value
 }

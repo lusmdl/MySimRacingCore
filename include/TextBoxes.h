@@ -10,5 +10,4 @@
 #define TXT_CLEAR       "                "
 #define TXT_JOYSTICK    "release joystick"
 
-
 #endif

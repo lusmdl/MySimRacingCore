@@ -47,6 +47,7 @@ class SetupDisplay {
         static constexpr int STORE_ADDR_RX_CENTER       = 160;
         static constexpr int STORE_ADDR_RY_CENTER       = 176;
 
+
         bool askForSetup();
         void clearLine(uint8_t line);
         void printLine(uint8_t line, String txt);

@@ -20,6 +20,7 @@ class Joyst {
         void setRyCenter(float center);
         void setRxCenter(int center);
         void setRyCenter(int center);
+  
         int getRxCenter();
         int getRyCenter();
         pod_axis getDataRx();
@@ -37,6 +38,11 @@ class Joyst {
         float centerRy_;
         const float TOLERANCE_;
 
+        float centerRx_;
+        float centerRy_;
+        float tolerance_;
+        
+        float checkTolerance(float act, float target, float tolerance, float smooth_value);
         uint8_t readButton();
         float checkTolerance(float act, float target, float tolerance, float smooth_value);
 
