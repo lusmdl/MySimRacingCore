@@ -14,8 +14,8 @@ Joyst::Joyst() :
     rotationX_(SHIFTER_X_PIN), // Assuming SHIFTER_X_PIN is defined in ProjectConfig.hpp
     rotationY_(SHIFTER_Y_PIN),  // Assuming SHIFTER_Y_PIN is defined in ProjectConfig.hpp
     centerRx_(00.00),
-    centerRy_(00.00),
-    TOLERANCE_(2.00)
+    centerRy_(00.00)
+    //JOYST_TOLERANCE(2.00)
 
 {}
 
@@ -117,7 +117,7 @@ pod_axis Joyst::getDataRx() {
 
     pod_axis d = rotationX_.getData();    
 
-    d.act = checkTolerance(d.act, centerRx_, TOLERANCE_, (d.max-d.max)*0.5);
+    d.act = checkTolerance(d.act, centerRx_, JOYST_TOLERANCE, (d.max-d.max)*0.5);
 
 
     return d; // Return modified or original value
@@ -139,7 +139,7 @@ pod_axis Joyst::getDataRy() {
 
     pod_axis d = rotationY_.getData();    
 
-    d.act = checkTolerance(d.act, centerRy_, TOLERANCE_, (d.max-d.max)*0.5);
+    d.act = checkTolerance(d.act, centerRy_, JOYST_TOLERANCE, (d.max-d.max)*0.5);
 
     return d; // Return modified or original value
 }

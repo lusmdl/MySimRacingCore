@@ -58,20 +58,20 @@ ComUsb::~ComUsb() {}
  */
 void ComUsb::begin() {
     
-    //joy_.setYAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
-    joy_.setZAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
-    joy_.setRxAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
-    joy_.setRyAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
-    //joy_.setRzAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
-    //joy_.setRudderRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
-    //joy_.setThrottleRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
-    joy_.setAcceleratorRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
-    joy_.setBrakeRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    //joy_.setYAxisRange(AXIS_MIN_USB, AXIS_MAX_USB);
+    joy_.setZAxisRange(AXIS_MIN_USB, AXIS_MAX_USB);
+    joy_.setRxAxisRange(AXIS_MIN_USB, AXIS_MAX_USB);
+    joy_.setRyAxisRange(AXIS_MIN_USB, AXIS_MAX_USB);
+    //joy_.setRzAxisRange(AXIS_MIN_USB, AXIS_MAX_USB);
+    //joy_.setRudderRange(AXIS_MIN_USB, AXIS_MAX_USB);
+    //joy_.setThrottleRange(AXIS_MIN_USB, AXIS_MAX_USB);
+    joy_.setAcceleratorRange(AXIS_MIN_USB, AXIS_MAX_USB);
+    joy_.setBrakeRange(AXIS_MIN_USB, AXIS_MAX_USB);
     #ifdef FFB
-    joy_.setXAxisRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    joy_.setXAxisRange(AXIS_MIN_USB, AXIS_MAX_USB);
     #endif
     #ifndef FFB
-    joy_.setSteeringRange(MIN_AXIS_VALUE, MAX_AXIS_VALUE);
+    joy_.setSteeringRange(AXIS_MIN_USB, AXIS_MAX_USB);
     #endif
     
     //set Timer3
@@ -116,7 +116,7 @@ void ComUsb::sendData() {
     joy_.setAccelerator(calculateAxis(pedal_->throttle_.getData(0.1 , 0.5)));
     joy_.setBrake(calculateAxis(pedal_->brake_.getData(0.5 , 0.01)));
 
-    // wheel buttons
+    // wheel buttons (*Button 0 is handeld at section: joystick)
 
     for (uint8_t i = 1; i < BTN_NUMBER; i++) {
 
@@ -164,11 +164,10 @@ int16_t ComUsb::calculateAxis(pod_axis data) {
         data.act = data.min;
     }
 
-
     // Map the input range [0, 100] to the output range [-32768, 32767]
 
     float dataDelta = data.max - data.min;
-    float axisDelta = static_cast<float>(MAX_AXIS_VALUE) - static_cast<float>(MIN_AXIS_VALUE);
+    float axisDelta = static_cast<float>(AXIS_MAX_USB) - static_cast<float>(AXIS_MIN_USB);
 
     // Calculate the scale factor
     float scale = axisDelta / dataDelta;
@@ -176,7 +175,7 @@ int16_t ComUsb::calculateAxis(pod_axis data) {
     // Calculate the output value
     float dataActCal = (data.act - data.min);
     float axisActWithoutOffset = dataActCal * scale;
-    float axisActWithOffset = axisActWithoutOffset + static_cast<float>(MIN_AXIS_VALUE);
+    float axisActWithOffset = axisActWithoutOffset + static_cast<float>(AXIS_MIN_USB);
     int16_t axisAct = static_cast<int16_t>(axisActWithOffset);
 
     return axisAct;

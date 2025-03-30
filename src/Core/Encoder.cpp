@@ -5,17 +5,12 @@
 
 #include "Encoder.hpp"
 
-
-
 const int8_t Encoder::KNOBDIR[] = {
   0, 1, -1, 0,
   -1, 0, 0, 1,
   1, 0, 0, -1,
   0, -1, 1, 0
 };
-const float Encoder::STEERING_MAX_DEG     = 540.00;
-const float Encoder::STEERING_FULL_TURN   = 360.00;
-
 
 Encoder::Encoder(uint8_t pinA, uint8_t pinB) : 
     pinA_(pinA),
@@ -53,7 +48,7 @@ float Encoder::setFactor() {
     fullturn_ = position_;
 
     // calculate the factor
-    factor_ = (STEERING_FULL_TURN / fullturn_);
+    factor_ = (static_cast<float>(STEERING_FULL_TURN) / fullturn_);
 
     return factor_;
 }

@@ -27,20 +27,20 @@ class ComUsb {
         void begin();
         void sendData();
         void receiveData();
-
-    private:
-
+        
+        private:
+        
         Buttons *btns_;
         Joyst *joyst_;
         Pedals *pedal_;
         Encoder *encoder_;
         
         Joystick_ joy_;
-
-
-        static const int16_t MIN_AXIS_VALUE = -32768;
-        static const int16_t MAX_AXIS_VALUE = 32767;
-
+        
+        
+        //static const int16_t AXIS_MIN_USB = -32768;
+        //static const int16_t AXIS_MAX_USB = 32767;
+        
         int16_t calculateAxis(pod_axis data);
 };
 

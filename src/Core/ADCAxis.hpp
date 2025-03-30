@@ -32,6 +32,7 @@ class ADCAxis {
         
         ADCAxis(uint8_t pin);
 
+        void begin();
         void updateRawData();
         int readADC();
         int setMin(float min);

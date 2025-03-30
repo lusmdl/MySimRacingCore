@@ -34,8 +34,6 @@ class Encoder {
         volatile int8_t oldState_;
 
         static const int8_t KNOBDIR[];
-        static const float STEERING_MAX_DEG;
-        static const float STEERING_FULL_TURN;
 
 
     private:

@@ -15,40 +15,32 @@ class Joyst {
 
         ADCAxis rotationX_;
         ADCAxis rotationY_;
+        
         void beginButton();
         void setRxCenter(float center);
         void setRyCenter(float center);
         void setRxCenter(int center);
         void setRyCenter(int center);
-  
+        
         int getRxCenter();
         int getRyCenter();
         pod_axis getDataRx();
         pod_axis getDataRy();
         pod_button getButtonStatus();
-
-
-
-
-
-    private:
-
+        
+        
+        
+        
+        
+        private:
+        
         pod_button buttonSW_;
         float centerRx_;
         float centerRy_;
-        const float TOLERANCE_;
-
-        float centerRx_;
-        float centerRy_;
-        float tolerance_;
+        //const float JOYST_TOLERANCE;
         
         float checkTolerance(float act, float target, float tolerance, float smooth_value);
         uint8_t readButton();
-        float checkTolerance(float act, float target, float tolerance, float smooth_value);
-
-
-
-
-
+        
 };
 #endif

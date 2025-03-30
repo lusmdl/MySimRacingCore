@@ -20,15 +20,8 @@ Buttons::Buttons(TwoWire &wire) :
  * No dynamic memory allocation is required.
  */
 Buttons::~Buttons() {
-    delete wire_;
-}
 
-/**
- * @brief Initializes the keypad or hardware components.
- */
-void Buttons::begin() {
-    wire_->begin();
-    
+    //delete wire_;
 }
 
 /**
@@ -38,47 +31,57 @@ void Buttons::begin() {
  */
 void Buttons::listener() {
 
-    const uint8_t TWI_MSG_BYTES {2};
+    //constexpr uint8_t TWI_MSG_BYTES {2};
         
-    uint8_t byteLow; // Receive the first byte
-    uint8_t byteHigh; // Receive the second byte
+    uint8_t byte;
 
-    wire_->requestFrom(TWI_ADDR_MY_WHEEL_BTN, TWI_MSG_BYTES);    // request 2 bytes from peripheral device 
+    // Device 1
+
+    wire_->requestFrom(TWI_ADDR_MY_WHEEL_BTN, TWI_MSG_BYTES);
     
     if (wire_->available() == TWI_MSG_BYTES) {
 
-        // Check if the peripheral sent the expected number of bytes
-        
-        byteLow = wire_->read(); // Receive the first byte
-        byteHigh = wire_->read(); // Receive the second byte
-
-        // Map the received bytes to the button data structure
+        byte = wire_->read(); // Receive the first byte
 
         for (int i = 0; i < 8; ++i) {
-            data_[i].pushed = (byteLow & (1 << i)) ? 1 : 0; // Map each bit to a button state
+
+            // Map the received bytes to the button data structure
+
+            data_[i].pushed = (byte & (1 << i)) ? 1 : 0;
         }
+
+        byte = wire_->read(); // Receive the second byte
+
         for (int i = 0; i < 8; ++i) {
-            data_[8 + i].pushed = (byteHigh & (1 << i)) ? 1 : 0; // Map each bit to a button state
+
+            // Map the received bytes to the button data structure
+
+            data_[8 + i].pushed = (byte & (1 << i)) ? 1 : 0;
         }
     }
 
-    
-    wire_->requestFrom(TWI_ADDR_MY_BTN_BOX, TWI_MSG_BYTES);    // request 2 bytes from peripheral device 
+    // Device 2
+
+    wire_->requestFrom(TWI_ADDR_MY_BTN_BOX, TWI_MSG_BYTES); 
     
     if (wire_->available() == TWI_MSG_BYTES) {
 
-        // Check if the peripheral sent the expected number of bytes
+        byte = wire_->read(); // Receive the first byte
         
-        byteLow = wire_->read(); // Receive the first byte
-        byteHigh = wire_->read(); // Receive the second byte
-
-        // Map the received bytes to the button data structure
-
         for (int i = 0; i < 8; ++i) {
-            data_[16 + i].pushed = (byteLow & (1 << i)) ? 1 : 0; // Map each bit to a button state
+            
+            // Map the received bytes to the button data structure
+
+            data_[16 + i].pushed = (byte & (1 << i)) ? 1 : 0;
         }
+
+        byte = wire_->read(); // Receive the second byte
+
         for (int i = 0; i < 8; ++i) {
-            data_[24 + i].pushed = (byteHigh & (1 << i)) ? 1 : 0; // Map each bit to a button state
+            
+            // Map the received bytes to the button data structure
+
+            data_[24 + i].pushed = (byte & (1 << i)) ? 1 : 0; // Map each bit to a button state
         }
     }
         

@@ -8,15 +8,20 @@
  */
 ADCAxis::ADCAxis(uint8_t pin) : 
     pin_(pin),
-    rawMin_(0), 
-    rawMax_(1023),
+    rawMin_(AXIS_MIN_ADC), 
+    rawMax_(AXIS_MAX_ADC),
     rawAct_(0)
 {
     // Constructor initializes pin, act, min, and max values
 
     data_.act = 0;
-    data_.min = 0;
-    data_.max = 100;
+    data_.min = AXIS_MIN_PHYSIC;
+    data_.max = AXIS_MAX_PHYSIC;
+
+    
+}
+
+void ADCAxis::begin() {
 
     // Configure the ADC
     ADMUX = (1 << REFS0); // AVcc with external capacitor at AREF pin
@@ -37,6 +42,7 @@ void ADCAxis::updateRawData() {
 }
 
 int ADCAxis::readADC() {
+
     // Select the analog pin (0-7)
     ADMUX = (ADMUX & 0xF0) | (pin_ & 0x0F);
 
@@ -78,6 +84,7 @@ void ADCAxis::setMin(float min, int raw) {
  * @param max The maximum value to be set
  */
 int ADCAxis::setMax(float max) {
+    
     rawMax_ = rawAct_;
     data_.max = max;
 

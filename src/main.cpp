@@ -3,10 +3,19 @@
  * @brief Main file for MySimRacingCore project.
  */
 
+
 // libs
 
 #include <Arduino.h>
+#include <EEPROM.h>
+
+
+// include macros
+
+#include "ProjectConfig.hpp"
 #include "DigitalWriteFast.h"
+#include "EepromAdresses.h"
+
 
 // source code modules
 
@@ -15,9 +24,8 @@
 #include "Core/Encoder.hpp"
 #include "Core/Joyst.hpp"
 #include "Core/Pedals.hpp"
-#ifndef LUSMDL_DEBUGMODE
 #include "Core/SetupDisplay.hpp"
-#endif
+
 
 // objects
 
@@ -25,15 +33,15 @@ Buttons buttons(Wire);
 Encoder encoder(ENCODER_A_PIN, ENCODER_B_PIN);
 Joyst joy;
 Pedals pedal;
-#ifndef LUSMDL_DEBUGMODE
-SetupDisplay display(joy, pedal, encoder, EEPROM);
-#endif
+SetupDisplay display(joy, pedal, encoder, EEPROM, Wire);
 ComUsb com(buttons, joy, pedal, encoder);
+
 
 // declaration of global variables
 
 uint8_t runSetup            {1}; // store the state, if a setup is running
-unsigned int numberOfCycle {0}; // count the cycles
+unsigned int numberOfCycle  {0}; // count the cycles
+
 
 // forward declaration of public functions
 
@@ -50,28 +58,28 @@ void handleInterrupt();
  */
 void setup() {
     
-    EEPROM.begin();
-
+    
     #ifdef LUSMDL_DEBUGMODE
     Serial.begin(9600);
     #endif
-
-    #ifndef LUSMDL_DEBUGMODE
     
+    #ifndef LUSMDL_DEBUGMODE 
     attachInterrupt(digitalPinToInterrupt(encoder.pinA_), handleInterrupt, CHANGE);
     attachInterrupt(digitalPinToInterrupt(encoder.pinB_), handleInterrupt, CHANGE);
-
-    display.begin();
     #endif
-
-    delay(5000);
-
-    buttons.begin();
-
+    
+    EEPROM.begin();
+    Wire.begin();
+    display.begin();
     joy.beginButton();
-
+    joy.rotationX_.begin();
+    joy.rotationY_.begin();
+    pedal.brake_.begin();
+    pedal.throttle_.begin();
     com.begin();
+    
 }
+
 
 /**
  * @brief Arduino loop function.
@@ -83,10 +91,6 @@ void loop() {
 
     numberOfCycle++;
 
-    static const unsigned int TIME_FAST     = 2;
-    static const unsigned int TIME_NORMAL   = 20;
-    static const unsigned int TIME_SLOW     = 200;
-    
     if((numberOfCycle % TIME_FAST) == 0) {
 
         // here are task which has priority
@@ -130,10 +134,6 @@ void loopNormal() {
     
     pedal.throttle_.updateRawData();
     pedal.brake_.updateRawData();
-    
-    
-    
-
 }
 
 void loopSlow() {
@@ -143,29 +143,10 @@ void loopSlow() {
     buttons.listener();
 
     #ifndef LUSMDL_DEBUGMODE
-    switch (runSetup)
-    {
-    case 1: // setup run
-
-        runSetup = display.runSetup();
-        break;
-
-    case 0: // no backlight (just one time)
-
-        display.dark();
-        runSetup = 3;
-        break;
-    case 3: // show steering angle
-        
-        //display.showSteering(); // I just comment it out because i hade some issues with it at -90 degree. The programm crashed. No clue why -lusmdl
-        break;    
-    
-    default:
-        runSetup = 3;
-        break;
-    }
+    display.runSetup();
     #endif
 }
+
 
 //ISR
 
@@ -175,6 +156,7 @@ ISR(TIMER3_COMPA_vect){
     
     com.receiveData();
 }
+
 
 void handleInterrupt(void) {
     
