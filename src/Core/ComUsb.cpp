@@ -19,7 +19,7 @@ ComUsb::ComUsb(Buttons &btns, Joyst &joyst, Pedals &pedal, Encoder &encoder) :
     encoder_(&encoder),
     joy_(
         JOYSTICK_DEFAULT_REPORT_ID, // REPORT_ID        Hid report id
-        JOYSTICK_TYPE_MULTI_AXIS,   // JOYSTICK_TYPE    Type of device: JOYSTICK, GAMEPAD, MULTI_AXIS
+        JOYSTICK_TYPE_JOYSTICK,//JOYSTICK_TYPE_MULTI_AXIS,   // JOYSTICK_TYPE    Type of device: JOYSTICK, GAMEPAD, MULTI_AXIS
         BTN_NUMBER,                 // button count     [0-32]
         0,                          // Hat Switch count [0,1,2]
         #ifdef FFB
@@ -108,13 +108,13 @@ void ComUsb::sendData() {
     // joystick
 
     joy_.setRxAxis(calculateAxis(joyst_->getDataRx()));
-    joy_.setRyAxis(calculateAxis(joyst_->getDataRy()));
+    joy_.setRyAxis(0);//joyst_->getDataRy()));
     joy_.setButton(0, (joyst_->getButtonStatus().pushed || btns_->getData(0).pushed));
 
     // pedals
 
-    joy_.setAccelerator(calculateAxis(pedal_->throttle_.getData(0.1 , 0.5)));
-    joy_.setBrake(calculateAxis(pedal_->brake_.getData(0.5 , 0.01)));
+    joy_.setAccelerator(calculateAxis(pedal_->throttle_.getData()));
+    joy_.setBrake(calculateAxis(pedal_->brake_.getData()));
 
     // wheel buttons (*Button 0 is handeld at section: joystick)
 
