@@ -214,25 +214,25 @@ void SetupDisplay::runSetup() {
 
             case 7 : // Throttle MAX
                 
-            eeprom_->put(STORE_ADDR_THROTTLE_MAX, pedal_->throttle_.setMax(AXIS_MAX_PHYSIC));
+            eeprom_->put(STORE_ADDR_THROTTLE_MAX, pedal_->throttle_.setMaxWithTolerance(AXIS_MAX_PHYSIC, THROTTLE_MAX_ADC_TOLERANCE));
             break;
 
 
             case 8 : // Throttle MIN
             
-            eeprom_->put(STORE_ADDR_THROTTLE_MIN, pedal_->throttle_.setMin(AXIS_MIN_PHYSIC));
+            eeprom_->put(STORE_ADDR_THROTTLE_MIN, pedal_->throttle_.setMinWithTolerance(AXIS_MIN_PHYSIC, THROTTLE_MIN_ADC_TOLERANCE));
             break;
 
 
             case 9 : // Brake MAX
             
-            eeprom_->put(STORE_ADDR_BRAKE_MAX, pedal_->brake_.setMax(AXIS_MAX_PHYSIC));
+            eeprom_->put(STORE_ADDR_BRAKE_MAX, pedal_->brake_.setMaxWithTolerance(AXIS_MAX_PHYSIC, BRAKE_MAX_ADC_TOLERANCE));
             break;
 
 
             case 10 : // Brake MIN
             
-            eeprom_->put(STORE_ADDR_BRAKE_MIN, pedal_->brake_.setMin(AXIS_MIN_PHYSIC));
+            eeprom_->put(STORE_ADDR_BRAKE_MIN, pedal_->brake_.setMinWithTolerance(AXIS_MIN_PHYSIC, BRAKE_MIN_ADC_TOLERANCE));
             break;
 
 

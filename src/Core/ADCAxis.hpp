@@ -37,8 +37,10 @@ class ADCAxis {
         int readADC();
         int setMin(float min);
         void setMin(float min, int raw);
+        int setMinWithTolerance(float min, int tolerance);
         int setMax(float max);
         void setMax(float max, int raw);
+        int setMaxWithTolerance(float max, int tolerance);
 
         pod_axis getData();
         pod_axis getData(float min_tolerance, float max_tolerance);

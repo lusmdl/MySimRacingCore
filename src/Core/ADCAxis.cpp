@@ -78,6 +78,14 @@ void ADCAxis::setMin(float min, int raw) {
     data_.min = min;
 }
 
+int ADCAxis::setMinWithTolerance(float min, int tolerance) {
+
+    rawMin_ = rawAct_ + tolerance;
+    data_.min = min;
+
+    return rawMin_;
+}
+
 /**
  * @brief Sets the maximum value for the axis based on current raw value
  * 
@@ -95,6 +103,14 @@ void ADCAxis::setMax(float min, int raw) {
 
     rawMax_ = raw;
     data_.max = min;
+}
+
+int ADCAxis::setMaxWithTolerance(float max, int tolerance) {
+    
+    rawMax_ = rawAct_ - tolerance;
+    data_.max = max;
+
+    return rawMax_;
 }
 
 /**

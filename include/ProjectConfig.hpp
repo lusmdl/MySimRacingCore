@@ -39,21 +39,28 @@
 
 // Pedals
 
-#define THROTTLE_PIN            PINF7 //A0
-#define BRAKE_PIN               PINF6 //A1
-#define CLUTCH_PIN              PINF5 //A2
+#define THROTTLE_PIN                PINF7 //A0
+#define THROTTLE_MIN_ADC_TOLERANCE  2
+#define THROTTLE_MAX_ADC_TOLERANCE  4
+
+#define BRAKE_PIN                   PINF6 //A1
+#define BRAKE_MIN_ADC_TOLERANCE     4
+#define BRAKE_MAX_ADC_TOLERANCE     2
+
+#define CLUTCH_PIN                  PINF5 //A2
+
 
 // Handbrake
 
-#define HANDBRAKE_PIN           PINF4 //A3 
+#define HANDBRAKE_PIN               PINF4 //A3 
 
 
 // Joystick
 
-#define SHIFTER_X_PIN           PINF1 //A4 
-#define SHIFTER_Y_PIN           PINF0 //A5
-#define JOYSTICK_BTN_PIN        PINB7
-#define JOYST_TOLERANCE         2
+#define SHIFTER_X_PIN               PINF1 //A4 
+#define SHIFTER_Y_PIN               PINF0 //A5
+#define JOYSTICK_BTN_PIN            PINB7
+#define JOYST_TOLERANCE             2
 
 
 // Pin definitions for Button Matrix
@@ -79,7 +86,7 @@
 #define STEERING_FULL_TURN      360
 
 
-// USB Communication
+// Axis
 
 #define AXIS_MIN_USB            -32768
 #define AXIS_MAX_USB            32767
