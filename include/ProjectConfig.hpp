@@ -18,7 +18,7 @@
 
 // MAIN.CPP Timing
 
-#define  TIME_FAST              4
+#define  TIME_FAST              2
 #define  TIME_NORMAL            8
 #define  TIME_SLOW              128
 
@@ -40,12 +40,12 @@
 // Pedals
 
 #define THROTTLE_PIN                PINF7 //A0
-#define THROTTLE_MIN_ADC_TOLERANCE  2
-#define THROTTLE_MAX_ADC_TOLERANCE  4
+#define THROTTLE_MIN_ADC_TOLERANCE  4
+#define THROTTLE_MAX_ADC_TOLERANCE  8
 
 #define BRAKE_PIN                   PINF6 //A1
-#define BRAKE_MIN_ADC_TOLERANCE     4
-#define BRAKE_MAX_ADC_TOLERANCE     2
+#define BRAKE_MIN_ADC_TOLERANCE     8
+#define BRAKE_MAX_ADC_TOLERANCE     4
 
 #define CLUTCH_PIN                  PINF5 //A2
 

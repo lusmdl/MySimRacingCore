@@ -119,6 +119,11 @@ void loop() {
 }
 
 void loopFast() {
+    
+    // read important analog Axis
+
+    pedal.throttle_.updateRawData();
+    pedal.brake_.updateRawData();
 
     // send USB Game data
 
@@ -131,9 +136,6 @@ void loopNormal() {
     
     joy.rotationX_.updateRawData();
     joy.rotationY_.updateRawData();
-    
-    pedal.throttle_.updateRawData();
-    pedal.brake_.updateRawData();
 }
 
 void loopSlow() {
