@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Sim Racing Core<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sim Racing Core<span id="projectnumber">&#160;1.1.0</span>
    </div>
    <div id="projectbrief">designed to manage steering, pedals, and other accessories, providing a seamless and immersive racing experience</div>
   </td>
@@ -124,34 +124,39 @@ $(function(){initNavTree('_a_d_c_axis_8hpp_source.html',''); initResizable(); })
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_class" href="class_a_d_c_axis.html">ADCAxis</a>(uint8_t pin);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">void</span> begin();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> updateRawData();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">int</span> readADC();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_a_d_c_axis.html#a7918ae458f6d2af10fb59e8a79007dbf">setMin</a>(<span class="keywordtype">float</span> min);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_c_axis.html#a7918ae458f6d2af10fb59e8a79007dbf">setMin</a>(<span class="keywordtype">float</span> min, <span class="keywordtype">int</span> raw);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_a_d_c_axis.html#a1ab493bc5f597e82939a7393abd8e341">setMax</a>(<span class="keywordtype">float</span> max);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_c_axis.html#a1ab493bc5f597e82939a7393abd8e341">setMax</a>(<span class="keywordtype">float</span> max, <span class="keywordtype">int</span> raw);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_struct" href="structpod__axis.html">pod_axis</a> <a class="code hl_function" href="class_a_d_c_axis.html#a94c874546819e7f5c6d3dbfdd7080f82">getData</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        uint8_t pin_;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">int</span> rawMin_;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">int</span> rawMax_;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">int</span> rawAct_;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_struct" href="structpod__axis.html">pod_axis</a> data_;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> begin();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> updateRawData();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">int</span> readADC();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_a_d_c_axis.html#a7918ae458f6d2af10fb59e8a79007dbf">setMin</a>(<span class="keywordtype">float</span> min);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_c_axis.html#a7918ae458f6d2af10fb59e8a79007dbf">setMin</a>(<span class="keywordtype">float</span> min, <span class="keywordtype">int</span> raw);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">int</span> setMinWithTolerance(<span class="keywordtype">float</span> min, <span class="keywordtype">int</span> tolerance);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_a_d_c_axis.html#a1ab493bc5f597e82939a7393abd8e341">setMax</a>(<span class="keywordtype">float</span> max);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_c_axis.html#a1ab493bc5f597e82939a7393abd8e341">setMax</a>(<span class="keywordtype">float</span> max, <span class="keywordtype">int</span> raw);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">int</span> setMaxWithTolerance(<span class="keywordtype">float</span> max, <span class="keywordtype">int</span> tolerance);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_struct" href="structpod__axis.html">pod_axis</a> <a class="code hl_function" href="class_a_d_c_axis.html#a94c874546819e7f5c6d3dbfdd7080f82">getData</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_struct" href="structpod__axis.html">pod_axis</a> <a class="code hl_function" href="class_a_d_c_axis.html#a94c874546819e7f5c6d3dbfdd7080f82">getData</a>(<span class="keywordtype">float</span> min_tolerance, <span class="keywordtype">float</span> max_tolerance);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        uint8_t pin_;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">int</span> rawMin_;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">int</span> rawMax_;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">int</span> rawAct_;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_struct" href="structpod__axis.html">pod_axis</a> data_;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif </span><span class="comment">// ADC_AXIS_HPP</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif </span><span class="comment">// ADC_AXIS_HPP</span></div>
 <div class="ttc" id="a_project_config_8hpp_html"><div class="ttname"><a href="_project_config_8hpp.html">ProjectConfig.hpp</a></div><div class="ttdoc">Definition of Project Pins and other important constatnt Values.</div></div>
 <div class="ttc" id="aclass_a_d_c_axis_html"><div class="ttname"><a href="class_a_d_c_axis.html">ADCAxis</a></div><div class="ttdoc">Class for managing an analog axis with ADC.</div><div class="ttdef"><b>Definition</b> ADCAxis.hpp:29</div></div>
-<div class="ttc" id="aclass_a_d_c_axis_html_a1ab493bc5f597e82939a7393abd8e341"><div class="ttname"><a href="class_a_d_c_axis.html#a1ab493bc5f597e82939a7393abd8e341">ADCAxis::setMax</a></div><div class="ttdeci">int setMax(float max)</div><div class="ttdoc">Sets the maximum value for the axis based on current raw value.</div><div class="ttdef"><b>Definition</b> ADCAxis.cpp:85</div></div>
-<div class="ttc" id="aclass_a_d_c_axis_html_a7918ae458f6d2af10fb59e8a79007dbf"><div class="ttname"><a href="class_a_d_c_axis.html#a7918ae458f6d2af10fb59e8a79007dbf">ADCAxis::setMin</a></div><div class="ttdeci">int setMin(float min)</div><div class="ttdoc">Sets the minimum value for the axis based on current raw value.</div><div class="ttdef"><b>Definition</b> ADCAxis.cpp:66</div></div>
-<div class="ttc" id="aclass_a_d_c_axis_html_a94c874546819e7f5c6d3dbfdd7080f82"><div class="ttname"><a href="class_a_d_c_axis.html#a94c874546819e7f5c6d3dbfdd7080f82">ADCAxis::getData</a></div><div class="ttdeci">pod_axis getData()</div><div class="ttdoc">Gets the current data of the axis, including the scaled actual value.</div><div class="ttdef"><b>Definition</b> ADCAxis.cpp:105</div></div>
+<div class="ttc" id="aclass_a_d_c_axis_html_a1ab493bc5f597e82939a7393abd8e341"><div class="ttname"><a href="class_a_d_c_axis.html#a1ab493bc5f597e82939a7393abd8e341">ADCAxis::setMax</a></div><div class="ttdeci">int setMax(float max)</div><div class="ttdoc">Sets the maximum value for the axis based on current raw value.</div><div class="ttdef"><b>Definition</b> ADCAxis.cpp:94</div></div>
+<div class="ttc" id="aclass_a_d_c_axis_html_a7918ae458f6d2af10fb59e8a79007dbf"><div class="ttname"><a href="class_a_d_c_axis.html#a7918ae458f6d2af10fb59e8a79007dbf">ADCAxis::setMin</a></div><div class="ttdeci">int setMin(float min)</div><div class="ttdoc">Sets the minimum value for the axis based on current raw value.</div><div class="ttdef"><b>Definition</b> ADCAxis.cpp:67</div></div>
+<div class="ttc" id="aclass_a_d_c_axis_html_a94c874546819e7f5c6d3dbfdd7080f82"><div class="ttname"><a href="class_a_d_c_axis.html#a94c874546819e7f5c6d3dbfdd7080f82">ADCAxis::getData</a></div><div class="ttdeci">pod_axis getData()</div><div class="ttdoc">Gets the current data of the axis, including the scaled actual value.</div><div class="ttdef"><b>Definition</b> ADCAxis.cpp:121</div></div>
 <div class="ttc" id="astructpod__axis_html"><div class="ttname"><a href="structpod__axis.html">pod_axis</a></div><div class="ttdoc">every axis has the same behavior. this data structur should provide a standard</div><div class="ttdef"><b>Definition</b> Axis.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

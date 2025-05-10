@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Sim Racing Core<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sim Racing Core<span id="projectnumber">&#160;1.1.0</span>
    </div>
    <div id="projectbrief">designed to manage steering, pedals, and other accessories, providing a seamless and immersive racing experience</div>
   </td>
@@ -126,20 +126,20 @@ $(function(){initNavTree('_com_usb_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_com_usb.html#ac3270f81642bcc8f87e00140598dc629">begin</a>();</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_com_usb.html#acd9731cd298973419a6c86cb38663f6d">sendData</a>();</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">void</span> receiveData();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_class" href="class_buttons.html">Buttons</a> *btns_;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_class" href="class_joyst.html">Joyst</a> *joyst_;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_class" href="class_pedals.html">Pedals</a> *pedal_;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_class" href="class_encoder.html">Encoder</a> *encoder_;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        Joystick_ joy_;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">static</span> <span class="keyword">const</span> int16_t MIN_AXIS_VALUE = -32768;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">static</span> <span class="keyword">const</span> int16_t MAX_AXIS_VALUE = 32767;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="comment">//static const int16_t AXIS_MIN_USB = -32768;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="comment">//static const int16_t AXIS_MAX_USB = 32767;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        int16_t calculateAxis(<a class="code hl_struct" href="structpod__axis.html">pod_axis</a> data);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
 </div>
@@ -148,11 +148,11 @@ $(function(){initNavTree('_com_usb_8hpp_source.html',''); initResizable(); });
 <div class="ttc" id="a_buttons_8hpp_html"><div class="ttname"><a href="_buttons_8hpp.html">Buttons.hpp</a></div><div class="ttdoc">Definition of the Buttons class.</div></div>
 <div class="ttc" id="a_encoder_8hpp_html"><div class="ttname"><a href="_encoder_8hpp.html">Encoder.hpp</a></div><div class="ttdoc">Implementations of the Encoder class.</div></div>
 <div class="ttc" id="a_project_config_8hpp_html"><div class="ttname"><a href="_project_config_8hpp.html">ProjectConfig.hpp</a></div><div class="ttdoc">Definition of Project Pins and other important constatnt Values.</div></div>
-<div class="ttc" id="aclass_buttons_html"><div class="ttname"><a href="class_buttons.html">Buttons</a></div><div class="ttdef"><b>Definition</b> Buttons.hpp:18</div></div>
+<div class="ttc" id="aclass_buttons_html"><div class="ttname"><a href="class_buttons.html">Buttons</a></div><div class="ttdef"><b>Definition</b> Buttons.hpp:13</div></div>
 <div class="ttc" id="aclass_com_usb_html"><div class="ttname"><a href="class_com_usb.html">ComUsb</a></div><div class="ttdef"><b>Definition</b> ComUsb.hpp:21</div></div>
 <div class="ttc" id="aclass_com_usb_html_a69f8d9bbafb68d3119fab44e9617dfae"><div class="ttname"><a href="class_com_usb.html#a69f8d9bbafb68d3119fab44e9617dfae">ComUsb::ComUsb</a></div><div class="ttdeci">ComUsb(Buttons &amp;btns, Joyst &amp;joyst, Pedals &amp;pedal, Encoder &amp;encoder)</div><div class="ttdoc">Constructor for ComUsb class.</div><div class="ttdef"><b>Definition</b> ComUsb.cpp:15</div></div>
 <div class="ttc" id="aclass_com_usb_html_ac3270f81642bcc8f87e00140598dc629"><div class="ttname"><a href="class_com_usb.html#ac3270f81642bcc8f87e00140598dc629">ComUsb::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Initializes the USB communication.</div><div class="ttdef"><b>Definition</b> ComUsb.cpp:59</div></div>
-<div class="ttc" id="aclass_com_usb_html_acd9731cd298973419a6c86cb38663f6d"><div class="ttname"><a href="class_com_usb.html#acd9731cd298973419a6c86cb38663f6d">ComUsb::sendData</a></div><div class="ttdeci">void sendData()</div><div class="ttdoc">Sends data via USB.</div><div class="ttdef"><b>Definition</b> ComUsb.cpp:86</div></div>
+<div class="ttc" id="aclass_com_usb_html_acd9731cd298973419a6c86cb38663f6d"><div class="ttname"><a href="class_com_usb.html#acd9731cd298973419a6c86cb38663f6d">ComUsb::sendData</a></div><div class="ttdeci">void sendData()</div><div class="ttdoc">Sends data via USB.</div><div class="ttdef"><b>Definition</b> ComUsb.cpp:99</div></div>
 <div class="ttc" id="aclass_com_usb_html_aef60c0b661b1b2e5303b78bd21053ab6"><div class="ttname"><a href="class_com_usb.html#aef60c0b661b1b2e5303b78bd21053ab6">ComUsb::~ComUsb</a></div><div class="ttdeci">~ComUsb()</div><div class="ttdoc">Destructor for ComUsb class.</div><div class="ttdef"><b>Definition</b> ComUsb.cpp:52</div></div>
 <div class="ttc" id="aclass_encoder_html"><div class="ttname"><a href="class_encoder.html">Encoder</a></div><div class="ttdef"><b>Definition</b> Encoder.hpp:20</div></div>
 <div class="ttc" id="aclass_joyst_html"><div class="ttname"><a href="class_joyst.html">Joyst</a></div><div class="ttdef"><b>Definition</b> Joyst.hpp:9</div></div>

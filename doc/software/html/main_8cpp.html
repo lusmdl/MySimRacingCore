@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Sim Racing Core<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sim Racing Core<span id="projectnumber">&#160;1.1.0</span>
    </div>
    <div id="projectbrief">designed to manage steering, pedals, and other accessories, providing a seamless and immersive racing experience</div>
   </td>
@@ -102,7 +102,10 @@ $(function(){initNavTree('main_8cpp.html',''); initResizable(); });
 <p>Main file for MySimRacingCore project.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;EEPROM.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_project_config_8hpp_source.html">ProjectConfig.hpp</a>&quot;</code><br />
 <code>#include &quot;DigitalWriteFast.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_eeprom_adresses_8h_source.html">EepromAdresses.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_com_usb_8hpp_source.html">Core/ComUsb.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_buttons_8hpp_source.html">Core/Buttons.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_encoder_8hpp_source.html">Core/Encoder.hpp</a>&quot;</code><br />
@@ -130,6 +133,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>handleInterrupt</b> (
 <tr class="memitem:afe461d27b9c48d5921c00d521181f12f" id="r_afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
 <tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arduino loop function.  <br /></td></tr>
 <tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86953738188622410b88938da2bf8a63" id="r_a86953738188622410b88938da2bf8a63"><td class="memItemLeft" align="right" valign="top"><a id="a86953738188622410b88938da2bf8a63" name="a86953738188622410b88938da2bf8a63"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ISR</b> (TIMER3_COMPA_vect)</td></tr>
+<tr class="separator:a86953738188622410b88938da2bf8a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -145,15 +151,15 @@ Variables</h2></td></tr>
 <tr class="memitem:a6de93e0f34c0e32d83fa32ada390971f" id="r_a6de93e0f34c0e32d83fa32ada390971f"><td class="memItemLeft" align="right" valign="top"><a id="a6de93e0f34c0e32d83fa32ada390971f" name="a6de93e0f34c0e32d83fa32ada390971f"></a>
 <a class="el" href="class_pedals.html">Pedals</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pedal</b></td></tr>
 <tr class="separator:a6de93e0f34c0e32d83fa32ada390971f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62805ed48aeb3abc1af243c5f782fcef" id="r_a62805ed48aeb3abc1af243c5f782fcef"><td class="memItemLeft" align="right" valign="top"><a id="a62805ed48aeb3abc1af243c5f782fcef" name="a62805ed48aeb3abc1af243c5f782fcef"></a>
-<a class="el" href="class_setup_display.html">SetupDisplay</a>&#160;</td><td class="memItemRight" valign="bottom"><b>display</b> (joy, pedal, encoder, EEPROM)</td></tr>
-<tr class="separator:a62805ed48aeb3abc1af243c5f782fcef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4cd84980f77b5e630e934278761dd2" id="r_a9d4cd84980f77b5e630e934278761dd2"><td class="memItemLeft" align="right" valign="top"><a id="a9d4cd84980f77b5e630e934278761dd2" name="a9d4cd84980f77b5e630e934278761dd2"></a>
+<a class="el" href="class_setup_display.html">SetupDisplay</a>&#160;</td><td class="memItemRight" valign="bottom"><b>display</b> (joy, pedal, encoder, EEPROM, Wire)</td></tr>
+<tr class="separator:a9d4cd84980f77b5e630e934278761dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6fd5e3e2abf453c6506c3ab4876a564" id="r_af6fd5e3e2abf453c6506c3ab4876a564"><td class="memItemLeft" align="right" valign="top"><a id="af6fd5e3e2abf453c6506c3ab4876a564" name="af6fd5e3e2abf453c6506c3ab4876a564"></a>
 <a class="el" href="class_com_usb.html">ComUsb</a>&#160;</td><td class="memItemRight" valign="bottom"><b>com</b> (buttons, joy, pedal, encoder)</td></tr>
 <tr class="separator:af6fd5e3e2abf453c6506c3ab4876a564"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7905552b53e9e29fa0620df2c9e7ecb4" id="r_a7905552b53e9e29fa0620df2c9e7ecb4"><td class="memItemLeft" align="right" valign="top"><a id="a7905552b53e9e29fa0620df2c9e7ecb4" name="a7905552b53e9e29fa0620df2c9e7ecb4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>runSetup</b> {1}</td></tr>
-<tr class="separator:a7905552b53e9e29fa0620df2c9e7ecb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eb0bcbec25efe2e6e317eac98558880" id="r_a8eb0bcbec25efe2e6e317eac98558880"><td class="memItemLeft" align="right" valign="top"><a id="a8eb0bcbec25efe2e6e317eac98558880" name="a8eb0bcbec25efe2e6e317eac98558880"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>runSetup</b> {1}</td></tr>
+<tr class="separator:a8eb0bcbec25efe2e6e317eac98558880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53084b828063011940d36be4c968eb26" id="r_a53084b828063011940d36be4c968eb26"><td class="memItemLeft" align="right" valign="top"><a id="a53084b828063011940d36be4c968eb26" name="a53084b828063011940d36be4c968eb26"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfCycle</b> {0}</td></tr>
 <tr class="separator:a53084b828063011940d36be4c968eb26"><td class="memSeparator" colspan="2">&#160;</td></tr>

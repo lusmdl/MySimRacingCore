@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_7ebuttons_0',['~Buttons',['../class_buttons.html#af5aadc00817a962a1fbbe399d45543c0',1,'Buttons']]],
-  ['_7ecomusb_1',['~ComUsb',['../class_com_usb.html#aef60c0b661b1b2e5303b78bd21053ab6',1,'ComUsb']]],
-  ['_7ejoyst_2',['~Joyst',['../class_joyst.html#adfa62d53e66e39858e2f77d230e8ee26',1,'Joyst']]]
+  ['y_20axis_20are_20bound_20as_20the_20force_20feedback_20axis_20by_20default_20the_20gains_20of_20various_20forces_20effect_20are_20set_20through_20the_20struct_20and_20the_20interface_20as_20following_3a_0',['2. After the object is created, the x-axis and y-axis are bound as the force feedback axis by default.The gains of various forces effect are set through the struct and the interface as following:',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md52',1,'']]]
 ];

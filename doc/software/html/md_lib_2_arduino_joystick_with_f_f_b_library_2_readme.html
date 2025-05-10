@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Sim Racing Core<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sim Racing Core<span id="projectnumber">&#160;1.1.0</span>
    </div>
    <div id="projectbrief">designed to manage steering, pedals, and other accessories, providing a seamless and immersive racing experience</div>
   </td>
@@ -95,22 +95,22 @@ $(function(){initNavTree('md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.
   <div class="headertitle"><div class="title">Arduino Joystick With Force Feedback Library</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md40"></a> </p>
-<h1><a class="anchor" id="autotoc_md41"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md45"></a> </p>
+<h1><a class="anchor" id="autotoc_md46"></a>
 Statement</h1>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 The v1.0.0 new version library is now available, with the following major updates:</h2>
 <p>1.Fixed an issue where frame rates decrease in certain games after connecting a force feedback controller. Due to issues with the mechanism by which some games send force feedback data, the Arduino did not promptly notify the computer upon receiving the force feedback data, resulting in lost frames in these games. To resolve this problem, the reception of force feedback data has been moved to be handled within an ISR (Interrupt Service Routine) on the Arduino, which means that some interfaces have undergone changes compared to v0.9.0. Example code will be provided to demonstrate the corresponding modifications. This fix has been tested and confirmed working in games such as 'Horizon 4' and 'Horizon 5'.</p>
 <p>2.Corrected several errors in the force feedback calculation logic.</p>
 <p>3.A complete demonstration project has been provided for developers to reference. It can be found at the path: examples/YourFirstFFBController.</p>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 This is a joy library for Atmega32UX chip with force feedback, which can be used to make game handle with vibration, game steering wheel with force feedback, etc.Multi-axis-force-feedback feature is added.</h2>
-<h1><a class="anchor" id="autotoc_md44"></a>
+<h1><a class="anchor" id="autotoc_md49"></a>
 Usage</h1>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md50"></a>
 0. example：</h2>
 <p><code>examples\SingleJoystickFFB\SingleJoystickFFB.ino</code></p>
-<h2><a class="anchor" id="autotoc_md46"></a>
+<h2><a class="anchor" id="autotoc_md51"></a>
 1. create <code>JoyStick</code> object</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -147,7 +147,7 @@ Usage</h1>
 <td class="markdownTableBodyLeft">Steering enable   </td><td class="markdownTableBodyLeft">True or False   </td></tr>
 </table>
 <p><code>Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,JOYSTICK_TYPE_JOYSTICK,8, 0,false, true,true,false, false, false,false, false,false, false, false);</code></p>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md52"></a>
 2. After the object is created, the x-axis and y-axis are bound as the force feedback axis by default.The gains of various forces effect are set through the struct and the interface as following:</h2>
 <div class="fragment"><div class="line">//struct of gains</div>
 <div class="line">struct Gains{</div>
@@ -173,7 +173,7 @@ Usage</h1>
 <div class="line"> *        -1：set gains failed</div>
 <div class="line">*/</div>
 <div class="line">int8_t setGains(Gains* _gains);</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md48"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md53"></a>
 example code p1</h3>
 <div class="fragment"><div class="line">#include &quot;Joystick.h&quot;</div>
 <div class="line"> </div>
@@ -193,7 +193,7 @@ example code p1</h3>
 <div class="line">    //enable gains REQUIRED</div>
 <div class="line">    Joystick.setGains(mygains);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md49"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md54"></a>
 3.Set the parameters of spring effect, damper effect, inertia effect and friction effect through the struct and the interface as following:</h2>
 <div class="fragment"><div class="line">//struct of Effect Params</div>
 <div class="line">struct EffectParams{</div>
@@ -224,7 +224,7 @@ example code p1</h3>
 <div class="line"> *        -1：set Effect Params failed</div>
 <div class="line">*/</div>
 <div class="line">int8_t setEffectParams(EffectParams* _effect_params);</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md50"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md55"></a>
 example code p2</h3>
 <div class="fragment"><div class="line">#include &quot;Joystick.h&quot;</div>
 <div class="line"> </div>
@@ -257,7 +257,7 @@ example code p2</h3>
 <div class="line">  </div>
 <div class="line">  Joystick.setEffectParams(myeffectparams);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md51"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md56"></a>
 4.Finally,open ISR to recevie the PID data, than get the force value with</h2>
 <p><code>JoyStick.getForce(int32_t* forces)</code></p>
 <p>params <code>int32_t* forces</code> is an <code>int32</code> array of length 2</p>
@@ -265,7 +265,7 @@ example code p2</h3>
 <p><code>forces[1]</code> is the Y-Axis force data</p>
 <p>return type <code>void</code></p>
 <p>range<code>[-255,255]</code></p>
-<h3><a class="anchor" id="autotoc_md52"></a>
+<h3><a class="anchor" id="autotoc_md57"></a>
 example code p3</h3>
 <div class="fragment"><div class="line">#include &quot;Joystick.h&quot;</div>
 <div class="line"> </div>
@@ -321,16 +321,16 @@ example code p3</h3>
 <div class="line">  Serial.print(&quot;  &quot;);</div>
 <div class="line">  Serial.println(forces[1]);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md53"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md58"></a>
 <b>Pay Attention!</b></h3>
 <p>**<code>Joystick.setGains(mygains)</code> and <code>Joystick.setEffectParams(myeffectparams)</code> must be invoked before <code>JoyStick.getForce(int32_t* forces)</code>**</p>
-<h2><a class="anchor" id="autotoc_md54"></a>
+<h2><a class="anchor" id="autotoc_md59"></a>
 5.DEMO</h2>
 <p><code>examples/YourFirstFFBController</code></p>
 <p><img src="examples/YourFirstFFBController/ffbcontroller.png" alt="diagramm" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md55"></a>
+<h1><a class="anchor" id="autotoc_md60"></a>
 Ref</h1>
-<h2><a class="anchor" id="autotoc_md56"></a>
+<h2><a class="anchor" id="autotoc_md61"></a>
 This library is based on <a href="https://github.com/MHeironimus/ArduinoJoystickLibrary">Heironimus</a> and <a href="https://github.com/hoantv/VNWheel">hoantv</a> 's work，very grateful for their work.</h2>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

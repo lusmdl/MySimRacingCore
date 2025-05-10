@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Sim Racing Core<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sim Racing Core<span id="projectnumber">&#160;1.1.0</span>
    </div>
    <div id="projectbrief">designed to manage steering, pedals, and other accessories, providing a seamless and immersive racing experience</div>
   </td>
@@ -124,15 +124,24 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>readADC</b> ()</td></t
 <tr class="memitem:a8a5ff97dc297c143e8c9e3a0e5afc4f8" id="r_a8a5ff97dc297c143e8c9e3a0e5afc4f8"><td class="memItemLeft" align="right" valign="top"><a id="a8a5ff97dc297c143e8c9e3a0e5afc4f8" name="a8a5ff97dc297c143e8c9e3a0e5afc4f8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setMin</b> (float min, int raw)</td></tr>
 <tr class="separator:a8a5ff97dc297c143e8c9e3a0e5afc4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab23c562493fcec36340957dc9958569b" id="r_ab23c562493fcec36340957dc9958569b"><td class="memItemLeft" align="right" valign="top"><a id="ab23c562493fcec36340957dc9958569b" name="ab23c562493fcec36340957dc9958569b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>setMinWithTolerance</b> (float min, int tolerance)</td></tr>
+<tr class="separator:ab23c562493fcec36340957dc9958569b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ab493bc5f597e82939a7393abd8e341" id="r_a1ab493bc5f597e82939a7393abd8e341"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ab493bc5f597e82939a7393abd8e341">setMax</a> (float max)</td></tr>
 <tr class="memdesc:a1ab493bc5f597e82939a7393abd8e341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum value for the axis based on current raw value.  <br /></td></tr>
 <tr class="separator:a1ab493bc5f597e82939a7393abd8e341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f285a764c030b8b1ebc92a98e3ea8e6" id="r_a6f285a764c030b8b1ebc92a98e3ea8e6"><td class="memItemLeft" align="right" valign="top"><a id="a6f285a764c030b8b1ebc92a98e3ea8e6" name="a6f285a764c030b8b1ebc92a98e3ea8e6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setMax</b> (float max, int raw)</td></tr>
 <tr class="separator:a6f285a764c030b8b1ebc92a98e3ea8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857ee65020ec2189e8d7e7ad127cd308" id="r_a857ee65020ec2189e8d7e7ad127cd308"><td class="memItemLeft" align="right" valign="top"><a id="a857ee65020ec2189e8d7e7ad127cd308" name="a857ee65020ec2189e8d7e7ad127cd308"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxWithTolerance</b> (float max, int tolerance)</td></tr>
+<tr class="separator:a857ee65020ec2189e8d7e7ad127cd308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94c874546819e7f5c6d3dbfdd7080f82" id="r_a94c874546819e7f5c6d3dbfdd7080f82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpod__axis.html">pod_axis</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94c874546819e7f5c6d3dbfdd7080f82">getData</a> ()</td></tr>
 <tr class="memdesc:a94c874546819e7f5c6d3dbfdd7080f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current data of the axis, including the scaled actual value.  <br /></td></tr>
 <tr class="separator:a94c874546819e7f5c6d3dbfdd7080f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c8cfeb2b1ed12f09ed21fff45ce73c" id="r_a95c8cfeb2b1ed12f09ed21fff45ce73c"><td class="memItemLeft" align="right" valign="top"><a id="a95c8cfeb2b1ed12f09ed21fff45ce73c" name="a95c8cfeb2b1ed12f09ed21fff45ce73c"></a>
+<a class="el" href="structpod__axis.html">pod_axis</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> (float min_tolerance, float max_tolerance)</td></tr>
+<tr class="separator:a95c8cfeb2b1ed12f09ed21fff45ce73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for managing an analog axis with ADC. </p>

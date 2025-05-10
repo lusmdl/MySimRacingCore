@@ -1,20 +1,13 @@
 var searchData=
 [
-  ['p1_0',['example code p1',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md48',1,'']]],
-  ['p2_1',['example code p2',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md50',1,'']]],
-  ['p3_2',['example code p3',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md52',1,'']]],
-  ['parameters_20of_20spring_20effect_20damper_20effect_20inertia_20effect_20and_20friction_20effect_20through_20the_20struct_20and_20the_20interface_20as_20following_3a_3',['3.Set the parameters of spring effect, damper effect, inertia effect and friction effect through the struct and the interface as following:',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md49',1,'']]],
-  ['pascalcase_20tt_4',['&lt;tt&gt;PascalCase&lt;/tt&gt;',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md20',1,'']]],
-  ['pay_20attention_20strong_5',['&lt;strong&gt;Pay Attention!&lt;/strong&gt;',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md53',1,'']]],
-  ['pedals_6',['Pedals',['../class_pedals.html',1,'']]],
-  ['pid_20data_20than_20get_20the_20force_20value_20with_7',['4.Finally,open ISR to recevie the PID data, than get the force value with',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md51',1,'']]],
-  ['pidreporthandler_8',['PIDReportHandler',['../class_p_i_d_report_handler.html',1,'']]],
-  ['placement_9',['Brace Placement',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md13',1,'']]],
-  ['pod_5faxis_10',['pod_axis',['../structpod__axis.html',1,'']]],
-  ['pod_5fbutton_11',['pod_button',['../structpod__button.html',1,'']]],
-  ['preprocessor_20directive_12',['Preprocessor Directive',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md28',1,'']]],
-  ['principles_13',['Commenting Principles',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md33',1,'']]],
-  ['projectconfig_2ehpp_14',['ProjectConfig.hpp',['../_project_config_8hpp.html',1,'']]],
-  ['projects_15',['Common Contributing Guidelines for C and C++ Projects',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html',1,'']]],
-  ['pull_20requests_16',['Pull Requests',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md38',1,'']]]
+  ['object_0',['1. create &lt;tt&gt;JoyStick&lt;/tt&gt; object',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md51',1,'']]],
+  ['object_20is_20created_20the_20x_20axis_20and_20y_20axis_20are_20bound_20as_20the_20force_20feedback_20axis_20by_20default_20the_20gains_20of_20various_20forces_20effect_20are_20set_20through_20the_20struct_20and_20the_20interface_20as_20following_3a_1',['2. After the object is created, the x-axis and y-axis are bound as the force feedback axis by default.The gains of various forces effect are set through the struct and the interface as following:',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md52',1,'']]],
+  ['of_20functions_20methods_20and_20files_2',['Limits of Functions, Methods and Files',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md6',1,'']]],
+  ['of_20spring_20effect_20damper_20effect_20inertia_20effect_20and_20friction_20effect_20through_20the_20struct_20and_20the_20interface_20as_20following_3a_3',['3.Set the parameters of spring effect, damper effect, inertia effect and friction effect through the struct and the interface as following:',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md54',1,'']]],
+  ['of_20various_20forces_20effect_20are_20set_20through_20the_20struct_20and_20the_20interface_20as_20following_3a_4',['2. After the object is created, the x-axis and y-axis are bound as the force feedback axis by default.The gains of various forces effect are set through the struct and the interface as following:',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md52',1,'']]],
+  ['on_20a_20href_20https_3a_20github_20com_20mheironimus_20arduinojoysticklibrary_20heironimus_20a_20and_20a_20href_20https_3a_20github_20com_20hoantv_20vnwheel_20hoantv_20a_20s_20work，very_20grateful_20for_20their_20work_5',['This library is based on &lt;a href=&quot;https://github.com/MHeironimus/ArduinoJoystickLibrary&quot; &gt;Heironimus&lt;/a&gt; and &lt;a href=&quot;https://github.com/hoantv/VNWheel&quot; &gt;hoantv&lt;/a&gt; &apos;s work，very grateful for their work.',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md61',1,'']]],
+  ['open_20isr_20to_20recevie_20the_20pid_20data_20than_20get_20the_20force_20value_20with_6',['4.Finally,open ISR to recevie the PID data, than get the force value with',['../md_lib_2_arduino_joystick_with_f_f_b_library_2_readme.html#autotoc_md56',1,'']]],
+  ['optimization_7',['Memory Optimization',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md30',1,'']]],
+  ['or_20strong_20small_20improvements_20strong_20that_20don’t_20change_20existing_20functionality_8',['&lt;strong&gt;PATCH &lt;tt&gt;v1.0.0 → v1.0.1&lt;/tt&gt;&lt;/strong&gt;: Incremented for &lt;strong&gt;bug fixes&lt;/strong&gt; or &lt;strong&gt;small improvements&lt;/strong&gt; that don’t change existing functionality.',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md42',1,'']]],
+  ['overview_9',['Doxygen Syntax Overview',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md37',1,'']]]
 ];
