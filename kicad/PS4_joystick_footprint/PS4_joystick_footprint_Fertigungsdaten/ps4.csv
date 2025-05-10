@@ -1,7 +1,8 @@
 "ID";"Bezeichner";"Footprint";"Stückzahl";"Bezeichnung";"Anbieter und Referenz";
 1;"SW4";"SW_SPST_B3S-1000";1;"Y";;;
 2;"U1";"PS4_joystick";1;"COM-09032";;;
-3;"J1";"PinHeader_1x11_P2.54mm_Vertical";1;"Conn_01x11_Pin";;;
-4;"SW1";"SW_SPST_B3S-1000";1;"X";;;
-5;"SW3";"SW_SPST_B3S-1000";1;"B";;;
-6;"SW2";"SW_SPST_B3S-1000";1;"A";;;
+3;"D1";"D_MiniMELF";1;"D";;;
+4;"J1";"PinHeader_1x11_P2.54mm_Vertical";1;"Conn_01x11_Pin";;;
+5;"SW1";"SW_SPST_B3S-1000";1;"X";;;
+6;"SW3";"SW_SPST_B3S-1000";1;"B";;;
+7;"SW2";"SW_SPST_B3S-1000";1;"A";;;

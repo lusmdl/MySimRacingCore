@@ -7,7 +7,7 @@
 	(title_block
 		(title "PS4 Joystick with buttons PCB")
 		(date "2025-01-14")
-		(rev "v1.0.0")
+		(rev "v1.1.0")
 		(company "https://github.com/lusmdl")
 	)
 	(lib_symbols

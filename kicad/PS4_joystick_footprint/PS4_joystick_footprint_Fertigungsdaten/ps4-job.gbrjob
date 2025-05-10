@@ -3,18 +3,18 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "8.0.7"
+      "Version": "8.0.8"
     },
-    "CreationDate": "2025-01-13T22:15:30+01:00"
+    "CreationDate": "2025-05-10T21:29:37+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "ps4",
       "GUID": "7073342e-6b69-4636-9164-5f7063625858",
-      "Revision": "rev?"
+      "Revision": "v1.1.0"
     },
     "Size": {
-      "X": 55.7,
+      "X": 60.7,
       "Y": 30.2
     },
     "LayerNumber": 2,

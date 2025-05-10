@@ -7,7 +7,7 @@
 	(title_block
 		(title "Arduino Micro Board")
 		(date "2025-01-14")
-		(rev "v1.0.0")
+		(rev "v1.1.0")
 		(company "https://github.com/lusmdl")
 	)
 	(lib_symbols
@@ -4047,7 +4047,6 @@
 	)
 	(label "D4"
 		(at 162.56 139.7 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4058,7 +4057,6 @@
 	)
 	(label "D2{slash}SDA"
 		(at 246.38 124.46 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4069,7 +4067,6 @@
 	)
 	(label "RX"
 		(at 63.5 137.16 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4080,7 +4077,6 @@
 	)
 	(label "*D5"
 		(at 162.56 137.16 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4091,7 +4087,6 @@
 	)
 	(label "Clutch"
 		(at 100.33 132.08 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4102,7 +4097,6 @@
 	)
 	(label "A2"
 		(at 111.76 132.08 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4113,7 +4107,6 @@
 	)
 	(label "D7"
 		(at 162.56 132.08 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4124,7 +4117,6 @@
 	)
 	(label "A5"
 		(at 72.39 139.7 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4135,7 +4127,6 @@
 	)
 	(label "D15{slash}SCK"
 		(at 111.76 160.02 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4146,7 +4137,6 @@
 	)
 	(label "*D13"
 		(at 111.76 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4157,7 +4147,6 @@
 	)
 	(label "D16{slash}MOSI"
 		(at 162.56 160.02 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4168,7 +4157,6 @@
 	)
 	(label "D17{slash}SS"
 		(at 162.56 157.48 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4179,7 +4167,6 @@
 	)
 	(label "D0{slash}RX"
 		(at 193.04 152.4 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4190,7 +4177,6 @@
 	)
 	(label "*D6"
 		(at 162.56 134.62 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4201,7 +4187,6 @@
 	)
 	(label "D2{slash}SDA"
 		(at 172.72 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4212,7 +4197,6 @@
 	)
 	(label "*D11"
 		(at 162.56 121.92 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4223,7 +4207,6 @@
 	)
 	(label "A1"
 		(at 111.76 129.54 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4234,7 +4217,6 @@
 	)
 	(label "D14{slash}MISO"
 		(at 111.76 157.48 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4245,7 +4227,6 @@
 	)
 	(label "RY"
 		(at 204.47 127 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4256,7 +4237,6 @@
 	)
 	(label "Brake"
 		(at 100.33 129.54 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4267,7 +4247,6 @@
 	)
 	(label "A4"
 		(at 111.76 137.16 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4278,7 +4257,6 @@
 	)
 	(label "A"
 		(at 203.2 152.4 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4289,7 +4267,6 @@
 	)
 	(label "A5"
 		(at 111.76 139.7 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4300,7 +4277,6 @@
 	)
 	(label "RY"
 		(at 63.5 139.7 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4311,7 +4287,6 @@
 	)
 	(label "*D3{slash}SCL"
 		(at 203.2 129.54 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4322,7 +4297,6 @@
 	)
 	(label "Handbrake"
 		(at 83.82 134.62 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4333,7 +4307,6 @@
 	)
 	(label "*D11"
 		(at 72.39 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4344,7 +4317,6 @@
 	)
 	(label "A3"
 		(at 111.76 134.62 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4355,7 +4327,6 @@
 	)
 	(label "RX"
 		(at 204.47 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4366,7 +4337,6 @@
 	)
 	(label "A0"
 		(at 111.76 127 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4377,7 +4347,6 @@
 	)
 	(label "D1{slash}TX"
 		(at 193.04 154.94 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4388,7 +4357,6 @@
 	)
 	(label "Throttle"
 		(at 100.33 127 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4399,7 +4367,6 @@
 	)
 	(label "B"
 		(at 203.2 154.94 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4410,7 +4377,6 @@
 	)
 	(label "*D9"
 		(at 162.56 127 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4421,7 +4387,6 @@
 	)
 	(label "*D3{slash}SCL"
 		(at 162.56 142.24 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4432,7 +4397,6 @@
 	)
 	(label "D2{slash}SDA"
 		(at 162.56 144.78 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4443,7 +4407,6 @@
 	)
 	(label "A4"
 		(at 72.39 137.16 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4454,7 +4417,6 @@
 	)
 	(label "*D3{slash}SCL"
 		(at 245.11 129.54 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4465,7 +4427,6 @@
 	)
 	(label "D8"
 		(at 162.56 129.54 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4476,7 +4437,6 @@
 	)
 	(label "D1{slash}TX"
 		(at 161.29 154.94 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4487,7 +4447,6 @@
 	)
 	(label "*D3{slash}SCL"
 		(at 172.72 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4498,7 +4457,6 @@
 	)
 	(label "D0{slash}RX"
 		(at 161.29 152.4 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4509,7 +4467,6 @@
 	)
 	(label "Switch"
 		(at 63.5 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4520,7 +4477,6 @@
 	)
 	(label "Z"
 		(at 203.2 157.48 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4531,7 +4487,6 @@
 	)
 	(label "AREF"
 		(at 111.76 124.46 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4542,7 +4497,6 @@
 	)
 	(label "~{RESET}"
 		(at 111.76 149.86 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4553,7 +4507,6 @@
 	)
 	(label "*D10"
 		(at 162.56 124.46 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4564,7 +4517,6 @@
 	)
 	(label "D2{slash}SDA"
 		(at 203.2 124.46 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4575,7 +4527,6 @@
 	)
 	(label "Switch"
 		(at 203.2 132.08 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4586,7 +4537,6 @@
 	)
 	(label "D12"
 		(at 162.56 119.38 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

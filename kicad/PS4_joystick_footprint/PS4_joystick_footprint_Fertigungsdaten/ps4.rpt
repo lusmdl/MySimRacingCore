@@ -1,18 +1,37 @@
-## Footprint report - date 2025-01-13T22:16:40+0100
-## Created by KiCad version 8.0.7
+## Footprint report - date 2025-05-10T21:30:19+0200
+## Created by KiCad version 8.0.8
 ## Unit = mm, Angle = deg.
 
 $BeginDESCRIPTION
 
 $BOARD
-upper_left_corner 93.700000 128.850000
-lower_right_corner 122.447147 130.312500
+upper_left_corner 83.800000 125.000000
+lower_right_corner 144.500000 155.200000
 $EndBOARD
+
+$MODULE D1
+footprint Diode_SMD:D_MiniMELF
+attribut smd
+position 140.400000 153.100000  orientation 0.00
+layer front
+$PAD "1"
+Shape Roundrect Layer front
+position -1.750000  0.000000  size  1.300000  1.700000  orientation 0.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "2"
+Shape Roundrect Layer front
+position  1.750000  0.000000  size  1.300000  1.700000  orientation 0.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  D1
 
 $MODULE J1
 footprint Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical
 attribut none
-position 91.900000 152.960000  orientation 180.00
+position 85.900000 152.960000  orientation 180.00
 layer front
 $PAD "1"
 Shape Rect Layer both
@@ -85,7 +104,7 @@ $EndMODULE  J1
 $MODULE SW1
 footprint Button_Switch_SMD:SW_SPST_B3S-1000
 attribut smd
-position 119.500000 140.500000  orientation 90.00
+position 121.000000 140.000000  orientation 90.00
 layer front
 $PAD "1"
 Shape Rect Layer front
@@ -116,7 +135,7 @@ $EndMODULE  SW1
 $MODULE SW2
 footprint Button_Switch_SMD:SW_SPST_B3S-1000
 attribut smd
-position 130.000000 151.000000  orientation 0.00
+position 130.000000 149.000000  orientation 0.00
 layer front
 $PAD "1"
 Shape Rect Layer front
@@ -147,7 +166,7 @@ $EndMODULE  SW2
 $MODULE SW3
 footprint Button_Switch_SMD:SW_SPST_B3S-1000
 attribut smd
-position 140.500000 140.500000  orientation -90.00
+position 139.000000 140.000000  orientation -90.00
 layer front
 $PAD "1"
 Shape Rect Layer front
@@ -178,7 +197,7 @@ $EndMODULE  SW3
 $MODULE SW4
 footprint Button_Switch_SMD:SW_SPST_B3S-1000
 attribut smd
-position 130.000000 130.000000  orientation 0.00
+position 130.000000 131.000000  orientation 0.00
 layer front
 $PAD "1"
 Shape Rect Layer front
@@ -209,7 +228,7 @@ $EndMODULE  SW4
 $MODULE U1
 footprint PS4_joystick_footprint_lib:PS4_joystick
 attribut none
-position 104.575000 143.974800  orientation 0.00
+position 102.050000 143.414800  orientation 0.00
 layer front
 $PAD "B1A"
 Shape Circle Layer both
