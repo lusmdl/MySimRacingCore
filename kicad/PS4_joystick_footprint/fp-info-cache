@@ -1,4 +1,4 @@
-24154932684203924
+24337382709304934
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -6768,6 +6768,13 @@ RC Connector XT60
 0
 4
 2
+Connector_AMASS
+AMASS_XT90PW-M_1x02_P10.90mm_Horizontal
+Connector XT90 Horizontal PCB Male  500V 30A IP40, https://www.bto.pl/pdf/09025/XT90PW-M.pdf
+RC
+0
+4
+3
 Connector_Amphenol
 Amphenol_M8S-03PMMR-SF8001
 M8 Male connector for panel, 90° PCB mount (https://www.amphenolltw.com/2012download/2D%20PDF/03_M%20Series%20Sensor%20Connectors/M8S-XXPMMR-SF8001.pdf)
@@ -10646,6 +10653,188 @@ connector JAE  top entry
 0
 81
 81
+Connector_FFC-FPC
+JUSHUO_AFA07-S04FCA-00_1x4-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 04 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+6
+5
+Connector_FFC-FPC
+JUSHUO_AFA07-S05FCA-00_1x5-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 05 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+7
+6
+Connector_FFC-FPC
+JUSHUO_AFA07-S06FCA-00_1x6-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 06 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+8
+7
+Connector_FFC-FPC
+JUSHUO_AFA07-S07FCA-00_1x7-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 07 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+9
+8
+Connector_FFC-FPC
+JUSHUO_AFA07-S08FCA-00_1x8-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 08 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+10
+9
+Connector_FFC-FPC
+JUSHUO_AFA07-S09FCA-00_1x9-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 09 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+11
+10
+Connector_FFC-FPC
+JUSHUO_AFA07-S10FCA-00_1x10-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 10 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+12
+11
+Connector_FFC-FPC
+JUSHUO_AFA07-S11FCA-00_1x11-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 11 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+13
+12
+Connector_FFC-FPC
+JUSHUO_AFA07-S12FCA-00_1x12-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 12 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+14
+13
+Connector_FFC-FPC
+JUSHUO_AFA07-S13FCA-00_1x13-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 13 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+15
+14
+Connector_FFC-FPC
+JUSHUO_AFA07-S14FCA-00_1x14-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 14 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+16
+15
+Connector_FFC-FPC
+JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 15 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+17
+16
+Connector_FFC-FPC
+JUSHUO_AFA07-S16FCA-00_1x16-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 16 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+18
+17
+Connector_FFC-FPC
+JUSHUO_AFA07-S17FCA-00_1x17-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 17 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+19
+18
+Connector_FFC-FPC
+JUSHUO_AFA07-S18FCA-00_1x18-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 18 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+20
+19
+Connector_FFC-FPC
+JUSHUO_AFA07-S19FCA-00_1x19-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 19 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+21
+20
+Connector_FFC-FPC
+JUSHUO_AFA07-S20FCA-00_1x20-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 20 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+22
+21
+Connector_FFC-FPC
+JUSHUO_AFA07-S21FCA-00_1x21-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 21 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+23
+22
+Connector_FFC-FPC
+JUSHUO_AFA07-S22FCA-00_1x22-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 22 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+24
+23
+Connector_FFC-FPC
+JUSHUO_AFA07-S23FCA-00_1x23-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 23 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+25
+24
+Connector_FFC-FPC
+JUSHUO_AFA07-S24FCA-00_1x24-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 24 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+26
+25
+Connector_FFC-FPC
+JUSHUO_AFA07-S25FCA-00_1x25-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 25 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+27
+26
+Connector_FFC-FPC
+JUSHUO_AFA07-S26FCA-00_1x26-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 26 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+28
+27
+Connector_FFC-FPC
+JUSHUO_AFA07-S27FCA-00_1x27-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 27 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+29
+28
+Connector_FFC-FPC
+JUSHUO_AFA07-S28FCA-00_1x28-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 28 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+30
+29
+Connector_FFC-FPC
+JUSHUO_AFA07-S29FCA-00_1x29-1MP_P1.0mm_Horizontal
+JUSHUO FPC connector, 29 bottom-side contacts, 1.0mm pitch, 2.5mm height, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JUSHUO-AFA07-S04FCA-00_C262710.pdf
+jushuo fpc
+0
+31
+30
 Connector_FFC-FPC
 Jushuo_AFC07-S06FCA-00_1x6-1MP_P0.50_Horizontal
 Jushuo AFC07, FFC/FPC connector, AFC07-S06FCA-00, 6 Pins per row (https://datasheet.lcsc.com/lcsc/1811040204_JUSHUO-AFC07-S32FCC-00_C11061.pdf)
@@ -24408,6 +24597,13 @@ sodimm
 0
 200
 200
+Connector_PCBEdge
+SODIMM-260_DDR4_H4.0-5.2_OrientationStd_Socket
+DDR4 SODIMM Socket, 0.5 mm pitch, 260 positions, 4 mm or 5 mm height, http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F2309407%7F3%7Fpdf%7FEnglish%7FENG_CD_2309407_3.pdf%7F2309407-1
+SODIMM DIMM DDR DDR4 RAM
+0
+262
+261
 Connector_PCBEdge
 Samtec_MECF-05-0_-L-DV_2x05_P1.27mm_Polarized_Edge
 Highspeed card edge connector for PCB's with 05 contacts (polarized)
@@ -43869,6 +44065,13 @@ ethernet 8p8c transformer magjack
 12
 11
 Connector_RJ
+RJ45_RCH_RC01937
+1 port ethernet throughhole connector, https://www.lcsc.com/datasheet/lcsc_datasheet_2411121142_RCH-RC01937_C708652.pdf
+RJ45 ethernet 8p8c shielded
+0
+10
+9
+Connector_RJ
 RJ45_UDE_RB1-125B8G1A
 1 Port RJ45 Connector Through Hole 10/100/1000 Base-T, https://datasheet.lcsc.com/szlcsc/1901091107_UDE-Corp-RB1-125B8G1A_C363353.pdf#page=3
 RJ45 ethernet
@@ -49840,6 +50043,13 @@ USB C Type-C Receptacle SMD
 28
 25
 Connector_USB
+USB_C_Receptacle_Amphenol_12401948E412A
+USB TYPE C, USB 2.0, SMT, https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/c12401948.pdf
+Amphenol
+0
+20
+16
+Connector_USB
 USB_C_Receptacle_CNCTech_C-ARA1-AK51X
 USB Type-C 3.0 Receptacle, 24-pin, right angle (source: https://www.cnctech.us/pdfs/C-ARA1-AK512.pdf)
 USB C Type-C Receptacle Hybrid CNCTech C-ARA1-AK51X
@@ -53417,6 +53627,13 @@ traco dcdc tht 12w
 5
 5
 Converter_DCDC
+Converter_DCDC_TRACO_TEN10-110xxWIRH_THT
+DCDC-Converter, TRACO, TEN 10-110xxWIRH, 10W, Rev. December 16. 2024 (Script generated with StandardBox.py) (https://www.tracopower.com/products/ten10wirh.pdf)
+DCDC-Converter TRACO TEN10WIRH THT DIP-24 COMPATIBLE_MPNS TEN3WIRH TEN6WIRH
+0
+9
+9
+Converter_DCDC
 Converter_DCDC_TRACO_TEN10-xxxx_Dual_THT
 DCDC-Converter, TRACO, TEN10-xxxx, single output, https://assets.tracopower.com/20171102100522/TEN10/documents/ten10-datasheet.pdf
 DCDC-Converter TRACO TEN10-xxxx single output
@@ -53637,6 +53854,13 @@ Converter_DCDC
 Converter_DCDC_TRACO_TSR1-xxxxE_THT
 DCDC-Converter, TRACO, TSR1-xxxxE, 1A, Rev. October 31. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tsr1e.pdf)
 DCDC-Converter SWITCHING-REGULATOR STEP-DOWN TRACO TSR1E 2.54MM THT SIP-3 1A
+0
+3
+3
+Converter_DCDC
+Converter_DCDC_TRACO_TSR2-24xxN_TSR2-24xxxN_THT
+DCDC-Converter, TRACO, TSR2-24xxN, TSR2-24xxxN, 2A, Rev. December 19. 2024 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tsr2n.pdf)
+DCDC-Converter SWITCHING-REGULATOR STEP-DOWN TRACO TSR2N 2.54MM THT SIP-3 2A COMPATIBLE_MPNS TSR3N
 0
 3
 3
@@ -55590,6 +55814,20 @@ Diode_SMD
 Nexperia_DSN1608-2_1.6x0.8mm
 Diode SMD DSN1608, 1.6 x 0.8 x 0.29 mm, https://assets.nexperia.com/documents/package-information/SOD964.pdf
 diode SOD964 SOD-964
+0
+2
+2
+Diode_SMD
+OnSemi_751EP_SOIC-4_3.9x4.725mm_P2.54mm
+OnSemi 751EP SOIC, 4 Pin (https://www.onsemi.com/pdf/datasheet/mb8s-d.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+OnSemi SOIC Diode_SMD OnSemi_MB8S OnSemi_SOIC4W
+0
+4
+4
+Diode_SMD
+ST_D_SMC
+STMicroelectronics SMC (JEDEC DO-214-D, variant AB), https://www.st.com/resource/en/datasheet/sm15t36a.pdf#page=7
+Diode DO-214AB
 0
 2
 2
@@ -64729,6 +64967,13 @@ LED Dialight 591
 2
 2
 LED_SMD
+LED_Everlight-SMD3528_3.5x2.8mm_67-21ST
+3.5mm x 2.8mm mid-power LED, https://www.everlight.com/wp-content/plugins/ItemRelationship/product_files/pdf/DSE-0020730-67-21ST-KK6C-HXXXX96Z6-2T_V3.pdf
+LED 3528
+0
+2
+2
+LED_SMD
 LED_Inolux_IN-P55TATRGB_PLCC6_5.0x5.5mm_P1.8mm
 5.0x5.0mm PLCC-6 RGB LED, Inolux, https://www.inolux-corp.com/datasheet/SMDLED/RGB%20Top%20View/IN-P55TATRGB.pdf
 LED RGB
@@ -65807,6 +66052,20 @@ Electrosmith Daisy Seed Microcontroller Module ARM Cortex-M7 Audio Codec
 40
 40
 Module
+Flipper_Zero_Angled
+Connector for Flipper Zero Straight https://docs.flipper.net/development/hardware/modules-blueprints
+Flipper Zero
+0
+18
+18
+Module
+Flipper_Zero_Straight
+Connector for Flipper Zero Straight https://docs.flipper.net/development/hardware/modules-blueprints
+Flipper Zero
+0
+18
+18
+Module
 Google_Coral_SMT_TPU_Module
 Google_Coral_SMT_TPU_Module (https://coral.ai/static/files/Coral-Accelerator-Module-datasheet.pdf)
 Google_Coral TPU Module
@@ -65848,6 +66107,55 @@ Pololu Breakout
 0
 16
 16
+Module
+RaspberryPi_Pico_Common_SMD
+Raspberry Pi Pico common (Pico & Pico W) surface-mount footprint for reflow or hand soldering, supports Raspberry Pi Pico 2, https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
+module usb pcb antenna
+0
+80
+40
+Module
+RaspberryPi_Pico_Common_THT
+Raspberry Pi Pico common (Pico & Pico W) through-hole footprint, supports Raspberry Pi Pico 2, default socketed model has height of 8.51mm, https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
+module usb pcb antenna
+0
+40
+40
+Module
+RaspberryPi_Pico_Common_Unspecified
+Raspberry Pi Pico versatile common (Pico & Pico W) footprint for surface-mount or through-hole hand soldering, supports Raspberry Pi Pico 2, default socketed model has height of 8.51mm, https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
+module usb pcb antenna
+0
+80
+40
+Module
+RaspberryPi_Pico_SMD
+Raspberry Pi Pico (non-W) surface-mount footprint for reflow soldering with test points and debug pads, supports Raspberry Pi Pico 2 (non-W), https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
+module usb pcb swd
+0
+96
+49
+Module
+RaspberryPi_Pico_SMD_HandSolder
+Raspberry Pi Pico (non-W) surface-mount footprint with debug pads for hand soldering, supports Raspberry Pi Pico 2 (non-W), https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
+module usb pcb swd
+0
+86
+43
+Module
+RaspberryPi_Pico_W_SMD
+Raspberry Pi Pico W surface-mount footprint for reflow soldering with test points and debug pads (not compatible with non-wireless Pico), supports Raspberry Pi Pico 2 W, https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf
+module usb pcb swd antenna
+0
+93
+49
+Module
+RaspberryPi_Pico_W_SMD_HandSolder
+Raspberry Pi Pico W surface-mount footprint with debug pads for hand soldering (not compatible with non-wireless Pico), supports Raspberry Pi Pico 2 W, https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf
+module usb pcb swd antenna
+0
+83
+43
 Module
 Raspberry_Pi_Zero_Socketed_THT_FaceDown_MountingHoles
 Raspberry Pi Zero using through hole straight pin socket, 2x20, 2.54mm pitch, https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_Zero_1p2.pdf
@@ -69447,6 +69755,41 @@ Miniature Crystal Clock Oscillator TG2520 series SMD SMT
 4
 4
 Oscillator
+Oscillator_SMD_SiT_PQFN-4Pin_2.0x1.6mm
+mems programmable oscillator https://www.sitime.com/datasheet/SiT8008 page 10, 2.0x1.6mm^2 package, generated by make_crystal.py
+SMD SMT oscillator mems programmable
+0
+4
+4
+Oscillator
+Oscillator_SMD_SiT_PQFN-4Pin_2.5x2.0mm
+mems programmable oscillator https://www.sitime.com/datasheet/SiT8008 page 10, 2.5x2.0mm^2 package, generated by make_crystal.py
+SMD SMT oscillator mems programmable
+0
+4
+4
+Oscillator
+Oscillator_SMD_SiT_PQFN-4Pin_3.2x2.5mm
+mems programmable oscillator https://www.sitime.com/datasheet/SiT8008 page 11, 3.2x2.5mm^2 package, generated by make_crystal.py
+SMD SMT oscillator mems programmable
+0
+4
+4
+Oscillator
+Oscillator_SMD_SiT_PQFN-4Pin_5.0x3.2mm
+mems programmable oscillator https://www.sitime.com/datasheet/SiT8008 page 11, 5.0x3.2mm^2 package, generated by make_crystal.py
+SMD SMT oscillator mems programmable
+0
+4
+4
+Oscillator
+Oscillator_SMD_SiT_PQFN-4Pin_7.0x5.0mm
+mems programmable oscillator https://www.sitime.com/datasheet/SiT8008 page 12, 7.0x5.0mm^2 package, generated by make_crystal.py
+SMD SMT oscillator mems programmable
+0
+4
+4
+Oscillator
 Oscillator_SMD_SiTime_PQFD-6L_3.2x2.5mm
 3.2x2.5mm, 6-pin QFN (https://www.sitime.com/datasheet/SiT9365 page 13)
 SMD SMT mems oscillator
@@ -69943,6 +70286,13 @@ BGA 756 0.8
 0
 756
 756
+Package_BGA
+Lattice_iCE40_csBGA-132_8.0x8.0mm_Layout14x14_P0.5mm
+Lattice csBGA-132, Option 2, iCE40 FPGAs, 8.0x8.0mm, 132 Ball, 14x14 Layout, 0.5mm Pitch, http://www.latticesemi.com/view_document?document_id=213
+BGA 132 0.5
+0
+132
+132
 Package_BGA
 Linear_BGA-133_15.0x15.0mm_Layout12x12_P1.27mm
 Analog Devices (Linear Tech), 133-pin BGA uModule, 15.0x15.0x4.92mm, https://www.analog.com/media/en/technical-documentation/data-sheets/4637fc.pdf
@@ -71434,6 +71784,34 @@ CSP 15 0.4
 0
 15
 15
+Package_CSP
+OnSemi_ODCSP8_BGA-8_3.16x3.16mm_P1.26mm_Ball0.26mm
+OnSemi ODCSP8 (Case 570CS), 0.27mm pad, 3.16x3.16mm, 8 Ball, 3x3 Layout, 1.26mm Pitch, https://www.onsemi.com/pub/Collateral/570CS.PDF
+CSP 8 1.26
+0
+8
+8
+Package_CSP
+OnSemi_ODCSP8_BGA-8_3.16x3.16mm_P1.26mm_Ball0.26mm_ManualAssembly
+OnSemi ODCSP8 (Case 570CS), 0.46mm pad, manual assembly variant (larger pads), 3.16x3.16mm, 8 Ball, 3x3 Layout, 1.26mm Pitch, https://www.onsemi.com/pub/Collateral/570CS.PDF
+CSP 8 1.26
+0
+8
+8
+Package_CSP
+OnSemi_ODCSP36_BGA-36_6.13x6.13mm_P1.0mm_Ball0.26mm
+OnSemi ODCSP36 (Case 570CP), 0.27mm pad, 6.13x6.13mm, 36 Ball, 6x6 Layout, 1.0mm Pitch, https://www.onsemi.com/pub/Collateral/570CP.PDF
+CSP 36 1.0
+0
+36
+36
+Package_CSP
+OnSemi_ODCSP36_BGA-36_6.13x6.13mm_P1.0mm_Ball0.26mm_ManualAssembly
+OnSemi ODCSP36 (Case 570CP), 0.47mm pad, manual assembly variant (larger pads), 6.13x6.13mm, 36 Ball, 6x6 Layout, 1.0mm Pitch, https://www.onsemi.com/pub/Collateral/570CP.PDF
+CSP 36 1.0
+0
+36
+36
 Package_CSP
 ST_WLCSP-12_1.70x1.42mm_P0.35mm_Stagger
 ST WLCSP-12, ST Die ID 443, 1.7x1.42mm, 12 Ball, Y-staggered 4x6 Layout, 0.35mm Pitch, https://www.st.com/resource/en/datasheet/stm32c011d6.pdf
@@ -73815,6 +74193,13 @@ QFN NoLead
 43
 29
 Package_DFN_QFN
+QFN-28-1EP_4x4mm_P0.4mm_EP2.7x2.7mm
+QFN, 28 Pin (QFN28; https://www.wch-ic.com/downloads/CH32V203DS0_PDF.html), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+33
+29
+Package_DFN_QFN
 QFN-28-1EP_4x4mm_P0.4mm_EP2.8x2.8mm
 QFN, 28 Pin (QFN28X4; https://www.wch-ic.com/downloads/CH32V203DS0_PDF.html), generated with kicad-footprint-generator ipc_noLead_generator.py
 QFN NoLead
@@ -73857,6 +74242,20 @@ QFN NoLead
 48
 29
 Package_DFN_QFN
+QFN-28-1EP_5x5mm_P0.5mm_EP2.7x2.7mm
+QFN, 28 Pin (JEDEC MO-220-K.01, variation VHHD-1,  https://www.jedec.org/system/files/docs/MO-220K01.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+38
+29
+Package_DFN_QFN
+QFN-28-1EP_5x5mm_P0.5mm_EP2.7x2.7mm_ThermalVias
+QFN, 28 Pin (JEDEC MO-220-K.01, variation VHHD-1,  https://www.jedec.org/system/files/docs/MO-220K01.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+55
+29
+Package_DFN_QFN
 QFN-28-1EP_5x5mm_P0.5mm_EP3.1x3.1mm
 QFN, 28 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/TMC2202_TMC2208_TMC2224_datasheet_rev1.14.pdf#page=77), generated with kicad-footprint-generator ipc_noLead_generator.py
 QFN NoLead
@@ -73869,6 +74268,20 @@ QFN, 28 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets
 QFN NoLead
 0
 71
+29
+Package_DFN_QFN
+QFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm
+QFN, 28 Pin (https://www.silabs.com/documents/public/data-sheets/C8051F32x.pdf#page=39), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+38
+29
+Package_DFN_QFN
+QFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm_ThermalVias
+QFN, 28 Pin (https://www.silabs.com/documents/public/data-sheets/C8051F32x.pdf#page=39), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+55
 29
 Package_DFN_QFN
 QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm
@@ -76601,6 +77014,13 @@ W-PDFN NoLead
 13
 9
 Package_DFN_QFN
+WCH_QFN-16-1EP_3x3mm_P0.5mm_EP1.8x1.8mm
+WCH  QFN, 16 Pin (https://www.wch.cn/downloads/PACKAGE_PDF.html), generated with kicad-footprint-generator ipc_noLead_generator.py
+WCH QFN NoLead
+0
+21
+17
+Package_DFN_QFN
 WDFN-6-2EP_4.0x2.6mm_P0.65mm
 WDFN, 6 pin, 4.0x2.6, 0.65P; Two exposed pads, (https://www.onsemi.com/pub/Collateral/511BZ.PDF)
 DFN 0.65P dual flag
@@ -79310,12 +79730,26 @@ NXP LGA NoLead
 8
 8
 Package_LGA
+Nordic_nRF9160-SIxx_LGA-102-59EP_16.0x10.5mm_P0.5mm
+nRF9160 (https://docs.nordicsemi.com/bundle/ps_nrf9160/page/mec_spec.html)
+Nordic LGA
+0
+161
+127
+Package_LGA
 Rohm_MLGA010V020A_LGA-10_2x2mm_P0.45mm_LayoutBorder2x3y
 Rohm  LGA, 10 Pin (https://fscdn.rohm.com/en/techdata_basic/ic/package/Jisso_MLGA010V020A-1-2_Rev005s_E2(MSL3).pdf)
 Rohm LGA NoLead
 0
 10
 10
+Package_LGA
+ST_CCLGA-7L_2.8x2.8mm_P1.15mm_H1.95mm
+ST  CCLGA, 7 Pin (https://www.st.com/resource/en/datasheet/ilps28qsw.pdf#page=44)
+water resistant package
+0
+7
+7
 Package_LGA
 ST_HLGA-10_2.5x2.5mm_P0.6mm_LayoutBorder3x2y
 ST  HLGA, 10 Pin (https://www.st.com/resource/en/datasheet/lps25hb.pdf#page=46), generated with kicad-footprint-generator ipc_noLead_generator.py
@@ -80479,6 +80913,34 @@ SSOP 0.65 PowerPAD
 83
 33
 Package_SO
+HTSSOP-38-1EP_4.4x9.7mm_P0.5mm_EP1.5x3.3mm
+HTSSOP, 38 Pin (JEDEC MO-153 Var BDT-1 https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py
+HTSSOP SO
+0
+41
+39
+Package_SO
+HTSSOP-38-1EP_4.4x9.7mm_P0.5mm_EP1.5x3.3mm_ThermalVias
+HTSSOP, 38 Pin (JEDEC MO-153 Var BDT-1 https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py
+HTSSOP SO
+0
+51
+39
+Package_SO
+HTSSOP-38-1EP_4.4x9.7mm_P0.5mm_EP2.74x4.75mm
+HTSSOP, 38 Pin (JEDEC MO-153 Var BDT-1 https://www.jedec.org/document_search?search_api_views_fulltext=MO-153 https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-tssop/tssop_38_05-08-1865.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+HTSSOP SO
+0
+45
+39
+Package_SO
+HTSSOP-38-1EP_4.4x9.7mm_P0.5mm_EP2.74x4.75mm_ThermalVias
+HTSSOP, 38 Pin (JEDEC MO-153 Var BDT-1 https://www.jedec.org/document_search?search_api_views_fulltext=MO-153 https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-tssop/tssop_38_05-08-1865.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+HTSSOP SO
+0
+61
+39
+Package_SO
 HTSSOP-38-1EP_6.1x12.5mm_P0.65mm_EP5.2x12.5mm_Mask3.39x6.35mm
 HTSSOP, 38 Pin (http://www.ti.com/lit/ds/symlink/tlc5951.pdf#page=46), generated with kicad-footprint-generator ipc_gullwing_generator.py
 HTSSOP SO TI-DAP/R-PDSO-G38
@@ -80668,6 +81130,27 @@ Infineon TSDSO 14-22
 17
 15
 Package_SO
+Infineon_SOIC-20W_7.6x12.8mm_P1.27mm
+Infineon  SOIC, 20 Pin (https://www.infineon.com/dgdl/Infineon-PG-DSO-20-77_SPO_PDF-Package-v15_00-EN.pdf?fileId=5546d4625c54d85b015c627e1a0c23b3, https://www.infineon.com/dgdl/Infineon-PG-DSO-20-77_FPD_PDF-Footprint-v15_00-EN.pdf?fileId=5546d4625c54d85b015c5f0f49614324), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Infineon SOIC SO PG-DSO-20 PG-DSO-20-6 PG-DSO-20-9 PG-DSO-20-31 PG-DSO-20-32 PG-DSO-20-36 PG-DSO-20-43 PG-DSO-20-45 PG-DSO-20-55 PG-DSO-20-66 PG-DSO-20-77
+0
+20
+20
+Package_SO
+Linear_HTSSOP-31-38-1EP_4.4x9.7mm_P0.5mm_EP2.74x4.75mm
+Linear  HTSSOP, 31 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-tssop/tssop_38_05-08-1865.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Linear HTSSOP SO FE38-(31)
+0
+38
+32
+Package_SO
+Linear_HTSSOP-31-38-1EP_4.4x9.7mm_P0.5mm_EP2.74x4.75mm_ThermalVias
+Linear  HTSSOP, 31 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-tssop/tssop_38_05-08-1865.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Linear HTSSOP SO FE38-(31)
+0
+54
+32
+Package_SO
 Linear_MSOP-12-16-1EP_3x4mm_P0.5mm
 12-Lead Plastic Micro Small Outline Package (MS) [MSOP], variant of MSOP-16 (see http://cds.linear.com/docs/en/datasheet/3630fd.pdf)
 SSOP 0.5
@@ -80822,6 +81305,20 @@ MSOP SO
 10
 10
 Package_SO
+MSOP-12-1EP_3x4.039mm_P0.65mm_EP1.651x2.845mm
+MSOP, 12 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-msop/05081666_g_mse12.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+MSOP SO
+0
+17
+13
+Package_SO
+MSOP-12-1EP_3x4.039mm_P0.65mm_EP1.651x2.845mm_ThermalVias
+MSOP, 12 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-msop/05081666_g_mse12.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+MSOP SO
+0
+24
+13
+Package_SO
 MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm
 MSOP, 12 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/3652fe.pdf#page=24), generated with kicad-footprint-generator ipc_gullwing_generator.py
 MSOP SO
@@ -80853,6 +81350,13 @@ Package_SO
 MSOP-12-16_3x4mm_P0.5mm
 10-Lead Plastic Micro Small Outline Package (MS) [MSOP] (see Microchip Packaging Specification 00000049BS.pdf)
 SSOP 0.5
+0
+12
+12
+Package_SO
+MSOP-12_3x4.039mm_P0.65mm
+MSOP, 12 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-msop/05081668_a_ms12.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+MSOP SO
 0
 12
 12
@@ -82677,6 +83181,13 @@ TSSOP SO
 100
 100
 Package_SO
+Texas_DAD0032A_HTSSOP-32_6.1x11mm_P0.65mm_TopEP3.71x3.81mm
+Texas DAD0032A HTSSOP, 32 Pin (https://www.ti.com/lit/ds/symlink/tpa3116d2.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Texas HTSSOP SO PowerPAD
+0
+32
+32
+Package_SO
 Texas_DGN0008B_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x3mm_Mask1.88x1.98mm
 Texas DGN0008B VSSOP, 8 Pin (https://www.ti.com/lit/ds/symlink/tps7a4101.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
 Texas VSSOP SO
@@ -82719,6 +83230,13 @@ Texas VSSOP SO
 23
 9
 Package_SO
+Texas_DKD0036A_HSSOP-36_11x15.9mm_P0.65mm_TopEP5.85x12.65mm
+Texas DKD0036A HSSOP, 36 Pin (https://www.ti.com/lit/ml/pptd185d/pptd185d.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Texas HSSOP SO PowerPAD
+0
+36
+36
+Package_SO
 Texas_DYY0016A_TSOT-23-16_4.2x2.0mm_P0.5mm
 TSSOP, 16 Pin (https://www.ti.com/lit/ds/symlink/tmux1574.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
 TSSOP SO
@@ -82746,6 +83264,13 @@ HTSOP 1.27
 0
 18
 9
+Package_SO
+Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm
+Texas PW0020A TSSOP, 20 Pin (https://www.ti.com/lit/ml/mpds362a/mpds362a.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Texas TSSOP SO
+0
+20
+20
 Package_SO
 Texas_PWP0020A
 20-Pin Thermally Enhanced Thin Shrink Small-Outline Package, Body 4.4x6.5x1.1mm, Pad 3.0x4.2mm, Texas Instruments (see http://www.ti.com/lit/ds/symlink/lm5118.pdf)
@@ -83568,6 +84093,13 @@ WSON-16 3.3 x 1.35mm  Pitch 0.4mm
 Package_SON
 Winbond_USON-8-1EP_3x2mm_P0.5mm_EP0.2x1.6mm
 Winbond  USON, 8 Pin (https://www.lcsc.com/datasheet/lcsc_datasheet_2205122030_Winbond-Elec-W25Q16JVUXIQ_C2843335.pdf#page=66f), generated with kicad-footprint-generator ipc_noLead_generator.py
+Winbond USON NoLead
+0
+10
+9
+Package_SON
+Winbond_USON-8-2EP_3x4mm_P0.8mm_EP0.2x0.8mm
+Winbond  USON, 8 Pin (https://www.winbond.com/hq/support/documentation/levelOne.jsp?__locale=en&DocNo=DA00-W25Q16JV.1#page=69), generated with kicad-footprint-generator ipc_noLead_generator.py
 Winbond USON NoLead
 0
 10
@@ -87353,6 +87885,13 @@ gps linx
 22
 22
 RF_GPS
+OriginGPS_ORG1510
+GPS / GNSS Module with integrated antenna, (https://origingps.com/wp-content/uploads/2019/09/HORNET-Modules-Layout-recommendations-and-Integration-Application-Note-Rev-2.0.pdf)
+GPS GNSS OriginGPS Hornet
+0
+23
+11
+RF_GPS
 Quectel_L70-R
 Quectel L70-R, (https://www.quectel.com/product/gps-only-l70-r)
 GPS Quectel L70-R
@@ -87499,6 +88038,13 @@ GSM Module SIM900
 0
 68
 68
+RF_GSM
+Telit_SE150A4
+Telit SE150A4 smart module, https://atoma.spb.ru/sites/default/files/documents/telit_se150a4_smart_module_hardware_user_guide_r1.pdf
+Smart module Telit SE150
+0
+466
+210
 RF_GSM
 Telit_xL865
 Telit xL865 familly footprint, http://www.telit.com/fileadmin/user_upload/products/Downloads/3G/Telit_UL865_Hardware_User_Guide_r8.pdf 
@@ -87864,6 +88410,13 @@ ESP32-C3 WROOM-02 espressif
 40
 19
 RF_Module
+ESP32-C6-MINI-1
+2.4 GHz Wi-Fi, Bluetooth, Zigbee and Thread combo chip, external antenna, https://www.espressif.com/sites/default/files/documentation/esp32-c6-mini-1_mini-1u_datasheet_en.pdf
+2.4 GHz Wi-Fi Bluetooth Zigbee Thread external antenna espressif  16.6*13.2mm
+0
+61
+53
+RF_Module
 ESP32-S2-MINI-1
 2.4 GHz Wi-Fi and Bluetooth combo chip, external antenna, https://www.espressif.com/sites/default/files/documentation/esp32-s3-mini-1_mini-1u_datasheet_en.pdf
 2.4 GHz Wi-Fi Bluetooth external antenna espressif  20*15.4mm
@@ -87990,6 +88543,13 @@ IQRF_KON-SIM-01 IQRF_TRx2D IQRF_TRx2DC
 10
 8
 RF_Module
+Jadak_Thingmagic_M6e-Nano
+UHF RFID reader with one 27dBm antenna port, https://www.jadaktech.com/product/thingmagic-m6e-nano-uhf-rain-rfid/
+Jadak Thingmagic M6e
+0
+96
+41
+RF_Module
 Laird_BL652
 Bluetooth v4.2 + NFC module
 Bluetooth BLE NFC
@@ -88059,6 +88619,13 @@ LoRa LoRaWAN RAK811
 0
 34
 34
+RF_Module
+RAK3172
+RAK3172 WisDuo LPWAN Module https://docs.rakwireless.com/product-categories/wisduo/rak3172-module/datasheet/
+LoRa LoRaWAN RAK3172
+0
+32
+32
 RF_Module
 RAK4200
 RAK4200 LPWAN Module https://downloads.rakwireless.com/LoRa/RAK4200/Hardware-Specification/RAK4200_Module_Specifications_V1.4.pdf
@@ -88886,6 +89453,13 @@ relays Hongfa form-c 2-coil reverse-polarity
 6
 6
 Relay_THT
+Relay_SPDT_Hongfa_JQC-3FF_0XX-1Z
+Hongfa subminature high power latching SPDT relay 5, 6, 9, 12, 18, 24, 48VDC. 10A switching current, Form-B https://www.generationrobots.com/media/JQC-3FF-v1.pdf
+relays Hongmei 1-coil
+0
+5
+5
+Relay_THT
 Relay_SPDT_HsinDa_Y14
 http://www.hsinda.com.tw/upload/file/Y14-20200430135145.pdf
 Relay Y14
@@ -89081,6 +89655,13 @@ relays Hongfa form-a 2-coil reverse-polarity
 0
 5
 5
+Relay_THT
+Relay_SPST_Hongfa_JQC-3FF_0XX-1H
+Hongfa subminature high power latching SPST-NO relay 5, 6, 9, 12, 18, 24, 48VDC. 15A switching current, Form-A https://www.generationrobots.com/media/JQC-3FF-v1.pdf
+relays Hongmei 1-coil
+0
+4
+4
 Relay_THT
 Relay_SPST_Omron-G5Q-1A
 Relay SPST-NO Omron Serie G5Q, http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5q.pdf
@@ -89340,6 +89921,13 @@ Standex Meder SIL reed relais
 0
 4
 4
+Relay_THT
+Relay_Tyco_V23072_Sealed
+Tyco Electronics Mini Relay K (Sealed Version), length 16.9mm, width 14.7mm, height 19.2mm, drill hole 1.30mm ( https://www.electrokit.com/upload/product/41019/41019252/V23072.pdf )
+SPST SPDT DC TE0598-P2
+0
+7
+7
 Resistor_SMD
 R_0201_0603Metric
 Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -90519,6 +91107,13 @@ rotary encoder
 Rotary_Encoder
 RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_CircularMountingHoles
 Alps rotary encoder, EC12E... with switch, vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+6
+Rotary_Encoder
+RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_MountingHoles
+Alps rotary encoder, EC12E... with switch, vertical shaft, https://www.lcsc.com/datasheet/lcsc_datasheet_2410010003_ALPSALPINE-EC11E09444A8_C1322538.pdf
 rotary encoder
 0
 7
@@ -95809,6 +96404,20 @@ THT Terminal Block WAGO 236-109 45Degree pitch 5mm size 47.3x14mm^2 drill 1.15mm
 9
 9
 TerminalBlock_WAGO
+TerminalBlock_WAGO_236-110_1x10_P5.00mm_45Degree
+Terminal Block WAGO 236-110, 45Degree (cable under 45degree), 10 pins, pitch 5mm, size 52.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-110 45Degree pitch 5mm size 52.3x14mm^2 drill 1.15mm pad 3mm
+0
+10
+10
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-111_1x11_P5.00mm_45Degree
+Terminal Block WAGO 236-111, 45Degree (cable under 45degree), 11 pins, pitch 5mm, size 57.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-111 45Degree pitch 5mm size 57.3x14mm^2 drill 1.15mm pad 3mm
+0
+11
+11
+TerminalBlock_WAGO
 TerminalBlock_WAGO_236-112_1x12_P5.00mm_45Degree
 Terminal Block WAGO 236-112, 45Degree (cable under 45degree), 12 pins, pitch 5mm, size 62.3x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
 THT Terminal Block WAGO 236-112 45Degree pitch 5mm size 62.3x14mm^2 drill 1.15mm pad 3mm
@@ -95816,12 +96425,26 @@ THT Terminal Block WAGO 236-112 45Degree pitch 5mm size 62.3x14mm^2 drill 1.15mm
 12
 12
 TerminalBlock_WAGO
+TerminalBlock_WAGO_236-113_1x13_P5.00mm_45Degree
+Terminal Block WAGO 236-113, 45Degree (cable under 45degree), 13 pins, pitch 5mm, size 67.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-113 45Degree pitch 5mm size 67.3x14mm^2 drill 1.15mm pad 3mm
+0
+13
+13
+TerminalBlock_WAGO
 TerminalBlock_WAGO_236-114_1x14_P5.00mm_45Degree
 Terminal Block WAGO 236-114, 45Degree (cable under 45degree), 14 pins, pitch 5mm, size 72.3x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
 THT Terminal Block WAGO 236-114 45Degree pitch 5mm size 72.3x14mm^2 drill 1.15mm pad 3mm
 0
 14
 14
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-115_1x15_P5.00mm_45Degree
+Terminal Block WAGO 236-115, 45Degree (cable under 45degree), 15 pins, pitch 5mm, size 77.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-115 45Degree pitch 5mm size 77.3x14mm^2 drill 1.15mm pad 3mm
+0
+15
+15
 TerminalBlock_WAGO
 TerminalBlock_WAGO_236-116_1x16_P5.00mm_45Degree
 Terminal Block WAGO 236-116, 45Degree (cable under 45degree), 16 pins, pitch 5mm, size 82.3x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
@@ -95914,12 +96537,47 @@ THT Terminal Block WAGO 236-209 45Degree pitch 7.5mm size 69.8x14mm^2 drill 1.15
 9
 9
 TerminalBlock_WAGO
+TerminalBlock_WAGO_236-210_1x10_P7.50mm_45Degree
+Terminal Block WAGO 236-210, 45Degree (cable under 45degree), 10 pins, pitch 7.5mm, size 77.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-210 45Degree pitch 7.5mm size 77.3x14mm^2 drill 1.15mm pad 3mm
+0
+10
+10
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-211_1x11_P7.50mm_45Degree
+Terminal Block WAGO 236-211, 45Degree (cable under 45degree), 11 pins, pitch 7.5mm, size 84.8x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-211 45Degree pitch 7.5mm size 84.8x14mm^2 drill 1.15mm pad 3mm
+0
+11
+11
+TerminalBlock_WAGO
 TerminalBlock_WAGO_236-212_1x12_P7.50mm_45Degree
 Terminal Block WAGO 236-212, 45Degree (cable under 45degree), 12 pins, pitch 7.5mm, size 92.3x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
 THT Terminal Block WAGO 236-212 45Degree pitch 7.5mm size 92.3x14mm^2 drill 1.15mm pad 3mm
 0
 12
 12
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-213_1x13_P7.50mm_45Degree
+Terminal Block WAGO 236-213, 45Degree (cable under 45degree), 13 pins, pitch 7.5mm, size 99.8x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-213 45Degree pitch 7.5mm size 99.8x14mm^2 drill 1.15mm pad 3mm
+0
+13
+13
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-214_1x14_P7.50mm_45Degree
+Terminal Block WAGO 236-214, 45Degree (cable under 45degree), 14 pins, pitch 7.5mm, size 107x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-214 45Degree pitch 7.5mm size 107x14mm^2 drill 1.15mm pad 3mm
+0
+14
+14
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-215_1x15_P7.50mm_45Degree
+Terminal Block WAGO 236-215, 45Degree (cable under 45degree), 15 pins, pitch 7.5mm, size 115x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-215 45Degree pitch 7.5mm size 115x14mm^2 drill 1.15mm pad 3mm
+0
+15
+15
 TerminalBlock_WAGO
 TerminalBlock_WAGO_236-216_1x16_P7.50mm_45Degree
 Terminal Block WAGO 236-216, 45Degree (cable under 45degree), 16 pins, pitch 7.5mm, size 122x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
@@ -95977,6 +96635,13 @@ THT Terminal Block WAGO 236-306 45Degree pitch 10mm size 62.3x14mm^2 drill 1.15m
 6
 6
 TerminalBlock_WAGO
+TerminalBlock_WAGO_236-307_1x07_P10.00mm_45Degree
+Terminal Block WAGO 236-307, 45Degree (cable under 45degree), 7 pins, pitch 10mm, size 72.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-307 45Degree pitch 10mm size 72.3x14mm^2 drill 1.15mm pad 3mm
+0
+7
+7
+TerminalBlock_WAGO
 TerminalBlock_WAGO_236-308_1x08_P10.00mm_45Degree
 Terminal Block WAGO 236-308, 45Degree (cable under 45degree), 8 pins, pitch 10mm, size 82.3x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
 THT Terminal Block WAGO 236-308 45Degree pitch 10mm size 82.3x14mm^2 drill 1.15mm pad 3mm
@@ -95991,12 +96656,47 @@ THT Terminal Block WAGO 236-309 45Degree pitch 10mm size 92.3x14mm^2 drill 1.15m
 9
 9
 TerminalBlock_WAGO
+TerminalBlock_WAGO_236-310_1x10_P10.00mm_45Degree
+Terminal Block WAGO 236-310, 45Degree (cable under 45degree), 10 pins, pitch 10mm, size 102x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-310 45Degree pitch 10mm size 102x14mm^2 drill 1.15mm pad 3mm
+0
+10
+10
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-311_1x11_P10.00mm_45Degree
+Terminal Block WAGO 236-311, 45Degree (cable under 45degree), 11 pins, pitch 10mm, size 112x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-311 45Degree pitch 10mm size 112x14mm^2 drill 1.15mm pad 3mm
+0
+11
+11
+TerminalBlock_WAGO
 TerminalBlock_WAGO_236-312_1x12_P10.00mm_45Degree
 Terminal Block WAGO 236-312, 45Degree (cable under 45degree), 12 pins, pitch 10mm, size 122x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
 THT Terminal Block WAGO 236-312 45Degree pitch 10mm size 122x14mm^2 drill 1.15mm pad 3mm
 0
 12
 12
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-313_1x13_P10.00mm_45Degree
+Terminal Block WAGO 236-313, 45Degree (cable under 45degree), 13 pins, pitch 10mm, size 132x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-313 45Degree pitch 10mm size 132x14mm^2 drill 1.15mm pad 3mm
+0
+13
+13
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-314_1x14_P10.00mm_45Degree
+Terminal Block WAGO 236-314, 45Degree (cable under 45degree), 14 pins, pitch 10mm, size 142x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-314 45Degree pitch 10mm size 142x14mm^2 drill 1.15mm pad 3mm
+0
+14
+14
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-315_1x15_P10.00mm_45Degree
+Terminal Block WAGO 236-315, 45Degree (cable under 45degree), 15 pins, pitch 10mm, size 152x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-315 45Degree pitch 10mm size 152x14mm^2 drill 1.15mm pad 3mm
+0
+15
+15
 TerminalBlock_WAGO
 TerminalBlock_WAGO_236-316_1x16_P10.00mm_45Degree
 Terminal Block WAGO 236-316, 45Degree (cable under 45degree), 16 pins, pitch 10mm, size 162x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
@@ -96075,6 +96775,20 @@ THT Terminal Block WAGO 236-409 45Degree pitch 5mm size 47.3x14mm^2 drill 1.15mm
 18
 9
 TerminalBlock_WAGO
+TerminalBlock_WAGO_236-410_1x10_P5.00mm_45Degree
+Terminal Block WAGO 236-410, 45Degree (cable under 45degree), 10 pins, pitch 5mm, size 52.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-410 45Degree pitch 5mm size 52.3x14mm^2 drill 1.15mm pad 3mm
+0
+20
+10
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-411_1x11_P5.00mm_45Degree
+Terminal Block WAGO 236-411, 45Degree (cable under 45degree), 11 pins, pitch 5mm, size 57.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-411 45Degree pitch 5mm size 57.3x14mm^2 drill 1.15mm pad 3mm
+0
+22
+11
+TerminalBlock_WAGO
 TerminalBlock_WAGO_236-412_1x12_P5.00mm_45Degree
 Terminal Block WAGO 236-412, 45Degree (cable under 45degree), 12 pins, pitch 5mm, size 62.3x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
 THT Terminal Block WAGO 236-412 45Degree pitch 5mm size 62.3x14mm^2 drill 1.15mm pad 3mm
@@ -96082,12 +96796,26 @@ THT Terminal Block WAGO 236-412 45Degree pitch 5mm size 62.3x14mm^2 drill 1.15mm
 24
 12
 TerminalBlock_WAGO
+TerminalBlock_WAGO_236-413_1x13_P5.00mm_45Degree
+Terminal Block WAGO 236-413, 45Degree (cable under 45degree), 13 pins, pitch 5mm, size 67.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-413 45Degree pitch 5mm size 67.3x14mm^2 drill 1.15mm pad 3mm
+0
+26
+13
+TerminalBlock_WAGO
 TerminalBlock_WAGO_236-414_1x14_P5.00mm_45Degree
 Terminal Block WAGO 236-414, 45Degree (cable under 45degree), 14 pins, pitch 5mm, size 72.3x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
 THT Terminal Block WAGO 236-414 45Degree pitch 5mm size 72.3x14mm^2 drill 1.15mm pad 3mm
 0
 28
 14
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-415_1x15_P5.00mm_45Degree
+Terminal Block WAGO 236-415, 45Degree (cable under 45degree), 15 pins, pitch 5mm, size 77.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-415 45Degree pitch 5mm size 77.3x14mm^2 drill 1.15mm pad 3mm
+0
+30
+15
 TerminalBlock_WAGO
 TerminalBlock_WAGO_236-416_1x16_P5.00mm_45Degree
 Terminal Block WAGO 236-416, 45Degree (cable under 45degree), 16 pins, pitch 5mm, size 82.3x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
@@ -96180,12 +96908,47 @@ THT Terminal Block WAGO 236-509 45Degree pitch 7.5mm size 69.8x14mm^2 drill 1.15
 18
 9
 TerminalBlock_WAGO
+TerminalBlock_WAGO_236-510_1x10_P7.50mm_45Degree
+Terminal Block WAGO 236-510, 45Degree (cable under 45degree), 10 pins, pitch 7.5mm, size 77.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-510 45Degree pitch 7.5mm size 77.3x14mm^2 drill 1.15mm pad 3mm
+0
+20
+10
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-511_1x11_P7.50mm_45Degree
+Terminal Block WAGO 236-511, 45Degree (cable under 45degree), 11 pins, pitch 7.5mm, size 84.8x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-511 45Degree pitch 7.5mm size 84.8x14mm^2 drill 1.15mm pad 3mm
+0
+22
+11
+TerminalBlock_WAGO
 TerminalBlock_WAGO_236-512_1x12_P7.50mm_45Degree
 Terminal Block WAGO 236-512, 45Degree (cable under 45degree), 12 pins, pitch 7.5mm, size 92.3x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
 THT Terminal Block WAGO 236-512 45Degree pitch 7.5mm size 92.3x14mm^2 drill 1.15mm pad 3mm
 0
 24
 12
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-513_1x13_P7.50mm_45Degree
+Terminal Block WAGO 236-513, 45Degree (cable under 45degree), 13 pins, pitch 7.5mm, size 99.8x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-513 45Degree pitch 7.5mm size 99.8x14mm^2 drill 1.15mm pad 3mm
+0
+26
+13
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-514_1x14_P7.50mm_45Degree
+Terminal Block WAGO 236-514, 45Degree (cable under 45degree), 14 pins, pitch 7.5mm, size 107x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-514 45Degree pitch 7.5mm size 107x14mm^2 drill 1.15mm pad 3mm
+0
+28
+14
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-515_1x15_P7.50mm_45Degree
+Terminal Block WAGO 236-515, 45Degree (cable under 45degree), 15 pins, pitch 7.5mm, size 115x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-515 45Degree pitch 7.5mm size 115x14mm^2 drill 1.15mm pad 3mm
+0
+30
+15
 TerminalBlock_WAGO
 TerminalBlock_WAGO_236-516_1x16_P7.50mm_45Degree
 Terminal Block WAGO 236-516, 45Degree (cable under 45degree), 16 pins, pitch 7.5mm, size 122x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
@@ -96243,6 +97006,13 @@ THT Terminal Block WAGO 236-606 45Degree pitch 10mm size 62.3x14mm^2 drill 1.15m
 12
 6
 TerminalBlock_WAGO
+TerminalBlock_WAGO_236-607_1x07_P10.00mm_45Degree
+Terminal Block WAGO 236-607, 45Degree (cable under 45degree), 7 pins, pitch 10mm, size 72.3x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-607 45Degree pitch 10mm size 72.3x14mm^2 drill 1.15mm pad 3mm
+0
+14
+7
+TerminalBlock_WAGO
 TerminalBlock_WAGO_236-608_1x08_P10.00mm_45Degree
 Terminal Block WAGO 236-608, 45Degree (cable under 45degree), 8 pins, pitch 10mm, size 82.3x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
 THT Terminal Block WAGO 236-608 45Degree pitch 10mm size 82.3x14mm^2 drill 1.15mm pad 3mm
@@ -96257,12 +97027,47 @@ THT Terminal Block WAGO 236-609 45Degree pitch 10mm size 92.3x14mm^2 drill 1.15m
 18
 9
 TerminalBlock_WAGO
+TerminalBlock_WAGO_236-610_1x10_P10.00mm_45Degree
+Terminal Block WAGO 236-610, 45Degree (cable under 45degree), 10 pins, pitch 10mm, size 102x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-610 45Degree pitch 10mm size 102x14mm^2 drill 1.15mm pad 3mm
+0
+20
+10
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-611_1x11_P10.00mm_45Degree
+Terminal Block WAGO 236-611, 45Degree (cable under 45degree), 11 pins, pitch 10mm, size 112x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-611 45Degree pitch 10mm size 112x14mm^2 drill 1.15mm pad 3mm
+0
+22
+11
+TerminalBlock_WAGO
 TerminalBlock_WAGO_236-612_1x12_P10.00mm_45Degree
 Terminal Block WAGO 236-612, 45Degree (cable under 45degree), 12 pins, pitch 10mm, size 122x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
 THT Terminal Block WAGO 236-612 45Degree pitch 10mm size 122x14mm^2 drill 1.15mm pad 3mm
 0
 24
 12
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-613_1x13_P10.00mm_45Degree
+Terminal Block WAGO 236-613, 45Degree (cable under 45degree), 13 pins, pitch 10mm, size 132x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-613 45Degree pitch 10mm size 132x14mm^2 drill 1.15mm pad 3mm
+0
+26
+13
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-614_1x14_P10.00mm_45Degree
+Terminal Block WAGO 236-614, 45Degree (cable under 45degree), 14 pins, pitch 10mm, size 142x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-614 45Degree pitch 10mm size 142x14mm^2 drill 1.15mm pad 3mm
+0
+28
+14
+TerminalBlock_WAGO
+TerminalBlock_WAGO_236-615_1x15_P10.00mm_45Degree
+Terminal Block WAGO 236-615, 45Degree (cable under 45degree), 15 pins, pitch 10mm, size 152x14mm^2, drill diameter 1.15mm, pad diameter 3mm, see , script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_WAGO
+THT Terminal Block WAGO 236-615 45Degree pitch 10mm size 152x14mm^2 drill 1.15mm pad 3mm
+0
+30
+15
 TerminalBlock_WAGO
 TerminalBlock_WAGO_236-616_1x16_P10.00mm_45Degree
 Terminal Block WAGO 236-616, 45Degree (cable under 45degree), 16 pins, pitch 10mm, size 162x14mm^2, drill diamater 1.15mm, pad diameter 3mm, see , script-generated with , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_WAGO
@@ -98594,73 +99399,3 @@ Varistor VF
 0
 2
 2
-footprints
-Arduino_101_Shield
-https://store.arduino.cc/genuino-101
-
-0
-38
-38
-footprints
-Arduino_Due_Shield
-https://store.arduino.cc/arduino-due
-
-0
-92
-91
-footprints
-Arduino_Leonardo_Shield
-https://store.arduino.cc/arduino-leonardo-with-headers
-
-0
-38
-37
-footprints
-Arduino_Mega2560_Shield
-https://store.arduino.cc/arduino-mega-2560-rev3
-
-0
-92
-91
-footprints
-Arduino_Micro_Socket
-https://store.arduino.cc/arduino-micro
-
-0
-34
-32
-footprints
-Arduino_Micro_Socket_oskar
-https://store.arduino.cc/arduino-micro
-
-0
-34
-32
-footprints
-Arduino_Mini_Socket
-https://store.arduino.cc/arduino-mini-05
-
-0
-35
-35
-footprints
-Arduino_Nano_Socket
-https://store.arduino.cc/arduino-nano
-
-0
-30
-30
-footprints
-Arduino_Uno_Shield
-https://store.arduino.cc/arduino-uno-rev3
-
-0
-38
-37
-footprints
-Arduino_Zero_Shield
-https://store.arduino.cc/genuino-zero
-
-0
-38
-38
